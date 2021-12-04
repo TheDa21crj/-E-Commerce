@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat:wght@500&family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+@import url(//db.onlinewebfonts.com/c/6bccacc0af0302222227e090e8a03f3f?family=Scriptina);
+body {
+    margin: 0px;
+    background-color: rgb(253, 216, 214);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+* {
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
