@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    height: 53px;
+}
+
+.Logo {
+    margin: 0px 3rem 0px 3rem;
+    display: flex;
+    letter-spacing: 0.4rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.Logo ul {
+    margin-left: 1rem;
+    list-style-type: none;
+    letter-spacing: 0rem;
+    font-size: 1rem;
+    display: flex;
+}
+
+.Logo ul li {
+    margin: 15px 17.8px 0px 17.8px;
+    border-radius: 5px;
+    padding: 1% 2% 1% 2%;
+    cursor: pointer;
+}
+
+.Logo ul li:hover {
+    text-shadow: 2px 2px 8px gold;
+}
+
+.List2 {
+    display: flex;
+    margin: 10px 0px 0px 0px;
+    width: 300px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.List2 svg path {
+    color: black;
+    transition: all 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.List2 svg path:hover {
+    color: gold;
+}
+
+.Link {
+    text-decoration: none;
+    font-family: "Festive", cursive;
+    color: black;
+}
+
+.dropDownDiv {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 1% 2% 1% 2%;
+    top: 52.667px;
+    left: 0%;
+    width: 96%;
+    height: auto;
+    background-color: white;
+    z-index: 2;
+}
+
+.Logo ul li:hover>.dropDownDiv {
+    opacity: 1;
+    visibility: visible;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.burger div {
+    width: 20px;
+    height: 0.5px;
+    background-color: black;
+    margin-bottom: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#s1 {
+    display: none;
+}
+
+#s2 {
+    display: block;
+}
+
+@media only screen and (max-width: 1050px) {
+    .burger {
+        display: block;
+    }
+    .Logo {
+        text-align: center;
+        letter-spacing: 0rem;
+        height: 52.667px;
+        width: 62%;
+    }
+    .Link {
+        width: 100%;
+    }
+    .Logo ul {
+        display: none;
+    }
+}

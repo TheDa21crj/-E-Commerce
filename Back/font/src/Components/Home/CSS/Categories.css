@@ -1,0 +1,18 @@
+.CmDiv {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.CmDiv h1 {
+    margin-bottom: 20px;
+}
+
+.Cscrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.Cscrollmenu::-webkit-scrollbar {
+    display: none;
+}

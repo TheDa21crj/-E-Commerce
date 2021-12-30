@@ -1,0 +1,4 @@
+{
+    "mongoURL": "mongodb+srv://Rishav1:Rishav1@clustere-commerce.87dkv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtTokenAuth": "myserettoken"
+}

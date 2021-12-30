@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+.FmDiv {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(245, 252, 255);
+    padding-top: 20px;
+}
+
+.FmDiv>img {
+    border-radius: 10px;
+}
+
+.ulList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.ulList ul {
+    list-style-type: none;
+}
+
+.ulList ul li {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.socialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 0px 0px 0px;
+    width: 200px;
+}
+
+.socialFace svg {
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.socialTwi svg {
+    color: #1da1f2;
+    cursor: pointer;
+}
+
+.socialIns svg {
+    color: #8a3ab9;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.textTi {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.Copyright {
+    margin: 10px 0px 10px 0px;
+    border-style: solid;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px 0px 0px 0px;
+    transition-property: all;
+    transition-duration: 0.4s;
+}
+
+.Copyright:hover {
+    text-shadow: 1px 1px 5px rgb(161, 161, 161);
+}
+
+@media only screen and (max-width: 600px) {
+    .ulList {
+        display: flex;
+        flex-direction: column;
+    }
+    .ulList ul li {
+        text-align: center;
+    }
+    .ulList ul div {
+        justify-content: center;
+        width: 100%;
+    }
+    .socialFace svg,
+    .socialTwi svg,
+    .socialIns svg {
+        margin-right: 20px;
+    }
+}
