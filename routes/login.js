@@ -32,7 +32,22 @@ router.post(
                     .status(400)
                     .json({ errors: [{ message: "Invalid Credentials" }] });
             }
-            return res.status(200).json({ message: "Login" });
+
+            const payload = {
+                user: {
+                    email: userE,
+                },
+            };
+
+            jwt.sign(
+                payload,
+                config.get("jwtTokenAuth"), { expiresIn: "360000" },
+                (err, token) => {
+                    if (err) throw err;
+                    res.status(200).json({ token });
+                }
+            );
+            // return res.status(200).json({ message: "Login" });
         } catch (error) {
             console.log(error);
             return res.status(500).json({ message: error });
