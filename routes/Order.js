@@ -25,22 +25,20 @@ router.post(
         if (order) {
             profileFeilds.order = order;
         }
-        console.log("profileFeilds");
-        console.log(profileFeilds);
-        // try {
-        //     let profile = await UserOrder.findOne({ user: req.user.id });
-        //     if (profile) {
-        //         profile = await UserOrder.findOneAndUpdate({ user: req.user.id }, { $set: profileFeilds }, { new: true });
-        //         return res.json(profile);
-        //     }
+        try {
+            let profile = await UserOrder.findOne({ user: req.user.id });
+            if (profile) {
+                profile = await UserOrder.findOneAndUpdate({ user: req.user.id }, { $set: profileFeilds }, { new: true });
+                return res.json(profile);
+            }
 
-        //     console.log("profileFeilds");
-        //     profile = new UserOrder(profileFeilds);
-        //     await profile.save();
-        //     res.json(profile);
-        // } catch (error) {
-        //     console.log(error);
-        // }
+            console.log("profileFeilds");
+            profile = new UserOrder(profileFeilds);
+            await profile.save();
+            res.json(profile, profileFeilds);
+        } catch (error) {
+            console.log(error);
+        }
     }
 );
 
