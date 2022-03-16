@@ -21,22 +21,22 @@ router.put(
         }
         const { order } = req.body;
         const profileFeilds = {};
-        profileFeilds.user = req.user.id;
+        profileFeilds.user = req.user._id;
         profileFeilds.orders = {};
         if (order) {
             profileFeilds.orders.order = order;
         }
         try {
-            let profile = await UserOrder.findOne({ user: req.user.id });
-            if (profile) {
-                profile.orders.unshift(profileFeilds.orders);
-                await profile.save();
-                return res.json(profile);
-            }
+            // let profile = await UserOrder.findOne({ user: req.user.id });
+            // if (profile) {
+            //     profile.orders.unshift(profileFeilds.orders);
+            //     await profile.save();
+            //     return res.json(profile);
+            // }
 
-            profile = new UserOrder(profileFeilds);
-            await profile.save();
-            res.json(profile);
+            // profile = new UserOrder(profileFeilds);
+            // await profile.save();
+            res.json(profileFeilds);
         } catch (error) {
             console.log(error);
         }
