@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/Users");
 
-// Public| Login| /
+// Public| Login| /api/login
 router.post(
     "/", [
         check("email", "Email is Required").not().isEmpty(),
