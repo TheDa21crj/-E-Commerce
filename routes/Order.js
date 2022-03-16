@@ -10,6 +10,7 @@ router.get("/", auth, (req, res) => {
     res.status(200).send(req.user);
 });
 
+// Private | Add Order | api/order/add
 router.put(
     "/add",
     auth, [check("order", "order name is required")],
