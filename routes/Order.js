@@ -18,8 +18,8 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
         const { order } = req.body;
-        const data = await User.findOne({ orders });
-        res.send(data);
+        const profileFeilds = {};
+        profileFeilds.user = req.user.id;
     }
 );
 
