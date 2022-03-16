@@ -1,10 +1,24 @@
 const express = require("express");
 const router = express.Router();
+const { check, validationResult } = require("express-validator");
 const auth = require("./../middleware/auth");
 
 // Private | order | api/order
-router.post("/", auth, (req, res) => {
+router.get("/", auth, (req, res) => {
     res.status(200).send(req.user);
 });
+
+router.post(
+    "/add",
+    auth, [check("order", "order name is required")],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+        const { order } = req.body;
+        res.send(order);
+    }
+);
 
 module.exports = router;
