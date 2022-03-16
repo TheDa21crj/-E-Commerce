@@ -6,9 +6,10 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/Users");
+const auth = require("./../middleware/auth");
 
 //Private | Account | /api/myaccount
-router.get("/", (req, res) => {
+router.get("/", auth, (req, res) => {
     res.status(200).send({ message: "My Account" });
 });
 
