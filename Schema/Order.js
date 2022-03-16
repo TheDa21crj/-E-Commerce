@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const OrderSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
+        ref: "users",
     },
     orders: [{
         order: {
@@ -16,4 +16,4 @@ const OrderSchema = new mongoose.Schema({
     }, ],
 });
 
-module.exports = Profile = mongoose.model("order", OrderSchema);
+module.exports = Order = mongoose.model("order", OrderSchema);
