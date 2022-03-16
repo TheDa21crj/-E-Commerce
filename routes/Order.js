@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const auth = require("./../middleware/auth");
+const User = require("./../Schema/Users");
 
 // Private | order | api/order
 router.get("/", auth, (req, res) => {
@@ -17,7 +18,8 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
         const { order } = req.body;
-        res.send(order);
+        const data = await User.findOne({ orders });
+        res.send(data);
     }
 );
 
