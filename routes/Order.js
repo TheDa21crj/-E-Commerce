@@ -29,14 +29,14 @@ router.post(
             let profile = await UserOrder.findOne({ user: req.user.id });
             if (profile) {
                 // profile = await UserOrder.findOneAndUpdate({ user: req.user.id }, { $set: profileFeilds }, { new: true });
-                // const result = await UserOrder.updateOne({ _id: data._id }, {
-                //     $set: {
-                //         des: des,
-                //     },
-                // });
+                const result = await UserOrder.updateOne({ _id: profile._id }, {
+                    $set: {
+                        order: order,
+                    },
+                });
                 // console.log("profileFeilds");
 
-                return res.json(profile.orders);
+                return res.json(result);
             }
 
             // console.log("profileFeilds");
