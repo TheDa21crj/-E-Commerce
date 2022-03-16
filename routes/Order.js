@@ -26,21 +26,21 @@ router.put(
         if (order) {
             profileFeilds.orders.order = order;
         }
-        // try {
-        // let profile = await UserOrder.findOne({ user: req.user.id });
-        // if (profile) {
-        //     profile.orders.unshift(profileFeilds.orders);
-        //     await profile.save();
-        //     return res.json(profile);
-        // }
+        try {
+            let profile = await UserOrder.findOne({ user: req.user.email._id });
+            if (profile) {
+                profile.orders.unshift(profileFeilds.orders);
+                await profile.save();
+                return res.json(profile);
+            }
 
-        // profile = new UserOrder(profileFeilds);
-        // await profile.save();
-        // res.json(profileFeilds);
-        res.json(req.user.email._id);
-        // } catch (error) {
-        //     console.log(error);
-        // }
+            profile = new UserOrder(profileFeilds);
+            await profile.save();
+            res.json(profileFeilds);
+            // res.json(req.user.email._id);
+        } catch (error) {
+            console.log(error);
+        }
     }
 );
 
