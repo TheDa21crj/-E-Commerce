@@ -7,7 +7,9 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/Users");
 
-//Private | Account | /myaccount
-router.get("/myaccount", (req, res) => {
-    res.status(200).send("My Account");
+//Private | Account | /api/myaccount
+router.get("/", (req, res) => {
+    res.status(200).send({ message: "My Account" });
 });
+
+module.exports = router;
