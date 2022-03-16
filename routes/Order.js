@@ -23,8 +23,9 @@ router.post(
         profileFeilds.user = req.user.id;
         profileFeilds.orders = {};
         if (order) {
-            profileFeilds.order = order;
+            profileFeilds.orders.order = order;
         }
+        res.send(profileFeilds);
     }
 );
 
