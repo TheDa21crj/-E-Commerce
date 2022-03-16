@@ -37,7 +37,6 @@ router.put(
             profile = new UserOrder(profileFeilds);
             await profile.save();
             res.json(profileFeilds);
-            // res.json(req.user.email._id);
         } catch (error) {
             console.log(error);
         }
