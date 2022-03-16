@@ -29,7 +29,7 @@ router.put(
         try {
             let profile = await UserOrder.findOne({ user: req.user.id });
             if (profile) {
-                const profile = await UserOrder.findOne({ user: req.user.id });
+                // const profile = await UserOrder.findOne({ user: req.user.id });
                 profile.orders.unshift(profileFeilds.orders);
                 await profile.save();
                 return res.json(profile);
