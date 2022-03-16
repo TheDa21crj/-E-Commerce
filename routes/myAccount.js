@@ -7,4 +7,4 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/Users");
 
-//
+//Private | Account | /myaccount
