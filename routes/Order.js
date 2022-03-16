@@ -22,6 +22,7 @@ router.put(
         const profileFeilds = {};
         profileFeilds.user = req.user.id;
         profileFeilds.orders = {};
+        const profileFeilds0 = {};
         if (order) {
             profileFeilds.orders.order = order;
         }
@@ -29,8 +30,8 @@ router.put(
             let profile = await UserOrder.findOne({ user: req.user.id });
             if (profile) {
                 const profile = await UserOrder.findOne({ user: req.user.id });
-                profile.orders.unshift(profileFeilds);
-                // await profile.save();
+                profile.orders.unshift(profileFeilds.orders);
+                await profile.save();
                 // console.log(typeof order);
                 return res.json(profile);
             }
