@@ -36,7 +36,7 @@ router.post(
                 // });
                 // console.log("profileFeilds");
 
-                return res.json(profile);
+                return res.json(profile.orders);
             }
 
             // console.log("profileFeilds");
