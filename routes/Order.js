@@ -33,10 +33,10 @@ router.post(
                 return res.json(profile);
             }
 
-            console.log("profileFeilds");
-            profile = new UserOrder(profileFeilds);
-            await profile.save();
-            res.json(profile, profileFeilds);
+            // console.log("profileFeilds");
+            // profile = new UserOrder(profileFeilds);
+            // await profile.save();
+            // res.json(profile, profileFeilds);
         } catch (error) {
             console.log(error);
         }
