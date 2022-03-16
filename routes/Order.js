@@ -10,7 +10,7 @@ router.get("/", auth, (req, res) => {
     res.status(200).send(req.user);
 });
 
-router.post(
+router.put(
     "/add",
     auth, [check("order", "order name is required")],
     async(req, res) => {
@@ -21,15 +21,18 @@ router.post(
         const { order } = req.body;
         const profileFeilds = {};
         profileFeilds.user = req.user.id;
-        profileFeilds.orders = {};
+        profileFeilds.order = {};
         if (order) {
-            profileFeilds.orders.order = order;
+            profileFeilds.order = order;
         }
         try {
             let profile = await UserOrder.findOne({ user: req.user.id });
             if (profile) {
-                profile = await UserOrder.findOneAndUpdate({ user: req.user._id }, { $set: profileFeilds }, { new: true });
-                return res.json(profile);
+                // const profile = await UserOrder.findOne({ user: req.user.id });
+                // profile.unshift(order);
+                // await profile.save();
+                console.log(typeof order);
+                // return res.json(typeof profile);
             }
 
             profile = new UserOrder(profileFeilds);
