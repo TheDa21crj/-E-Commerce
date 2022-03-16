@@ -25,6 +25,8 @@ router.post(
         if (order) {
             profileFeilds.order = order;
         }
+        console.log("profileFeilds");
+        console.log(profileFeilds);
         // try {
         //     let profile = await UserOrder.findOne({ user: req.user.id });
         //     if (profile) {
