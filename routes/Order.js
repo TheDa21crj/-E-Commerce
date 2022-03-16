@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const auth = require("./../middleware/auth");
+const UserOrder = require("./../Schema/Order");
 const User = require("./../Schema/Users");
 
 // Private | order | api/order
@@ -20,6 +21,23 @@ router.post(
         const { order } = req.body;
         const profileFeilds = {};
         profileFeilds.user = req.user.id;
+        profileFeilds.orders = {};
+        if (order) {
+            profileFeilds.order = order;
+        }
+        try {
+            let profile = await UserOrder.findOne({ user: req.user.id });
+            if (profile) {
+                profile = await UserOrder.findOneAndUpdate({ user: req.user.id }, { $set: profileFeilds }, { new: true });
+                return res.json(profile);
+            }
+
+            profile = new UserOrder(profileFeilds);
+            await profile.save();
+            res.json(profile);
+        } catch (error) {
+            console.log(error);
+        }
     }
 );
 
