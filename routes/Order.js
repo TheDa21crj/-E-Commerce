@@ -28,14 +28,14 @@ router.put(
         }
         try {
             let profile = await UserOrder.findOne({ user: req.user.id });
-            if (profile) {
-                profile.orders.unshift(profileFeilds.orders);
-                await profile.save();
-                return res.json(profile);
-            }
+            // if (profile) {
+            //     profile.orders.unshift(profileFeilds.orders);
+            //     await profile.save();
+            //     return res.json(profile);
+            // }
 
-            profile = new UserOrder(profileFeilds);
-            await profile.save();
+            // profile = new UserOrder(profileFeilds);
+            // await profile.save();
             res.json(profile);
         } catch (error) {
             console.log(error);
