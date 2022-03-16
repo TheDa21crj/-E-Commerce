@@ -22,7 +22,6 @@ router.put(
         const profileFeilds = {};
         profileFeilds.user = req.user.id;
         profileFeilds.orders = {};
-        const profileFeilds0 = {};
         if (order) {
             profileFeilds.orders.order = order;
         }
