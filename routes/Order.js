@@ -35,6 +35,7 @@ router.post(
             profile = new UserOrder(profileFeilds);
             await profile.save();
             res.json(profile);
+            console.log(profileFeilds);
         } catch (error) {
             console.log(error);
         }
