@@ -5,6 +5,9 @@ const auth = require("./../middleware/auth");
 const CartSchema = require("./../Schema/Cart");
 const User = require("./../Schema/Users");
 
+// Private | Cart All Items | api/cart
+router.get("/", auth, async(req, res) => {});
+
 // Private | Cart Add | api/cart/add
 router.put(
     "/add",
