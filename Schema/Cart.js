@@ -6,7 +6,7 @@ const WishListSchema = new mongoose.Schema({
         ref: "users",
     },
     carts: [{
-        items: {
+        item: {
             type: "string",
         },
         date: {
