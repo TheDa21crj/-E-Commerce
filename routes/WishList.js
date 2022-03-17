@@ -14,17 +14,17 @@ router.put(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { order } = req.body;
+        const { product } = req.body;
         const profileFeilds = {};
         profileFeilds.user = req.user.email._id;
-        profileFeilds.orders = {};
+        profileFeilds.wishlists = {};
         if (order) {
-            profileFeilds.orders.order = order;
+            profileFeilds.wishlists.order = product;
         }
         try {
             let profile = await UserOrder.findOne({ user: req.user.email._id });
             if (profile) {
-                profile.orders.unshift(profileFeilds.orders);
+                profile.wishlists.unshift(profileFeilds.wishlists);
                 await profile.save();
                 return res.json(profile);
             }
