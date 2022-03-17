@@ -29,7 +29,6 @@ router.put(
                 await profile.save();
                 return res.json(profile);
             }
-
             profile = new WishListSchema(profileFeilds);
             await profile.save();
             res.json(profileFeilds);
