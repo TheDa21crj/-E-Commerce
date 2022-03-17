@@ -1,3 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const { check, validationResult } = require("express-validator");
+const auth = require("./../middleware/auth");
+const UserOrder = require("./../Schema/Order");
+const User = require("./../Schema/Users");
+
 // Private | Add Order | api/order/add
 router.put(
     "/add",
