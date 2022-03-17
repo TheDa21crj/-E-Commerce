@@ -6,7 +6,10 @@ const CartSchema = require("./../Schema/Cart");
 const User = require("./../Schema/Users");
 
 // Private | Cart All Items | api/cart
-router.get("/", auth, async(req, res) => {});
+router.get("/", auth, async(req, res) => {
+    let data = await CartSchema.find();
+    res.json(data);
+});
 
 // Private | Cart Add | api/cart/add
 router.put(
