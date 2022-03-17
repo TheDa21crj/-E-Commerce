@@ -19,6 +19,7 @@ app.use("/api/TrackOrder", require("./routes/TrackOrder"));
 app.use("/api/Order", require("./routes/Order"));
 app.use("/api/WishList", require("./routes/WishList"));
 app.use("/api/Cart", require("./routes/Cart"));
+// app.use("/api/Cart", require("./routes/Cart"));
 
 const port = process.env.PORT || 5000;
 
