@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const auth = require("./../middleware/auth");
+const CartSchema = require("./../Schema/Cart");
 const User = require("./../Schema/Users");
 
 // Private | Add wishlists | api/wishlist/add
