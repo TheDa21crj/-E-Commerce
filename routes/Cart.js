@@ -8,18 +8,18 @@ const User = require("./../Schema/Users");
 // Private | Cart Add | api/cart/add
 router.put(
     "/add",
-    auth, [check("wishlist", "wishlist name is required")],
+    auth, [check("item", "item name is required")],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { wishlist } = req.body;
+        const { item } = req.body;
         const profileFeilds = {};
         profileFeilds.user = req.user.email._id;
-        profileFeilds.wishlists = {};
-        if (wishlist) {
-            profileFeilds.wishlists.wishlist = wishlist;
+        profileFeilds.carts = {};
+        if (item) {
+            profileFeilds.carts.item = item;
         }
 
         try {
