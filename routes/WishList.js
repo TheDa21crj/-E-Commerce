@@ -5,7 +5,7 @@ const auth = require("./../middleware/auth");
 const WishList = require("./../Schema/WishList");
 const User = require("./../Schema/Users");
 
-// Private | Add Order | api/order/add
+// Private | Add wishlists | api/wishlist/add
 router.put(
     "/add",
     auth, [check("product", "product name is required")],
