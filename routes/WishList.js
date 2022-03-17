@@ -2,13 +2,13 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const auth = require("./../middleware/auth");
-const UserOrder = require("./../Schema/Order");
+const WishList = require("./../Schema/WishList");
 const User = require("./../Schema/Users");
 
 // Private | Add Order | api/order/add
 router.put(
     "/add",
-    auth, [check("order", "order name is required")],
+    auth, [check("product", "product name is required")],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
