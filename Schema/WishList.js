@@ -9,6 +9,7 @@ const WishListSchema = new mongoose.Schema({
         wishlist: {
             type: "string",
         },
+
         date: {
             type: Date,
             default: Date.now,
