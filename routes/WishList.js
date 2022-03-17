@@ -2,39 +2,41 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const auth = require("./../middleware/auth");
-const WishList = require("./../Schema/WishList");
+const WishListSchema = require("./../Schema/WishList");
 const User = require("./../Schema/Users");
 
 // Private | Add wishlists | api/wishlist/add
 router.put(
     "/add",
-    auth, [check("product", "product name is required")],
+    auth, [check("wishlist", "wishlist name is required")],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { product } = req.body;
+        const { wishlist } = req.body;
         const profileFeilds = {};
         profileFeilds.user = req.user.email._id;
         profileFeilds.wishlists = {};
-        if (order) {
-            profileFeilds.wishlists.order = product;
+        if (wishlist) {
+            profileFeilds.wishlists.wishlist = wishlist;
         }
-        try {
-            let profile = await UserOrder.findOne({ user: req.user.email._id });
-            if (profile) {
-                profile.wishlists.unshift(profileFeilds.wishlists);
-                await profile.save();
-                return res.json(profile);
-            }
+        console.log(profileFeilds);
 
-            profile = new UserOrder(profileFeilds);
-            await profile.save();
-            res.json(profileFeilds);
-        } catch (error) {
-            console.log(error);
-        }
+        // try {
+        //     let profile = await WishListSchema.findOne({ user: req.user.email._id });
+        //     if (profile) {
+        //         profile.wishlists.unshift(profileFeilds.wishlists);
+        //         await profile.save();
+        //         return res.json(profile);
+        //     }
+
+        //     profile = new WishListSchema(profileFeilds);
+        //     await profile.save();
+        //     res.json(profileFeilds);
+        // } catch (error) {
+        //     console.log(error);
+        // }
     }
 );
 
