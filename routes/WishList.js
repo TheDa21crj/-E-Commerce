@@ -22,20 +22,20 @@ router.put(
             profileFeilds.wishlists.wishlist = wishlist;
         }
 
-        // try {
-        //     let profile = await WishListSchema.findOne({ user: req.user.email._id });
-        //     if (profile) {
-        //         profile.wishlists.unshift(profileFeilds.wishlists);
-        //         await profile.save();
-        //         return res.json(profile);
-        //     }
+        try {
+            let profile = await WishListSchema.findOne({ user: req.user.email._id });
+            if (profile) {
+                profile.wishlists.unshift(profileFeilds.wishlists);
+                await profile.save();
+                return res.json(profile);
+            }
 
-        //     profile = new WishListSchema(profileFeilds);
-        //     await profile.save();
-        //     res.json(profileFeilds);
-        // } catch (error) {
-        //     console.log(error);
-        // }
+            profile = new WishListSchema(profileFeilds);
+            await profile.save();
+            res.json(profileFeilds);
+        } catch (error) {
+            console.log(error);
+        }
     }
 );
 
