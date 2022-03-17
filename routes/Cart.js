@@ -23,13 +23,13 @@ router.put(
         }
 
         try {
-            let profile = await WishListSchema.findOne({ user: req.user.email._id });
+            let profile = await CartSchema.findOne({ user: req.user.email._id });
             if (profile) {
-                profile.wishlists.unshift(profileFeilds.wishlists);
+                profile.carts.unshift(profileFeilds.carts);
                 await profile.save();
                 return res.json(profile);
             }
-            profile = new WishListSchema(profileFeilds);
+            profile = new CartSchema(profileFeilds);
             await profile.save();
             res.json(profileFeilds);
         } catch (error) {
