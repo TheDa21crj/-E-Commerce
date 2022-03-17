@@ -21,7 +21,6 @@ router.put(
         if (wishlist) {
             profileFeilds.wishlists.wishlist = wishlist;
         }
-        // console.log(profileFeilds.wishlists);
 
         // try {
         //     let profile = await WishListSchema.findOne({ user: req.user.email._id });
