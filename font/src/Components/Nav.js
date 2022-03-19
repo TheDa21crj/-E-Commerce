@@ -115,9 +115,9 @@ export default function Nav() {
         </div>
       </div>
       <div>
-        <PersonIcon />
-        <ShoppingCartIcon />
-        <FavoriteBorderIconE />
+        <PersonIcon fontSize="large" />
+        <ShoppingCartIcon fontSize="large" />
+        <FavoriteBorderIconE fontSize="large" />
       </div>
     </div>
   );
