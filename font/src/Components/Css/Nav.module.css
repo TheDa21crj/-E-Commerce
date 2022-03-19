@@ -43,6 +43,7 @@
 #Dd li {
     list-style-type: none;
     font-family: ManropeRegular;
+    cursor: pointer;
 }
 
 .IconsDiv {
@@ -72,11 +73,11 @@
     visibility: hidden;
     position: absolute;
     padding: 1% 2% 1% 2%;
-    top: 52.667px;
+    top: 38px;
     left: 0%;
     width: 96%;
     height: auto;
-    background-color: white;
+    background-color: transparent;
     z-index: 2;
 }
 
