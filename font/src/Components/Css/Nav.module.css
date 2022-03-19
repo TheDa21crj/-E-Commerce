@@ -59,6 +59,10 @@
     transition: all 0.3s;
 }
 
+.IconsClass1 :hover {
+    color: rgb(66, 66, 196);
+}
+
 .IconsClass2 :hover {
     color: rgb(235, 43, 43);
 }
