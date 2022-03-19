@@ -17,7 +17,7 @@ export default function Nav() {
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
             <li>
-              Men
+              <p>Men</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -47,7 +47,7 @@ export default function Nav() {
               </div>
             </li>
             <li>
-              Women
+              <p>Women</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -75,7 +75,7 @@ export default function Nav() {
               </div>
             </li>
             <li>
-              Kids
+              <p>Kids</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -112,9 +112,15 @@ export default function Nav() {
                 />
               </div>
             </li>
-            <li>New</li>
-            <li>Beauty</li>
-            <li>Membership</li>
+            <li>
+              <p>New</p>
+            </li>
+            <li>
+              <p>Beauty</p>
+            </li>
+            <li>
+              <p>Membership</p>
+            </li>
           </ul>
         </div>
       </div>

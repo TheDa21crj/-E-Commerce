@@ -84,3 +84,7 @@
     opacity: 1;
     visibility: visible;
 }
+
+#Dd li p:hover {
+    text-shadow: 1px 1px 1px rgb(255, 237, 136);
+}
