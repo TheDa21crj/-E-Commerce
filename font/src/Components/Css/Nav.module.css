@@ -1,0 +1,27 @@
+.NavmDiv,
+.TitleandSubtileDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: red;
+}
+
+.TitleandSubtileDiv {
+    width: 70%;
+}
+
+.ulDiv {
+    width: 80%;
+}
+
+#Dd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Dd li {
+    list-style-type: none;
+}

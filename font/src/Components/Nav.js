@@ -1,12 +1,17 @@
 import React from "react";
+import NavCss from "./Css/Nav.module.css";
+import PersonIcon from "@mui/icons-material/Person";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function Nav() {
   return (
-    <div>
-      <div>
-        <div>The Da</div>
-        <div>
-          <ul id="Dd">
+    <div className={NavCss.NavmDiv}>
+      <div className={NavCss.TitleandSubtileDiv}>
+        <h1>The Da</h1>
+        <div className={NavCss.ulDiv}>
+          <ul id={NavCss.Dd}>
             <li>
               Men
               {/* <div className="dropDownDiv">
