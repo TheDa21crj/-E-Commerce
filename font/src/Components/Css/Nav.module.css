@@ -20,7 +20,9 @@
     width: 80%;
 }
 
-.TitleandSubtileDiv h1 {}
+.TitleandSubtileDiv h1 {
+    font-family: ManropeExtraBold;
+}
 
 .ulDiv {
     width: 80%;
