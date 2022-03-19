@@ -1,3 +1,7 @@
+.NavmDiv {
+    height: 20.44vh;
+}
+
 .NavmDiv,
 .TitleandSubtileDiv {
     display: flex;
