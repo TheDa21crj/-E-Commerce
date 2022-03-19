@@ -3,7 +3,7 @@ import Nav from "./../Components/Nav";
 
 export default function Home() {
   return (
-    <div>
+    <div className="BodyDiv">
       <Nav />
       Hello world
     </div>
