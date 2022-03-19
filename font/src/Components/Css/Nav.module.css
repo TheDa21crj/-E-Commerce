@@ -66,3 +66,21 @@
 .IconsClass2 :hover {
     color: rgb(235, 43, 43);
 }
+
+.dropDownDiv {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 1% 2% 1% 2%;
+    top: 52.667px;
+    left: 0%;
+    width: 96%;
+    height: auto;
+    background-color: white;
+    z-index: 2;
+}
+
+#Dd li:hover>.dropDownDiv {
+    opacity: 1;
+    visibility: visible;
+}
