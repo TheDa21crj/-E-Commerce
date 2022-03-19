@@ -1,3 +1,8 @@
+@font-face {
+    font-family: GraphikMedium;
+    src: url(./../../Graphik/GraphikMedium.otf);
+}
+
 .NavmDiv {
     height: 53px;
     box-shadow: 2px 2px 10px #cecece;
