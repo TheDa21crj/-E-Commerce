@@ -113,7 +113,7 @@ export default function Nav() {
           </ul>
         </div>
       </div>
-      <div>
+      <div className={NavCss.IconsDiv}>
         <PersonIcon fontSize="large" />
         <ShoppingCartIcon fontSize="large" />
         <FavoriteBorderIcon fontSize="large" />
