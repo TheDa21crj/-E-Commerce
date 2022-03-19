@@ -5,6 +5,10 @@ import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
+import ImgNav1 from "./../Img/men.jpg";
+import ImgNav2 from "./../Img/women.jpg";
+import ImgNav3 from "./../Img/kids.jpg";
+
 export default function Nav() {
   return (
     <div className={NavCss.NavmDiv}>
