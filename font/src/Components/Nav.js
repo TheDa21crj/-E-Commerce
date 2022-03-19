@@ -103,7 +103,9 @@ export default function Nav() {
               />
             </div> */}
             </li>
-            <li> New </li> <li> Beauty </li> <li> Membership </li>
+            <li>New</li>
+            <li>Beauty</li>
+            <li>Membership</li>
           </ul>
         </div>
       </div>
