@@ -1,5 +1,11 @@
 import React from "react";
+import Nav from "./../Components/Nav";
 
 export default function Home() {
-  return <div>Hello world</div>;
+  return (
+    <div>
+      <Nav />
+      Hello world
+    </div>
+  );
 }
