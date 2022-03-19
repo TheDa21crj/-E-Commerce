@@ -2,8 +2,8 @@ import React from "react";
 import NavCss from "./Css/Nav.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteBorderIconE from "@mui/icons-material/FavoriteBorder";
+import FavoriteBorderIconF from "@mui/icons-material/FavoriteBorder";
 
 export default function Nav() {
   return (
@@ -114,7 +114,11 @@ export default function Nav() {
           </ul>
         </div>
       </div>
-      <div></div>
+      <div>
+        <PersonIcon />
+        <ShoppingCartIcon />
+        <FavoriteBorderIconE />
+      </div>
     </div>
   );
 }
