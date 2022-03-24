@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import HeaderCss from "./Css/Header.module.css";
 import "./Css/Header.css";
 
-import img1 from "./../../Img/Header/christmas.jpg";
+import img1 from "./../../Img/Header/woman.jpg";
 import img2 from "./../../Img/Header/girl-lying-on-the-grass.jpg";
-import img3 from "./../../Img/Header/woman.jpg";
+import img3 from "./../../Img/Header/christmas.jpg";
 
 export default function Header() {
   var settings = {
