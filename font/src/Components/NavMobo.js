@@ -9,7 +9,9 @@ export default function NavMobo() {
         <div className={NCss.burger2}></div>
         <div className={NCss.burger3}></div>
       </div>
-      <div>The Da</div>
+      <div>
+        <h1 className={NCss.h1}>The Da</h1>
+      </div>
       <div>
         <div>Account</div>
       </div>
