@@ -1,5 +1,6 @@
 import React from "react";
 import NCss from "./Css/NavMobo.module.css";
+import PersonIcon from "@mui/icons-material/Person";
 
 export default function NavMobo() {
   return (
@@ -13,7 +14,9 @@ export default function NavMobo() {
         <h1 className={NCss.h1}>The Da</h1>
       </div>
       <div>
-        <div>Account</div>
+        <div>
+          <PersonIcon fontSize="large" />
+        </div>
       </div>
     </div>
   );
