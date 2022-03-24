@@ -9,7 +9,7 @@ export default function Home() {
       <Nav />
       <NavMobo />
       <Header />
-      Hello world{" "}
+      Hello world
     </div>
   );
 }
