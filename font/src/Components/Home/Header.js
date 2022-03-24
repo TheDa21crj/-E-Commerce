@@ -11,7 +11,7 @@ import img3 from "./../../Img/Header/woman.jpg";
 
 export default function Header() {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     arrows: true,
     speed: 500,
@@ -20,17 +20,17 @@ export default function Header() {
     autoplay: true,
   };
   return (
-    <div className="SlideShow">
-      <div className="slides">
-        <Sliders {...settings} className="Hslide">
-          <div className="slide s1">
-            <img src={img1} />
+    <div className={HeaderCss.SlideShow}>
+      <div className={HeaderCss.slideDiv}>
+        <Sliders {...settings} className={HeaderCss.Hslide}>
+          <div className={HeaderCss.slide}>
+            <img src={img1} className={HeaderCss.ImgHeader} />
           </div>
-          <div className="slide ">
-            <img src={img2} />
+          <div className={HeaderCss.slide}>
+            <img src={img2} className={HeaderCss.ImgHeader} />
           </div>
-          <div className="slide">
-            <img src={img3} />
+          <div className={HeaderCss.slide}>
+            <img src={img3} className={HeaderCss.ImgHeader} />
           </div>
         </Sliders>
       </div>
