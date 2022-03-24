@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div className="BodyDiv">
       <Nav />
+      <Header />
       Hello world
     </div>
   );
