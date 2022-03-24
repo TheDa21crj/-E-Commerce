@@ -1,0 +1,8 @@
+.slick-prev {
+    transform: translate(170%, -50%) !important;
+    z-index: 1;
+}
+
+.slick-next {
+    transform: translate(-170%, -50%) !important;
+}
