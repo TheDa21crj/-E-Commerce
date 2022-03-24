@@ -22,7 +22,7 @@ export default function NavMobo() {
           </div>
         </div>
       </div>
-      {show ? <DropDownMobo close={show} /> : ""}
+      {show ? <DropDownMobo /> : ""}
     </div>
   );
 }
