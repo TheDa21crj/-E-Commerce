@@ -11,8 +11,15 @@
     .mDiv {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .ChilDiv {
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        width: 95%;
     }
     .HamBurger {
         width: 44px;
