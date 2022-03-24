@@ -4,38 +4,38 @@
 }
 
 .mDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
 }
 
-.HamBurger {
-    width: 44px;
-    margin: 1%;
-}
-
-.burger1,
-.burger2,
-.burger3 {
-    height: 3px;
-    background-color: black;
-}
-
-.burger1 {
-    margin-bottom: 5px;
-    width: 100%;
-}
-
-.burger2 {
-    margin-bottom: 5px;
-    width: 75%;
-}
-
-.burger3 {
-    width: 50%;
-}
-
-.h1 {
-    font-family: ManropeExtraBold;
+@media only screen and (max-width: 850px) {
+    .mDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .HamBurger {
+        width: 44px;
+        margin: 1%;
+    }
+    .burger1,
+    .burger2,
+    .burger3 {
+        height: 3px;
+        background-color: black;
+    }
+    .burger1 {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .burger2 {
+        margin-bottom: 5px;
+        width: 75%;
+    }
+    .burger3 {
+        width: 50%;
+    }
+    .h1 {
+        font-family: ManropeExtraBold;
+    }
 }
