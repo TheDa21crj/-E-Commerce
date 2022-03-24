@@ -8,7 +8,7 @@ export default function NavMobo() {
   return (
     <div className={NCss.mDiv}>
       <div className={NCss.ChilDiv}>
-        <div className={NCss.HamBurger} onClick={() => setShow(!show)}>
+        <div className={NCss.HamBurger} onClick={() => setShow(true)}>
           <div className={NCss.burger1}></div>
           <div className={NCss.burger2}></div>
           <div className={NCss.burger3}></div>
