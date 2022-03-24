@@ -4,10 +4,11 @@ import PersonIcon from "@mui/icons-material/Person";
 import DropDownMobo from "./DropDownMobo";
 
 export default function NavMobo() {
+  const [show, setShow] = useState(false);
   return (
     <div className={NCss.mDiv}>
       <div className={NCss.ChilDiv}>
-        <div className={NCss.HamBurger}>
+        <div className={NCss.HamBurger} onClick={() => setShow(!show)}>
           <div className={NCss.burger1}></div>
           <div className={NCss.burger2}></div>
           <div className={NCss.burger3}></div>
@@ -21,6 +22,7 @@ export default function NavMobo() {
           </div>
         </div>
       </div>
+      {show ? <div>Hello</div> : ""}
     </div>
   );
 }
