@@ -14,9 +14,8 @@
 .burger1,
 .burger2,
 .burger3 {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+    height: 3px;
+    background-color: black;
 }
 
 .burger1 {
