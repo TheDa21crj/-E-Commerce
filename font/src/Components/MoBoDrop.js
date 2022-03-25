@@ -1,5 +1,6 @@
 import React from "react";
 import DMcss from "./Css/Mobo.module.css";
+
 export default function MoBoDrop(props) {
   return (
     <div>
