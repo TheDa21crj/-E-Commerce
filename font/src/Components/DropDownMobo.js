@@ -4,7 +4,14 @@ import DbmCss from "./Css/DropDownMobo.module.css";
 export default function DropDownMobo(props) {
   return (
     <div className={DbmCss.mDiv}>
-      <p>DropDownMobo</p>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>New</li>
+        <li>Beauty</li>
+        <li>Membership</li>
+      </ul>
     </div>
   );
 }
