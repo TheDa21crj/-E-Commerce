@@ -13,8 +13,12 @@
     z-index: 2;
 }
 
-.ulTag {}
+.ulTag {
+    margin: 0px 3%;
+    list-style-type: none;
+}
 
 .LiPTag {
     font-family: ManropeExtraBold;
+    margin: 3% 0px;
 }
