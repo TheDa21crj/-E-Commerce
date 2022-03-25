@@ -6,7 +6,9 @@ export default function DropDownMobo(props) {
   return (
     <div className={DbmCss.mDiv}>
       <ul>
-        <li>Men</li>
+        <li>
+          <p>Men</p>
+        </li>
         <li>Women</li>
         <li>Kids</li>
         <li>New</li>
