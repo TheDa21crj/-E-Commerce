@@ -4,7 +4,7 @@ import DMcss from "./Css/Mobo.module.css";
 export default function MoBoDrop(props) {
   return (
     <div className={DMcss.mDiv}>
-      <div>
+      <div className={DMcss.Div1}>
         <p className={DMcss.pTagHead}>{props.h21}</p>
         <ul className={DMcss.MoboUlTag}>
           <li> {props.li1} </li> <li> {props.li2} </li> <li> {props.li3} </li>
@@ -14,7 +14,7 @@ export default function MoBoDrop(props) {
           <li> {props.li12m} </li>
         </ul>
       </div>
-      <div>
+      <div className={DMcss.Div2}>
         <p className={DMcss.pTagHead}>{props.h22}</p>
         <ul className={DMcss.MoboUlTag}>
           <li> {props.li12} </li> <li> {props.li22} </li>
@@ -25,7 +25,7 @@ export default function MoBoDrop(props) {
           <li> {props.li112} </li> <li> {props.li122} </li>
         </ul>
       </div>
-      <div>
+      <div className={DMcss.Div3}>
         <p className={DMcss.pTagHead}>{props.h23}</p>
         <ul className={DMcss.MoboUlTag}>
           <li> {props.li13} </li> <li> {props.li23} </li>
