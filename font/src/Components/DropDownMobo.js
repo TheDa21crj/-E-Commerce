@@ -70,7 +70,43 @@ export default function DropDownMobo(props) {
           )}
         </li>
         <li>
-          <p>Kids</p>
+          <p onClick={() => setKid(!showKid)}>Kids</p>
+          {showKid ? (
+            <MoBoDrop
+              H21="TOPWEAR"
+              H22="BOTTOMWEAR"
+              H23="Accessories"
+              li1="T-Shirts"
+              li2="Shirts"
+              li3="Dresses"
+              li4="Clothing Sets"
+              li5="Ethnic Wear"
+              li6="Shirts"
+              li7="Hoodies & Sweatshirts"
+              li8="Jackets"
+              li9="Winterwear"
+              li10="Jumpsuits"
+              li11="Tops"
+              li12m="Frok"
+              li12="Shorts"
+              li22="Jeans"
+              li32="Trousers"
+              li42="Skirts"
+              li52="Tights & Leggings"
+              li62="Capris"
+              li13="Bags & Backpacks"
+              li23="Watches"
+              li33="Jewellery & Hair accessory"
+              li43="Sunglasses"
+              li53="Masks & Protective Gears"
+              li63="Caps & Hats"
+              li73="Cotton Masks"
+              li83="Socks"
+              li93="Backpacks"
+            />
+          ) : (
+            ""
+          )}
         </li>
         <li>
           <p>New</p>
