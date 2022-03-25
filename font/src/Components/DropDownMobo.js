@@ -40,8 +40,8 @@ export default function DropDownMobo(props) {
           )}
         </li>
         <li>
-          <p onClick={() => setMen(!showWoMen)}>Women</p>
-          {showMen ? (
+          <p onClick={() => setMen(!setWoMen)}>Women</p>
+          {showWoMen ? (
             <MoBoDrop
               h21="TOPWEAR"
               h22="BOTTOMWEAR"
