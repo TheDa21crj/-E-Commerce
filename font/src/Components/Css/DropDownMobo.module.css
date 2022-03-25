@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
 .mDiv {
     position: absolute;
     top: 43px;
@@ -8,4 +13,6 @@
     z-index: 2;
 }
 
-.LiPTag {}
+.LiPTag {
+    font-family: ManropeExtraBold;
+}
