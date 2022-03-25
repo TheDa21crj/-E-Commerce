@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
 .mDiv {
     display: flex;
     flex-direction: row;
@@ -7,4 +12,10 @@
 
 .MoboUlTag {
     list-style-type: none;
+}
+
+.pTagHead {
+    font-family: ManropeExtraBold;
+    font-size: 1.4rem;
+    letter-spacing: 0.2px;
 }
