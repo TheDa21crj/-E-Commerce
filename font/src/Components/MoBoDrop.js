@@ -6,7 +6,7 @@ export default function MoBoDrop(props) {
     <div>
       <div>
         <h1>{props.h21}</h1>
-        <ul>
+        <ul className={DMcss.MoboUlTag}>
           <li> {props.li1} </li> <li> {props.li2} </li> <li> {props.li3} </li>
           <li> {props.li4} </li> <li> {props.li5} </li> <li> {props.li6} </li>
           <li> {props.li7} </li> <li> {props.li8} </li> <li> {props.li9} </li>
@@ -16,7 +16,7 @@ export default function MoBoDrop(props) {
       </div>
       <div>
         <h1>{props.h22}</h1>
-        <ul>
+        <ul className={DMcss.MoboUlTag}>
           <li> {props.li12} </li> <li> {props.li22} </li>
           <li> {props.li32} </li> <li> {props.li42} </li>
           <li> {props.li52} </li> <li> {props.li62} </li>
@@ -27,7 +27,7 @@ export default function MoBoDrop(props) {
       </div>
       <div>
         <h1>{props.h23}</h1>
-        <ul>
+        <ul className={DMcss.MoboUlTag}>
           <li> {props.li13} </li> <li> {props.li23} </li>
           <li> {props.li33} </li> <li> {props.li43} </li>
           <li> {props.li53} </li> <li> {props.li63} </li>
