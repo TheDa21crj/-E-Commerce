@@ -5,6 +5,7 @@ import DbmCss from "./Css/DropDownMobo.module.css";
 export default function DropDownMobo(props) {
   const [showMen, setMen] = useState(false);
   const [showWoMen, setWoMen] = useState(false);
+  const [showKid, setKid] = useState(false);
   return (
     <div className={DbmCss.mDiv}>
       <ul>
@@ -40,7 +41,7 @@ export default function DropDownMobo(props) {
           )}
         </li>
         <li>
-          <p onClick={() => setMen(!setWoMen)}>Women</p>
+          <p onClick={() => setWoMen(!showWoMen)}>Women</p>
           {showWoMen ? (
             <MoBoDrop
               h21="TOPWEAR"
@@ -68,10 +69,18 @@ export default function DropDownMobo(props) {
             ""
           )}
         </li>
-        <li>Kids</li>
-        <li>New</li>
-        <li>Beauty</li>
-        <li>Membership</li>
+        <li>
+          <p>Kids</p>
+        </li>
+        <li>
+          <p>New</p>
+        </li>
+        <li>
+          <p>Beauty</p>
+        </li>
+        <li>
+          <p>Membership</p>
+        </li>
       </ul>
     </div>
   );
