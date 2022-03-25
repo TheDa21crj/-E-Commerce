@@ -73,9 +73,9 @@ export default function DropDownMobo(props) {
           <p onClick={() => setKid(!showKid)}>Kids</p>
           {showKid ? (
             <MoBoDrop
-              H21="TOPWEAR"
-              H22="BOTTOMWEAR"
-              H23="Accessories"
+              h21="TOPWEAR"
+              h22="BOTTOMWEAR"
+              h23="Accessories"
               li1="T-Shirts"
               li2="Shirts"
               li3="Dresses"
