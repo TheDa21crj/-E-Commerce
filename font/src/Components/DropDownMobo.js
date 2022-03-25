@@ -8,6 +8,7 @@ export default function DropDownMobo(props) {
       <ul>
         <li>
           <p>Men</p>
+          <MoBoDrop />
         </li>
         <li>Women</li>
         <li>Kids</li>
