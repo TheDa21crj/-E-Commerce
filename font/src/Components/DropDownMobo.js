@@ -8,7 +8,7 @@ export default function DropDownMobo(props) {
   const [showKid, setKid] = useState(false);
   return (
     <div className={DbmCss.mDiv}>
-      <ul>
+      <ul className={DbmCss.ulTag}>
         <li>
           <p onClick={() => setMen(!showMen)} className={DbmCss.LiPTag}>
             Men
