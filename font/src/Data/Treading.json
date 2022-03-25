@@ -1,29 +1,22 @@
 [{
-        "id": "1",
-        "name": "gmail"
+        "id": "1"
     },
     {
-        "id": "2",
-        "name": "gmail photos"
+        "id": "2"
     },
     {
-        "id": "3",
-        "name": "gmail drive"
+        "id": "3"
     },
     {
-        "id": "4",
-        "name": "gmail blog"
+        "id": "4"
     },
     {
-        "id": "5",
-        "name": "gmail contact"
+        "id": "5"
     },
     {
-        "id": "6",
-        "name": "gmail map"
+        "id": "6"
     },
     {
-        "id": "7",
-        "name": "gmail files"
+        "id": "7"
     }
 ]
