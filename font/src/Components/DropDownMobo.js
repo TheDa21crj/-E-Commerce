@@ -10,7 +10,9 @@ export default function DropDownMobo(props) {
     <div className={DbmCss.mDiv}>
       <ul>
         <li>
-          <p onClick={() => setMen(!showMen)}>Men</p>
+          <p onClick={() => setMen(!showMen)} className={DbmCss.LiPTag}>
+            Men
+          </p>
           {showMen ? (
             <MoBoDrop
               h21="TOPWEAR"
@@ -41,7 +43,9 @@ export default function DropDownMobo(props) {
           )}
         </li>
         <li>
-          <p onClick={() => setWoMen(!showWoMen)}>Women</p>
+          <p onClick={() => setWoMen(!showWoMen)} className={DbmCss.LiPTag}>
+            Women
+          </p>
           {showWoMen ? (
             <MoBoDrop
               h21="TOPWEAR"
@@ -70,7 +74,9 @@ export default function DropDownMobo(props) {
           )}
         </li>
         <li>
-          <p onClick={() => setKid(!showKid)}>Kids</p>
+          <p onClick={() => setKid(!showKid)} className={DbmCss.LiPTag}>
+            Kids
+          </p>
           {showKid ? (
             <MoBoDrop
               h21="TOPWEAR"
