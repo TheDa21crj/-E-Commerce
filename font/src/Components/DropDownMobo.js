@@ -4,6 +4,7 @@ import DbmCss from "./Css/DropDownMobo.module.css";
 
 export default function DropDownMobo(props) {
   const [showMen, setMen] = useState(false);
+  const [showWoMen, setWoMen] = useState(false);
   return (
     <div className={DbmCss.mDiv}>
       <ul>
@@ -11,6 +12,9 @@ export default function DropDownMobo(props) {
           <p onClick={() => setMen(!showMen)}>Men</p>
           {showMen ? (
             <MoBoDrop
+              h21="TOPWEAR"
+              h22="BOTTOMWEAR"
+              h23="Accessories"
               li1="T-Shirts"
               li2="Co-ord Sets New"
               li3="Drop-Cut T-Shirts"
@@ -23,19 +27,47 @@ export default function DropDownMobo(props) {
               li10="Jackets"
               li11="Sweaters"
               li12="Cotton Pants New"
-              li13="Joggers"
-              li14="Shorts"
-              li15="Pajamas"
-              li16="Boxers"
-              li17="Cotton Masks"
-              li18="Socks"
-              li19="Backpacks"
+              li22="Joggers"
+              li32="Shorts"
+              li42="Pajamas"
+              li52="Boxers"
+              li13="Cotton Masks"
+              li23="Socks"
+              li33="Backpacks"
             />
           ) : (
             ""
           )}
         </li>
-        <li>Women</li>
+        <li>
+          <p onClick={() => setMen(!showWoMen)}>Women</p>
+          {showMen ? (
+            <MoBoDrop
+              h21="TOPWEAR"
+              h22="BOTTOMWEAR"
+              h23="Accessories"
+              li1="Women's T-Shirts"
+              li2="Dresses"
+              li3="Unisex T-Shirts"
+              li4="Shirts"
+              li5="Tank Tops"
+              li6="Shirts"
+              li7="Hoodies & Sweatshirts"
+              li8="Jackets"
+              li9="Winterwear"
+              li12="Joggers"
+              li22="Pajamas"
+              li32="All Day Pants"
+              li42="Shorts"
+              li52="Urban Leggings"
+              li13="Cotton Masks"
+              li23="Socks"
+              li33="Backpacks"
+            />
+          ) : (
+            ""
+          )}
+        </li>
         <li>Kids</li>
         <li>New</li>
         <li>Beauty</li>
