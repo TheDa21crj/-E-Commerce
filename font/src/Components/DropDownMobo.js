@@ -115,13 +115,13 @@ export default function DropDownMobo(props) {
           )}
         </li>
         <li>
-          <p>New</p>
+          <p className={DbmCss.LiPTag}>New</p>
         </li>
         <li>
-          <p>Beauty</p>
+          <p className={DbmCss.LiPTag}>Beauty</p>
         </li>
         <li>
-          <p>Membership</p>
+          <p className={DbmCss.LiPTag}>Membership</p>
         </li>
       </ul>
     </div>
