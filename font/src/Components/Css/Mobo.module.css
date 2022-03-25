@@ -38,11 +38,13 @@
     }
     .Div1,
     .Div2,
-    .Div3 {
+    .Div3,
+    .MoboUlTag {
         margin-left: 10%;
     }
     .MoboUlTag {
-        margin-left: 10%;
         margin-bottom: 20px;
     }
 }
+
+@media only screen and (max-width: 500px) {}
