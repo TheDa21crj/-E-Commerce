@@ -1,10 +1,12 @@
 import React from "react";
-import AdminC from "./../Components/Admin/Admin";
+import Nav from "./../Components/Nav";
+import Footer from "./../Components/Footer";
 
 export default function Admin() {
   return (
     <div>
-      <AdminC />
+      <Nav />
+      <Footer />
     </div>
   );
 }
