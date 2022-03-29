@@ -1,5 +1,11 @@
 import React from "react";
+import Login from "./../Components/Admin/Login";
 
 export default function AdminLogin() {
-  return <div>AdminLogin</div>;
+  return (
+    <div>
+      <Login />
+      AdminLogin
+    </div>
+  );
 }
