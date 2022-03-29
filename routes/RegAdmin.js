@@ -5,7 +5,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const User = require("./../Schema/Users");
+const User = require("./../Schema/Admin");
 
 router.post(
     "/", [
@@ -25,11 +25,6 @@ router.post(
                 return res.status(400).json({ message: `User Already Exists` });
             }
             console.log(req.body);
-            const avatar = gravatar.url(email, {
-                s: "200",
-                r: "pg",
-                d: "mm",
-            });
 
             user = new User({
                 username,
