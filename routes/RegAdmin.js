@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/Admin");
 
+// Private| Admin Register| /api/RegAdmin || Admin ONLY
 router.post(
     "/", [
         check("username", "username is Required").not().isEmpty(),
@@ -36,21 +37,6 @@ router.post(
 
             await user.save();
             res.status(202).json({ message: `User Registered` });
-
-            // const payload = {
-            //     user: {
-            //         id: user.id,
-            //     },
-            // };
-
-            // jwt.sign(
-            //     payload,
-            //     config.get("jwtTokenAuth"), { expiresIn: "360000" },
-            //     (err, token) => {
-            //         if (err) throw err;
-            //         res.json({ token });
-            //     }
-            // );
         } catch (error) {
             console.log(error);
             res.status(500).json({ message: error });

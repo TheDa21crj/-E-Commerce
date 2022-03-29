@@ -5,7 +5,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const User = require("./../Schema/Users");
+const User = require("./../Schema/Admin");
 
 // Private| Admin Login| /api/admin/login || Admin ONLY
 router.post(
