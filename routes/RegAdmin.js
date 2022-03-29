@@ -41,6 +41,7 @@ router.post(
             user.password = await bcrypt.hash(password, salt);
 
             await user.save();
+            res.status(202).json({ message: `User Registered` });
 
             // const payload = {
             //     user: {
