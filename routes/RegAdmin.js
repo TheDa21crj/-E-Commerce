@@ -33,8 +33,7 @@ router.post(
             });
 
             user = new User({
-                email,
-                avatar,
+                username,
                 password,
             });
 
