@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
-        <Link to="/">
+        <Link to="/" className={NavCss.LinkTag}>
           <h1>The Da</h1>
         </Link>
         <div className={NavCss.ulDiv}>

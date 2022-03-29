@@ -25,8 +25,10 @@
     width: 80%;
 }
 
-.TitleandSubtileDiv h1 {
+.LinkTag {
     font-family: ManropeExtraBold;
+    text-decoration: none;
+    color: inherit;
 }
 
 .ulDiv {
