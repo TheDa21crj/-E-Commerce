@@ -1,5 +1,11 @@
 import React from "react";
+import Nav from "./../Nav";
 
 export default function Admin() {
-  return <div>Admin</div>;
+  return (
+    <div>
+      <Nav />
+      Admin
+    </div>
+  );
 }
