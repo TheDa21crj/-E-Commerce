@@ -1,6 +1,7 @@
 import React from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
+import { Link } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -13,7 +14,9 @@ export default function Nav() {
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
-        <h1>The Da</h1>
+        <Link to="/">
+          <h1>The Da</h1>
+        </Link>
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
             <li>
