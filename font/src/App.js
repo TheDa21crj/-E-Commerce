@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import Admin from "./Pages/Admin";
+import AdminLogin from "./Pages/AdminLogin";
 
 import Layout from "./Pages/Layout";
 
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Layout>
