@@ -1,8 +1,8 @@
 import React from "react";
 import Nav from "./../Components/Nav";
-import Footer from "./../Components/Footer";
 import NavMobo from "./../Components/NavMobo";
 import Header from "./../Components/Home/Header";
+import Footer from "./../Components/Footer";
 
 export default function Home() {
   return (
