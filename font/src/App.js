@@ -6,23 +6,15 @@ import Admin from "./Pages/Admin";
 import Layout from "./Pages/Layout";
 
 function App() {
-    return ( <
-        Layout >
-        <
-        Routes >
-        <
-        Route path = "/"
-        element = { < Home / > }
-        /> <
-        Route path = "/admin"
-        element = { < Admin / > }
-        /> <
-        Route path = "*"
-        element = { < Error / > }
-        /> <
-        /Routes> <
-        /Layout>
-    );
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />{" "}
+        <Route path="/admin" element={<Admin />} />{" "}
+        <Route path="*" element={<Error />} />{" "}
+      </Routes>{" "}
+    </Layout>
+  );
 }
 
 export default App;
