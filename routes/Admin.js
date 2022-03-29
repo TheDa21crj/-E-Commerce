@@ -20,7 +20,8 @@ router.post(
         }
         const { username, password } = req.body;
         try {
-            if (username === "rishav" && password === "password") {
+            let userE = await User.findOne({ username });
+            if (!userE) {
                 return res
                     .status(404)
                     .json({ errors: [{ message: "Invalid Credentials" }] });
