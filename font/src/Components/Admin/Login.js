@@ -14,9 +14,28 @@ export default function Login() {
     setUser({ ...showUser, [name]: value });
   };
 
+  const PostData = async () => {
+    const { username, password } = showUser;
+
+    const res = await fetch("/api/admin/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    });
+    const r = await res.json();
+    if (r.status === 200) {
+      console.log("Login Admin");
+    }
+  };
+
   return (
     <div>
-      <form action="">
+      <form action="" method="POST">
         <input
           type="text"
           name="username"
@@ -34,7 +53,7 @@ export default function Login() {
           onChange={DataInp}
         />
       </form>
-      <button>Login</button>
+      <button onClick={PostData}>Login</button>
     </div>
   );
 }
