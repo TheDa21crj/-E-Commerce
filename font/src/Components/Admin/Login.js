@@ -1,15 +1,41 @@
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const history = useHistory();
+  const [showUser, setUser] = useState({ username: "", password: "" });
+
+  const navigate = useNavigate();
+
+  let username, password;
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    console.log(name);
+    // setUser({ ...showUser, [username]: value });
+  };
+
   return (
     <div>
       <form action="">
-        <input type="text" name="" id="" placeholder="username" />
-        <input type="password" name="" id="" placeholder="password" />
+        <input
+          type="text"
+          name="username"
+          id=""
+          placeholder="username"
+          value={showUser.username}
+          onChange={DataInp}
+        />
+        <input
+          type="password"
+          name="password"
+          id=""
+          placeholder="password"
+          value={showUser.password}
+          onChange={DataInp}
+        />
       </form>
-      <button> Login </button>
+      <button>Login</button>
     </div>
   );
 }
