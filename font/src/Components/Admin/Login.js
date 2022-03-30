@@ -34,6 +34,7 @@ export default function Login() {
       console.log("Error");
     } else if (!r.errors) {
       console.log("Login Admin");
+      navigate("/admin/post-content");
     } else {
       console.log("Unwanted Error");
     }
