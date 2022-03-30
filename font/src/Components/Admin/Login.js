@@ -11,8 +11,7 @@ export default function Login() {
     const name = e.target.name;
     const value = e.target.value;
 
-    console.log(name);
-    // setUser({ ...showUser, [username]: value });
+    setUser({ ...showUser, [name]: value });
   };
 
   return (
