@@ -17,6 +17,10 @@ export default function Login() {
   const PostData = async () => {
     const { username, password } = showUser;
 
+    // fetch("http://localhost:5000/api/admin/login").then((res) =>
+    //   console.log(res)
+    // );
+
     const res = await fetch("/api/admin/login", {
       method: "POST",
       headers: {
@@ -28,9 +32,21 @@ export default function Login() {
       }),
     });
     const r = await res.json();
-    if (r.status === 200) {
+    // if (r.status === 200) {
+    //   console.log("Login Admin");
+    // } else if (r.status === 400 || r.status === 404 || !r) {
+    //   console.log("No");
+    // } else {
+
+    if (r.errors) {
+      console.log("Error");
+    } else if (!r.errors) {
       console.log("Login Admin");
+    } else {
+      console.log("Unwanted Error");
     }
+
+    // }
   };
 
   return (
