@@ -5,6 +5,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const auth = require("./../middleware/auth");
 const User = require("./../Schema/Admin");
 
 // Private| Admin Login| /api/admin/login || Admin ONLY
@@ -53,5 +54,9 @@ router.post(
         }
     }
 );
+
+router.post("/post-content", auth, (req, res) => {
+    res.send(req.user);
+});
 
 module.exports = router;
