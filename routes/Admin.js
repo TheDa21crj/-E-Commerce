@@ -45,6 +45,11 @@ router.post(
                 config.get("jwtTokenAuth"), { expiresIn: "360000" },
                 (err, token) => {
                     if (err) throw err;
+                    res.cookie("jwtTokenAuth", token, {
+                        expries: new Date(Date.now() + 360000),
+                        httpOnly: true,
+                    });
+                    consloe.log(`cookie = ${res.cookies.jwtTokenAuth}`);
                     res.status(200).json({ token });
                 }
             );
