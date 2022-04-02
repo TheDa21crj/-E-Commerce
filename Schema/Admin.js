@@ -9,6 +9,12 @@ const AdminSchema = new mongoose.Schema({
         type: "string",
         required: true,
     },
+    tokens: [{
+        token: {
+            type: "string",
+            required: true,
+        },
+    }, ],
     date: {
         type: Date,
         default: Date.now,
