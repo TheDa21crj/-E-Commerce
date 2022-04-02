@@ -17,6 +17,8 @@ connectDB();
 
 app.use(express.json({ extended: false }));
 
+app.use(cookieParser());
+
 app.get("/", (req, res) => {
     res.status(200).send("Hello World");
 });
