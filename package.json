@@ -4,7 +4,10 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "server": "nodemon server"
+        "start": "node server",
+        "server": "nodemon server",
+        "font": "npm start --prefix font",
+        "dev": "concurrently \"npm run server\" \"npm run font\""
     },
     "repository": {
         "type": "git",
