@@ -40,19 +40,15 @@ router.post(
                 },
             };
 
-            jwt.sign(
-                payload,
-                config.get("jwtTokenAuth"), { expiresIn: "360000" },
-                (err, token) => {
-                    if (err) throw err;
-                    res.cookie("jwtTokenAuth", token, {
-                        expries: new Date(Date.now() + 360000),
-                        httpOnly: true,
-                    });
-                    consloe.log(`cookie = ${res.cookies.jwtTokenAuth}`);
-                    res.status(200).json({ token });
-                }
-            );
+            let token = jwt.sign(payload, config.get("jwtTokenAuth"));
+            userE.tokens.push({ token });
+            await userE.save();
+            res.cookie("jwtTokenAuth", token, {
+                expries: new Date(Date.now() + 360000),
+                httpOnly: true,
+            });
+
+            res.status(202).send(userE);
         } catch (error) {
             console.log(error);
             return res.status(500).json({ message: error });
