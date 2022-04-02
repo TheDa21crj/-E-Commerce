@@ -21,6 +21,7 @@ app.use(express.json({ extended: false }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
+    res.cookie("jwt", "token");
     res.status(200).send("Hello World");
 });
 
