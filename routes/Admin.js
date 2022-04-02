@@ -5,7 +5,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const auth = require("./../middleware/auth");
+// const auth = require("./../middleware/AdminAuth");
 const User = require("./../Schema/Admin");
 
 // Private| Admin Login| /api/admin/login || Admin ONLY
@@ -48,7 +48,7 @@ router.post(
                 httpOnly: true,
             });
 
-            res.status(202).send(userE);
+            res.status(202).send(token);
         } catch (error) {
             console.log(error);
             return res.status(500).json({ message: error });
@@ -56,8 +56,8 @@ router.post(
     }
 );
 
-router.post("/post-content", auth, (req, res) => {
-    res.send(req.user);
-});
+// router.get("/post-content", auth, (req, res) => {
+//     res.send(req.user_data);
+// });
 
 module.exports = router;
