@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce",
+  "version": "0.0.3",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDa21crj/E-Commerce.git"
+  },
+  "author": "Rishav Raj Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDa21crj/E-Commerce/issues"
+  },
+  "homepage": "https://github.com/TheDa21crj/E-Commerce#readme"
+}
