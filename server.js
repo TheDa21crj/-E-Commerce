@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
-// const connectDB = require("./config/db");
+const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-// connectDB();
+connectDB();
 
 app.use(express.json({ extended: false }));
 
