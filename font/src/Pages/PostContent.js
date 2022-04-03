@@ -7,7 +7,7 @@ export default function PostContent() {
   const AuthMiddleware = async () => {
     try {
       const res = await fetch("/api/admin/post", {
-        method: "POST",
+        method: "GET",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -16,7 +16,12 @@ export default function PostContent() {
       });
 
       const data = await res.json();
-      console.log(data);
+      if (data.errors) {
+        navigate("/");
+      }
+      if (data) {
+        console.log(data);
+      }
     } catch (error) {
       console.log(error);
       navigate("/");

@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 
 const Auth = async(req, res, next) => {
     try {
-        const token = req.cookie.jwtTokenAuth;
+        const token = req.cookies.jwtTokenAuth;
         const vToken = jwt.verify(token, config.get("jwtTokenAuth"));
         const dataUser = await User.findOne({
             _id: vToken._id,
@@ -22,7 +22,7 @@ const Auth = async(req, res, next) => {
 
         next();
     } catch (error) {
-        res.status(401).json({ errors: [{ message: error }] });
+        res.status(401).json({ errors: error });
     }
 };
 module.exports = Auth;

@@ -6,8 +6,8 @@ const jwt = require("jsonwebtoken");
 const User = require("./../Schema/Admin");
 const auth = require("./../middleware/auth");
 
-router.post("/post", async(req, res) => {
-    res.status(200).send({ message: `Hello Post` });
+router.get("/post", auth, async(req, res) => {
+    res.status(200).send({ message: req.dataUser });
 });
 
 module.exports = router;
