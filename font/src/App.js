@@ -3,6 +3,7 @@ import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import AdminLogin from "./Pages/AdminLogin";
+import PostContent from "./Pages/PostContent";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="/admin" element={<Admin />} /> */}
           <Route path="/admin/login" element={<AdminLogin />} />
-          {/* <Route path="/admin/post-content" element={<PostContent />} /> */}
+          <Route path="/admin/post-content" element={<PostContent />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Layout>
