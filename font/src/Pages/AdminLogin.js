@@ -1,19 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AdminLogin() {
+  const [showUser, setUser] = useState({ username: "", password: "" });
+
+  const navigate = useNavigate();
+
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setUser({ ...showUser, [name]: value });
+  };
+
+  const PostData = async () => {
+    const { username, password } = showUser;
+
+    const res = await fetch("/api/admin/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    });
+
+    const r = await res.json();
+    console.log(r);
+
+    // if (r.errors) {
+    //   console.log("Error");
+    // } else if (!r.errors) {
+    //   console.log("Login Admin");
+    //   // navigate("/admin/post-content");
+    // } else {
+    //   console.log("Unwanted Error");
+    // }
+  };
+
   return (
     <div>
-      <h1>Login</h1>
       <form action="" method="POST">
         <div>
           <label htmlFor="username">username</label>
-          <input type="text" name="" id="" placeholder="username" />
+          <input
+            type="text"
+            name="username"
+            id=""
+            placeholder="username"
+            value={showUser.username}
+            onChange={DataInp}
+          />
         </div>
         <div>
-          <label htmlFor="username">password</label>
-          <input type="text" name="" id="" placeholder="password" />
+          <label htmlFor="password">password</label>
+          <input
+            type="password"
+            name="password"
+            id=""
+            placeholder="password"
+            value={showUser.password}
+            onChange={DataInp}
+          />
         </div>
       </form>
+      <button onClick={PostData}> Login </button>
     </div>
   );
 }

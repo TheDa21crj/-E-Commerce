@@ -21,36 +21,12 @@ router.post(
         const { username, password } = req.body;
         try {
             let userE = await User.findOne({ username });
-            if (!userE) {
-                return res
-                    .status(404)
-                    .json({ errors: [{ message: "Invalid Credentials" }] });
-            }
-            const matchP = await bcrypt.compare(password, userE.password);
-            if (!matchP) {
-                return res
-                    .status(400)
-                    .json({ errors: [{ message: "Invalid Credentials" }] });
-            }
-
-            const payload = {
-                user: {
-                    email: userE,
-                },
-            };
-
-            let token = jwt.sign(payload, config.get("jwtTokenAuth"));
-            userE.tokens.push({ token });
-            await userE.save();
-            res.cookie("jwtTokenAuth", token, {
-                expries: new Date(Date.now() + 360000),
-                httpOnly: true,
-            });
-
-            res.status(202).send(token);
+            // res
+            //     .status(202)
+            //     .send({ message: `Username = ${username} and Password = ${password}` });
+            res.status(202).send(userE);
         } catch (error) {
             console.log(error);
-            return res.status(500).json({ message: error });
         }
     }
 );
