@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("./../Schema/Admin");
 
-router.post("/post", async(req, res) => {
+router.post("/post", auth, async(req, res) => {
     res.status(200).send({ message: `Hello World` });
 });
 
