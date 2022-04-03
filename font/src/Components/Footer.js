@@ -7,11 +7,11 @@ export default function Footer() {
     <div className={FootCss.mDiv}>
       <div>
         <ul>
-          <li>About Us</li>
+          <li> About Us </li>
         </ul>
       </div>
       <div>
-        <Link to="/admin">Admin</Link>
+        <Link to="/admin/login"> Admin </Link>
       </div>
     </div>
   );

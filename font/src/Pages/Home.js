@@ -13,7 +13,6 @@ export default function Home() {
       <Header />
       Hello world
       <Footer />
-      Home <Link to="/admin/login"> Admin </Link>{" "}
     </div>
   );
 }
