@@ -31,8 +31,8 @@ app.get("/", (req, res) => {
 // app.use("/api/Order", require("./routes/Order"));
 // app.use("/api/WishList", require("./routes/WishList"));
 // app.use("/api/Cart", require("./routes/Cart"));
-// app.use("/api/RegAdmin", require("./routes/RegAdmin"));
-// app.use("/api/admin/login", require("./routes/Admin"));
+app.use("/api/RegAdmin", require("./routes/RegAdmin"));
+app.use("/api/admin/login", require("./routes/Admin"));
 
 const port = process.env.PORT || 5000;
 
