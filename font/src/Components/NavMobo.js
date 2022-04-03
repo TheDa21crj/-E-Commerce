@@ -11,13 +11,13 @@ export default function NavMobo() {
       <div className={NCss.ChilDiv}>
         <div className={NCss.HamBurger} onClick={() => setShow(!show)}>
           {show ? (
+            <CloseIcon fontSize="large" />
+          ) : (
             <div>
               <div className={NCss.burger1}></div>
               <div className={NCss.burger2}></div>
               <div className={NCss.burger3}></div>
             </div>
-          ) : (
-            <CloseIcon fontSize="large" />
           )}
         </div>
         <div>
