@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
-const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const config = require("config");
 const User = require("./../Schema/Admin");
 
 // Private| Admin Login| /api/admin/login || Admin ONLY
@@ -33,7 +31,12 @@ router.post(
                     .json({ errors: [{ message: "Invalid Credentials" }] });
             }
 
-            res.status(202).json("Login successful");
+            let token = await userE.generateToken();
+            res.cookie("jwtTokenAuth", token, {
+                expires: new Date(Date.now() + 360000),
+                httpOnly: true,
+            });
+            res.status(202).send({ message: `Token = ${token}` });
         } catch (error) {
             console.log(error);
         }
