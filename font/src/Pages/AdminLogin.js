@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminLogin() {
   const [showUser, setUser] = useState({ username: "", password: "" });
@@ -44,7 +44,7 @@ export default function AdminLogin() {
     <div>
       <form action="" method="POST">
         <div>
-          <label htmlFor="username">username</label>
+          <label htmlFor="username"> username </label>
           <input
             type="text"
             name="username"
@@ -52,10 +52,11 @@ export default function AdminLogin() {
             placeholder="username"
             value={showUser.username}
             onChange={DataInp}
+            autoComplete="off"
           />
         </div>
         <div>
-          <label htmlFor="password">password</label>
+          <label htmlFor="password"> password </label>
           <input
             type="password"
             name="password"
@@ -63,6 +64,7 @@ export default function AdminLogin() {
             placeholder="password"
             value={showUser.password}
             onChange={DataInp}
+            autoComplete="off"
           />
         </div>
       </form>
