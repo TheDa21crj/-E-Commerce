@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NCss from "./Css/NavMobo.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import DropDownMobo from "./DropDownMobo";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function NavMobo() {
   const [show, setShow] = useState(false);
@@ -9,9 +10,15 @@ export default function NavMobo() {
     <div className={NCss.mDiv}>
       <div className={NCss.ChilDiv}>
         <div className={NCss.HamBurger} onClick={() => setShow(!show)}>
-          <div className={NCss.burger1}></div>
-          <div className={NCss.burger2}></div>
-          <div className={NCss.burger3}></div>
+          {show ? (
+            <div>
+              <div className={NCss.burger1}></div>
+              <div className={NCss.burger2}></div>
+              <div className={NCss.burger3}></div>
+            </div>
+          ) : (
+            <CloseIcon fontSize="large" />
+          )}
         </div>
         <div>
           <h1 className={NCss.h1}>The Da</h1>
