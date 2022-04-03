@@ -30,14 +30,14 @@ export default function AdminLogin() {
     const r = await res.json();
     console.log(r);
 
-    // if (r.errors) {
-    //   console.log("Error");
-    // } else if (!r.errors) {
-    //   console.log("Login Admin");
-    //   // navigate("/admin/post-content");
-    // } else {
-    //   console.log("Unwanted Error");
-    // }
+    if (r.errors) {
+      console.log("Error");
+    } else if (!r.errors) {
+      console.log("Login Admin");
+      navigate("/admin/post-content");
+    } else {
+      console.log("Unwanted Error");
+    }
   };
 
   return (
