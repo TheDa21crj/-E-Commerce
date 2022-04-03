@@ -128,7 +128,7 @@ export default function Nav() {
         </div>
       </div>
       <div className={NavCss.IconsDiv}>
-        <Link to="/my-account">
+        <Link to="/my-account" className="LinkStyle">
           <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
         </Link>
         <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
