@@ -1,0 +1,99 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../Manrope/static/Manrope-Regular.ttf);
+}
+
+.NavmDiv {
+    height: 53px;
+    box-shadow: 2px 2px 10px #cecece;
+}
+
+.NavmDiv,
+.TitleandSubtileDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.TitleandSubtileDiv {
+    width: 80%;
+}
+
+.LinkTag {
+    font-family: ManropeExtraBold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.ulDiv {
+    width: 80%;
+}
+
+#Dd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Dd li {
+    list-style-type: none;
+    font-family: ManropeRegular;
+    cursor: pointer;
+}
+
+.IconsDiv {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.IconsClass0,
+.IconsClass1,
+.IconsClass2 {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.IconsClass1 :hover {
+    color: rgb(66, 66, 196);
+}
+
+.IconsClass2 :hover {
+    color: rgb(235, 43, 43);
+}
+
+.dropDownDiv {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 2%;
+    top: 38px;
+    left: 0%;
+    width: 96%;
+    height: auto;
+    background-color: white;
+    z-index: 2;
+}
+
+#Dd li:hover>.dropDownDiv {
+    opacity: 1;
+    visibility: visible;
+}
+
+#Dd li p:hover {
+    box-shadow: 0px 2px 0px rgb(255, 237, 136);
+}
+
+@media only screen and (max-width: 850px) {
+    .NavmDiv {
+        display: none;
+    }
+}
