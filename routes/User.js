@@ -82,4 +82,8 @@ router.post(
     }
 );
 
+router.get("/account", auth, async(req, res) => {
+    res.status(200).send({ message: req.dataUser });
+});
+
 module.exports = router;
