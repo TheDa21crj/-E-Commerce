@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
@@ -6,6 +6,7 @@ import Header from "./../Components/Home/Header";
 import Footer from "./../Components/Footer";
 
 export default function MyAccount() {
+  const [showName, setName] = useState("");
   const navigate = useNavigate();
 
   const AuthMiddleware = async () => {
@@ -24,9 +25,9 @@ export default function MyAccount() {
         navigate("/login");
       }
       if (data) {
-        console.log(data);
+        setName(data.message.email);
+        console.log("My Account");
       }
-      console.log(data);
     } catch (error) {
       console.log(error);
       navigate("/login");
@@ -41,6 +42,10 @@ export default function MyAccount() {
       <Nav />
       <NavMobo />
       MyAccount
+      <br />
+      <p>
+        email: <span> {showName}</span>
+      </p>
       <Footer />
     </div>
   );
