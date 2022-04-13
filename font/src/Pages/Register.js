@@ -3,6 +3,7 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import { Link } from "react-router-dom";
+import RegCss from "./Css/Register.module.css";
 
 export default function Register() {
   return (
