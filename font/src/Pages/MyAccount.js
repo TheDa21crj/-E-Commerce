@@ -20,12 +20,12 @@ export default function MyAccount() {
       });
 
       const data = await res.json();
-      //   if (data.errors) {
-      //     navigate("/login");
-      //   }
-      //   if (data) {
-      //     console.log(data);
-      //   }
+      if (data.errors) {
+        navigate("/login");
+      }
+      if (data) {
+        console.log(data);
+      }
       console.log(data);
     } catch (error) {
       console.log(error);

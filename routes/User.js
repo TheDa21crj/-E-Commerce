@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/User");
-const auth = require("./../middleware/auth");
+const UserAuth = require("./../middleware/UserAuth");
 
 // Public | User Register | /api/register
 router.post(
@@ -45,7 +45,7 @@ router.post(
     }
 );
 
-// Public | User Login | /api/login
+// Public | User Login | api/login
 router.post(
     "/login", [
         check("email", "email is Required").not().isEmpty(),
@@ -58,24 +58,25 @@ router.post(
         }
         const { email, password } = req.body;
         try {
-            let userE = await User.findOne({ email });
-            if (!userE) {
+            let user = await User.findOne({ email });
+            if (!user) {
                 return res
                     .status(404)
                     .json({ errors: [{ message: "Invalid Credentials" }] });
             }
-            const matchP = await bcrypt.compare(password, userE.password);
-            if (!matchP) {
+            const match = await bcrypt.compare(password, user.password);
+            if (!match) {
                 return res
                     .status(400)
                     .json({ errors: [{ message: "Invalid Credentials" }] });
             }
 
-            let token = await userE.generateToken();
-            res.cookie("jwtTokenAuth", token, {
+            let token = await user.generateToken();
+            res.cookie("jwt", token, {
                 expires: new Date(Date.now() + 360000),
                 httpOnly: true,
             });
+
             res.status(202).send({ message: `Token = ${token}` });
         } catch (error) {
             console.log(error);
@@ -83,10 +84,8 @@ router.post(
     }
 );
 
-// Private | User Account | /api/account
-router.get("/account", auth, async(req, res) => {
-    // res.status(200).send({ message: req.dataUser });
-    res.status(200).json({ message: "hello" });
+router.get("/account", UserAuth, async(req, res) => {
+    res.status(200).send({ message: "req.dataUser" });
 });
 
 module.exports = router;
