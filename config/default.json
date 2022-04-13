@@ -1,5 +1,4 @@
 {
     "mongoURL": "mongodb+srv://Rishav:rishav@e-commerce.pmv1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtTokenAuth": "myserettoken",
-    "jwtTokenUser": "rishavrajsingh"
+    "jwtTokenAuth": "myserettoken"
 }

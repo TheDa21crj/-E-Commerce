@@ -1,18 +1,16 @@
 const jwt = require("jsonwebtoken");
 const User = require("./../Schema/Admin");
 const config = require("config");
-const express = require("express");
-const router = express.Router();
-const bcrypt = require("bcryptjs");
 
 const Auth = async(req, res, next) => {
     try {
-        const token = req.cookies.jwtTokenAuth;
-        const vToken = jwt.verify(token, config.get("jwtTokenUser"));
+        const token = req.cookies.jwtUser;
+        const vToken = jwt.verify(token, config.get("jwtTokenAuth"));
         const dataUser = await User.findOne({
             _id: vToken._id,
             "tokens.token": token,
         });
+        console.log(dataUser);
         if (!dataUser) {
             throw new Error("Couldn't find");
         }
@@ -22,6 +20,7 @@ const Auth = async(req, res, next) => {
 
         next();
     } catch (error) {
+        console.log(error);
         res.status(401).json({ errors: error });
     }
 };

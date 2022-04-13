@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/User");
-const UserAuth = require("./../middleware/UserAuth");
+const auth = require("./../middleware/auth");
 
 // Public | User Register | /api/register
 router.post(
@@ -72,7 +72,7 @@ router.post(
             }
 
             let token = await userE.generateToken();
-            res.cookie("jwtTokenUser", token, {
+            res.cookie("jwtTokenAuth", token, {
                 expires: new Date(Date.now() + 360000),
                 httpOnly: true,
             });
@@ -84,8 +84,9 @@ router.post(
 );
 
 // Private | User Account | /api/account
-router.get("/account", UserAuth, async(req, res) => {
-    res.status(200).send({ message: req.dataUser });
+router.get("/account", auth, async(req, res) => {
+    // res.status(200).send({ message: req.dataUser });
+    res.status(200).json({ message: "hello" });
 });
 
 module.exports = router;
