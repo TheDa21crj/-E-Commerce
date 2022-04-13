@@ -28,9 +28,12 @@ router.post(
             }
             console.log(req.body);
 
+            const avatar = gravatar.url(email, { s: "200", r: "pg", d: "mm" });
+
             user = new User({
                 email,
                 password,
+                avatar,
             });
 
             const salt = await bcrypt.genSalt(10);

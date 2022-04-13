@@ -7,6 +7,7 @@ import Footer from "./../Components/Footer";
 
 export default function MyAccount() {
   const [showName, setName] = useState("");
+  const [showUrl, seturl] = useState("");
   const navigate = useNavigate();
 
   const AuthMiddleware = async () => {
@@ -26,6 +27,7 @@ export default function MyAccount() {
       }
       if (data) {
         setName(data.message.email);
+        seturl(data.message.avatar);
         console.log("My Account");
       }
     } catch (error) {
@@ -46,6 +48,7 @@ export default function MyAccount() {
       <p>
         email: <span> {showName}</span>
       </p>
+      <img src={showUrl} alt="" />
       <Footer />
     </div>
   );
