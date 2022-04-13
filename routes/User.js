@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/User");
+const UserAuth = require("./../Schema/UserAuth");
 
 // Public | User Register | /api/register
 router.post(
@@ -82,7 +83,7 @@ router.post(
     }
 );
 
-router.get("/account", auth, async(req, res) => {
+router.get("/account", UserAuth, async(req, res) => {
     res.status(200).send({ message: req.dataUser });
 });
 
