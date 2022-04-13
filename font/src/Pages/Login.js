@@ -3,6 +3,7 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import { Link } from "react-router-dom";
+import LoginCss from "./Css/Login.module.css";
 
 export default function Login() {
   return (
