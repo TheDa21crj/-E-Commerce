@@ -83,6 +83,7 @@ router.post(
     }
 );
 
+// Private | User Account | /api/account
 router.get("/account", UserAuth, async(req, res) => {
     res.status(200).send({ message: req.dataUser });
 });
