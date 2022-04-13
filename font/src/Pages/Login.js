@@ -5,9 +5,13 @@ import Footer from "./../Components/Footer";
 import { Link } from "react-router-dom";
 import LoginCss from "./Css/Login.module.css";
 import { useNavigate } from "react-router-dom";
+import { toggleNav } from "./../Actions/index";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Login() {
   const [showUser, setUser] = useState({ email: "", password: "" });
+
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -39,6 +43,7 @@ export default function Login() {
     if (r.errors) {
       console.log("Error");
     } else if (!r.errors) {
+      dispatch(toggleNav());
       console.log("Login Admin");
       navigate("/my-account");
     } else {
