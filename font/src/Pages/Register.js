@@ -21,6 +21,29 @@ export default function Register() {
   const PostData = async () => {
     const { email, password } = showUser;
     console.log(email, password);
+
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+
+    const r = await res.json();
+    console.log(r);
+
+    if (r.errors) {
+      console.log("Error");
+    } else if (!r.errors) {
+      console.log("Registered");
+      navigate("/login");
+    } else {
+      console.log("Unwanted Error");
+    }
   };
 
   return (
@@ -49,6 +72,7 @@ export default function Register() {
       <button onClick={PostData}>Register</button>
       <br />
       <Link to="/login">Login</Link>
+      <Footer />
     </div>
   );
 }

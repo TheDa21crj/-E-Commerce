@@ -21,6 +21,29 @@ export default function Login() {
   const PostData = async () => {
     const { email, password } = showUser;
     console.log(email, password);
+
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+
+    const r = await res.json();
+    console.log(r);
+
+    if (r.errors) {
+      console.log("Error");
+    } else if (!r.errors) {
+      console.log("Login Admin");
+      navigate("/my-account");
+    } else {
+      console.log("Unwanted Error");
+    }
   };
   return (
     <div>
@@ -48,6 +71,7 @@ export default function Login() {
       <button onClick={PostData}>Login</button>
       <br />
       <Link to="/register">Register</Link>
+      <Footer />
     </div>
   );
 }

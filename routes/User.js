@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const User = require("./../Schema/User");
-const UserAuth = require("./../Schema/UserAuth");
+const UserAuth = require("./../middleware/UserAuth");
 
 // Public | User Register | /api/register
 router.post(
