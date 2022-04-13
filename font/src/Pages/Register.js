@@ -12,8 +12,8 @@ export default function Register() {
       <NavMobo />
       Register
       <form action="" method="POST">
-        <input type="email" name="email" id="" />
-        <input type="password" name="password" id="" />
+        <input type="email" name="email" id="" placeholder="Email" />
+        <input type="password" name="password" id="" placeholder="Password" />
       </form>
       <br />
       <Link to="/login">Login</Link>
