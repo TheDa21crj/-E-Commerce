@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const config = require("config");
 const jwt = require("jsonwebtoken");
 
-const AdminSchema = new mongoose.Schema({
-    username: {
+const UserSchema = new mongoose.Schema({
+    email: {
         type: "string",
         required: true,
     },
@@ -24,9 +24,9 @@ const AdminSchema = new mongoose.Schema({
 });
 
 // token
-AdminSchema.methods.generateToken = async function() {
+UserSchema.methods.generateToken = async function() {
     try {
-        let token = jwt.sign({ _id: this._id }, config.get("jwtTokenAuth"));
+        let token = jwt.sign({ _id: this._id }, config.get("jwtTokenUser"));
         this.tokens = this.tokens.concat({ token: token });
         await this.save();
         return token;
@@ -35,4 +35,4 @@ AdminSchema.methods.generateToken = async function() {
     }
 };
 
-module.exports = Users = mongoose.model("Admin", AdminSchema);
+module.exports = Users = mongoose.model("User", UserSchema);

@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
     res.status(200).send("Hello World");
 });
 
-// app.use("/api/register", require("./routes/register"));
+app.use("/api", require("./routes/User"));
 // app.use("/api/login", require("./routes/login"));
 // app.use("/api/myAccount", require("./routes/myAccount"));
 // app.use("/api/TrackOrder", require("./routes/TrackOrder"));
