@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
 import { Link } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useSelector, useDispatch } from "react-redux";
+import { darkmode } from "./../Actions/index";
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
 import ImgNav3 from "./../Img/kids.jpg";
 
 export default function Nav() {
+  // const [show, hide] = useState(false);
+
+  const myState = useSelector((state) => state.darkmode);
+  const dispatch = useDispatch();
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
@@ -133,6 +139,7 @@ export default function Nav() {
         </Link>
         <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
         <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
+        {myState === true ? <p>Logout</p> : <p>No</p>}
       </div>
     </div>
   );
