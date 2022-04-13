@@ -14,7 +14,7 @@ const Auth = async(req, res, next) => {
             "tokens.token": token,
         });
         if (!dataUser) {
-            throw new Error("Couldn't find");
+            return res.status(400).json({ message: dataUser });
         }
         req.token = token;
         req.dataUser = dataUser;
