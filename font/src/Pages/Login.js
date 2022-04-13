@@ -10,6 +10,11 @@ export default function Login() {
       <Nav />
       <NavMobo />
       Login
+      <form action="" method="POST">
+        <input type="email" name="email" id="" />
+        <input type="password" name="password" id="" />
+      </form>
+      <br />
       <Link to="/register">Register</Link>
     </div>
   );
