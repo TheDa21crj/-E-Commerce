@@ -59,7 +59,7 @@ export default function Login() {
         <input
           type="email"
           name="email"
-          id=""
+          id={LoginCss.email}
           placeholder="Email"
           value={showUser.email}
           onChange={DataInp}
@@ -67,7 +67,7 @@ export default function Login() {
         <input
           type="password"
           name="password"
-          id=""
+          id={LoginCss.password}
           placeholder="Password"
           value={showUser.password}
           onChange={DataInp}

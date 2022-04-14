@@ -14,3 +14,13 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+#email,
+#password {
+    outline: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    font-size: 1rem;
+}
