@@ -9,6 +9,8 @@ import { toggleNav } from "./../Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import { GoogleLogin } from "react-google-login";
+import axios from "axios";
 
 export default function Login() {
   const [showUser, setUser] = useState({ email: "", password: "" });
@@ -53,6 +55,7 @@ export default function Login() {
       console.log("Unwanted Error");
     }
   };
+
   return (
     <div className={LoginCss.LoginMDiv}>
       <Nav />
@@ -97,7 +100,14 @@ export default function Login() {
       <p className={LoginCss.AlreadyPTag}>
         Already have a Account? <Link to="/register">Register</Link>
       </p>
-
+      {/* <GoogleLogin
+        clientID="1041876207389-livgmvg61pgulnts4foep16mgniebp7e.apps.googleusercontent.com"
+        onSuccess={googleAuth}
+        onFailure={(err) => {
+          console.log(err);
+        }}
+        cookiePolicy={"single_host_origin"}
+      ></GoogleLogin> */}
       <Footer />
     </div>
   );
