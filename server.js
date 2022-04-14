@@ -7,6 +7,8 @@ const passport = require("passport");
 
 const app = express();
 
+require("./config/passport")(passport);
+
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header(
@@ -19,6 +21,17 @@ app.use(function(req, res, next) {
 connectDB();
 
 app.use(express.json({ extended: false }));
+
+app.use(
+    session({
+        secret: "keyboard cat",
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(cookieParser());
 
