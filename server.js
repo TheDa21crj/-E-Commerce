@@ -49,6 +49,7 @@ app.use("/api", require("./routes/User"));
 app.use("/api/RegAdmin", require("./routes/RegAdmin"));
 app.use("/api/admin/login", require("./routes/Admin"));
 app.use("/api/admin/", require("./routes/AdminPost"));
+app.use("/auth", require("./routes/UserGoogle"));
 
 const port = process.env.PORT || 5000;
 
