@@ -7,9 +7,12 @@ import LoginCss from "./Css/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { toggleNav } from "./../Actions/index";
 import { useSelector, useDispatch } from "react-redux";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 export default function Login() {
   const [showUser, setUser] = useState({ email: "", password: "" });
+  const [showPassword, setPassword] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -65,12 +68,18 @@ export default function Login() {
           onChange={DataInp}
         />
         <input
-          type="password"
+          // type="password"
+          type={showPassword ? "text" : "password"}
           name="password"
           id={LoginCss.password}
           placeholder="Password"
           value={showUser.password}
           onChange={DataInp}
+        />
+        <RemoveRedEyeIcon
+          onClick={() => {
+            setPassword(!showPassword);
+          }}
         />
       </form>
       <button onClick={PostData}>Login</button>
