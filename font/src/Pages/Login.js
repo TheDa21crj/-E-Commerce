@@ -54,7 +54,7 @@ export default function Login() {
     }
   };
   return (
-    <div>
+    <div className={LoginCss.LoginMDiv}>
       <Nav />
       <NavMobo />
       <p className={LoginCss.LoginPTag}>Login</p>
@@ -67,24 +67,37 @@ export default function Login() {
           value={showUser.email}
           onChange={DataInp}
         />
-        <input
-          // type="password"
-          type={showPassword ? "text" : "password"}
-          name="password"
-          id={LoginCss.password}
-          placeholder="Password"
-          value={showUser.password}
-          onChange={DataInp}
-        />
-        <RemoveRedEyeIcon
-          onClick={() => {
-            setPassword(!showPassword);
-          }}
-        />
+        <div className={LoginCss.passwordDiv}>
+          <input
+            // type="password"
+            type={showPassword ? "text" : "password"}
+            name="password"
+            id={LoginCss.password}
+            placeholder="Password"
+            value={showUser.password}
+            onChange={DataInp}
+          />
+          <div
+            id={LoginCss.ShowPasswordDiv}
+            onClick={() => {
+              setPassword(!showPassword);
+            }}
+          >
+            {showPassword ? <RemoveRedEyeIcon /> : <VisibilityOffIcon />}
+          </div>
+        </div>
       </form>
-      <button onClick={PostData}>Login</button>
+
+      <div className={LoginCss.LoginDivBTN}>
+        <button onClick={PostData} className={LoginCss.LoginBtn}>
+          Login
+        </button>
+      </div>
       <br />
-      <Link to="/register">Register</Link>
+      <p className={LoginCss.AlreadyPTag}>
+        Already have a Account <Link to="/register">Register</Link>
+      </p>
+
       <Footer />
     </div>
   );
