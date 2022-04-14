@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useSelector, useDispatch } from "react-redux";
+// import toggleNav from "./../reducers/toggleNav";
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
@@ -13,6 +14,13 @@ import ImgNav3 from "./../Img/kids.jpg";
 
 export default function Nav() {
   const myState = useSelector((state) => state.toggleNav);
+
+  useEffect(() => {
+    // console.log(myState.msg);
+    if (myState.msg === "true") {
+      console.log("first");
+    }
+  });
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
@@ -135,7 +143,7 @@ export default function Nav() {
         </Link>
         <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
         <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
-        {myState === true ? <p>Logout</p> : <p></p>}
+        {myState.msg === "true" ? <p>Logout</p> : <p></p>}
       </div>
     </div>
   );

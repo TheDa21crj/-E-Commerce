@@ -4,11 +4,15 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Header from "./../Components/Home/Header";
 import Footer from "./../Components/Footer";
+import { toggleNav } from "./../Actions/index";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function MyAccount() {
   const [showName, setName] = useState("");
   const [showUrl, seturl] = useState("");
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const AuthMiddleware = async () => {
     try {
@@ -26,6 +30,7 @@ export default function MyAccount() {
         navigate("/login");
       }
       if (data) {
+        dispatch(toggleNav("true"));
         setName(data.message.email);
         seturl(data.message.avatar);
         console.log("My Account");

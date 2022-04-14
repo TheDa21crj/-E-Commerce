@@ -43,7 +43,7 @@ export default function Login() {
     if (r.errors) {
       console.log("Error");
     } else if (!r.errors) {
-      dispatch(toggleNav());
+      dispatch(toggleNav("true"));
       console.log("Login Admin");
       navigate("/my-account");
     } else {

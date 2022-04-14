@@ -1,14 +1,15 @@
-const initialState = false;
+export const initialState = "";
 
 const toggleNav = (state = initialState, action) => {
-    switch (action.type) {
-        case "TOGGLENAV":
-            state = !state;
-            console.log(state);
-            return state;
-        default:
-            return state;
-    }
+  const { type, payload } = action;
+  switch (type) {
+    case "TOGGLENAV":
+      //   console.log(action);
+      state = payload;
+      return state;
+    default:
+      return state;
+  }
 };
 
 export default toggleNav;
