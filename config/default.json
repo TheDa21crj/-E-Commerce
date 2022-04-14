@@ -1,4 +1,6 @@
 {
     "mongoURL": "mongodb+srv://Rishav:rishav@e-commerce.pmv1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtTokenAuth": "myserettoken"
+    "jwtTokenAuth": "myserettoken",
+    "GoogleClientID": "1041876207389-livgmvg61pgulnts4foep16mgniebp7e.apps.googleusercontent.com",
+    "GoogleClientSecret": "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"
 }
