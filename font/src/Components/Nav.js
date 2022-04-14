@@ -165,7 +165,11 @@ export default function Nav() {
             <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
           </Link>
           <div className={NavCss.HoverDiv}>
-            <div className={NavCss.UserHoverDiv}>Sign/In</div>
+            <div className={NavCss.UserHoverDiv}>
+              <Link to="/login" className="LinkStyle">
+                Login/Register
+              </Link>
+            </div>
             <div className={NavCss.arrow}></div>
           </div>
         </div>
