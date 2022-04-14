@@ -54,8 +54,8 @@ export default function Login() {
     <div>
       <Nav />
       <NavMobo />
-      Login
-      <form action="" method="POST">
+      <p className={LoginCss.LoginPTag}>Login</p>
+      <form action="" method="POST" className={LoginCss.LoginFormTag}>
         <input
           type="email"
           name="email"
