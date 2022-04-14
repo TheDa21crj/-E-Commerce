@@ -160,9 +160,15 @@ export default function Nav() {
         </div>
       </div>
       <div className={NavCss.IconsDiv}>
-        <Link to="/my-account" className="LinkStyle">
-          <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
-        </Link>
+        <div className={NavCss.UserDiv}>
+          <Link to="/my-account" className="LinkStyle">
+            <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
+          </Link>
+          <div className={NavCss.HoverDiv}>
+            <div className={NavCss.UserHoverDiv}>Sign/In</div>
+            <div className={NavCss.arrow}></div>
+          </div>
+        </div>
         <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
         <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
         {myState.msg === "true" ? <p>Logout</p> : <p></p>}
