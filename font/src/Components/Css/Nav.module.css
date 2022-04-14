@@ -91,7 +91,6 @@
 .UserDiv {
     z-index: 1;
     position: relative;
-    background-color: pink;
     transition: all 0.3s;
 }
 
@@ -103,20 +102,20 @@
 }
 
 .HoverDiv {
-    /* transform: translateY(10px);
+    transform: translateY(10px);
     opacity: 0;
-    pointer-events: none; */
+    pointer-events: none;
     transition: all 0.3s;
 }
 
 .UserHoverDiv {
     position: absolute;
     z-index: 3;
-    left: -50%;
+    left: -100%;
     background-color: #60b4df;
     border-radius: 5px;
     color: #fff;
-    box-shadow: 10px 10px 50px lightgrey;
+    box-shadow: 10px 10px 70px lightgrey;
     padding: 0.5rem 1rem;
 }
 
