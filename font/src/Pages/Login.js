@@ -95,7 +95,7 @@ export default function Login() {
       </div>
       <br />
       <p className={LoginCss.AlreadyPTag}>
-        Already have a Account <Link to="/register">Register</Link>
+        Already have a Account? <Link to="/register">Register</Link>
       </p>
 
       <Footer />
