@@ -30,10 +30,10 @@ export default function MyAccount() {
         navigate("/login");
       }
       if (data) {
-        dispatch(toggleNav("true"));
         setName(data.message.email);
         seturl(data.message.avatar);
         console.log("My Account");
+        dispatch(toggleNav("true"));
       }
     } catch (error) {
       console.log(error);
