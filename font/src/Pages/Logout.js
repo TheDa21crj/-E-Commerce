@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toggleNav } from "./../Actions/index";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Logout() {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
+
   useEffect(() => {
     fetch("/api/logout", {
       method: "GET",
@@ -14,6 +19,7 @@ export default function Logout() {
     })
       .then((res) => {
         navigate("/");
+        dispatch(toggleNav("false"));
 
         if (res.status !== 200) {
           const error = new Error(res.error);

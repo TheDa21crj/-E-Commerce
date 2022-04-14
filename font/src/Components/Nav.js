@@ -166,16 +166,21 @@ export default function Nav() {
           </Link>
           <div className={NavCss.HoverDiv}>
             <div className={NavCss.UserHoverDiv}>
-              <Link to="/login" className="LinkStyle">
-                Login/Register
-              </Link>
+              {myState.msg === "true" ? (
+                <Link to="/logout" className="LinkStyle">
+                  Logout
+                </Link>
+              ) : (
+                <Link to="/login" className="LinkStyle">
+                  Login/Register
+                </Link>
+              )}
             </div>
             <div className={NavCss.arrow}></div>
           </div>
         </div>
         <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
         <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
-        {myState.msg === "true" ? <p>Logout</p> : <p></p>}
       </div>
     </div>
   );
