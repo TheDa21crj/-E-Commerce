@@ -6,7 +6,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useSelector, useDispatch } from "react-redux";
-// import toggleNav from "./../reducers/toggleNav";
+import { toggleNav } from "./../Actions/index";
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
@@ -15,12 +15,34 @@ import ImgNav3 from "./../Img/kids.jpg";
 export default function Nav() {
   const myState = useSelector((state) => state.toggleNav);
 
-  useEffect(() => {
-    // console.log(myState.msg);
-    if (myState.msg === "true") {
-      console.log("first");
+  const dispatch = useDispatch();
+
+  const AuthMiddleware = async () => {
+    try {
+      const res = await fetch("/api/account", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (data.errors) {
+        return;
+      }
+      if (data) {
+        dispatch(toggleNav("true"));
+      }
+    } catch (error) {
+      return;
     }
-  });
+  };
+
+  useEffect(() => {
+    AuthMiddleware();
+  }, []);
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
