@@ -55,34 +55,6 @@ export default function Login() {
     }
   };
 
-  const responseGoogle = async (response) => {
-    let email = response.profileObj.email;
-    let tokenId = response.tokenId;
-    // console.log(response.tokenId);
-    const res = await fetch("/auth/google/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        tokenId,
-      }),
-    });
-
-    const r = await res.json();
-    console.log(r);
-
-    if (r.errors) {
-      console.log("Error");
-    } else if (!r.errors) {
-      dispatch(toggleNav("true"));
-      console.log("Login Admin");
-      navigate("/my-account");
-    } else {
-      console.log("Unwanted Error");
-    }
-  };
   return (
     <div className={LoginCss.LoginMDiv}>
       <Nav />
@@ -127,20 +99,7 @@ export default function Login() {
         Already have a Account? <Link to="/register">Register</Link>
       </p>
 
-      <GoogleLogin
-        clientId="1041876207389-5pdpbui6r4dm58llv4ii8tumjdsan29j.apps.googleusercontent.com"
-        buttonText="Login"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={"single_host_origin"}
-      />
       <Footer />
     </div>
   );
 }
-
-// Your Client ID
-// 1041876207389-5pdpbui6r4dm58llv4ii8tumjdsan29j.apps.googleusercontent.com
-
-// Your Client Secret
-// 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

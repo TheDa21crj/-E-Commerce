@@ -25,32 +25,15 @@ export default function MyAccount() {
         credentials: "include",
       });
 
-      const res1 = await fetch("/auth/accountGooge", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
-
-      const data0 = await res.json();
-      const data1 = await res1.json();
-      if (data0.errors || data1.errors) {
+      const data = await res.json();
+      if (data.errors) {
         navigate("/login");
       }
-      if (data0) {
-        setName(data0.message.email);
-        seturl(data0.message.avatar);
+      if (data) {
+        setName(data.message.email);
+        seturl(data.message.avatar);
         console.log("My Account");
         dispatch(toggleNav("true"));
-        return;
-      } else if (data1) {
-        setName(data1.message.email);
-        seturl(data1.message.avatar);
-        console.log("My Account");
-        dispatch(toggleNav("true"));
-        return;
       }
     } catch (error) {
       console.log(error);
