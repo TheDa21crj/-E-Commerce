@@ -57,7 +57,8 @@ export default function Login() {
 
   const responseGoogle = async (response) => {
     let email = response.profileObj.email;
-
+    let tokenId = response.tokenId;
+    // console.log(response.tokenId);
     const res = await fetch("/auth/google/login", {
       method: "POST",
       headers: {
@@ -65,21 +66,22 @@ export default function Login() {
       },
       body: JSON.stringify({
         email,
+        tokenId,
       }),
     });
 
     const r = await res.json();
     console.log(r);
 
-    // if (r.errors) {
-    //   console.log("Error");
-    // } else if (!r.errors) {
-    //   dispatch(toggleNav("true"));
-    //   console.log("Login Admin");
-    //   navigate("/my-account");
-    // } else {
-    //   console.log("Unwanted Error");
-    // }
+    if (r.errors) {
+      console.log("Error");
+    } else if (!r.errors) {
+      dispatch(toggleNav("true"));
+      console.log("Login Admin");
+      navigate("/my-account");
+    } else {
+      console.log("Unwanted Error");
+    }
   };
   return (
     <div className={LoginCss.LoginMDiv}>

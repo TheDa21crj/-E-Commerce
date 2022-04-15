@@ -3,6 +3,8 @@ const router = express.Router();
 const User = require("./../Schema/UserGoogle");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
+const { OAuth2Client } = require("google-auth-library");
+const GoolgeAuth = require("./../middleware/GoolgeAuth");
 
 router.post(
     "/google/register", [
@@ -53,18 +55,27 @@ router.post(
 );
 
 router.post(
-    "/google/login", [check("email", "email is Required").not().isEmpty()],
+    "/google/login", [
+        check("email", "email is Required").not().isEmpty(),
+        check("tokenId", "tokenId is Required").not().isEmpty(),
+    ],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
 
-        const { email } = req.body;
+        const { email, tokenId } = req.body;
         try {
             let user = await User.findOne({ email });
             if (user) {
-                res.status(202).send({ message: `Token` });
+                let token = await user.generateToken();
+                res.cookie("jwt", token, {
+                    expires: new Date(Date.now() + 360000),
+                    httpOnly: true,
+                });
+
+                res.status(202).send({ message: `Token = ${token}` });
             } else {
                 return res
                     .status(400)
@@ -72,9 +83,13 @@ router.post(
             }
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: error });
+            res.status(500).json({ message: "error" });
         }
     }
 );
+
+router.get("/accountGooge", GoolgeAuth, async(req, res) => {
+    res.status(200).send({ message: req.dataUser });
+});
 
 module.exports = router;
