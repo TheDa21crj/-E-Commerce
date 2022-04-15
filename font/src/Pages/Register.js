@@ -5,6 +5,7 @@ import Footer from "./../Components/Footer";
 import { Link } from "react-router-dom";
 import RegCss from "./Css/Register.module.css";
 import { useNavigate } from "react-router-dom";
+import { GoogleLogin } from "react-google-login";
 
 export default function Register() {
   const [showUser, setUser] = useState({ email: "", password: "" });
@@ -46,6 +47,42 @@ export default function Register() {
     }
   };
 
+  const responseGoogle = async (response) => {
+    let googleId = response.googleId;
+    let email = response.profileObj.email;
+    let familyName = response.profileObj.familyName;
+    let givenName = response.profileObj.givenName;
+    let name = response.profileObj.name;
+    let imageUrl = response.profileObj.imageUrl;
+
+    const res = await fetch("/auth/google/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        googleId,
+        email,
+        familyName,
+        givenName,
+        name,
+        imageUrl,
+      }),
+    });
+
+    const r = await res.json();
+    console.log(r);
+
+    // if (r.errors) {
+    //   console.log("Error");
+    // } else if (!r.errors) {
+    //   dispatch(toggleNav("true"));
+    //   console.log("Login Admin");
+    //   navigate("/my-account");
+    // } else {
+    //   console.log("Unwanted Error");
+    // }
+  };
   return (
     <div>
       <Nav />
@@ -72,6 +109,14 @@ export default function Register() {
       <button onClick={PostData}>Register</button>
       <br />
       <Link to="/login">Login</Link>
+      <br />
+      <GoogleLogin
+        clientId="1041876207389-5pdpbui6r4dm58llv4ii8tumjdsan29j.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={"single_host_origin"}
+      />
       <Footer />
     </div>
   );

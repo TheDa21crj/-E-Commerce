@@ -5,19 +5,23 @@ const UserGoogleSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    displayName: {
+    email: {
+        type: "string",
+        required: true,
+    },
+    familyName: {
         type: String,
         required: true,
     },
-    firstName: {
+    givenName: {
         type: String,
         required: true,
     },
-    lastName: {
+    name: {
         type: String,
         required: true,
     },
-    image: {
+    imageUrl: {
         type: String,
     },
     createdAt: {

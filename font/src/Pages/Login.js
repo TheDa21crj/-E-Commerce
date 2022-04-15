@@ -10,7 +10,6 @@ import { useSelector, useDispatch } from "react-redux";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { GoogleLogin } from "react-google-login";
-import axios from "axios";
 
 export default function Login() {
   const [showUser, setUser] = useState({ email: "", password: "" });
@@ -56,6 +55,32 @@ export default function Login() {
     }
   };
 
+  const responseGoogle = async (response) => {
+    let email = response.profileObj.email;
+
+    const res = await fetch("/auth/google/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+      }),
+    });
+
+    const r = await res.json();
+    console.log(r);
+
+    // if (r.errors) {
+    //   console.log("Error");
+    // } else if (!r.errors) {
+    //   dispatch(toggleNav("true"));
+    //   console.log("Login Admin");
+    //   navigate("/my-account");
+    // } else {
+    //   console.log("Unwanted Error");
+    // }
+  };
   return (
     <div className={LoginCss.LoginMDiv}>
       <Nav />
@@ -90,7 +115,6 @@ export default function Login() {
           </div>
         </div>
       </form>
-
       <div className={LoginCss.LoginDivBTN}>
         <button onClick={PostData} className={LoginCss.LoginBtn}>
           Login
@@ -100,15 +124,21 @@ export default function Login() {
       <p className={LoginCss.AlreadyPTag}>
         Already have a Account? <Link to="/register">Register</Link>
       </p>
-      {/* <GoogleLogin
-        clientID="1041876207389-livgmvg61pgulnts4foep16mgniebp7e.apps.googleusercontent.com"
-        onSuccess={googleAuth}
-        onFailure={(err) => {
-          console.log(err);
-        }}
+
+      <GoogleLogin
+        clientId="1041876207389-5pdpbui6r4dm58llv4ii8tumjdsan29j.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
-      ></GoogleLogin> */}
+      />
       <Footer />
     </div>
   );
 }
+
+// Your Client ID
+// 1041876207389-5pdpbui6r4dm58llv4ii8tumjdsan29j.apps.googleusercontent.com
+
+// Your Client Secret
+// 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
