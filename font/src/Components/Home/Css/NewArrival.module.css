@@ -24,12 +24,15 @@
 }
 
 .ImgHeader {
+    border-radius: 0px 10px 0px 10px;
     width: 98%;
     max-height: 380px;
 }
 
 .SlidDiv {
+    border-radius: 0px 10px 0px 10px;
     position: relative;
+    margin-left: 1px;
     transition: all 0.3s;
 }
 
@@ -39,6 +42,7 @@
 }
 
 .ImgDivBtnDiv {
+    border-radius: 0px 10px 0px 10px;
     opacity: 0;
     visibility: hidden;
     position: absolute;
