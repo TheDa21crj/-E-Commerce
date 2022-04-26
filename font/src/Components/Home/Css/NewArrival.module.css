@@ -4,7 +4,7 @@
 }
 
 .mDiv {
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
 .mDiv h1 {
@@ -17,7 +17,6 @@
 .slideDiv {
     display: flex;
     justify-content: center;
-    background-color: #60b4df;
 }
 
 .Hslide {
@@ -26,5 +25,24 @@
 
 .ImgHeader {
     width: 98%;
-    /* max-height: 392px; */
+    max-height: 380px;
+}
+
+.SlidDiv {
+    position: relative;
+}
+
+.ImgPTag {
+    font-family: ManropeExtraBold;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    /* background-color: #60b4df; */
+    width: 98%;
+    color: white;
+    text-shadow: 5px 5px 10px lightgrey;
+}
+
+.ShowNowATag {
+    text-decoration: none;
 }
