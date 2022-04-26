@@ -4,6 +4,7 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Header from "./../Components/Home/Header";
 import Footer from "./../Components/Footer";
+import NewArrival from "./../Components/Home/NewArrival";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Nav />
       <NavMobo />
       <Header />
+      <NewArrival />
       Hello world
       <Footer />
     </div>
