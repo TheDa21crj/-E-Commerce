@@ -1,5 +1,6 @@
 import React from "react";
 import TSCss from "./Css/TopSelling.module.css";
+import TopSellingJson from "./../../Data/TopSelling.json";
 
 export default function TopSelling() {
   return (
