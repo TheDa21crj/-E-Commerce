@@ -1,4 +1,16 @@
-[
-    { "id": "1", "src": "" },
-    { "id": "2", "src": "" }
+[{
+        "id": "1",
+        "name": "Blazer",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62426985162e55e9f67c881c_Blazer.png"
+    },
+    {
+        "id": "2",
+        "name": "Tank Top",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624268ff7db7b39ec1bf906a_selenagomezTankTop.png"
+    },
+    {
+        "id": "3",
+        "name": "",
+        "src": ""
+    }
 ]
