@@ -1,5 +1,6 @@
 import React from "react";
 import NACss from "./Css/NewArrival.module.css";
+import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,15 +24,18 @@ export default function NewArrival() {
           {NewArrivalJson.map((value, key) => {
             return (
               <div key={key} className={NACss.SlidDiv}>
-                <p className={NACss.ImgPTag}>{value.name}</p>
                 <img
                   src={value.src}
                   alt={value.name}
                   className={NACss.ImgHeader}
                 />
-                <a href="#" className={NACss.ShowNowATag}>
-                  Show Now
-                </a>
+                <div className={NACss.ImgDivBtnDiv}>
+                  <p className={NACss.ImgPTag}>{value.name}</p>
+
+                  <Link to="/" className={NACss.ShowNowATag}>
+                    Show Now
+                  </Link>
+                </div>
               </div>
             );
           })}
