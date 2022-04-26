@@ -9,12 +9,10 @@
 
 .slick-prev:before {
     content: "\2190";
-    font-size: 3rem;
-    font-family: "";
+    font-size: 2rem;
 }
 
 .slick-next:before {
     content: "\2192";
-    font-size: 3rem;
-    font-family: "";
+    font-size: 2rem;
 }
