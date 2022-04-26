@@ -10,20 +10,20 @@ import img2 from "./../../Img/Header/girl-lying-on-the-grass.jpg";
 import img3 from "./../../Img/Header/christmas.jpg";
 
 export default function NewArrival() {
-  var settings = {
+  var setting = {
     dots: false,
     infinite: true,
     arrows: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay: true,
+    autoplay: false,
   };
   return (
     <div className={NACss.mDiv}>
       <h1>New Arrival</h1>
       <div>
-        <Sliders {...settings} className={NACss.Hslide}>
+        <Sliders {...setting} className={NACss.Hslide}>
           <div className={NACss.slide}>
             <img src={img1} className={NACss.ImgHeader} />
           </div>
