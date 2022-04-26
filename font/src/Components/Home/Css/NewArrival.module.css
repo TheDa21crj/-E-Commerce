@@ -1,0 +1,15 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+.mDiv {
+    margin-top: 20px;
+}
+
+.mDiv h1 {
+    text-align: center;
+    font-family: ManropeExtraBold;
+    line-height: 1.24;
+    margin-bottom: 20px;
+}
