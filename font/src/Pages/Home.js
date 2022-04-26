@@ -5,6 +5,7 @@ import NavMobo from "./../Components/NavMobo";
 import Header from "./../Components/Home/Header";
 import Footer from "./../Components/Footer";
 import NewArrival from "./../Components/Home/NewArrival";
+import TopSelling from "./../Components/Home/TopSelling";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <NavMobo />
       <Header />
       <NewArrival />
-      Tending/TOP SELLING
+      <TopSelling />
       <br />
       CATEGORIES
       <br />

@@ -1,0 +1,33 @@
+.mDiv {
+    margin-top: 20px;
+}
+
+.H1Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.h1 {
+    position: relative;
+    text-align: center;
+    font-family: ManropeExtraBold;
+    line-height: 1.24;
+    margin-bottom: 30px;
+}
+
+.h1::after {
+    content: "";
+    position: absolute;
+    background-color: gold;
+    height: 3px;
+    width: 10%;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.3s;
+}
+
+.h1:hover:after {
+    width: 100%;
+}

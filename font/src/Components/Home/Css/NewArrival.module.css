@@ -76,7 +76,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     background-color: transparent;
     transition: all 0.3s;
 }
