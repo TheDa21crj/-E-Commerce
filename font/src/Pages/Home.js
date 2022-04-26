@@ -11,7 +11,8 @@ export default function Home() {
       <Nav />
       <NavMobo />
       <Header />
-      Hello world <Footer />
+      Hello world
+      <Footer />
     </div>
   );
 }
