@@ -154,7 +154,9 @@ export default function Nav() {
               <p className={NavCss.NavListPTag}>Beauty</p>
             </li>
             <li>
-              <p className={NavCss.NavListPTag}>Membership</p>
+              <Link to="/Membership" className="LinkStyle">
+                <p className={NavCss.NavListPTag}>Membership</p>
+              </Link>
             </li>
           </ul>
         </div>
