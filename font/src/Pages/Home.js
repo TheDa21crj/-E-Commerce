@@ -13,6 +13,15 @@ export default function Home() {
       <NavMobo />
       <Header />
       <NewArrival />
+      Tending/TOP SELLING
+      <br />
+      CATEGORIES
+      <br />
+      Customer reviews
+      <br />
+      OFFICIAL MERCHANDISE/Brands
+      <br />
+      <br />
       Hello world
       <Footer />
     </div>
