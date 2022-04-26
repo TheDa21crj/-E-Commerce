@@ -18,7 +18,9 @@ export default function NewArrival() {
   };
   return (
     <div className={NACss.mDiv}>
-      <h1>New Arrival</h1>
+      <div className={NACss.H1Div}>
+        <h1 className={NACss.h1}>New Arrival</h1>
+      </div>
       <div className={NACss.slideDiv}>
         <Sliders {...setting} className={NACss.Hslide}>
           {NewArrivalJson.map((value, key) => {
