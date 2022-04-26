@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Header from "./../Components/Home/Header";
 import Footer from "./../Components/Footer";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -11,8 +11,7 @@ export default function Home() {
       <Nav />
       <NavMobo />
       <Header />
-      Hello world
-      <Footer />
+      Hello world <Footer />
     </div>
   );
 }
