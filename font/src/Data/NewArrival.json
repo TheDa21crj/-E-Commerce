@@ -1,16 +1,37 @@
 [{
-        "id": "1",
-        "name": "Blazer",
-        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62426985162e55e9f67c881c_Blazer.png"
-    },
-    {
-        "id": "2",
-        "name": "Tank Top",
-        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624268ff7db7b39ec1bf906a_selenagomezTankTop.png"
-    },
-    {
-        "id": "3",
-        "name": "",
-        "src": ""
-    }
-]
+    "id": "1",
+    "name": "Blazer",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62426985162e55e9f67c881c_Blazer.png"
+}, {
+    "id": "2",
+    "name": "Tank Top",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624268ff7db7b39ec1bf906a_selenagomezTankTop.png"
+}, {
+    "id": "3",
+    "name": "Wonder Woman Her Universe",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624268768cc16a75ba5ce628_WonderWomanHerUniverse.png"
+}, {
+    "id": "4",
+    "name": "Night Wear",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624267cdcd3b426dcd3539e4_selenagomezNightwear.png"
+}, {
+    "id": "5",
+    "name": "Ananya Panday Mini Skirt",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624266f6162e55d2187c7dff_AnanyaPandayMiniSkirt1.png"
+}, {
+    "id": "6",
+    "name": "Batman - The Dark Knight",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62426562bc230c6884ab8ed7_BatmanTheDarkKnight.png"
+}, {
+    "id": "7",
+    "name": "Hugsy",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/624264c5c64a978086e4d800_hugsy.png"
+}, {
+    "id": "8",
+    "name": "FriendsLogo",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/6242639bdeb53f2c7fbd719e_FriendsLogo.png"
+}, {
+    "id": "9",
+    "name": "Liverpool - Never Walk Alone",
+    "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62426465deb53f6599bd8c52_LiverpoolNeverWalkAlone.png"
+}]
