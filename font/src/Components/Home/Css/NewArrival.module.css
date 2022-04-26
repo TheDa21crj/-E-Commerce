@@ -33,11 +33,6 @@
     transition: all 0.3s;
 }
 
-
-/* .h1:hover {
-    color: gold;
-} */
-
 .h1:hover:after {
     width: 100%;
 }
