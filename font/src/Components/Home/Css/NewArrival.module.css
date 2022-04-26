@@ -14,6 +14,17 @@
     margin-bottom: 20px;
 }
 
+.slideDiv {
+    display: flex;
+    justify-content: center;
+    background-color: #60b4df;
+}
+
+.Hslide {
+    width: 95%;
+}
+
 .ImgHeader {
-    width: 33%;
+    width: 98%;
+    /* max-height: 392px; */
 }

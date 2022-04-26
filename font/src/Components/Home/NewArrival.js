@@ -3,11 +3,7 @@ import NACss from "./Css/NewArrival.module.css";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import img1 from "./../../Img/Header/woman.jpg";
-// import img1 from "./../../";
-import img2 from "./../../Img/Header/girl-lying-on-the-grass.jpg";
-import img3 from "./../../Img/Header/christmas.jpg";
+import NewArrivalJson from "./../../Data/NewArrival.json";
 
 export default function NewArrival() {
   var setting = {
@@ -22,8 +18,21 @@ export default function NewArrival() {
   return (
     <div className={NACss.mDiv}>
       <h1>New Arrival</h1>
-      <div>
-        <Sliders {...setting} className={NACss.Hslide}></Sliders>
+      <div className={NACss.slideDiv}>
+        <Sliders {...setting} className={NACss.Hslide}>
+          {NewArrivalJson.map((value, key) => {
+            return (
+              <div key={key}>
+                <p>{value.name}</p>
+                <img
+                  src={value.src}
+                  alt={value.name}
+                  className={NACss.ImgHeader}
+                />
+              </div>
+            );
+          })}
+        </Sliders>
       </div>
     </div>
   );
