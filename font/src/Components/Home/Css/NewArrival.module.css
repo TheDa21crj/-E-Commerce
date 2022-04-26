@@ -39,8 +39,8 @@
 }
 
 .ImgDivBtnDiv {
-    /* opacity: 0; */
-    /* visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 0px;
     width: 98%;
@@ -61,6 +61,7 @@
     text-shadow: 5px 5px 50px white;
     line-height: 1.24;
     margin-bottom: 20px;
+    letter-spacing: 0.18rem;
 }
 
 .ShowNowATag {
