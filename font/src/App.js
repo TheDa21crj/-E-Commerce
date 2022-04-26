@@ -8,6 +8,7 @@ import PostContent from "./Pages/PostContent";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Logout from "./Pages/Logout";
+import Membership from "./Pages/Membership";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -22,6 +23,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Membership" element={<Membership />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
