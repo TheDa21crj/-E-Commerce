@@ -16,3 +16,8 @@
     content: "\2192";
     font-size: 2rem;
 }
+
+.slick-prev:before:hover,
+.slick-next:before:hover {
+    color: gold !important;
+}
