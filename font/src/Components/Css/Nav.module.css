@@ -148,10 +148,6 @@
     width: 100%;
 }
 
-.LinkTag {
-    color: inherit;
-}
-
 @media only screen and (max-width: 850px) {
     .NavmDiv {
         display: none;
