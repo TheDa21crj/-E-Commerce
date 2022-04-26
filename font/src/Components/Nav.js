@@ -52,7 +52,7 @@ export default function Nav() {
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
             <li>
-              <p>Men</p>
+              <p className={NavCss.NavListPTag}>Men</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -82,7 +82,7 @@ export default function Nav() {
               </div>
             </li>
             <li>
-              <p>Women</p>
+              <p className={NavCss.NavListPTag}>Women</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -110,7 +110,7 @@ export default function Nav() {
               </div>
             </li>
             <li>
-              <p>Kids</p>
+              <p className={NavCss.NavListPTag}>Kids</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -148,13 +148,13 @@ export default function Nav() {
               </div>
             </li>
             <li>
-              <p>New</p>
+              <p className={NavCss.NavListPTag}>New</p>
             </li>
             <li>
-              <p>Beauty</p>
+              <p className={NavCss.NavListPTag}>Beauty</p>
             </li>
             <li>
-              <p>Membership</p>
+              <p className={NavCss.NavListPTag}>Membership</p>
             </li>
           </ul>
         </div>
