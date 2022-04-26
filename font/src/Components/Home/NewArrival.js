@@ -23,35 +23,7 @@ export default function NewArrival() {
     <div className={NACss.mDiv}>
       <h1>New Arrival</h1>
       <div>
-        <Sliders {...setting} className={NACss.Hslide}>
-          <div className={NACss.slide}>
-            <img src={img1} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img2} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img3} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img3} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img2} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img1} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img2} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img3} className={NACss.ImgHeader} />
-          </div>
-          <div className={NACss.slide}>
-            <img src={img1} className={NACss.ImgHeader} />
-          </div>
-        </Sliders>
+        <Sliders {...setting} className={NACss.Hslide}></Sliders>
       </div>
     </div>
   );
