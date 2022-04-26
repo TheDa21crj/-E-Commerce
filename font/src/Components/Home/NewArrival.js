@@ -22,13 +22,16 @@ export default function NewArrival() {
         <Sliders {...setting} className={NACss.Hslide}>
           {NewArrivalJson.map((value, key) => {
             return (
-              <div key={key}>
-                <p>{value.name}</p>
+              <div key={key} className={NACss.SlidDiv}>
+                <p className={NACss.ImgPTag}>{value.name}</p>
                 <img
                   src={value.src}
                   alt={value.name}
                   className={NACss.ImgHeader}
                 />
+                <a href="#" className={NACss.ShowNowATag}>
+                  Show Now
+                </a>
               </div>
             );
           })}
