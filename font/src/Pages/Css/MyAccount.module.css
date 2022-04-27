@@ -1,3 +1,13 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../Manrope/static/Manrope-Regular.ttf);
+}
+
 .mdiv {
     margin: 30px 0px;
     width: 100%;
@@ -14,14 +24,47 @@
 }
 
 .leftDiv {
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    /* background-color: red; */
     width: 30%;
     margin-left: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #60b4df;
     border-radius: 10px;
+}
+
+.PTagEmail {
+    margin-bottom: 25px;
+    font-family: ManropeRegular;
+}
+
+.pTags {
+    font-weight: bold;
+    width: 100%;
+    margin-left: 20px;
+    font-family: ManropeRegular;
+}
+
+#LogoutLinkTag {
+    width: 40%;
+    padding: 7px 0%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9534f;
+    color: #d9534f;
+    text-align: center;
+    font-family: ManropeExtraBold;
+    transition: all 0.3s;
+}
+
+#LogoutLinkTag:hover {
+    background-color: #d9534f;
+    color: #fff;
 }
 
 .rightDiv {
