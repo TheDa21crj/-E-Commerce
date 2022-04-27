@@ -1,0 +1,30 @@
+.mdiv {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ImgTag {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.leftDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30%;
+    margin-left: 50px;
+}
+
+.rightDiv {
+    width: 60%;
+    background-color: red;
+    margin-right: 50px;
+}

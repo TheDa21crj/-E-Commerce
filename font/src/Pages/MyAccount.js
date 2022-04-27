@@ -49,12 +49,17 @@ export default function MyAccount() {
     <div>
       <Nav />
       <NavMobo />
-      MyAccount
-      <br />
-      <p>
-        email: <span> {showName}</span>
-      </p>
-      <img src={showUrl} alt="" />
+      <div className={MACss.mdiv}>
+        <div className={MACss.leftDiv}>
+          <img src={showUrl} alt="" className={MACss.ImgTag} />
+          <p>
+            <span> {showName}</span>
+          </p>
+        </div>
+        <div className={MACss.rightDiv}>
+          <p>Your Orders</p>
+        </div>
+      </div>
       <Footer />
     </div>
   );
