@@ -59,9 +59,11 @@ export default function MyAccount() {
           <p className={MACss.pTags}>Profile</p>
           <p className={MACss.pTags}>My Orders</p>
           <p className={MACss.pTags}>My Addresses</p>
-          <Link to="/logout" className="LinkStyle" id={MACss.LogoutLinkTag}>
-            Logout
-          </Link>
+          <div className={MACss.LinkTagDiv}>
+            <Link to="/logout" className="LinkStyle" id={MACss.LogoutLinkTag}>
+              Logout
+            </Link>
+          </div>
         </div>
         <div className={MACss.rightDiv}>
           <p>Your Orders</p>
