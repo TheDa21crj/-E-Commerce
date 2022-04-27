@@ -3,23 +3,33 @@ const config = require("config");
 const jwt = require("jsonwebtoken");
 
 const UserSchema = new mongoose.Schema({
-    email: {
+    name: {
         type: "string",
         required: true,
     },
-    password: {
+    imageSrc: {
         type: "string",
         required: true,
     },
-    avatar: {
+    des: {
         type: "string",
+        required: true,
     },
-    tokens: [{
-        token: {
-            type: "string",
-            required: true,
-        },
-    }, ],
+    rating: {
+        type: "Number",
+        required: true,
+        default: 0,
+    },
+    NumReview: {
+        type: "Number",
+        required: true,
+        default: 0,
+    },
+    price: {
+        type: "Number",
+        required: true,
+        default: 0,
+    },
     date: {
         type: Date,
         default: Date.now,
