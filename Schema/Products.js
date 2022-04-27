@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const config = require("config");
 const jwt = require("jsonwebtoken");
 
-const UserSchema = new mongoose.Schema({
+const ProductSchema = new mongoose.Schema({
     name: {
         type: "string",
         required: true,
@@ -30,10 +30,14 @@ const UserSchema = new mongoose.Schema({
         required: true,
         default: 0,
     },
+    category: {
+        type: "string",
+        required: true,
+    },
     date: {
         type: Date,
         default: Date.now,
     },
 });
 
-module.exports = Users = mongoose.model("User", UserSchema);
+module.exports = Users = mongoose.model("Product", ProductSchema);
