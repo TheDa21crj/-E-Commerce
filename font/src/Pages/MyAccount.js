@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
-import Header from "./../Components/Home/Header";
+import Profile from "./../Components/Account/Profile";
+import MyAddress from "./../Components/Account/MyAddress";
+import Myorders from "./../Components/Account/Myorders";
 import Footer from "./../Components/Footer";
 import MACss from "./Css/MyAccount.module.css";
 import { toggleNav } from "./../Actions/index";
@@ -12,7 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 export default function MyAccount() {
   const [showName, setName] = useState("");
   const [showUrl, seturl] = useState("");
-  const [showProfileState, setProfileState] = useState("Your Orders");
+  const [showProfileState, setProfileState] = useState("My Orders");
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -78,7 +80,9 @@ export default function MyAccount() {
           </div>
         </div>
         <div className={MACss.rightDiv}>
-          <p>{showProfileState}</p>
+          {showProfileState === "Profile" && <Profile />}
+          {showProfileState === "My Orders" && <Myorders />}
+          {showProfileState === "My Addresses" && <MyAddress />}
         </div>
       </div>
       <Footer />
