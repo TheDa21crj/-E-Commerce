@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
@@ -52,9 +53,15 @@ export default function MyAccount() {
       <div className={MACss.mdiv}>
         <div className={MACss.leftDiv}>
           <img src={showUrl} alt="" className={MACss.ImgTag} />
-          <p>
+          <p className={MACss.PTagEmail}>
             <span> {showName}</span>
           </p>
+          <p className={MACss.pTags}>Profile</p>
+          <p className={MACss.pTags}>My Orders</p>
+          <p className={MACss.pTags}>My Addresses</p>
+          <Link to="/logout" className="LinkStyle" id={MACss.LogoutLinkTag}>
+            Logout
+          </Link>
         </div>
         <div className={MACss.rightDiv}>
           <p>Your Orders</p>
