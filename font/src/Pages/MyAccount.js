@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function MyAccount() {
   const [showName, setName] = useState("");
+  const [showid, setid] = useState("");
   const [showUrl, seturl] = useState("");
   const [showProfileState, setProfileState] = useState("My Orders");
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ export default function MyAccount() {
       }
       if (data) {
         setName(data.message.email);
+        setid(data.message._id);
         seturl(data.message.avatar);
         console.log("My Account");
         dispatch(toggleNav("true"));
@@ -80,9 +82,9 @@ export default function MyAccount() {
           </div>
         </div>
         <div className={MACss.rightDiv}>
-          {showProfileState === "Profile" && <Profile />}
-          {showProfileState === "My Orders" && <Myorders />}
-          {showProfileState === "My Addresses" && <MyAddress />}
+          {showProfileState === "Profile" && <Profile id={showid} />}
+          {showProfileState === "My Orders" && <Myorders id={showid} />}
+          {showProfileState === "My Addresses" && <MyAddress id={showid} />}
         </div>
       </div>
       <Footer />
