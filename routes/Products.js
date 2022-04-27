@@ -23,7 +23,8 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { email, password } = req.body;
+        const { name, imageSrc, des, rating, NumReview, price, gender, category } =
+        req.body;
 
         res.status(200).send({ message: "Hello" });
     }
