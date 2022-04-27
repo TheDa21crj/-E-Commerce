@@ -30,6 +30,10 @@ const ProductSchema = new mongoose.Schema({
         required: true,
         default: 0,
     },
+    gender: {
+        type: "string",
+        required: true,
+    },
     category: {
         type: "string",
         required: true,
