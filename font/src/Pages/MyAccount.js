@@ -12,6 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 export default function MyAccount() {
   const [showName, setName] = useState("");
   const [showUrl, seturl] = useState("");
+  const [showProfileState, setProfileState] = useState("Your Orders");
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -46,6 +47,11 @@ export default function MyAccount() {
   useEffect(() => {
     AuthMiddleware();
   }, []);
+
+  const ShowProfileState = async (e) => {
+    console.log(e.target.innerHTML);
+    setProfileState(e.target.innerHTML);
+  };
   return (
     <div>
       <Nav />
@@ -56,9 +62,15 @@ export default function MyAccount() {
           <p className={MACss.PTagEmail}>
             <span> {showName}</span>
           </p>
-          <p className={MACss.pTags}>Profile</p>
-          <p className={MACss.pTags}>My Orders</p>
-          <p className={MACss.pTags}>My Addresses</p>
+          <p className={MACss.pTags} onClick={ShowProfileState}>
+            Profile
+          </p>
+          <p className={MACss.pTags} onClick={ShowProfileState}>
+            My Orders
+          </p>
+          <p className={MACss.pTags} onClick={ShowProfileState}>
+            My Addresses
+          </p>
           <div className={MACss.LinkTagDiv}>
             <Link to="/logout" className="LinkStyle" id={MACss.LogoutLinkTag}>
               Logout
@@ -66,7 +78,7 @@ export default function MyAccount() {
           </div>
         </div>
         <div className={MACss.rightDiv}>
-          <p>Your Orders</p>
+          <p>{showProfileState}</p>
         </div>
       </div>
       <Footer />
