@@ -4,6 +4,7 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Header from "./../Components/Home/Header";
 import Footer from "./../Components/Footer";
+import MACss from "./Css/MyAccount.module.css";
 import { toggleNav } from "./../Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 
