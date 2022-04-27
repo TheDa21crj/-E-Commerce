@@ -29,7 +29,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
     width: 30%;
     margin-left: 50px;
     border-style: solid;
@@ -90,6 +89,5 @@
 
 .rightDiv {
     width: 60%;
-    background-color: red;
     margin-right: 50px;
 }
