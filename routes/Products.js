@@ -16,18 +16,46 @@ router.post(
         check("NumReview", "NumReview is Required").not().isEmpty(),
         check("price", "price is Required").not().isEmpty(),
         check("gender", "gender is Required").not().isEmpty(),
-        check("category", "category is Required").not().isEmpty(),
+        // check("category", "category is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { name, imageSrc, des, rating, NumReview, price, gender, category } =
-        req.body;
+        const {
+            name,
+            imageSrc,
+            des,
+            rating,
+            NumReview,
+            price,
+            gender,
+            // category
+        } = req.body;
 
         try {
-            res.status(200).send({ message: "Hello" });
+            let imgSrc = await Products.findOne({ imageSrc });
+
+            if (imgSrc) {
+                return res.status(400).json({ message: `Product Exists` });
+            }
+            console.log(req.body);
+
+            let ProductData = new Products({
+                name,
+                imageSrc,
+                des,
+                rating,
+                NumReview,
+                price,
+                gender,
+                // category,
+            });
+
+            await ProductData.save();
+
+            res.status(200).send({ message: "Product Added" });
         } catch (error) {
             console.log(error);
             res.status(500).json({ message: error });

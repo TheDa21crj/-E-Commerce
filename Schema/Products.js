@@ -36,7 +36,7 @@ const ProductSchema = new mongoose.Schema({
     },
     category: {
         type: "string",
-        required: true,
+        // required: true,
     },
     date: {
         type: Date,
