@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NACss from "./Css/NewArrival.module.css";
 import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import NewArrivalJson from "./../../Data/NewArrival.json";
 
 export default function NewArrival() {
+  const [showNA, setNA] = useState([]);
+
   var setting = {
     dots: false,
     infinite: true,
@@ -16,6 +17,34 @@ export default function NewArrival() {
     slidesToScroll: 3,
     autoplay: false,
   };
+
+  const DataGet = async () => {
+    try {
+      const res = await fetch("/api/admin/Products/NewArival", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (data.errors) {
+        return console.log("error");
+      }
+      if (data) {
+        setNA(data);
+        console.log(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    DataGet();
+  }, []);
   return (
     <div className={NACss.mDiv}>
       <div className={NACss.H1Div}>
@@ -23,11 +52,11 @@ export default function NewArrival() {
       </div>
       <div className={NACss.slideDiv}>
         <Sliders {...setting} className={NACss.Hslide}>
-          {NewArrivalJson.map((value, key) => {
+          {showNA.map((value, key) => {
             return (
-              <div key={key} className={NACss.SlidDiv}>
+              <div key={value._id} className={NACss.SlidDiv}>
                 <img
-                  src={value.src}
+                  src={value.imageSrc}
                   alt={value.name}
                   className={NACss.ImgHeader}
                 />
