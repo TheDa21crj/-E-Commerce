@@ -38,6 +38,10 @@ const ProductSchema = new mongoose.Schema({
         type: "string",
         // required: true,
     },
+    sold: {
+        type: "Number",
+        // required: true,
+    },
     date: {
         type: Date,
         default: Date.now,
