@@ -38,8 +38,12 @@
     height: 380px;
 }
 
+.Hslide {
+    width: 95%;
+}
 
-/* .slideDiv {
+.slideDiv {
     display: flex;
     justify-content: center;
-} */
+    margin-left: 1px;
+}
