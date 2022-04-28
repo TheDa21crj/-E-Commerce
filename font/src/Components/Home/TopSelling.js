@@ -65,7 +65,10 @@ export default function TopSelling() {
                 </div>
                 <div className={TSCss.DetailsDiv}>
                   <p className={TSCss.Name}>{value.name}</p>
-                  <p>{value.rating}</p>
+                  <p className={TSCss.Rating}>
+                    <StarIcon fontSize="small" className={TSCss.StarIcon} />
+                    <span>{value.rating}</span>
+                  </p>
                   <p>₹ {value.price}</p>
                 </div>
               </div>
