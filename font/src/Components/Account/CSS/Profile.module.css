@@ -1,0 +1,9 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../../Manrope/static/Manrope-Regular.ttf);
+}
