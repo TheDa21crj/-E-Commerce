@@ -22,7 +22,19 @@ export default function TopSelling() {
         <h1 className={TSCss.h1}>Top Selling</h1>
       </div>
       <div>
-        <Sliders {...settingTS} className={TSCss.Hslide}></Sliders>
+        <Sliders {...settingTS} className={TSCss.Hslide}>
+          {TopSellingJson.map((value, key) => {
+            return (
+              <div key={key}>
+                <img
+                  src={value.src}
+                  alt={value.name}
+                  className={TSCss.ImgSrc}
+                />
+              </div>
+            );
+          })}
+        </Sliders>
       </div>
     </div>
   );
