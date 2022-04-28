@@ -81,3 +81,15 @@
 .Name:hover {
     color: #000000;
 }
+
+.Rating {
+    font-family: ManropeRegular;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.StarIcon {
+    color: gold;
+    margin-right: 5px;
+}
