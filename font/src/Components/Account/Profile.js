@@ -6,7 +6,18 @@ export default function Profile(props) {
     <div>
       <h1 className={ProfileCss.h1}>Profile</h1>
       <div className={ProfileCss.conMDiv}>
-        <p>{props.email}</p>
+        <div className={ProfileCss.EmailDiv}>
+          <p>Email ID:</p>
+          <input
+            type="email"
+            className={ProfileCss.impEmail}
+            name=""
+            id=""
+            readonly="readonly"
+            disabled="disabled"
+            value={props.email}
+          />
+        </div>
       </div>
     </div>
   );
