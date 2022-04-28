@@ -49,7 +49,6 @@ router.post(
                 NumReview,
                 price,
                 gender,
-                // category,
             });
 
             await ProductData.save();
@@ -69,8 +68,8 @@ router.get("/NewArival", [], async(req, res) => {
 });
 
 //Public || Update || /api/admin/Products/Update
-router.post(
-    "/", [
+router.put(
+    "/Update", [
         check("_id", "id is Required").not().isEmpty(),
         check("field", "field is Required").not().isEmpty(),
         check("value", "value is Required").not().isEmpty(),
@@ -81,6 +80,22 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
         const { _id, field, value } = req.body;
+
+        try {
+            let id = await Products.findOne({ _id });
+
+            if (!id) {
+                return res.status(400).json({ message: `Product Does not Exists` });
+            }
+            const result = await Products.updateOne({ _id }, {
+                $set: {
+                    [field]: value },
+            });
+            return res.status(200).json(result);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error });
+        }
     }
 );
 
