@@ -37,7 +37,7 @@ export default function MyAccount() {
       }
       if (data) {
         setName(data.message.email);
-        setid(data.message._id);
+        setid(data.message.email);
         seturl(data.message.avatar);
         console.log("My Account");
         dispatch(toggleNav("true"));
@@ -82,7 +82,7 @@ export default function MyAccount() {
           </div>
         </div>
         <div className={MACss.rightDiv}>
-          {showProfileState === "Profile" && <Profile id={showid} />}
+          {showProfileState === "Profile" && <Profile email={showid} />}
           {showProfileState === "My Orders" && <Myorders id={showid} />}
           {showProfileState === "My Addresses" && <MyAddress id={showid} />}
         </div>
