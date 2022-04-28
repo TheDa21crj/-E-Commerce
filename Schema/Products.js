@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const config = require("config");
-const jwt = require("jsonwebtoken");
 
 const ProductSchema = new mongoose.Schema({
     name: {
@@ -36,10 +34,12 @@ const ProductSchema = new mongoose.Schema({
     },
     category: {
         type: "string",
+        default: "null",
         // required: true,
     },
     sold: {
         type: "Number",
+        default: 0,
         // required: true,
     },
     date: {
