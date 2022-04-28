@@ -66,10 +66,10 @@
 .Name {
     width: 98%;
     margin-bottom: 7px;
+    color: grey;
     border-style: solid;
     border-color: lightgrey;
     border-width: 0px 0px 1px 0px;
     font-weight: bold;
     font-family: ManropeExtraBold;
-    /* background-color: red; */
 }
