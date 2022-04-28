@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function TopSelling() {
   const [showTS, setTS] = useState([]);
