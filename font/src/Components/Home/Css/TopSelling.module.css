@@ -31,3 +31,9 @@
 .h1:hover:after {
     width: 100%;
 }
+
+.ImgSrc {
+    border-radius: 0px 10px 0px 10px;
+    width: 98%;
+    max-height: 380px;
+}
