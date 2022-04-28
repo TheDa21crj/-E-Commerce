@@ -91,6 +91,8 @@ router.get("/account", UserAuth, async(req, res) => {
     res.status(200).send({ message: req.dataUser });
 });
 
+router.get("/");
+
 router.get("/logout", async(req, res) => {
     res.clearCookie("jwt", { path: "/" });
     res.status(200).send({ message: `Logout` });
