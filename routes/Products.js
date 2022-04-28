@@ -61,12 +61,6 @@ router.post(
     }
 );
 
-// Public || New Arrival || /api/admin/Products/NewArival
-router.get("/NewArival", [], async(req, res) => {
-    let data = await Products.find().sort({ date: -1 }).limit(9);
-    res.status(202).json(data);
-});
-
 //Public || Update || /api/admin/Products/Update
 router.put(
     "/Update", [
@@ -89,7 +83,8 @@ router.put(
             }
             const result = await Products.updateOne({ _id }, {
                 $set: {
-                    [field]: value },
+                    [field]: value,
+                },
             });
             return res.status(200).json(result);
         } catch (error) {
@@ -98,5 +93,17 @@ router.put(
         }
     }
 );
+
+// Public || New Arrival || /api/admin/Products/NewArival
+router.get("/NewArival", [], async(req, res) => {
+    let data = await Products.find().sort({ date: 1 }).limit(9);
+    res.status(202).json(data);
+});
+
+// Public || Top Selling || /api/admin/Products/TopSelling
+router.get("/TopSelling", [], async(req, res) => {
+    let data = await Products.find().sort({ sold: 1 }).limit(12);
+    res.status(202).json(data);
+});
 
 module.exports = router;
