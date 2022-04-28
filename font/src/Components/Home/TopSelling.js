@@ -62,7 +62,8 @@ export default function TopSelling() {
                     className={TSCss.ImgSrc}
                   />
                 </div>
-                <p>{value.name}</p>
+                <p className={TSCss.Name}>{value.name}</p>
+                <p>{value.rating}</p>
                 <p>₹ {value.price}</p>
               </div>
             );
