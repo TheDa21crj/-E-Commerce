@@ -63,7 +63,7 @@ export default function TopSelling() {
                   />
                 </div>
                 <p>{value.name}</p>
-                <p>₹{value.price}</p>
+                <p>₹ {value.price}</p>
               </div>
             );
           })}
