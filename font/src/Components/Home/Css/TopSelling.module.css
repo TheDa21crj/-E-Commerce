@@ -1,3 +1,13 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../Manrope/static/Manrope-Regular.ttf);
+}
+
 .mDiv {
     margin-top: 20px;
 }
@@ -46,4 +56,12 @@
     display: flex;
     justify-content: center;
     margin-left: 1px;
+}
+
+.DetailsDiv {
+    margin: 7px 0px 0px 15px;
+}
+
+.Name {
+    font-weight: bold;
 }
