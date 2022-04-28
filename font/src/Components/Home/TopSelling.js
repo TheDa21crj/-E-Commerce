@@ -55,7 +55,7 @@ export default function TopSelling() {
         <Sliders {...settingTS} className={TSCss.Hslide}>
           {showTS.map((value, key) => {
             return (
-              <div key={value._id}>
+              <div key={value._id} className={TSCss.MapMDiv}>
                 <div>
                   <img
                     src={value.imageSrc}
@@ -69,7 +69,7 @@ export default function TopSelling() {
                     <StarIcon fontSize="small" className={TSCss.StarIcon} />
                     <span>{value.rating}</span>
                   </p>
-                  <p>₹ {value.price}</p>
+                  <p className={TSCss.price}>₹ {value.price}</p>
                 </div>
               </div>
             );

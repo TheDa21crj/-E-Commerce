@@ -63,6 +63,12 @@
     margin: 7px 0px 0px 15px;
 }
 
+.DetailsDiv:hover>.Name,
+.DetailsDiv:hover>.Rating,
+.DetailsDiv:hover>.price {
+    color: black;
+}
+
 .Name {
     white-space: nowrap;
     width: 98%;
@@ -78,18 +84,25 @@
     transition: all 0.3s;
 }
 
-.Name:hover {
+
+/* .Name:hover {
     color: #000000;
-}
+} */
 
 .Rating {
     font-family: ManropeRegular;
     display: flex;
     align-items: center;
     margin-bottom: 7px;
+    color: grey;
 }
 
 .StarIcon {
     color: gold;
     margin-right: 5px;
+}
+
+.price {
+    font-family: ManropeRegular;
+    color: grey;
 }
