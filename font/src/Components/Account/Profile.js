@@ -5,7 +5,9 @@ export default function Profile(props) {
   return (
     <div>
       <h1 className={ProfileCss.h1}>Profile</h1>
-      <p>{props.email}</p>
+      <div className={ProfileCss.conMDiv}>
+        <p>{props.email}</p>
+      </div>
     </div>
   );
 }
