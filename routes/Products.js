@@ -63,4 +63,10 @@ router.post(
     }
 );
 
+// Public || New Arrival || /api/admin/Products/NewArival
+router.get("/NewArival", [], async(req, res) => {
+    let data = await Products.find().sort({ date: -1 }).limit(9);
+    res.status(202).json(data);
+});
+
 module.exports = router;
