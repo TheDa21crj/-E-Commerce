@@ -55,11 +55,15 @@ export default function TopSelling() {
           {showTS.map((value, key) => {
             return (
               <div key={value._id}>
-                <img
-                  src={value.imageSrc}
-                  alt={value.name}
-                  className={TSCss.ImgSrc}
-                />
+                <div>
+                  <img
+                    src={value.imageSrc}
+                    alt={value.name}
+                    className={TSCss.ImgSrc}
+                  />
+                </div>
+                <p>{value.name}</p>
+                <p>{value.category}</p>
               </div>
             );
           })}
