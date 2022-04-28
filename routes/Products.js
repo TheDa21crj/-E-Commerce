@@ -16,7 +16,6 @@ router.post(
         check("NumReview", "NumReview is Required").not().isEmpty(),
         check("price", "price is Required").not().isEmpty(),
         check("gender", "gender is Required").not().isEmpty(),
-        // check("category", "category is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
