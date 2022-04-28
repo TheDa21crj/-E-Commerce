@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function TopSelling() {
+  const [showTS, setTS] = useState([]);
+
   var settingTS = {
     dots: false,
     infinite: true,
@@ -16,18 +18,45 @@ export default function TopSelling() {
     slidesToScroll: 4,
     autoplay: false,
   };
+
+  const DataGet = async () => {
+    try {
+      const res = await fetch("/api/admin/Products/TopSelling", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (data.errors) {
+        return console.log("error");
+      }
+      if (data) {
+        setTS(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    DataGet();
+  }, []);
   return (
     <div className={TSCss.mDiv}>
       <div className={TSCss.H1Div}>
         <h1 className={TSCss.h1}>Top Selling</h1>
       </div>
-      <div>
+      <div className={TSCss.slideDiv}>
         <Sliders {...settingTS} className={TSCss.Hslide}>
-          {TopSellingJson.map((value, key) => {
+          {showTS.map((value, key) => {
             return (
-              <div key={key}>
+              <div key={value._id}>
                 <img
-                  src={value.src}
+                  src={value.imageSrc}
                   alt={value.name}
                   className={TSCss.ImgSrc}
                 />
