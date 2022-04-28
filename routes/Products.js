@@ -102,7 +102,7 @@ router.get("/NewArival", [], async(req, res) => {
 
 // Public || Top Selling || /api/admin/Products/TopSelling
 router.get("/TopSelling", [], async(req, res) => {
-    let data = await Products.find().sort({ sold: 1 }).limit(12);
+    let data = await Products.find().sort({ sold: -1 }).limit(12);
     res.status(202).json(data);
 });
 
