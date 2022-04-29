@@ -193,8 +193,10 @@
 
 .Des {
     position: absolute;
-    width: 11px;
-    height: 11px;
-    background-color: gold;
+    width: 15px;
+    height: 15px;
+    background-image: linear-gradient(to bottom right, gold 50%, white 50%);
+    top: 35px;
     left: 50%;
+    transform: rotate(45deg);
 }
