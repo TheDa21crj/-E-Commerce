@@ -5,6 +5,7 @@ import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function ProductsDeatils() {
   const [showid, setid] = useState("");
@@ -72,8 +73,19 @@ export default function ProductsDeatils() {
         </div>
         <div className={PDCss.rightDiv}>
           <h1 className={PDCss.PName}>{showname}</h1>
-          <p className={PDCss.Price}>₹ {showprice}</p>
-          <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
+          <div className={PDCss.RowDiv}>
+            <div>
+              <p className={PDCss.Price}>₹ {showprice}</p>
+              <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
+            </div>
+            <div className={PDCss.RatingDiv}>
+              <p className={PDCss.Rating}>
+                <StarIcon className={PDCss.StarIcon} />
+                {showrating}
+              </p>
+            </div>
+          </div>
+          <div></div>
           <div className={PDCss.SizeMDiv}>
             <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
               {showS ? (
