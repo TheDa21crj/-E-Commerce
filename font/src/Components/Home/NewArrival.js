@@ -53,7 +53,6 @@ export default function NewArrival() {
         <Sliders {...setting} className={NACss.Hslide}>
           {showNA.map((value, key) => {
             return (
-              // <Link to={`/products/${value._id}`} className="LinkStyle">
               <div key={value._id} className={NACss.SlidDiv}>
                 <img
                   src={value.imageSrc}
@@ -71,7 +70,6 @@ export default function NewArrival() {
                   </Link>
                 </div>
               </div>
-              // </Link>
             );
           })}
         </Sliders>
