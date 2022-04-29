@@ -56,23 +56,25 @@ export default function TopSelling() {
         <Sliders {...settingTS} className={TSCss.Hslide}>
           {showTS.map((value, key) => {
             return (
-              <div key={value._id} className={TSCss.MapMDiv}>
-                <div>
-                  <img
-                    src={value.imageSrc}
-                    alt={value.name}
-                    className={TSCss.ImgSrc}
-                  />
+              <Link to={`/products/${value._id}`}>
+                <div key={value._id} className={TSCss.MapMDiv}>
+                  <div>
+                    <img
+                      src={value.imageSrc}
+                      alt={value.name}
+                      className={TSCss.ImgSrc}
+                    />
+                  </div>
+                  <div className={TSCss.DetailsDiv}>
+                    <p className={TSCss.Name}>{value.name}</p>
+                    <p className={TSCss.Rating}>
+                      <StarIcon fontSize="small" className={TSCss.StarIcon} />
+                      <span>{value.rating}</span>
+                    </p>
+                    <p className={TSCss.price}>₹ {value.price}</p>
+                  </div>
                 </div>
-                <div className={TSCss.DetailsDiv}>
-                  <p className={TSCss.Name}>{value.name}</p>
-                  <p className={TSCss.Rating}>
-                    <StarIcon fontSize="small" className={TSCss.StarIcon} />
-                    <span>{value.rating}</span>
-                  </p>
-                  <p className={TSCss.price}>₹ {value.price}</p>
-                </div>
-              </div>
+              </Link>
             );
           })}
         </Sliders>
