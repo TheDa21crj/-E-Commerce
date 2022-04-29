@@ -174,7 +174,7 @@ export default function ProductsDeatils() {
             <div className={PDCss.AddWISHLIST}>ADD TO WISHLIST</div>
           </div>
 
-          <div>
+          <div className={PDCss.DesDiv}>
             <div>
               <div>Product Description</div>
               <div>Product Details</div>
