@@ -76,6 +76,7 @@ export default function ProductsDeatils({ props }) {
               <p>XXL</p>
             </div>
           </div>
+          <p className={PDCss.SizeChart}>Size Chart</p>
         </div>
       </div>
       {/* <p>ID:{showid}</p> */}
