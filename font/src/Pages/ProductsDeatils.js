@@ -144,12 +144,6 @@ export default function ProductsDeatils() {
           {showChat ? <SizeChart /> : ""}
         </div>
       </div>
-      {/* <p>ID:{showid}</p> */}
-      {/* <p>Name:{showname}</p> */}
-      {/* <img src={showimageSrc} alt="" /> */}
-      {/* <p>Description:{showdes}</p> */}
-      {/* <p>Price:{showprice}</p> */}
-      {/* <p>Rating:{showrating}</p> */}
       <Footer />
     </div>
   );
