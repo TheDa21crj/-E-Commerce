@@ -142,8 +142,14 @@ export default function ProductsDeatils() {
             </span>
           </p>
           {showChat ? <SizeChart /> : ""}
+
+          <div className={PDCss.QuantityDiv}>
+            <p>Quantity</p>
+            <input type="number" name="" id="" className={PDCss.QuantityINP} />
+          </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
