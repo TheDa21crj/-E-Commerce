@@ -182,11 +182,11 @@ export default function ProductsDeatils() {
                 onClick={() => setDetails(false)}
               >
                 Product Description
-                <div className={PDCss.Des}></div>
+                {showDetails ? "" : <div className={PDCss.Des}></div>}
               </div>
               <div className={PDCss.Details} onClick={() => setDetails(true)}>
                 Product Details
-                <div className={PDCss.Des}></div>
+                {showDetails ? <div className={PDCss.Des}></div> : ""}
               </div>
             </div>
             <div className={PDCss.ContentDiv}>
