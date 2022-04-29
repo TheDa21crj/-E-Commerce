@@ -122,6 +122,11 @@
     border-color: lightgrey;
     border-radius: 5px;
     padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.QuantityINP:hover {
+    border-color: gold;
 }
 
 .BuyDiv {
