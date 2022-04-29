@@ -80,8 +80,8 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
-              {showS ? (
+            <div className={PDCss.SizeRoundDivP} onClick={() => setM(!showM)}>
+              {showM ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>M</p>
                 </div>
@@ -92,8 +92,8 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
-              {showS ? (
+            <div className={PDCss.SizeRoundDivP} onClick={() => setL(!showL)}>
+              {showL ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>L</p>
                 </div>
@@ -104,8 +104,8 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
-              {showS ? (
+            <div className={PDCss.SizeRoundDivP} onClick={() => setXL(!showXL)}>
+              {showXL ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>XL</p>
                 </div>
@@ -116,8 +116,11 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
-              {showS ? (
+            <div
+              className={PDCss.SizeRoundDivP}
+              onClick={() => setXXL(!showXXL)}
+            >
+              {showXXL ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>XXL</p>
                 </div>
@@ -128,6 +131,7 @@ export default function ProductsDeatils() {
               )}
             </div>
           </div>
+
           <p className={PDCss.SizeChart}>
             Need Some Guide for selecting the size?{" "}
             <span
