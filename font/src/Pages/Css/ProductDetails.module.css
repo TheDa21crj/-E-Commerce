@@ -78,6 +78,9 @@
 
 .SizeChart {
     margin-top: 15px;
+}
+
+.SizeChartSpan {
     text-decoration: underline;
     color: gold;
     cursor: pointer;
