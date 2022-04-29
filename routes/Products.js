@@ -106,6 +106,6 @@ router.get("/TopSelling", [], async(req, res) => {
     res.status(202).json(data);
 });
 
-//
+// Public || Product page || /api/admin/Products/:id
 
 module.exports = router;
