@@ -79,4 +79,6 @@
 .SizeChart {
     margin-top: 15px;
     text-decoration: underline;
+    color: gold;
+    cursor: pointer;
 }
