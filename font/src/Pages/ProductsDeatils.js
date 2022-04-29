@@ -145,7 +145,6 @@ export default function ProductsDeatils() {
 
           <div className={PDCss.QuantityDiv}>
             <p>Quantity</p>
-            {/* <input type="number" name="" id="" className={PDCss.QuantityINP} /> */}
             <select name="" id="" className={PDCss.QuantityINP}>
               <option value="1">1</option>
               <option value="2">2</option>
