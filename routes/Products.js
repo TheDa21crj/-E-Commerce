@@ -107,5 +107,20 @@ router.get("/TopSelling", [], async(req, res) => {
 });
 
 // Public || Product page || /api/admin/Products/:id
+router.get("/api/admin/Products/:id", async(req, res) => {
+    try {
+        const productD = await Products.find({ _id: req.params.id });
+        if (!productD) {
+            return res.status(404).json({ message: "No Product found" });
+        }
+        res.status(200).json(productD);
+    } catch (error) {
+        if (error.kind === "ObjectID") {
+            return res.status(400).json({ message: "NO Product Found" });
+        }
+        console.log(error);
+        res.status(500).send("Server Error");
+    }
+});
 
 module.exports = router;
