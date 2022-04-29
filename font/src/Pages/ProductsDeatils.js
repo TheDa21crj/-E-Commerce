@@ -5,8 +5,21 @@ import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 
 export default function ProductsDeatils({ props }) {
+  const [showid, setid] = useState("");
+  const [showname, setname] = useState("");
+  const [showimageSrc, setimageSrc] = useState("");
+  const [showdes, setdes] = useState("");
+  const [showprice, setprice] = useState("");
+  const [showrating, setrating] = useState("");
+
+  //   id: "",
+  //   name: "",
+  //   imageSrc: "",
+  //   des: "",
+  //   price: "",
+  //   rating: "",
+
   const { id } = useParams();
-  console.log(id);
 
   const ProductData = async () => {
     try {
@@ -24,7 +37,12 @@ export default function ProductsDeatils({ props }) {
         return;
       }
       if (data) {
-        console.log(data[0]);
+        setid(data[0].id);
+        setname(data[0].name);
+        setimageSrc(data[0].imageSrc);
+        setdes(data[0].des);
+        setprice(data[0].price);
+        setrating(data[0].rating);
       }
     } catch (error) {
       console.log(error);
