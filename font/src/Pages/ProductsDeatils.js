@@ -55,7 +55,11 @@ export default function ProductsDeatils({ props }) {
         <div>
           <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
         </div>
-        <div></div>
+        <div>
+          <h1 className={PDCss.PName}>{showname}</h1>
+          <p className={PDCss.Price}>₹ {showprice}</p>
+          <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
+        </div>
       </div>
       {/* <p>ID:{showid}</p> */}
       {/* <p>Name:{showname}</p> */}
