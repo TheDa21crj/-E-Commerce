@@ -66,10 +66,10 @@ export default function ProductsDeatils() {
       <Nav />
       <NavMobo />
       <div className={PDCss.MDiv}>
-        <div>
+        <div className={PDCss.leftDiv}>
           <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
         </div>
-        <div>
+        <div className={PDCss.rightDiv}>
           <h1 className={PDCss.PName}>{showname}</h1>
           <p className={PDCss.Price}>₹ {showprice}</p>
           <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
@@ -179,7 +179,7 @@ export default function ProductsDeatils() {
               <div className={PDCss.Description}>Product Description</div>
               <div className={PDCss.Details}>Product Details</div>
             </div>
-            <div></div>
+            <div>{showdes}</div>
           </div>
         </div>
       </div>
