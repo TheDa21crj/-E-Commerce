@@ -58,23 +58,12 @@ export default function ProductsDeatils({ props }) {
       <Nav />
       <NavMobo />
       ProductsDeatils
-      <br />
-      <br />
       <p>ID:{showid}</p>
-      <br />
       <p>Name:{showname}</p>
-      <br />
-      <p>Image Link:{showimageSrc}</p>
-      <br />
       <img src={showimageSrc} alt="" />
-      <br />
-      <br />
       <p>Description:{showdes}</p>
-      <br />
       <p>Price:{showprice}</p>
-      <br />
       <p>Rating:{showrating}</p>
-      <br />
       <Footer />
     </div>
   );
