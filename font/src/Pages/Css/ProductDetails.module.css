@@ -65,8 +65,18 @@
     border-style: solid;
     border-width: 2px;
     border-color: gold;
+    transition: all 0.3s;
+}
+
+.SizeRoundDiv:hover {
+    box-shadow: 2px 2px 50px gold;
 }
 
 .SizeRoundDiv p {
     font-family: ManropeMedium;
+}
+
+.SizeChart {
+    margin-top: 15px;
+    text-decoration: underline;
 }
