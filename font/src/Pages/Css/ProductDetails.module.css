@@ -175,6 +175,7 @@
 
 .Description,
 .Details {
+    position: relative;
     font-family: ManropeExtraBold;
 }
 
@@ -188,4 +189,12 @@
     border-radius: 5px;
     border-color: rgb(252, 239, 166);
     padding: 20px;
+}
+
+.Des {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: gold;
+    left: 50%;
 }
