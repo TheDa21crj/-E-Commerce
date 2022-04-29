@@ -19,7 +19,7 @@ export default function ProductsDeatils() {
   const [showM, setM] = useState(false);
   const [showL, setL] = useState(false);
   const [showXL, setXL] = useState(false);
-  const [showXXl, setXXl] = useState(false);
+  const [showXXL, setXXL] = useState(false);
 
   const { id } = useParams();
 
