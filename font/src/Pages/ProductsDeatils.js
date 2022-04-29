@@ -78,8 +78,14 @@ export default function ProductsDeatils({ props }) {
               <p>XXL</p>
             </div>
           </div>
-          <p className={PDCss.SizeChart} onClick={() => setChart(!showChat)}>
-            Need Some Guide for selecting the size? <span>Size Chart</span>
+          <p className={PDCss.SizeChart}>
+            Need Some Guide for selecting the size?{" "}
+            <span
+              onClick={() => setChart(!showChat)}
+              className={PDCss.SizeChartSpan}
+            >
+              Size Chart
+            </span>
           </p>
           {showChat ? <SizeChart /> : ""}
         </div>
