@@ -21,6 +21,8 @@ export default function ProductsDeatils() {
   const [showXL, setXL] = useState(false);
   const [showXXL, setXXL] = useState(false);
 
+  const [showSelect, setSelect] = useState();
+
   const { id } = useParams();
 
   const ProductData = async () => {
@@ -54,6 +56,10 @@ export default function ProductsDeatils() {
   useEffect(() => {
     ProductData();
   }, []);
+
+  const handleClick = (e) => {
+    setSelect(e.target.value);
+  };
 
   return (
     <div>
@@ -145,7 +151,12 @@ export default function ProductsDeatils() {
 
           <div className={PDCss.QuantityDiv}>
             <p>Quantity</p>
-            <select name="" id="" className={PDCss.QuantityINP}>
+            <select
+              name=""
+              id=""
+              className={PDCss.QuantityINP}
+              onChange={handleClick}
+            >
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="4">4</option>
