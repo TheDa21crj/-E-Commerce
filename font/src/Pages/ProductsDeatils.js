@@ -3,6 +3,7 @@ import Nav from "./../Components/Nav";
 import { Link, useParams } from "react-router-dom";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
+import PDCss from "ProductDetails.module.css"
 
 export default function ProductsDeatils({ props }) {
   const [showid, setid] = useState("");
@@ -57,7 +58,12 @@ export default function ProductsDeatils({ props }) {
     <div>
       <Nav />
       <NavMobo />
-      ProductsDeatils
+      <div className={}>
+        <div>
+          <img src={showimageSrc} alt="" />
+        </div>
+        <div></div>
+      </div>
       {/* <p>ID:{showid}</p> */}
       {/* <p>Name:{showname}</p> */}
       {/* <img src={showimageSrc} alt="" /> */}
