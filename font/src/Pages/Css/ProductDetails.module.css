@@ -125,10 +125,6 @@
     transition: all 0.3s;
 }
 
-.QuantityINP:hover {
-    border-color: gold;
-}
-
 .BuyDiv {
     margin-top: 30px;
     display: flex;
