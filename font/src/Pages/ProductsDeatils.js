@@ -6,7 +6,7 @@ import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
 
-export default function ProductsDeatils({ props }) {
+export default function ProductsDeatils() {
   const [showid, setid] = useState("");
   const [showname, setname] = useState("");
   const [showimageSrc, setimageSrc] = useState("");
@@ -14,6 +14,12 @@ export default function ProductsDeatils({ props }) {
   const [showprice, setprice] = useState("");
   const [showrating, setrating] = useState("");
   const [showChat, setChart] = useState(false);
+
+  const [showS, setS] = useState(false);
+  const [showM, setM] = useState(false);
+  const [showL, setL] = useState(false);
+  const [showXL, setXL] = useState(false);
+  const [showXXl, setXXl] = useState(false);
 
   const { id } = useParams();
 
@@ -62,8 +68,16 @@ export default function ProductsDeatils({ props }) {
           <p className={PDCss.Price}>₹ {showprice}</p>
           <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
           <div className={PDCss.SizeMDiv}>
-            <div className={PDCss.SizeRoundDiv}>
-              <p>S</p>
+            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
+              {showS ? (
+                <div className={PDCss.SizeRoundDivTrue}>
+                  <p>S</p>
+                </div>
+              ) : (
+                <div className={PDCss.SizeRoundDiv}>
+                  <p>S</p>
+                </div>
+              )}
             </div>
             <div className={PDCss.SizeRoundDiv}>
               <p>M</p>
