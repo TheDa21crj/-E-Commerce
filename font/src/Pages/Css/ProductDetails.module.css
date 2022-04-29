@@ -106,3 +106,14 @@
     color: gold;
     cursor: pointer;
 }
+
+.QuantityDiv {
+    margin-top: 20px;
+    font-family: ManropeMedium;
+    display: flex;
+    align-items: center;
+}
+
+.QuantityINP {
+    margin-left: 10px;
+}
