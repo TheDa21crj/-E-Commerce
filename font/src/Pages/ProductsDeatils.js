@@ -79,17 +79,53 @@ export default function ProductsDeatils() {
                 </div>
               )}
             </div>
-            <div className={PDCss.SizeRoundDiv}>
-              <p>M</p>
+
+            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
+              {showS ? (
+                <div className={PDCss.SizeRoundDivTrue}>
+                  <p>M</p>
+                </div>
+              ) : (
+                <div className={PDCss.SizeRoundDiv}>
+                  <p>M</p>
+                </div>
+              )}
             </div>
-            <div className={PDCss.SizeRoundDiv}>
-              <p>L</p>
+
+            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
+              {showS ? (
+                <div className={PDCss.SizeRoundDivTrue}>
+                  <p>L</p>
+                </div>
+              ) : (
+                <div className={PDCss.SizeRoundDiv}>
+                  <p>L</p>
+                </div>
+              )}
             </div>
-            <div className={PDCss.SizeRoundDiv}>
-              <p>XL</p>
+
+            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
+              {showS ? (
+                <div className={PDCss.SizeRoundDivTrue}>
+                  <p>XL</p>
+                </div>
+              ) : (
+                <div className={PDCss.SizeRoundDiv}>
+                  <p>XL</p>
+                </div>
+              )}
             </div>
-            <div className={PDCss.SizeRoundDiv}>
-              <p>XXL</p>
+
+            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
+              {showS ? (
+                <div className={PDCss.SizeRoundDivTrue}>
+                  <p>XXL</p>
+                </div>
+              ) : (
+                <div className={PDCss.SizeRoundDiv}>
+                  <p>XXL</p>
+                </div>
+              )}
             </div>
           </div>
           <p className={PDCss.SizeChart}>
