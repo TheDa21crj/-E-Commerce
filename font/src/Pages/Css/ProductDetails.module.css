@@ -177,3 +177,10 @@
 .Details {
     font-family: ManropeExtraBold;
 }
+
+.ContentDiv {
+    margin-top: 20px;
+    font-family: ManropeMedium;
+    text-align: justify;
+    line-height: 1.5;
+}
