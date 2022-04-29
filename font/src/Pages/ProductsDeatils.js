@@ -186,6 +186,7 @@ export default function ProductsDeatils() {
               </div>
               <div className={PDCss.Details} onClick={() => setDetails(true)}>
                 Product Details
+                <div className={PDCss.Des}></div>
               </div>
             </div>
             <div className={PDCss.ContentDiv}>
