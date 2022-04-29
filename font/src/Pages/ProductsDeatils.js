@@ -60,11 +60,11 @@ export default function ProductsDeatils({ props }) {
           <p className={PDCss.Price}>₹ {showprice}</p>
           <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
           <div className={PDCss.SizeMDiv}>
-            <div className={PDCss.SizeMDiv}>S</div>
-            <div className={PDCss.SizeMDiv}>M</div>
-            <div className={PDCss.SizeMDiv}>L</div>
-            <div className={PDCss.SizeMDiv}>XL</div>
-            <div className={PDCss.SizeMDiv}>XXL</div>
+            <div className={PDCss.SizeRoundDiv}>S</div>
+            <div className={PDCss.SizeRoundDiv}>M</div>
+            <div className={PDCss.SizeRoundDiv}>L</div>
+            <div className={PDCss.SizeRoundDiv}>XL</div>
+            <div className={PDCss.SizeRoundDiv}>XXL</div>
           </div>
         </div>
       </div>
