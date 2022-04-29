@@ -145,7 +145,7 @@ export default function ProductsDeatils() {
 
           <div className={PDCss.QuantityDiv}>
             <p>Quantity</p>
-            <input type="number" name="" id="" className={PDCss.QuantityINP} />
+            {/* <input type="number" name="" id="" className={PDCss.QuantityINP} /> */}
           </div>
         </div>
       </div>
