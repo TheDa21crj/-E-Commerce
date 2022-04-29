@@ -170,8 +170,8 @@ export default function ProductsDeatils() {
           </div>
 
           <div className={PDCss.BuyDiv}>
-            <div></div>
-            <div></div>
+            <div className={PDCss.AddCART}>ADD TO CART</div>
+            <div className={PDCss.AddWISHLIST}>ADD TO WISHLIST</div>
           </div>
         </div>
       </div>
