@@ -22,7 +22,7 @@ export default function ProductsDeatils() {
   const [showXXL, setXXL] = useState(false);
 
   const [showSelect, setSelect] = useState(1);
-  const [showDetails, setDetails] = useState();
+  const [showDetails, setDetails] = useState(false);
 
   const { id } = useParams();
 
@@ -177,11 +177,18 @@ export default function ProductsDeatils() {
 
           <div className={PDCss.DesDiv}>
             <div className={PDCss.DesHeadDiv}>
-              <div className={PDCss.Description}>Product Description</div>
-              <div className={PDCss.Details}>Product Details</div>
+              <div
+                className={PDCss.Description}
+                onClick={() => setDetails(false)}
+              >
+                Product Description
+              </div>
+              <div className={PDCss.Details} onClick={() => setDetails(true)}>
+                Product Details
+              </div>
             </div>
             <div className={PDCss.ContentDiv}>
-              <p>{showdes}</p>
+              {showDetails ? <p>Hello</p> : <p>{showdes}</p>}
             </div>
           </div>
         </div>
