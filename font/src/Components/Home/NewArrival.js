@@ -35,7 +35,6 @@ export default function NewArrival() {
       }
       if (data) {
         setNA(data);
-        console.log(data);
       }
     } catch (error) {
       console.log(error);
