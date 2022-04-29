@@ -55,7 +55,20 @@
     align-items: center;
 }
 
-.SizeRoundDiv {
+.SizeRoundDivP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+}
+
+.SizeRoundDiv,
+.SizeRoundDivTrue {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +83,13 @@
 
 .SizeRoundDiv:hover {
     box-shadow: 2px 2px 50px gold;
+}
+
+.SizeRoundDivTrue {
+    font-family: ManropeMedium;
+    font-weight: bold;
+    color: white;
+    background-color: gold;
 }
 
 .SizeRoundDiv p {
