@@ -168,7 +168,11 @@ export default function ProductsDeatils() {
               <option value="10">10</option>
             </select>
           </div>
-          {showSelect}
+
+          <div className={PDCss.BuyDiv}>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
 
