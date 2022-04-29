@@ -175,7 +175,7 @@ export default function ProductsDeatils() {
           </div>
 
           <div className={PDCss.DesDiv}>
-            <div>
+            <div className={PDCss.DesHeadDiv}>
               <div>Product Description</div>
               <div>Product Details</div>
             </div>
