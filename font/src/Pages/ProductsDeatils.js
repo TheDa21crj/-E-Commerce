@@ -21,7 +21,7 @@ export default function ProductsDeatils() {
   const [showXL, setXL] = useState(false);
   const [showXXL, setXXL] = useState(false);
 
-  const [showSelect, setSelect] = useState();
+  const [showSelect, setSelect] = useState(1);
 
   const { id } = useParams();
 
@@ -168,6 +168,7 @@ export default function ProductsDeatils() {
               <option value="10">10</option>
             </select>
           </div>
+          {showSelect}
         </div>
       </div>
 
