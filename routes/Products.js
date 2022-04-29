@@ -107,7 +107,7 @@ router.get("/TopSelling", [], async(req, res) => {
 });
 
 // Public || Product page || /api/admin/Products/:id
-router.get("/api/admin/Products/:id", async(req, res) => {
+router.get("/:id", async(req, res) => {
     try {
         const productD = await Products.find({ _id: req.params.id });
         if (!productD) {
