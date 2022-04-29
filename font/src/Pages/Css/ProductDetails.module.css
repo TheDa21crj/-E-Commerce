@@ -8,6 +8,11 @@
     src: url(./../../Manrope/static/Manrope-Regular.ttf);
 }
 
+@font-face {
+    font-family: ManropeMedium;
+    src: url(./../../Manrope/static/Manrope-Medium.ttf);
+}
+
 .MDiv {
     margin: 30px 0px 0px 0px;
     width: 100%;
@@ -43,10 +48,10 @@
 }
 
 .SizeMDiv {
-    margin-top: 10px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -54,8 +59,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: pink;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gold;
+}
+
+.SizeRoundDiv p {
+    font-family: ManropeMedium;
 }
