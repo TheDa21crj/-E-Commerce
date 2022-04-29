@@ -22,6 +22,11 @@
     /* align-items: center; */
 }
 
+.rightDiv,
+.leftDiv {
+    width: 45%;
+}
+
 .ImageSrc {
     width: 100%;
 }
@@ -169,4 +174,7 @@
     align-items: center;
 }
 
-.Description {}
+.Description,
+.Details {
+    font-family: ManropeExtraBold;
+}
