@@ -182,6 +182,7 @@ export default function ProductsDeatils() {
                 onClick={() => setDetails(false)}
               >
                 Product Description
+                <div className={PDCss.Des}></div>
               </div>
               <div className={PDCss.Details} onClick={() => setDetails(true)}>
                 Product Details
@@ -205,7 +206,7 @@ export default function ProductsDeatils() {
                   <br />
                   <b>Manufactured & Sold By:</b>
                   <br />
-                  The Da's Associations
+                  <i>The Da's Associations</i>
                 </p>
               ) : (
                 <p>{showdes}</p>
