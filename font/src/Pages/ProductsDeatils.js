@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
+import SizeChart from "./../Components/Product/SizeChart";
 
 export default function ProductsDeatils({ props }) {
   const [showid, setid] = useState("");
@@ -12,6 +13,7 @@ export default function ProductsDeatils({ props }) {
   const [showdes, setdes] = useState("");
   const [showprice, setprice] = useState("");
   const [showrating, setrating] = useState("");
+  const [showChat, setChart] = useState(false);
 
   const { id } = useParams();
 
@@ -76,7 +78,10 @@ export default function ProductsDeatils({ props }) {
               <p>XXL</p>
             </div>
           </div>
-          <p className={PDCss.SizeChart}>Size Chart</p>
+          <p className={PDCss.SizeChart} onClick={() => setChart(!showChat)}>
+            Need Some Guide for selecting the size? <span>Size Chart</span>
+          </p>
+          {showChat ? <SizeChart /> : ""}
         </div>
       </div>
       {/* <p>ID:{showid}</p> */}
