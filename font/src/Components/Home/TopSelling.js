@@ -46,6 +46,7 @@ export default function TopSelling() {
   useEffect(() => {
     DataGet();
   }, []);
+
   return (
     <div className={TSCss.mDiv}>
       <div className={TSCss.H1Div}>
