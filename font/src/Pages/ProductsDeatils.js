@@ -8,6 +8,12 @@ export default function ProductsDeatils({ props }) {
   const { id } = useParams();
   console.log(id);
 
+  const ProductData = async () => {};
+
+  useEffect(() => {
+    ProductData();
+  }, []);
+
   return (
     <div>
       <Nav />
