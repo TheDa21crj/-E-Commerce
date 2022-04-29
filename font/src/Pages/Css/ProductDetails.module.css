@@ -183,4 +183,9 @@
     font-family: ManropeMedium;
     text-align: justify;
     line-height: 1.5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(252, 239, 166);
+    padding: 20px;
 }
