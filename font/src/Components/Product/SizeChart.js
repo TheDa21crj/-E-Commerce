@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function SizeChart() {
-  return <div>SizeChart</div>;
+  return <div>Size Chart</div>;
 }
