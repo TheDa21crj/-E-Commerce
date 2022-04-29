@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import TSCss from "./Css/TopSelling.module.css";
-// import TopSellingJson from "./../../Data/TopSelling.json";
 import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
