@@ -8,7 +8,28 @@ export default function ProductsDeatils({ props }) {
   const { id } = useParams();
   console.log(id);
 
-  const ProductData = async () => {};
+  const ProductData = async () => {
+    try {
+      const res = await fetch(`/api/admin/Products/${id}`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (data.errors) {
+        return;
+      }
+      if (data) {
+        console.log(data[0]);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     ProductData();
