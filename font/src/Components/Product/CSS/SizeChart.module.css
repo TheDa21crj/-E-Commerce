@@ -13,7 +13,9 @@
 }
 
 .ConDiv {
-    background-color: red;
+    position: relative;
+    background-color: #60b4df;
+    width: 80%;
 }
 
 .mDivInner {
@@ -26,4 +28,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.CloseIcon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
