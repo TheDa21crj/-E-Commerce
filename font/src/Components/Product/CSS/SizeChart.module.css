@@ -55,11 +55,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     width: 90%;
 }
 
 .InCmDiv {
+    float: right;
     border-style: solid;
     border-width: 1px;
     border-color: gold;
@@ -85,5 +86,24 @@
 }
 
 .ImgTag {
+    width: 100%;
+}
+
+.RightDiv {
     width: 60%;
+    background-color: pink;
+}
+
+.LeftDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.TableDiv {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
