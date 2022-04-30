@@ -57,3 +57,9 @@
     font-family: ManropeRegular;
     margin-top: 20px;
 }
+
+.FormTag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
