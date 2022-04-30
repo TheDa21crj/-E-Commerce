@@ -155,13 +155,13 @@ export default function ProductsDeatils() {
           <p className={PDCss.SizeChart}>
             Need Some Guide for selecting the size?{" "}
             <span
-              onClick={() => setChart(!showChat)}
+              onClick={() => setChart(true)}
               className={PDCss.SizeChartSpan}
             >
               Size Chart
             </span>
           </p>
-          {showChat ? <SizeChart /> : ""}
+          {showChat ? <SizeChart name={showname} state={setChart} /> : ""}
 
           <div className={PDCss.QuantityDiv}>
             <p>Quantity</p>
