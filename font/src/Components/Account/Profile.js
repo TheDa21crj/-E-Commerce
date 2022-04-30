@@ -20,7 +20,7 @@ export default function Profile(props) {
         </div>
         {/* id:{props.id} */}
         <div className={ProfileCss.FormDiv}>
-          <p>General Information</p>
+          <p id={ProfileCss.GeneralI}>General Information</p>
           <form action="" method="POST" className={ProfileCss.FormTag}>
             <div>
               <div className={ProfileCss.LabelDivTag1}>
@@ -47,31 +47,39 @@ export default function Profile(props) {
               </div>
             </div>
             <div>
-              <div>
+              <div className={ProfileCss.Gender}>
                 <p>Gender</p>
-                <div>
-                  {props.gender == "Male" ? (
-                    <input type="radio" name="" id="" checked />
-                  ) : (
-                    <input type="radio" name="" id="" />
-                  )}
-                  <label htmlFor="Male">Male</label>
-                </div>
-                <div>
-                  {props.gender == "Female" ? (
-                    <input type="radio" name="" id="" checked />
-                  ) : (
-                    <input type="radio" name="" id="" />
-                  )}
-                  <label htmlFor="Female">Female</label>
-                </div>
-                <div>
-                  {props.gender == "Other" ? (
-                    <input type="radio" name="" id="" checked />
-                  ) : (
-                    <input type="radio" name="" id="" />
-                  )}
-                  <label htmlFor="Other">Other</label>
+                <div className={ProfileCss.GenderTDiv}>
+                  <div>
+                    {props.gender == "Male" ? (
+                      <input type="radio" name="" id="" checked />
+                    ) : (
+                      <input type="radio" name="" id="" />
+                    )}
+                    <label htmlFor="Male" className={ProfileCss.MaleLabel}>
+                      Male
+                    </label>
+                  </div>
+                  <div>
+                    {props.gender == "Female" ? (
+                      <input type="radio" name="" id="" checked />
+                    ) : (
+                      <input type="radio" name="" id="" />
+                    )}
+                    <label htmlFor="Female" className={ProfileCss.FemaleLabel}>
+                      Female
+                    </label>
+                  </div>
+                  <div>
+                    {props.gender == "Other" ? (
+                      <input type="radio" name="" id="" checked />
+                    ) : (
+                      <input type="radio" name="" id="" />
+                    )}
+                    <label htmlFor="Other" className={ProfileCss.OtherLabel}>
+                      Other
+                    </label>
+                  </div>
                 </div>
               </div>
               <div>
