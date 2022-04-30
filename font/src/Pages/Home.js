@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
@@ -8,6 +8,9 @@ import NewArrival from "./../Components/Home/NewArrival";
 import TopSelling from "./../Components/Home/TopSelling";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Welcome";
+  });
   return (
     <div>
       <Nav />
