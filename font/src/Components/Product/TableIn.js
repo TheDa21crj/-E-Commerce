@@ -6,10 +6,10 @@ export default function Table() {
     <div>
       <table>
         <tr>
-          <th>Size</th>
-          <th>Fit Shoulder</th>
-          <th>Fit Chest</th>
-          <th>Fit Waist</th>
+          <th className={TCss.th1}>Size</th>
+          <th className={TCss.th1}>Shoulder</th>
+          <th className={TCss.th1}>Chest</th>
+          <th className={TCss.th1}>Waist</th>
         </tr>
         <tr>
           <th>S</th>
