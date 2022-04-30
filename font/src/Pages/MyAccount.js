@@ -42,7 +42,7 @@ export default function MyAccount() {
         setemail(data.message.email);
         seturl(data.message.avatar);
         setFirstName(data.message.firstName);
-        setlastName(data.message.lastName);
+        setlastName(data.message.LastName);
         console.log("My Account");
         dispatch(toggleNav("true"));
       }
@@ -87,15 +87,14 @@ export default function MyAccount() {
         </div>
         <div className={MACss.rightDiv}>
           {showProfileState === "Profile" && (
-            <Profile email={showemail} id={showid} />
-          )}
-          {showProfileState === "My Orders" && (
-            <Myorders
+            <Profile
+              email={showemail}
               id={showid}
               firstName={showFirstName}
               lastName={showlastName}
             />
           )}
+          {showProfileState === "My Orders" && <Myorders id={showid} />}
           {showProfileState === "My Addresses" && <MyAddress id={showid} />}
         </div>
       </div>
