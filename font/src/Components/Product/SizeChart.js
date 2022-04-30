@@ -23,10 +23,18 @@ export default function SizeChart(props) {
               </div>
               <div className={SCCss.RightDiv}>
                 <div className={SCCss.InCmDiv}>
-                  <p className={SCCss.InPTag} onClick={() => setM(true)}>
+                  <p
+                    className={SCCss.InPTag}
+                    id={showM ? "select" : ""}
+                    onClick={() => setM(true)}
+                  >
                     In
                   </p>
-                  <p className={SCCss.CmPTag} onClick={() => setM(false)}>
+                  <p
+                    className={SCCss.CmPTag}
+                    id={showM ? "" : "select"}
+                    onClick={() => setM(false)}
+                  >
                     Cm
                   </p>
                 </div>
