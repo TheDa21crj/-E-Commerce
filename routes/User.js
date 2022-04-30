@@ -91,9 +91,36 @@ router.get("/account", UserAuth, async(req, res) => {
     res.status(200).send({ message: req.dataUser });
 });
 
+// Private || User Update || api/update
 router.put(
-    "/update", [check("email", "email is Required").not().isEmpty()],
-    async(req, res) => {}
+    "/update", [check("_id", "id is Required").not().isEmpty()],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+        const { _id, firstName, LastName, gender, PhoneNumber, dob } = req.body;
+        try {
+            let id = await User.findOne({ _id });
+
+            if (!id) {
+                return res.status(400).json({ message: `User: Does not Exists` });
+            }
+            const result = await User.updateOne({ _id }, {
+                $set: {
+                    [firstName]: firstName,
+                    [LastName]: LastName,
+                    [gender]: gender,
+                    [PhoneNumber]: PhoneNumber,
+                    [dob]: dob,
+                },
+            });
+            res.status(200).json({ message: result });
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error });
+        }
+    }
 );
 
 router.get("/logout", async(req, res) => {
