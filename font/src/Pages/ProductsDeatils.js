@@ -202,30 +202,37 @@ export default function ProductsDeatils() {
                 {showDetails ? <div className={PDCss.Des}></div> : ""}
               </div>
             </div>
-            <div className={PDCss.ContentDiv}>
-              {showDetails ? (
-                <p>
-                  <b>Est. Order Processing Time: </b>12-24 hours
-                  <br />
-                  <br />
-                  <b>Estimated Delivery Time:</b>
-                  <br />
-                  Metros: 1-4 days
-                  <br />
-                  Rest of India: 4-7 days
-                  <br />
-                  <br />
-                  <b>Country of Origin: </b>India (and proud)
-                  <br />
-                  <br />
-                  <b>Manufactured & Sold By:</b>
-                  <br />
-                  <i>The Da's Associations</i>
-                </p>
-              ) : (
-                <p>{showdes}</p>
-              )}
-            </div>
+            <CSSTransition
+              in={showdes}
+              unmountOnExit
+              timeout={500}
+              className={PDCss.CSSTransitionClass}
+            >
+              <div className={PDCss.ContentDiv}>
+                {showDetails ? (
+                  <p>
+                    <b>Est. Order Processing Time: </b>12-24 hours
+                    <br />
+                    <br />
+                    <b>Estimated Delivery Time:</b>
+                    <br />
+                    Metros: 1-4 days
+                    <br />
+                    Rest of India: 4-7 days
+                    <br />
+                    <br />
+                    <b>Country of Origin: </b>India (and proud)
+                    <br />
+                    <br />
+                    <b>Manufactured & Sold By:</b>
+                    <br />
+                    <i>The Da's Associations</i>
+                  </p>
+                ) : (
+                  <p>{showdes}</p>
+                )}
+              </div>
+            </CSSTransition>
           </div>
         </div>
       </div>
