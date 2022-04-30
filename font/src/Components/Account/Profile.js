@@ -22,20 +22,28 @@ export default function Profile(props) {
         <div className={ProfileCss.FormDiv}>
           <p>General Information</p>
           <form action="" method="POST" className={ProfileCss.FormTag}>
-            <input
-              type="text"
-              name="firstName"
-              id=""
-              value={props.firstName}
-              className={ProfileCss.impEmail}
-            />
-            <input
-              type="text"
-              name="lastName"
-              id=""
-              value={props.lastName}
-              className={ProfileCss.impEmail}
-            />
+            <div className={ProfileCss.LabelDivTag1}>
+              <label htmlFor="firstName" className={ProfileCss.LabelTag1}>
+                First Name:{" "}
+              </label>
+              <input
+                type="text"
+                name="firstName"
+                id=""
+                value={props.firstName}
+                className={ProfileCss.NameInp}
+              />
+            </div>
+            <div className={ProfileCss.LabelDivTag2}>
+              <label htmlFor="lastName">Last Name: </label>
+              <input
+                type="text"
+                name="lastName"
+                id=""
+                value={props.lastName}
+                className={ProfileCss.NameInp}
+              />
+            </div>
           </form>
         </div>
       </div>
