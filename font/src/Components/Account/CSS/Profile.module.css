@@ -8,6 +8,11 @@
     src: url(./../../../Manrope/static/Manrope-Regular.ttf);
 }
 
+@font-face {
+    font-family: ManropeMedium;
+    src: url(./../../../Manrope/static/Manrope-Medium.ttf);
+}
+
 .h1 {
     font-family: ManropeExtraBold;
 }
@@ -31,4 +36,13 @@
     border-width: 1px;
     border-radius: 5px;
     cursor: not-allowed;
+}
+
+.FormDiv {
+    margin-top: 30px;
+}
+
+.FormDiv p {
+    font-family: ManropeMedium;
+    margin-bottom: 15px;
 }
