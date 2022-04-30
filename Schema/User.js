@@ -14,6 +14,21 @@ const UserSchema = new mongoose.Schema({
     avatar: {
         type: "string",
     },
+    firstName: {
+        type: "string",
+    },
+    LastName: {
+        type: "string",
+    },
+    gender: {
+        type: "string",
+    },
+    PhoneNumber: {
+        type: "number",
+    },
+    dob: {
+        type: Date,
+    },
     tokens: [{
         token: {
             type: "string",
