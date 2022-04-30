@@ -91,7 +91,10 @@ router.get("/account", UserAuth, async(req, res) => {
     res.status(200).send({ message: req.dataUser });
 });
 
-// router.get("/");
+router.put(
+    "/update", [check("email", "email is Required").not().isEmpty()],
+    async(req, res) => {}
+);
 
 router.get("/logout", async(req, res) => {
     res.clearCookie("jwt", { path: "/" });
