@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SCCss from "./CSS/SizeChart.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import TableIn from "./TableIn";
 
 export default function SizeChart(props) {
+  const [showM, setM] = useState(true);
   return (
     <div className={SCCss.mDiv}>
       <div className={SCCss.mDivInner}>
@@ -21,8 +22,12 @@ export default function SizeChart(props) {
               </div>
               <div className={SCCss.RightDiv}>
                 <div className={SCCss.InCmDiv}>
-                  <p className={SCCss.InPTag}>In</p>
-                  <p className={SCCss.CmPTag}>Cm</p>
+                  <p className={SCCss.InPTag} onClick={() => setM(true)}>
+                    In
+                  </p>
+                  <p className={SCCss.CmPTag} onClick={() => setM(false)}>
+                    Cm
+                  </p>
                 </div>
                 <div className={SCCss.TableDiv}>
                   <TableIn />
