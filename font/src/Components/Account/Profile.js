@@ -22,27 +22,46 @@ export default function Profile(props) {
         <div className={ProfileCss.FormDiv}>
           <p>General Information</p>
           <form action="" method="POST" className={ProfileCss.FormTag}>
-            <div className={ProfileCss.LabelDivTag1}>
-              <label htmlFor="firstName" className={ProfileCss.LabelTag1}>
-                First Name:{" "}
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                id=""
-                value={props.firstName}
-                className={ProfileCss.NameInp}
-              />
+            <div>
+              <div className={ProfileCss.LabelDivTag1}>
+                <label htmlFor="firstName" className={ProfileCss.LabelTag1}>
+                  First Name:{" "}
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id=""
+                  value={props.firstName}
+                  className={ProfileCss.NameInp}
+                />
+              </div>
+              <div className={ProfileCss.LabelDivTag2}>
+                <label htmlFor="lastName">Last Name: </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id=""
+                  value={props.lastName}
+                  className={ProfileCss.NameInp}
+                />
+              </div>
             </div>
-            <div className={ProfileCss.LabelDivTag2}>
-              <label htmlFor="lastName">Last Name: </label>
-              <input
-                type="text"
-                name="lastName"
-                id=""
-                value={props.lastName}
-                className={ProfileCss.NameInp}
-              />
+            <div>
+              <div>
+                <p>Gender</p>
+                <div>
+                  <input type="radio" name="" id="" checked />
+                  <label htmlFor="gender">Male</label>
+                </div>
+                <div>
+                  <input type="radio" name="" id="" />
+                  <label htmlFor="gender">Female</label>
+                </div>
+                <div>
+                  <input type="radio" name="" id="" />
+                  <label htmlFor="gender">Other</label>
+                </div>
+              </div>
             </div>
           </form>
         </div>
