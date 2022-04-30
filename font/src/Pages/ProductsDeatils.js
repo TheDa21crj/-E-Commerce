@@ -6,6 +6,7 @@ import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
+import { CSSTransition } from "react-transition-group";
 
 export default function ProductsDeatils() {
   const [showid, setid] = useState("");
