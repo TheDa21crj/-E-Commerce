@@ -10,6 +10,7 @@ import Register from "./Pages/Register";
 import Logout from "./Pages/Logout";
 import Membership from "./Pages/Membership";
 import ProductsDeatils from "./Pages/ProductsDeatils";
+import Cart from "./Pages/Cart";
 
 import { Provider } from "react-redux";
 import store from "./store";
