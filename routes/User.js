@@ -24,7 +24,7 @@ router.post(
             let user = await User.findOne({ email });
 
             if (user) {
-                return res.status(400).json({ message: `User Already Exists` });
+                return res.status(400).json({ errors: `User Already Exists` });
             }
             console.log(req.body);
 
@@ -108,11 +108,11 @@ router.put(
             }
             const result = await User.updateOne({ _id }, {
                 $set: {
-                    [firstName]: firstName,
-                    [LastName]: LastName,
-                    [gender]: gender,
-                    [PhoneNumber]: PhoneNumber,
-                    [dob]: dob,
+                    firstName: firstName,
+                    LastName: LastName,
+                    gender: gender,
+                    PhoneNumber: PhoneNumber,
+                    dob: dob,
                 },
             });
             res.status(200).json({ message: result });
