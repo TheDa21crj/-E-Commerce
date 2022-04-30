@@ -57,6 +57,11 @@
     border-radius: 5px;
 }
 
+.PhoneNumberInp {
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
 .FormDiv {
     margin-top: 30px;
 }
@@ -89,7 +94,7 @@
 .GenderTDiv {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-family: ManropeMedium;
 }
