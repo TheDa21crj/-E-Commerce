@@ -13,16 +13,16 @@ export default function SizeChart(props) {
             onClick={() => props.state(false)}
           />
           <h1>{props.name}</h1>
-          <div>
-            <div></div>
-            <div>
-              <div>
-                <div>
-                  <div>In</div>
-                  <div>Cm</div>
+          <div className={SCCss.rowDIvP}>
+            <div className={SCCss.rowDIv}>
+              <div className={SCCss.LeftDiv}>img</div>
+              <div className={SCCss.RightDiv}>
+                <div className={SCCss.InCmDiv}>
+                  <p>In</p>
+                  <p>Cm</p>
                 </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
         </div>
