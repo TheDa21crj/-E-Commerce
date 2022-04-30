@@ -161,7 +161,11 @@ export default function ProductsDeatils() {
               Size Chart
             </span>
           </p>
-          {showChat ? <SizeChart name={showname} state={setChart} /> : ""}
+          {showChat ? (
+            <SizeChart name={showname} state={setChart} src={showimageSrc} />
+          ) : (
+            ""
+          )}
 
           <div className={PDCss.QuantityDiv}>
             <p>Quantity</p>
