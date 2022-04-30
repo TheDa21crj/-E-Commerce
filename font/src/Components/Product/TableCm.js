@@ -1,5 +1,5 @@
 import React from "react";
-import TCMCss from "./CSS/TableCm.module.css";
+import TCMCss from "./CSS/TableIn.module.css";
 
 export default function TableCm() {
   return (
