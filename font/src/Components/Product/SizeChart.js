@@ -15,7 +15,9 @@ export default function SizeChart(props) {
           <h1>{props.name}</h1>
           <div className={SCCss.rowDIvP}>
             <div className={SCCss.rowDIv}>
-              <div className={SCCss.LeftDiv}>img</div>
+              <div className={SCCss.LeftDiv}>
+                <img src={props.src} alt="" className={SCCss.ImgTag} />
+              </div>
               <div className={SCCss.RightDiv}>
                 <div className={SCCss.InCmDiv}>
                   <p className={SCCss.InPTag}>In</p>
