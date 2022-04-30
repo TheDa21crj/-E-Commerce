@@ -1,15 +1,15 @@
 import React from "react";
-import TCMCss from "./CSS/TableIn.module.css";
+import TCss from "./CSS/TableIn.module.css";
 
 export default function TableCm() {
   return (
     <div>
       <table>
         <tr>
-          <th>Size</th>
-          <th>Shoulder</th>
-          <th>Chest</th>
-          <th>Waist</th>
+          <th className={TCss.th1}>Size</th>
+          <th className={TCss.th1}>Shoulder</th>
+          <th className={TCss.th1}>Chest</th>
+          <th className={TCss.th1}>Waist</th>
         </tr>
         <tr>
           <th>S</th>
