@@ -17,6 +17,11 @@
     font-family: ManropeExtraBold;
 }
 
+.LeftDiv,
+.RightDiv {
+    width: 45%;
+}
+
 .conMDiv {
     width: 100%;
     padding: 30px 0px;
