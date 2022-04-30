@@ -60,6 +60,10 @@ export default function ProductsDeatils() {
     ProductData();
   }, []);
 
+  useEffect(() => {
+    document.title = showname;
+  });
+
   const handleClick = (e) => {
     setSelect(e.target.value);
   };
