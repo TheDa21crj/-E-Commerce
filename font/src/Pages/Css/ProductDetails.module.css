@@ -217,7 +217,8 @@
     color: gold;
 }
 
-.desPTagTrue {
+
+/* .desPTagTrue {
     animation: DesPTag 1s linear;
 }
 
@@ -232,4 +233,4 @@
     100% {
         background-color: pink;
     }
-}
+} */
