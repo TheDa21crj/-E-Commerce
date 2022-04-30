@@ -47,7 +47,6 @@ export default function MyAccount() {
         setlastName(data.message.LastName);
         setGender(data.message.gender);
         setnum(data.message.PhoneNumber);
-        console.log("My Account");
         dispatch(toggleNav("true"));
       }
     } catch (error) {
@@ -61,7 +60,6 @@ export default function MyAccount() {
   }, []);
 
   const ShowProfileState = async (e) => {
-    console.log(e.target.innerHTML);
     setProfileState(e.target.innerHTML);
   };
   return (
