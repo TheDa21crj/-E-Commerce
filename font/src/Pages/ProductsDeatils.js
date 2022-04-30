@@ -205,7 +205,7 @@ export default function ProductsDeatils() {
 
             <div className={PDCss.ContentDiv}>
               {showDetails ? (
-                <p>
+                <p className={PDCss.desPTagTrue}>
                   <b>Est. Order Processing Time: </b>12-24 hours
                   <br />
                   <br />
