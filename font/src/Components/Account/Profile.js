@@ -18,6 +18,23 @@ export default function Profile(props) {
             value={props.email}
           />
         </div>
+        id:{props.id}
+        <form action="">
+          <input
+            type="text"
+            name="firstName"
+            id=""
+            value={props.firstName}
+            className={ProfileCss.impEmail}
+          />
+          <input
+            type="text"
+            name="lastName"
+            id=""
+            value={props.lastName}
+            className={ProfileCss.impEmail}
+          />
+        </form>
       </div>
     </div>
   );
