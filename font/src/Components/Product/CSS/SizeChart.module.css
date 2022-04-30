@@ -10,15 +10,17 @@
     align-items: center;
     z-index: 2;
     backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ConDiv {
     position: relative;
-    background-color: #60b4df;
+    background-color: #fff;
     width: 80%;
 }
 
 .ConDiv h1 {
+    margin: 20px 0px 0px 30px;
     font-family: ManropeExtraBold;
 }
 
@@ -36,8 +38,8 @@
 
 .CloseIcon {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
 }
 
@@ -54,7 +56,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     width: 90%;
 }
 
@@ -62,6 +63,7 @@
     border-style: solid;
     border-width: 1px;
     border-color: gold;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -76,4 +78,12 @@
     text-align: center;
 }
 
-.CmPTag {}
+.CmPTag {
+    border-style: solid;
+    border-color: gold;
+    border-width: 0px 0px 0px 1px;
+}
+
+.ImgTag {
+    width: 60%;
+}
