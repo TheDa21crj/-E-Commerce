@@ -13,6 +13,7 @@ const UserSchema = new mongoose.Schema({
     },
     avatar: {
         type: "string",
+        required: true,
     },
     firstName: {
         type: "string",
