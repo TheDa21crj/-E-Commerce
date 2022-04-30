@@ -74,6 +74,10 @@ export default function Profile(props) {
                   <label htmlFor="Other">Other</label>
                 </div>
               </div>
+              <div>
+                <label htmlFor="PhoneNumber">Mobile Number: </label>
+                <input type="number" name="" id="" value={props.phone} />
+              </div>
             </div>
           </form>
         </div>
