@@ -18,11 +18,10 @@ export default function Profile(props) {
             value={props.email}
           />
         </div>
-        {/* id:{props.id} */}
         <div className={ProfileCss.FormDiv}>
           <p id={ProfileCss.GeneralI}>General Information</p>
           <form action="" method="POST" className={ProfileCss.FormTag}>
-            <div>
+            <div className={ProfileCss.LeftDiv}>
               <div className={ProfileCss.LabelDivTag1}>
                 <label htmlFor="firstName" className={ProfileCss.LabelTag1}>
                   First Name:{" "}
@@ -46,7 +45,7 @@ export default function Profile(props) {
                 />
               </div>
             </div>
-            <div>
+            <div className={ProfileCss.RightDiv}>
               <div className={ProfileCss.Gender}>
                 <p>Gender</p>
                 <div className={ProfileCss.GenderTDiv}>
