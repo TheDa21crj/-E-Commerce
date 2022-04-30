@@ -18,6 +18,7 @@ export default function MyAccount() {
   const [showGender, setGender] = useState("");
   const [showemail, setemail] = useState("");
   const [showUrl, seturl] = useState("");
+  const [shownum, setnum] = useState("");
   const [showProfileState, setProfileState] = useState("My Orders");
   const navigate = useNavigate();
 
@@ -45,6 +46,7 @@ export default function MyAccount() {
         setFirstName(data.message.firstName);
         setlastName(data.message.LastName);
         setGender(data.message.gender);
+        setnum(data.message.PhoneNumber);
         console.log("My Account");
         dispatch(toggleNav("true"));
       }
@@ -95,6 +97,7 @@ export default function MyAccount() {
               firstName={showFirstName}
               lastName={showlastName}
               gender={showGender}
+              phone={shownum}
             />
           )}
           {showProfileState === "My Orders" && <Myorders id={showid} />}
