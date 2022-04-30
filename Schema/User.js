@@ -17,18 +17,23 @@ const UserSchema = new mongoose.Schema({
     },
     firstName: {
         type: "string",
+        default: "null",
     },
     LastName: {
         type: "string",
+        default: "null",
     },
     gender: {
         type: "string",
+        default: "null",
     },
     PhoneNumber: {
         type: "number",
+        default: 0,
     },
     dob: {
         type: Date,
+        default: 0,
     },
     tokens: [{
         token: {
