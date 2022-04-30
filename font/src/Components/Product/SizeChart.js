@@ -13,6 +13,18 @@ export default function SizeChart(props) {
             onClick={() => props.state(false)}
           />
           <h1>{props.name}</h1>
+          <div>
+            <div></div>
+            <div>
+              <div>
+                <div>
+                  <div>In</div>
+                  <div>Cm</div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
