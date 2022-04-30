@@ -23,7 +23,22 @@ export default function SizeChart(props) {
                   <p className={SCCss.InPTag}>In</p>
                   <p className={SCCss.CmPTag}>Cm</p>
                 </div>
-                <div></div>
+                <div className={SCCss.TableDiv}>
+                  <table border={1}>
+                    <tr>
+                      <th>SIZE</th>
+                      <th>
+                        <p>A. TO FIT SHOULDER</p>
+                      </th>
+                      <th>
+                        <p>B. TO FIT CHEST</p>
+                      </th>
+                      <th>
+                        <p>C. TO FIT WAIST</p>
+                      </th>
+                    </tr>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
