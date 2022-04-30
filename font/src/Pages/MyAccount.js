@@ -12,8 +12,10 @@ import { toggleNav } from "./../Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function MyAccount() {
-  const [showName, setName] = useState("");
+  const [showFirstName, setFirstName] = useState("");
+  const [showlastName, setlastName] = useState("");
   const [showid, setid] = useState("");
+  const [showemail, setemail] = useState("");
   const [showUrl, seturl] = useState("");
   const [showProfileState, setProfileState] = useState("My Orders");
   const navigate = useNavigate();
@@ -36,9 +38,11 @@ export default function MyAccount() {
         navigate("/login");
       }
       if (data) {
-        setName(data.message.email);
-        setid(data.message.email);
+        setid(data.message._id);
+        setemail(data.message.email);
         seturl(data.message.avatar);
+        setFirstName(data.message.firstName);
+        setlastName(data.message.lastName);
         console.log("My Account");
         dispatch(toggleNav("true"));
       }
@@ -64,7 +68,7 @@ export default function MyAccount() {
         <div className={MACss.leftDiv}>
           <img src={showUrl} alt="" className={MACss.ImgTag} />
           <p className={MACss.PTagEmail}>
-            <span> {showName}</span>
+            <span> {showemail}</span>
           </p>
           <p className={MACss.pTags} onClick={ShowProfileState}>
             Profile
@@ -82,8 +86,16 @@ export default function MyAccount() {
           </div>
         </div>
         <div className={MACss.rightDiv}>
-          {showProfileState === "Profile" && <Profile email={showid} />}
-          {showProfileState === "My Orders" && <Myorders id={showid} />}
+          {showProfileState === "Profile" && (
+            <Profile email={showemail} id={showid} />
+          )}
+          {showProfileState === "My Orders" && (
+            <Myorders
+              id={showid}
+              firstName={showFirstName}
+              lastName={showlastName}
+            />
+          )}
           {showProfileState === "My Addresses" && <MyAddress id={showid} />}
         </div>
       </div>
