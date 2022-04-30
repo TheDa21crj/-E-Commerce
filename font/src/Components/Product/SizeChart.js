@@ -31,7 +31,8 @@ export default function SizeChart(props) {
                   </p>
                 </div>
                 <div className={SCCss.TableDiv}>
-                  <TableIn />
+                  {/* <TableIn /> */}
+                  <TableCm />
                 </div>
               </div>
             </div>
