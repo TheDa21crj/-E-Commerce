@@ -39,3 +39,29 @@
     top: 0px;
     right: 0px;
 }
+
+.rowDIvP {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowDIv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 90%;
+}
+
+.InCmDiv {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+}
