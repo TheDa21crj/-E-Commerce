@@ -9,8 +9,13 @@ table {
 
 td,
 th {
-    border: 1px solid #dddddd;
     text-align: center;
-    padding: 10px 30px;
+    padding: 10px 35px;
     font-family: ManropeLight;
+}
+
+.th1 {
+    background-color: lightgrey;
+    border: 1px solid #dddddd;
+    color: #fff;
 }
