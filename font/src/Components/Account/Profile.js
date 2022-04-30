@@ -83,8 +83,20 @@ export default function Profile(props) {
                 </div>
               </div>
               <div>
-                <label htmlFor="PhoneNumber">Mobile Number: </label>
-                <input type="number" name="" id="" value={props.phone} />
+                <label
+                  className={ProfileCss.PhoneNumberLabel}
+                  htmlFor="PhoneNumber"
+                >
+                  Mobile Number:{" "}
+                </label>
+                <br />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  value={props.phone}
+                  className={ProfileCss.PhoneNumberInp}
+                />
               </div>
             </div>
           </form>
