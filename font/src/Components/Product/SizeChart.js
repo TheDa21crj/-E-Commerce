@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import SCCss from "./CSS/SizeChart.module.css";
 import CloseIcon from "@mui/icons-material/Close";
-import TableIn from "./Table";
+import TableIn from "./TableIn";
 
 export default function SizeChart(props) {
   return (
