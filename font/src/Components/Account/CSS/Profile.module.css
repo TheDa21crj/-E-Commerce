@@ -41,7 +41,9 @@
 }
 
 .impEmail,
+.PhoneNumberInp,
 .NameInp {
+    font-family: ManropeRegular;
     outline: none;
     margin-left: 10px;
     padding: 7px 12px;
@@ -63,6 +65,10 @@
 .LabelDivTag1 {
     font-family: ManropeRegular;
     margin-top: 20px;
+}
+
+.PhoneNumberLabel {
+    font-family: ManropeRegular;
 }
 
 .FormTag {
