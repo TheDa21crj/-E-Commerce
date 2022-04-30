@@ -6,6 +6,7 @@ import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
+import { motion } from "framer-motion";
 
 export default function ProductsDeatils() {
   const [showid, setid] = useState("");
@@ -204,7 +205,7 @@ export default function ProductsDeatils() {
 
             <div className={PDCss.ContentDiv}>
               {showDetails ? (
-                <p className={PDCss.desPTagTrue}>
+                <p>
                   <b>Est. Order Processing Time: </b>12-24 hours
                   <br />
                   <br />
@@ -223,7 +224,7 @@ export default function ProductsDeatils() {
                   <i>The Da's Associations</i>
                 </p>
               ) : (
-                <p className={PDCss.showdesPTag}>{showdes}</p>
+                <p>{showdes}</p>
               )}
             </div>
           </div>

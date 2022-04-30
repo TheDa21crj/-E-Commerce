@@ -219,18 +219,6 @@
 
 
 /* .desPTagTrue {
-    animation: DesPTag 1s linear;
-}
-
-.showdesPTag {
-    animation: DesPTag 1s linear;
-}
-
-@keyframes DesPTag {
-    0% {
-        background-color: green;
-    }
-    100% {
-        background-color: pink;
-    }
+    background-color: pink;
+    transform: translateY(-100px);
 } */
