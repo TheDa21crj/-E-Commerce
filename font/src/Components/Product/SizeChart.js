@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import SCCss from "./CSS/SizeChart.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import TableIn from "./TableIn";
+import TableCm from "./TableCm";
 
 export default function SizeChart(props) {
   const [showM, setM] = useState(true);
