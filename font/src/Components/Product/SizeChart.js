@@ -18,8 +18,8 @@ export default function SizeChart(props) {
               <div className={SCCss.LeftDiv}>img</div>
               <div className={SCCss.RightDiv}>
                 <div className={SCCss.InCmDiv}>
-                  <p>In</p>
-                  <p>Cm</p>
+                  <p className={SCCss.InP}>In</p>
+                  <p className={SCCss.CmP}>Cm</p>
                 </div>
                 <div></div>
               </div>
