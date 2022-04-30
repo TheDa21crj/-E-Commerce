@@ -18,6 +18,10 @@
     width: 80%;
 }
 
+.ConDiv h1 {
+    font-family: ManropeExtraBold;
+}
+
 .mDivInner {
     position: absolute;
     top: 0;
