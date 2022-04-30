@@ -50,16 +50,28 @@ export default function Profile(props) {
               <div>
                 <p>Gender</p>
                 <div>
-                  <input type="radio" name="" id="" checked />
-                  <label htmlFor="gender">Male</label>
+                  {props.gender == "Male" ? (
+                    <input type="radio" name="" id="" checked />
+                  ) : (
+                    <input type="radio" name="" id="" />
+                  )}
+                  <label htmlFor="Male">Male</label>
                 </div>
                 <div>
-                  <input type="radio" name="" id="" />
-                  <label htmlFor="gender">Female</label>
+                  {props.gender == "Female" ? (
+                    <input type="radio" name="" id="" checked />
+                  ) : (
+                    <input type="radio" name="" id="" />
+                  )}
+                  <label htmlFor="Female">Female</label>
                 </div>
                 <div>
-                  <input type="radio" name="" id="" />
-                  <label htmlFor="gender">Other</label>
+                  {props.gender == "Other" ? (
+                    <input type="radio" name="" id="" checked />
+                  ) : (
+                    <input type="radio" name="" id="" />
+                  )}
+                  <label htmlFor="Other">Other</label>
                 </div>
               </div>
             </div>
