@@ -6,16 +6,10 @@ export default function Table() {
     <div>
       <table>
         <tr>
-          <th>SIZE</th>
-          <th>
-            <p>A. TO FIT SHOULDER</p>
-          </th>
-          <th>
-            <p>B. TO FIT CHEST</p>
-          </th>
-          <th>
-            <p>C. TO FIT WAIST</p>
-          </th>
+          <th>Size</th>
+          <th>Fit Shoulder</th>
+          <th>Fit Chest</th>
+          <th>Fit Waist</th>
         </tr>
         <tr>
           <th>S</th>
