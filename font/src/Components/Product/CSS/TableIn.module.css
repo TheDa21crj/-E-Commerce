@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ManropeLight;
+    src: url(./../../../Manrope/static/Manrope-Light.ttf);
+}
+
 table {
     border-collapse: collapse;
 }
@@ -7,4 +12,5 @@ th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
+    font-family: ManropeLight;
 }
