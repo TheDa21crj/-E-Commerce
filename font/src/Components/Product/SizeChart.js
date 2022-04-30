@@ -24,7 +24,7 @@ export default function SizeChart(props) {
                   <p className={SCCss.CmPTag}>Cm</p>
                 </div>
                 <div className={SCCss.TableDiv}>
-                  <table border={1}>
+                  <table>
                     <tr>
                       <th>SIZE</th>
                       <th>
