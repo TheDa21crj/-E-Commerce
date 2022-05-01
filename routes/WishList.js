@@ -90,8 +90,13 @@ router.delete(
 
         let userCheck = await WishList.findOne({ user: userID });
         if (userCheck) {
-            let ProductData = await WishList.findOne({ product: _id });
-            return res.status(202).json(ProductData);
+            for (let i = 0; i < userCheck.Product.length; i++) {
+                if (userCheck.Product[i]._id == _id) {
+                    // const dataDelete = await WishList.deleteOne({ _id: data._id });
+                    await WishList.update({}, { $unset: { "Product._id": _id } });
+                    return res.status(200).json(dataDelete);
+                }
+            }
         }
         res.status(202).json({ message: "No" });
     }
