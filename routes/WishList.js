@@ -77,4 +77,6 @@ router.get("/", UserAuth, async(req, res) => {
     }
 });
 
+// Private || Delete WishList || api/Wishlist/delete
+
 module.exports = router;
