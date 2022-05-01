@@ -7,6 +7,7 @@ import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductsDeatils() {
   const [showid, setid] = useState("");
@@ -27,6 +28,8 @@ export default function ProductsDeatils() {
   const [showDetails, setDetails] = useState(false);
 
   const { id } = useParams();
+
+  const navigate = useNavigate();
 
   const ProductData = async () => {
     try {
@@ -66,6 +69,36 @@ export default function ProductsDeatils() {
 
   const handleClick = (e) => {
     setSelect(e.target.value);
+  };
+
+  const CartCheck = async () => {
+    try {
+      let quantity = showSelect;
+      const res = await fetch("/api/Wishlist/add", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id,
+          quantity,
+        }),
+      });
+      const data = await res.json();
+      if (data === null) {
+        return console.error("errors");
+      }
+      if (data.errors) {
+        return navigate("/login");
+      }
+      if (data) {
+        return console.log(data);
+      }
+    } catch (error) {
+      console.log(error);
+      return navigate("/login");
+    }
   };
 
   return (
@@ -193,7 +226,9 @@ export default function ProductsDeatils() {
 
           <div className={PDCss.BuyDiv}>
             <div className={PDCss.AddCART}>ADD TO CART</div>
-            <div className={PDCss.AddWISHLIST}>ADD TO WISHLIST</div>
+            <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
+              ADD TO WISHLIST
+            </div>
           </div>
 
           <div className={PDCss.DesDiv}>
