@@ -52,7 +52,7 @@ export default function Cart() {
   const deleteWish = async (deleteID) => {
     let _id = deleteID;
     try {
-      const r = await fetch("/api/Wishlist/delete", {
+      const res = await fetch("/api/Wishlist/delete", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
