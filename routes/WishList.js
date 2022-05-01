@@ -89,9 +89,8 @@ router.delete(
         let userID = req.userId;
 
         let userCheck = await WishList.findOne({ user: userID });
-        if (userCheck) {
-            res.status(202).json({ message: "Delete" });
-        }
+
+        res.status(202).json(userCheck);
     }
 );
 
