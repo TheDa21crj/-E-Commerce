@@ -30,8 +30,6 @@ router.post(
                 products.id = id;
                 products.quantity = quantity;
 
-                console.log(userCheck.Product[0].id);
-
                 for (let i = 0; i < userCheck.Product.length; i++) {
                     if (userCheck.Product[i].id == id) {
                         return res.status(400).json({ message: "same" });
@@ -63,5 +61,16 @@ router.post(
         }
     }
 );
+
+router.get("/", UserAuth, async(req, res) => {
+    let userID = req.userId;
+    try {
+        let userCheck = await WishList.findOne({ user: userID });
+        return res.status(200).json({ message: userCheck });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: error });
+    }
+});
 
 module.exports = router;
