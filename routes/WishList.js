@@ -78,5 +78,8 @@ router.get("/", UserAuth, async(req, res) => {
 });
 
 // Private || Delete WishList || api/Wishlist/delete
+router.delete("/delete", UserAuth, async(req, res) => {
+    res.status(202).json({ message: "Delete Wish" });
+});
 
 module.exports = router;
