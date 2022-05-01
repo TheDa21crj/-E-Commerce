@@ -77,8 +77,7 @@ export default function Cart() {
                       fontSize="small"
                       onClick={() => {
                         deleteWish();
-                        let send = value._id;
-                        setID(send);
+                        setID(value._id);
                       }}
                     />
                   </div>
