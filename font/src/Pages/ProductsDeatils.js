@@ -73,7 +73,9 @@ export default function ProductsDeatils() {
 
   const CartCheck = async () => {
     try {
-      let quantity = showSelect;
+      let imgSrc = showimageSrc;
+      let name = showname;
+      let price = showprice;
       const res = await fetch("/api/Wishlist/add", {
         method: "POST",
         headers: {
@@ -82,7 +84,9 @@ export default function ProductsDeatils() {
         },
         body: JSON.stringify({
           id,
-          quantity,
+          name,
+          imgSrc,
+          price,
         }),
       });
       const data = await res.json();
