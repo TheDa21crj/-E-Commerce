@@ -13,14 +13,16 @@ router.post(
     "/add", [
         UserAuth,
         check("id", "id is Required").not().isEmpty(),
-        check("quantity", "quantity is Required").not().isEmpty(),
+        check("name", "name is Required").not().isEmpty(),
+        check("imgSrc", "imgSrc is Required").not().isEmpty(),
+        check("price", "price is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { id, quantity } = req.body;
+        const { id, name, imgSrc, price } = req.body;
         let userID = req.userId;
 
         try {
@@ -28,8 +30,9 @@ router.post(
             if (userCheck) {
                 let products = {};
                 products.id = id;
-                products.quantity = quantity;
-
+                products.name = name;
+                products.imgSrc = imgSrc;
+                products.price = price;
                 for (let i = 0; i < userCheck.Product.length; i++) {
                     if (userCheck.Product[i].id == id) {
                         return res.status(400).json({ message: "same" });
@@ -42,18 +45,18 @@ router.post(
                         Product: products,
                     },
                 });
-                return res.status(200).json({ userCheck });
+                return res.status(200).json("Added to Wishlist");
             } else {
                 let Wish = {};
                 Wish.user = userID;
                 Wish.Product = {};
                 Wish.Product.id = id;
-                Wish.Product.quantity = quantity;
-
+                Wish.Product.name = name;
+                Wish.Product.imgSrc = imgSrc;
+                Wish.Product.price = price;
                 let newWish = new WishList(Wish);
                 await newWish.save();
-
-                return res.status(200).json(Wish);
+                return res.status(200).json("Added to Wishlist");
             }
         } catch (error) {
             console.log(error);
