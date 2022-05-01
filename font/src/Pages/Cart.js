@@ -12,6 +12,7 @@ export default function Cart() {
 
   const [showData, setData] = useState("");
   const [showNumberItems, setNumberItems] = useState(0);
+  const [showID, setID] = useState("");
 
   const CartCheck = async () => {
     try {
@@ -42,6 +43,10 @@ export default function Cart() {
     document.title = "My Wishlist";
     CartCheck();
   }, []);
+
+  const deleteWish = async () => {
+    console.log("Delete:\t" + showID);
+  };
   return (
     <div>
       <Nav />
@@ -55,18 +60,27 @@ export default function Cart() {
             <div className={CartCss.CardDivMap}>
               {showData.map((value, key) => {
                 return (
-                  <div key={value._id} className={CartCss.CardGridDiv}>
-                    <div className={CartCss.CardImgDiv}>
-                      <img
-                        src={value.imgSrc}
-                        alt=""
-                        className={CartCss.ImgTag}
+                  <Link to={`/products/${value.id}`} className="LinkStyle">
+                    <div key={value._id} className={CartCss.CardGridDiv}>
+                      <div className={CartCss.CardImgDiv}>
+                        <img
+                          src={value.imgSrc}
+                          alt=""
+                          className={CartCss.ImgTag}
+                        />
+                      </div>
+                      <p className={CartCss.Name}>{value.name}</p>
+                      <p className={CartCss.Price}>₹ {value.price}</p>
+                      <CloseIcon
+                        className={CartCss.CloseIcon}
+                        fontSize="small"
+                        onClick={() => {
+                          deleteWish();
+                          setID(value._id);
+                        }}
                       />
                     </div>
-                    <p className={CartCss.Name}>{value.name}</p>
-                    <p className={CartCss.Price}>₹ {value.price}</p>
-                    <CloseIcon className={CartCss.CloseIcon} fontSize="small" />
-                  </div>
+                  </Link>
                 );
               })}
             </div>
