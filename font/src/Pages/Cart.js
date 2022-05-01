@@ -41,7 +41,7 @@ export default function Cart() {
       <Nav />
       <NavMobo />
       Cart
-      <div>{showData}</div>
+      <div></div>
       <Footer />
     </div>
   );
