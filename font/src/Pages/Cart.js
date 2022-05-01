@@ -65,7 +65,7 @@ export default function Cart() {
                     </div>
                     <p className={CartCss.Name}>{value.name}</p>
                     <p className={CartCss.Price}>₹ {value.price}</p>
-                    <CloseIcon className={CartCss.CloseIcon} />
+                    <CloseIcon className={CartCss.CloseIcon} fontSize="small" />
                   </div>
                 );
               })}
