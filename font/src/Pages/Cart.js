@@ -60,8 +60,8 @@ export default function Cart() {
             <div className={CartCss.CardDivMap}>
               {showData.map((value, key) => {
                 return (
-                  <Link to={`/products/${value.id}`} className="LinkStyle">
-                    <div key={value._id} className={CartCss.CardGridDiv}>
+                  <div key={value._id} className={CartCss.CardGridDiv}>
+                    <Link to={`/products/${value.id}`} className="LinkStyle">
                       <div className={CartCss.CardImgDiv}>
                         <img
                           src={value.imgSrc}
@@ -71,16 +71,17 @@ export default function Cart() {
                       </div>
                       <p className={CartCss.Name}>{value.name}</p>
                       <p className={CartCss.Price}>₹ {value.price}</p>
-                      <CloseIcon
-                        className={CartCss.CloseIcon}
-                        fontSize="small"
-                        onClick={() => {
-                          deleteWish();
-                          setID(value._id);
-                        }}
-                      />
-                    </div>
-                  </Link>
+                    </Link>
+                    <CloseIcon
+                      className={CartCss.CloseIcon}
+                      fontSize="small"
+                      onClick={() => {
+                        deleteWish();
+                        let send = value._id;
+                        setID(send);
+                      }}
+                    />
+                  </div>
                 );
               })}
             </div>
