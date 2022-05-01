@@ -44,6 +44,11 @@ export default function Cart() {
     CartCheck();
   }, []);
 
+  useEffect(() => {
+    var show = showID;
+    deleteWish(show);
+  }, [showID]);
+
   const deleteWish = async () => {
     console.log("Delete:\t" + showID);
   };
@@ -76,7 +81,7 @@ export default function Cart() {
                       className={CartCss.CloseIcon}
                       fontSize="small"
                       onClick={() => {
-                        deleteWish();
+                        // deleteWish();
                         setID(value._id);
                       }}
                     />
