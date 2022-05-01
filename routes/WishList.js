@@ -85,7 +85,15 @@ router.delete(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        res.status(202).json({ message: "Delete Wish" });
+        const { _id } = req.body;
+        let userID = req.userId;
+
+        let userCheck = await WishList.findOne({ user: userID });
+        if (userCheck) {
+            let ProductData = await WishList.findOne({ product: _id });
+            return res.status(202).json(ProductData);
+        }
+        res.status(202).json({ message: "No" });
     }
 );
 
