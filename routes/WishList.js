@@ -69,7 +69,7 @@ router.get("/", UserAuth, async(req, res) => {
     let userID = req.userId;
     try {
         let userCheck = await WishList.findOne({ user: userID });
-        return res.status(200).json({ message: userCheck });
+        return res.status(200).json({ message: userCheck.Product });
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: error });
