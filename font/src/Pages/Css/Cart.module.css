@@ -26,11 +26,11 @@
 }
 
 .CardDivMap {
-    width: 90%;
+    width: 95%;
     /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: center; */
     display: grid;
     gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
