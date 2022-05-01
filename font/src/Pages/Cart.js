@@ -28,7 +28,7 @@ export default function Cart() {
       if (data) {
         setData(data.message);
         setNumberItems(data.message.length);
-        return console.log(data.message);
+        return;
       }
     } catch (error) {
       console.log(error);
@@ -43,25 +43,33 @@ export default function Cart() {
     <div>
       <Nav />
       <NavMobo />
-      <p>My Wishlist ({showNumberItems} items)</p>
-      <div>
-        {showData ? (
-          <div>
-            {showData.map((value, key) => {
-              return (
-                <div key={value._id}>
-                  <div>
-                    <img src={value.imgSrc} alt="" className={CartCss.ImgTag} />
+      <div className={CartCss.mDiv}>
+        <p className={CartCss.MainPTag}>
+          My Wishlist ({showNumberItems} items)
+        </p>
+        <div className={CartCss.CardDivM}>
+          {showData ? (
+            <div className={CartCss.CardDivMap}>
+              {showData.map((value, key) => {
+                return (
+                  <div key={value._id} className={CartCss.CardGridDiv}>
+                    <div className={CartCss.CardImgDiv}>
+                      <img
+                        src={value.imgSrc}
+                        alt=""
+                        className={CartCss.ImgTag}
+                      />
+                    </div>
+                    <p>{value.name}</p>
+                    <p>₹ {value.price}</p>
                   </div>
-                  <p>{value.name}</p>
-                  <p>₹ {value.price}</p>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          ""
-        )}
+                );
+              })}
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
       <Footer />
     </div>
