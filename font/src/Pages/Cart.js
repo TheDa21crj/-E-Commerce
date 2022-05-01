@@ -37,11 +37,7 @@ export default function Cart() {
     }
   };
 
-  const { wishlist } = useParams();
-
   useEffect(() => {
-    console.log(wishlist);
-
     document.title = "My Wishlist";
     CartCheck();
   }, []);
