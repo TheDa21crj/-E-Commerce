@@ -81,7 +81,6 @@ export default function Cart() {
                       className={CartCss.CloseIcon}
                       fontSize="small"
                       onClick={() => {
-                        // deleteWish();
                         setID(value._id);
                       }}
                     />
