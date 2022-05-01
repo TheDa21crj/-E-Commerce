@@ -3,11 +3,13 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import { useNavigate } from "react-router-dom";
+import CartCss from "./Css/Cart.module.css";
 
 export default function Cart() {
   const navigate = useNavigate();
 
   const [showData, setData] = useState("");
+  const [showNumberItems, setNumberItems] = useState(0);
 
   const CartCheck = async () => {
     try {
@@ -25,6 +27,7 @@ export default function Cart() {
       }
       if (data) {
         setData(data.message);
+        setNumberItems(data.message.length);
         return console.log(data.message);
       }
     } catch (error) {
@@ -40,12 +43,20 @@ export default function Cart() {
     <div>
       <Nav />
       <NavMobo />
-      Cart
+      <p>My Wishlist ({showNumberItems} items)</p>
       <div>
         {showData ? (
           <div>
-            {showData.map((arr, key) => {
-              return <div key={key}>{arr.name}</div>;
+            {showData.map((value, key) => {
+              return (
+                <div key={value._id}>
+                  <div>
+                    <img src={value.imgSrc} alt="" className={CartCss.ImgTag} />
+                  </div>
+                  <p>{value.name}</p>
+                  <p>₹ {value.price}</p>
+                </div>
+              );
             })}
           </div>
         ) : (
