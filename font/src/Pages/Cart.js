@@ -4,6 +4,7 @@ import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
+import { Link, useParams } from "react-router-dom";
 
 export default function Cart() {
   const navigate = useNavigate();
@@ -36,7 +37,11 @@ export default function Cart() {
     }
   };
 
+  const { wishlist } = useParams();
+
   useEffect(() => {
+    console.log(wishlist);
+
     document.title = "My Wishlist";
     CartCheck();
   }, []);
