@@ -37,6 +37,7 @@ export default function Cart() {
   };
 
   useEffect(() => {
+    document.title = "My Wishlist";
     CartCheck();
   }, []);
   return (
@@ -61,7 +62,7 @@ export default function Cart() {
                       />
                     </div>
                     <p className={CartCss.Name}>{value.name}</p>
-                    <p>₹ {value.price}</p>
+                    <p className={CartCss.Price}>₹ {value.price}</p>
                   </div>
                 );
               })}
