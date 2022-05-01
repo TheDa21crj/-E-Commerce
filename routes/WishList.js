@@ -79,11 +79,12 @@ router.get("/", UserAuth, async(req, res) => {
 
 // Private || Delete WishList || api/Wishlist/delete
 router.delete(
-    "/delete", [
-        // UserAuth,
-        check("_id", "_id is Required").not().isEmpty(),
-    ],
+    "/delete", [UserAuth, check("_id", "_id is Required").not().isEmpty()],
     async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
         res.status(202).json({ message: "Delete Wish" });
     }
 );
