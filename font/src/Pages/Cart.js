@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
+  const navigate = useNavigate();
+
+  const [showData, setData] = useState();
+
   const CartCheck = async () => {
     try {
-      let quantity = showSelect;
       const res = await fetch("/api/Wishlist", {
         method: "GET",
         headers: {
@@ -17,10 +21,11 @@ export default function Cart() {
       });
       const data = await res.json();
       if (data.errors) {
-        return;
+        return navigate("/login");
       }
       if (data) {
-        return console.log(data);
+        setData(data.message.Product);
+        return console.log(data.message.Product);
       }
     } catch (error) {
       console.log(error);
@@ -35,7 +40,9 @@ export default function Cart() {
     <div>
       <Nav />
       <NavMobo />
-      Cart <Footer />
+      Cart
+      <div>{showData}</div>
+      <Footer />
     </div>
   );
 }
