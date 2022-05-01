@@ -60,7 +60,7 @@ export default function Cart() {
                         className={CartCss.ImgTag}
                       />
                     </div>
-                    <p>{value.name}</p>
+                    <p className={CartCss.Name}>{value.name}</p>
                     <p>₹ {value.price}</p>
                   </div>
                 );
