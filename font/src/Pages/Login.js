@@ -28,7 +28,6 @@ export default function Login() {
 
   const PostData = async () => {
     const { email, password } = showUser;
-    console.log(email, password);
 
     const res = await fetch("/api/login", {
       method: "POST",
@@ -42,13 +41,11 @@ export default function Login() {
     });
 
     const r = await res.json();
-    console.log(r);
 
     if (r.errors) {
       console.log("Error");
     } else if (!r.errors) {
       dispatch(toggleNav("true"));
-      console.log("Login Admin");
       navigate("/my-account");
     } else {
       console.log("Unwanted Error");
