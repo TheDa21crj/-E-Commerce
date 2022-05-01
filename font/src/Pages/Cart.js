@@ -4,9 +4,11 @@ import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 
 export default function Cart() {
-  // useEffect(() => {
-  //   CartCheck();
-  // }, []);
+  const CartCheck = async () => {};
+
+  useEffect(() => {
+    CartCheck();
+  }, []);
   return (
     <div>
       <Nav />
