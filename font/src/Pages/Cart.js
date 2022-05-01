@@ -42,13 +42,13 @@ export default function Cart() {
       <NavMobo />
       Cart
       <div>
-        {showData.map((value, key) => {
+        {/* {showData.map((value, key) => {
           return (
             <div key={value.id}>
               <p>value.id</p>
             </div>
           );
-        })}
+        })} */}
       </div>
       <Footer />
     </div>
