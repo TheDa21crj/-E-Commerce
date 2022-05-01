@@ -5,6 +5,7 @@ import Footer from "./../Components/Footer";
 import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
 import { Link, useParams } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Cart() {
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ export default function Cart() {
                     </div>
                     <p className={CartCss.Name}>{value.name}</p>
                     <p className={CartCss.Price}>₹ {value.price}</p>
+                    <CloseIcon className={CartCss.CloseIcon} />
                   </div>
                 );
               })}
