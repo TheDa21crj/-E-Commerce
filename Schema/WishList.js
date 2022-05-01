@@ -14,6 +14,10 @@ const WishListSchema = new mongoose.Schema({
             type: "string",
             required: true,
         },
+        imgSrc: {
+            type: "string",
+            required: true,
+        },
         price: {
             type: "number",
             required: true,
