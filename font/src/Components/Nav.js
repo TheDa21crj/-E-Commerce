@@ -181,10 +181,10 @@ export default function Nav() {
             <div className={NavCss.arrow}></div>
           </div>
         </div>
+        <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
         <Link to="/wishlist" className="LinkStyle">
-          <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
+          <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
         </Link>
-        <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
       </div>
     </div>
   );
