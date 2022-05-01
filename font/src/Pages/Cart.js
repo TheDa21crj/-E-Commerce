@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Cart() {
   const navigate = useNavigate();
 
-  const [showData, setData] = useState();
+  const [showData, setData] = useState("");
 
   const CartCheck = async () => {
     try {
@@ -24,8 +24,8 @@ export default function Cart() {
         return navigate("/login");
       }
       if (data) {
-        setData(data.message.Product);
-        return console.log(data.message.Product);
+        setData(data.message);
+        return console.log(data.message);
       }
     } catch (error) {
       console.log(error);
@@ -42,13 +42,15 @@ export default function Cart() {
       <NavMobo />
       Cart
       <div>
-        {/* {showData.map((value, key) => {
-          return (
-            <div key={value.id}>
-              <p>value.id</p>
-            </div>
-          );
-        })} */}
+        {showData ? (
+          <div>
+            {showData.map((arr, key) => {
+              return <div key={key}>{arr.name}</div>;
+            })}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <Footer />
     </div>
