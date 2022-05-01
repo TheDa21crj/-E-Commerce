@@ -8,9 +8,10 @@ const WishList = require("./../Schema/WishList");
 const UserAuth = require("./../middleware/UserAuth");
 const Product = require("./../Schema/Products");
 
+// Private || Add WishList || api/Wishlist/add
 router.post(
     "/add", [
-        // UserAuth,
+        UserAuth,
         check("id", "id is Required").not().isEmpty(),
         check("quantity", "quantity is Required").not().isEmpty(),
     ],
@@ -20,13 +21,42 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
         const { id, quantity } = req.body;
+        let userID = req.userId;
+
         try {
-            // const profile = await WishList.findOne({ user: req.user.id });
-            let productExists = await Product.findOne({ _id: id });
-            if (!productExists) {
-                return res.status(404).json({ errors: "error" });
+            let userCheck = await WishList.findOne({ user: userID });
+            if (userCheck) {
+                let products = {};
+                products.id = id;
+                products.quantity = quantity;
+
+                console.log(userCheck.Product[0].id);
+
+                for (let i = 0; i < userCheck.Product.length; i++) {
+                    if (userCheck.Product[i].id == id) {
+                        return res.status(400).json({ message: "same" });
+                    }
+                }
+
+                // add product
+                let add = await WishList.findOneAndUpdate({ user: userID }, {
+                    $push: {
+                        Product: products,
+                    },
+                });
+                return res.status(200).json({ userCheck });
+            } else {
+                let Wish = {};
+                Wish.user = userID;
+                Wish.Product = {};
+                Wish.Product.id = id;
+                Wish.Product.quantity = quantity;
+
+                let newWish = new WishList(Wish);
+                await newWish.save();
+
+                return res.status(200).json(Wish);
             }
-            res.status(200).json({ message: productExists });
         } catch (error) {
             console.log(error);
             res.status(500).json({ message: error });
