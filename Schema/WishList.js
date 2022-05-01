@@ -10,7 +10,11 @@ const WishListSchema = new mongoose.Schema({
             type: "string",
             required: true,
         },
-        quantity: {
+        name: {
+            type: "string",
+            required: true,
+        },
+        price: {
             type: "number",
             required: true,
         },
