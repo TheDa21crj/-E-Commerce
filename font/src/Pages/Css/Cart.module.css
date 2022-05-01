@@ -32,6 +32,10 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
+.CardGridDiv {
+    position: relative;
+}
+
 .Name {
     font-weight: bold;
     font-family: ManropeExtraBold;
