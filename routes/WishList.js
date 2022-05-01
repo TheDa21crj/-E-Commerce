@@ -65,6 +65,7 @@ router.post(
     }
 );
 
+// Private || See Wishlist || api/Wishlist
 router.get("/", UserAuth, async(req, res) => {
     let userID = req.userId;
     try {
