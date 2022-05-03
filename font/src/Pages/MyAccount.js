@@ -12,6 +12,10 @@ import { toggleNav } from "./../Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function MyAccount() {
+  useEffect(() => {
+    document.title = "My Account";
+  });
+
   const [showFirstName, setFirstName] = useState("");
   const [showlastName, setlastName] = useState("");
   const [showid, setid] = useState("");
