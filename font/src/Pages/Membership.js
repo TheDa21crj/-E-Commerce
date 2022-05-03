@@ -26,7 +26,7 @@ export default function Membership() {
               </div>
             </div>
             <div className={MCSs.FunFactsDiv}>
-              <p className={MCSs.FunFacts}>Fun Facts</p>
+              <p className={MCSs.FunFactsPTag}>Fun Facts</p>
             </div>
           </div>
         </div>
