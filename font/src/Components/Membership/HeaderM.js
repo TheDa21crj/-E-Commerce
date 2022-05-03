@@ -9,7 +9,7 @@ export default function HeaderM() {
   var settingM = {
     dots: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -31,21 +31,31 @@ export default function HeaderM() {
           </div>
           <div className={HMCss.slideDiv}>
             <Sliders {...settingM} className={HMCss.Hslide}>
-              <div>
-                <p>
-                  Add the membership to your cart
-                  <br />
-                  and get the discount on this order itself.
-                </p>
+              <div className={HMCss.slideComDiv}>
+                <div className={HMCss.slideDivMain}>
+                  <p>
+                    Add the membership to your cart
+                    <br />
+                    and get the discount on this order itself.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p>Most people save the membership fee on their first order.</p>
+              <div className={HMCss.slideComDiv}>
+                <div className={HMCss.slideDivMain}>
+                  <p>
+                    Most people save the membership fee on their first order.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p>The average exclusive member SAVES Rs. 2600/year.</p>
+              <div className={HMCss.slideComDiv}>
+                <div className={HMCss.slideDivMain}>
+                  <p>The average exclusive member SAVES Rs. 2600/year.</p>
+                </div>
               </div>
-              <div>
-                <p>Most people become members and don’t pay full price.</p>
+              <div className={HMCss.slideComDiv}>
+                <div className={HMCss.slideDivMain}>
+                  <p>Most people become members and don’t pay full price.</p>
+                </div>
               </div>
             </Sliders>
           </div>
