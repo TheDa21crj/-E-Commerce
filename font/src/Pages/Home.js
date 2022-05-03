@@ -9,7 +9,7 @@ import TopSelling from "./../Components/Home/TopSelling";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Welcome";
+    document.title = "Online Shopping for Men & Women: The Da";
   });
   return (
     <div>
