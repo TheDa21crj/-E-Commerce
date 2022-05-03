@@ -3,6 +3,9 @@ import MCSs from "./Css/Member.module.css";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import img from "./../Img/clothes.jpg";
+import Sliders from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Membership() {
   useEffect(() => {
@@ -28,6 +31,7 @@ export default function Membership() {
             <div className={MCSs.FunFactsDiv}>
               <p className={MCSs.FunFactsPTag}>Fun Facts</p>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
