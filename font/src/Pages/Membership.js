@@ -25,6 +25,9 @@ export default function Membership() {
                 </p>
               </div>
             </div>
+            <div className={MCSs.FunFactsDiv}>
+              <p className={MCSs.FunFacts}>Fun Facts</p>
+            </div>
           </div>
         </div>
       </div>
