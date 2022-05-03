@@ -88,7 +88,7 @@ router.delete(
         const { _id } = req.body;
         let userID = req.userId;
 
-        let userCheck = await WishList.findOne({ user: userID });
+        let userCheck = await WishList.updateOne({ user: userID }, { $pull: { Product: { _id: _id } } });
 
         res.status(202).json(userCheck);
     }
