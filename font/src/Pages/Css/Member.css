@@ -1,4 +1,16 @@
 .slick-dots {
-    background-color: pink;
-    bottom: -50px;
+    /* background-color: pink; */
+    bottom: -70px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    color: #fff;
+    opacity: 0.5;
+    text-shadow: 2px 2px 5px black;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #fff;
 }
