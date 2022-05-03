@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
@@ -12,6 +12,10 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { GoogleLogin } from "react-google-login";
 
 export default function Login() {
+  useEffect(() => {
+    document.title = "Login: The Da";
+  });
+
   const [showUser, setUser] = useState({ email: "", password: "" });
   const [showPassword, setPassword] = useState(false);
 
