@@ -50,3 +50,9 @@
     background-image: url("./../../Img/clothes.jpg");
     color: transparent;
 }
+
+.FunFactsDiv {
+    margin-top: 30px;
+    font-family: ManropeRegular;
+    font-weight: bold;
+}
