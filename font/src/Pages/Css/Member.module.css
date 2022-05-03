@@ -61,3 +61,14 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
+
+.slideDiv {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    width: 100%;
+}
+
+.Hslide {
+    width: 95%;
+}
