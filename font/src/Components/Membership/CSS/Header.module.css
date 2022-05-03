@@ -59,16 +59,39 @@
     font-family: ManropeRegular;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    letter-spacing: 0.12rem;
 }
 
 .slideDiv {
     display: flex;
     justify-content: center;
-    background-color: red;
     width: 100%;
 }
 
 .Hslide {
     width: 95%;
+}
+
+.slideComDiv {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slideDivMain {
+    background-color: transparent;
+    padding: 1.2rem;
+    border-style: solid;
+    border-width: 1.2px;
+    border-color: #fff;
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: ManropeRegular;
 }
