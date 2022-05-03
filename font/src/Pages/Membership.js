@@ -12,6 +12,16 @@ export default function Membership() {
     document.title =
       "Join The Da Store Exclusive Membership & Shop At Discounted Prices";
   });
+
+  var settingM = {
+    dots: true,
+    infinite: true,
+    arrows: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
   return (
     <div>
       <Nav />
@@ -31,7 +41,28 @@ export default function Membership() {
             <div className={MCSs.FunFactsDiv}>
               <p className={MCSs.FunFactsPTag}>Fun Facts</p>
             </div>
-            <div></div>
+            <div className={MCSs.slideDiv}>
+              <Sliders {...settingM} className={MCSs.Hslide}>
+                <div>
+                  <p>
+                    Add the membership to your cart
+                    <br />
+                    and get the discount on this order itself.
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    Most people save the membership fee on their first order.
+                  </p>
+                </div>
+                <div>
+                  <p>The average exclusive member SAVES Rs. 2600/year.</p>
+                </div>
+                <div>
+                  <p>Most people become members and don’t pay full price.</p>
+                </div>
+              </Sliders>
+            </div>
           </div>
         </div>
       </div>
