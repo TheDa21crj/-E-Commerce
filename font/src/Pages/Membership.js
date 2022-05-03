@@ -16,7 +16,13 @@ export default function Membership() {
       <Nav />
       <NavMobo />
       <HeaderM />
-      <div></div>
+      <div>
+        Exclusive Member Benefits
+        <br />
+        BECOME AN EXCLUSIVE MEMBER (price)
+        <br />
+        TESTIMONIALS
+      </div>
       <Footer />
     </div>
   );
