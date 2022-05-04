@@ -5,7 +5,7 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 export default function Excusive() {
   return (
-    <div>
+    <div className={Ecss.mDiv}>
       <div className={Ecss.titlemDiv}>
         <div className={Ecss.titlemDivChild}>
           <p className={Ecss.ExclusiveMemberBenefits}>
