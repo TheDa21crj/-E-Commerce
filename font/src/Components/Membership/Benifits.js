@@ -11,7 +11,7 @@ export default function Benifits(props) {
         <div className={BenifitsCss.CircleDiv}></div>
       </div>
       <div className={BenifitsCss.contentDiv}>
-        <p>{props.content}</p>
+        <p className={BenifitsCss.contentDivPTag}>{props.content}</p>
       </div>
     </div>
   );
