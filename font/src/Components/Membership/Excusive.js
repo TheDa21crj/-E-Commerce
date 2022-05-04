@@ -6,8 +6,17 @@ export default function Excusive() {
   return (
     <div>
       <div className={Ecss.titlemDiv}>
-        <p></p>
-        <p></p>
+        <div className={Ecss.titlemDivChild}>
+          <p className={Ecss.ExclusiveMemberBenefits}>
+            Exclusive Member Benefits
+          </p>
+          <p>
+            <EmojiEventsIcon
+              fontSize="large"
+              className={Ecss.EmojiEventsIcon}
+            />
+          </p>
+        </div>
       </div>
     </div>
   );
