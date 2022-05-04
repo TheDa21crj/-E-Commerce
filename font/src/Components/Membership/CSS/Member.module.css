@@ -10,3 +10,10 @@
     text-align: center;
     margin-bottom: 25px;
 }
+
+.CarsPricemDiv {
+    display: flex;
+    font-display: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
