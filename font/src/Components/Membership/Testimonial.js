@@ -19,8 +19,8 @@ export default function Testimonial() {
       <p className={TeCss.TestimonialtitlePTag}>Testimonial</p>
       <div>
         <Sliders {...settingT} className={TeCss.Hslide}>
-          <div>
-            <div>
+          <div className={TeCss.SlidermDiv}>
+            <div className={TeCss.SliderinsideDiv}>
               <p>
                 The exclusive membership is great, it helps save so much money.
                 You not only recover the money you've spent on it, but save so
@@ -29,8 +29,8 @@ export default function Testimonial() {
               <p>Atharva, Pune</p>
             </div>
           </div>
-          <div>
-            <div>
+          <div className={TeCss.SlidermDiv}>
+            <div className={TeCss.SliderinsideDiv}>
               <p>
                 The exclusive membership has definitely been worth the value.
                 I've never had a bad experience with the membership and all
@@ -39,8 +39,8 @@ export default function Testimonial() {
               <p>Bhuvandeep, Bangalore</p>
             </div>
           </div>
-          <div>
-            <div>
+          <div className={TeCss.SlidermDiv}>
+            <div className={TeCss.SliderinsideDiv}>
               <p>
                 The exclusive membership has been a real blessing, it gives you
                 first preference for limited edition clothes, it also helps you
