@@ -31,7 +31,7 @@ export default function Excusive() {
               content="Get your hands on select products and designs before others do."
             />
           </div>
-          <div>
+          <div className={Ecss.BenifitsBottomDiv}>
             <Benifits
               title="FREE DELIVERY"
               content="Our shipping charges are on us."
