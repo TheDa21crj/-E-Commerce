@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PCss from "./CSS/PriceCards.module.css";
 
 export default function PriceCards(props) {
@@ -6,7 +6,11 @@ export default function PriceCards(props) {
   const [showP, setP] = useState(props.percentage);
 
   return (
-    <div className={PCss.mDiv}>
+    <div
+      className={PCss.mDiv}
+      // id={PCss.notSelected}
+      id={props.selected ? "Selected" : "notSelected"}
+    >
       {show ? (
         <div className={PCss.popularDiv}>
           <p className={PCss.Mostpopular}>{props.popular}</p>
