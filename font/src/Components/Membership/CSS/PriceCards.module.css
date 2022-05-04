@@ -1,3 +1,29 @@
 .mDiv {
     position: relative;
+    width: 300px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 233, 110);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.popularDiv {
+    height: 16px;
+}
+
+.Mostpopular {
+    padding: 8px 0px;
+    font-family: ManropeRegular;
+    /* background-color: gold; */
+    font-weight: bold;
+    /* color: white; */
+    width: 100%;
+    height: 100%;
+    /* border-radius: 10px 10px 0px 0px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
