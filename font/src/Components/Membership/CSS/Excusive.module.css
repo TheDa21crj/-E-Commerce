@@ -26,3 +26,17 @@
     border-width: 0px 0px 2px 0px;
     border-color: gold;
 }
+
+.BenifitsRowDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.BenifitsDiv {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
