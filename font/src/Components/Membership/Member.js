@@ -19,6 +19,7 @@ export default function Member() {
         <PriceCards monthNum="3" monthPrice="83" price="249" percentage="58" />
         <PriceCards monthNum="1" monthPrice="199" price="199" />
       </div>
+      <button className={MemCss.AddMembership}>Add Membership to Cart</button>
     </div>
   );
 }
