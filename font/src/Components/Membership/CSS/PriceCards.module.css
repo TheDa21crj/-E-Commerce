@@ -25,4 +25,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: 0.1rem;
+}
+
+.monthNum {
+    margin: 32px 0px 16px 0px;
+    font-family: ManropeExtraBold;
+}
+
+.monthPrice {
+    font-family: ManropeRegular;
+    font-weight: 300;
+    margin-bottom: 48px;
+}
+
+.price {
+    font-family: ManropeExtraBold;
+    margin-bottom: 20px;
+}
+
+.percentage {
+    font-family: ManropeRegular;
+    margin-bottom: 20px;
+    letter-spacing: 0.12rem;
+    font-weight: 500;
+    height: 12px;
 }
