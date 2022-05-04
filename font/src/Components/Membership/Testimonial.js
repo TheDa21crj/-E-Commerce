@@ -26,7 +26,7 @@ export default function Testimonial() {
                 You not only recover the money you've spent on it, but save so
                 much more!
               </p>
-              <p>Atharva, Pune</p>
+              <p className={TeCss.SliderNameDiv}>Atharva, Pune</p>
             </div>
           </div>
           <div className={TeCss.SlidermDiv}>
@@ -36,7 +36,7 @@ export default function Testimonial() {
                 I've never had a bad experience with the membership and all
                 these continuous discounts are very beneficial to the customer.
               </p>
-              <p>Bhuvandeep, Bangalore</p>
+              <p className={TeCss.SliderNameDiv}>Bhuvandeep, Bangalore</p>
             </div>
           </div>
           <div className={TeCss.SlidermDiv}>
@@ -47,7 +47,7 @@ export default function Testimonial() {
                 save so much and it barely costs anything in comparison with
                 what you save.
               </p>
-              <p>Rahul, Pune</p>
+              <p className={TeCss.SliderNameDiv}>Rahul, Pune</p>
             </div>
           </div>
         </Sliders>
