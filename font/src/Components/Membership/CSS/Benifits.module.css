@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+.imgTag {
+    width: 100px;
+    height: 100px;
+}
+
 .imgDiv {
     margin-right: 10px;
 }
