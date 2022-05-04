@@ -4,7 +4,7 @@ import MemCss from "./CSS/Member.module.css";
 
 export default function Member() {
   return (
-    <div className={MemCss.mDiv}>
+    <div className={MemCss.mDiv} id={MemCss.notSelected}>
       <p className={MemCss.titlePtag}>Become An Exclusive Member</p>
       <div className={MemCss.CarsPricemDiv}>
         <PriceCards
