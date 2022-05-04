@@ -4,6 +4,7 @@ import Nav from "./../Components/Nav";
 import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import HeaderM from "./../Components/Membership/HeaderM";
+import Excusive from "./../Components/Membership/Excusive";
 
 export default function Membership() {
   useEffect(() => {
@@ -17,8 +18,7 @@ export default function Membership() {
       <NavMobo />
       <HeaderM />
       <div>
-        Exclusive Member Benefits
-        <br />
+        <Excusive />
         BECOME AN EXCLUSIVE MEMBER (price)
         <br />
         TESTIMONIALS
