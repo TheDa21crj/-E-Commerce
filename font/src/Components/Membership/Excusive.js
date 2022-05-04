@@ -2,6 +2,7 @@ import React from "react";
 import Ecss from "./CSS/Excusive.module.css";
 import Benifits from "./Benifits";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import PercentIcon from "@mui/icons-material/Percent";
 
 export default function Excusive() {
   return (
@@ -25,6 +26,7 @@ export default function Excusive() {
             <Benifits
               title="BIG DISCOUNTS"
               content="Save big on ALL products every day. Why wait for a sale?"
+              img={<PercentIcon fontSize="large" />}
             />
             <Benifits
               title="EARLY ACCESS"
