@@ -20,13 +20,19 @@
 .SliderinsideDiv {
     width: 80%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .SliderContentDiv {
+    margin-top: 15px;
     text-align: center;
     font-family: ManropeRegular;
     font-size: 18px;
     color: #5a5b5d;
+    width: 92%;
 }
 
 .SliderNameDiv {
@@ -36,4 +42,20 @@
     color: rgb(73, 76, 99);
     font-size: 26px;
     text-align: center;
+}
+
+.QoutesS,
+.QoutesE {
+    position: absolute;
+    font-size: 5rem;
+}
+
+.QoutesS {
+    top: -15px;
+    left: 0px;
+}
+
+.QoutesE {
+    bottom: -7px;
+    right: 20px;
 }
