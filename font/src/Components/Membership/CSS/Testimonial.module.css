@@ -15,7 +15,11 @@
 
 .SliderinsideDiv {
     width: 80%;
-    background-color: red;
+    /* background-color: red; */
 }
 
-.SliderContentDiv {}
+.SliderContentDiv {
+    text-align: center;
+    font-family: ManropeRegular;
+    font-size: 18px;
+}
