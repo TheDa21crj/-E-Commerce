@@ -40,3 +40,13 @@
     justify-content: space-between;
     flex-direction: column;
 }
+
+.BenifitsTopDiv,
+.BenifitsBottomDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BenifitsBottomDiv {
+    margin-top: 40px;
+}
