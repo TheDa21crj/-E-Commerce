@@ -1,0 +1,11 @@
+.titlePtag {
+    font-size: 26px;
+    font-family: ManropeExtraBold;
+    text-align: center;
+}
+
+.mDiv {
+    margin-top: 20px;
+    padding: 20px 0px;
+    background-color: lightgrey;
+}
