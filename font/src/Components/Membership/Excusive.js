@@ -21,7 +21,7 @@ export default function Excusive() {
       </div>
       <div className={Ecss.BenifitsRowDiv}>
         <div className={Ecss.BenifitsDiv}>
-          <div>
+          <div className={Ecss.BenifitsTopDiv}>
             <Benifits
               title="BIG DISCOUNTS"
               content="Save big on ALL products every day. Why wait for a sale?"
