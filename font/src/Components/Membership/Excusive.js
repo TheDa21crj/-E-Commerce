@@ -2,7 +2,8 @@ import React from "react";
 import Ecss from "./CSS/Excusive.module.css";
 import Benifits from "./Benifits";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import PercentIcon from "@mui/icons-material/Percent";
+import svg1 from "./../../Img/Membership/discount.svg";
+import svg4 from "./../../Img/Membership/delivery.svg";
 
 export default function Excusive() {
   return (
@@ -26,7 +27,7 @@ export default function Excusive() {
             <Benifits
               title="BIG DISCOUNTS"
               content="Save big on ALL products every day. Why wait for a sale?"
-              img={<PercentIcon fontSize="large" />}
+              img={svg1}
             />
             <Benifits
               title="EARLY ACCESS"
@@ -41,6 +42,7 @@ export default function Excusive() {
             <Benifits
               title="PRIORITISED SHIPPING"
               content="We ship your orders before everyone else’s."
+              img={svg4}
             />
           </div>
         </div>
