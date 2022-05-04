@@ -3,6 +3,7 @@
     /* letter-spacing: 0.12rem; */
     font-family: ManropeExtraBold;
     margin-left: 15px;
+    margin-bottom: 5px;
 }
 
 .LineDiv {
@@ -21,4 +22,12 @@
     height: 12px;
     background-color: rgb(255, 233, 110);
     border-radius: 50%;
+}
+
+.contentDiv {
+    margin-left: 15px;
+}
+
+.contentDivPTag {
+    font-family: ManropeRegular;
 }
