@@ -6,6 +6,7 @@ import Footer from "./../Components/Footer";
 import HeaderM from "./../Components/Membership/HeaderM";
 import Excusive from "./../Components/Membership/Excusive";
 import Member from "./../Components/Membership/Member";
+import Testimonial from "./../Components/Membership/Testimonial";
 
 export default function Membership() {
   useEffect(() => {
@@ -21,8 +22,7 @@ export default function Membership() {
       <div>
         <Excusive />
         <Member />
-        <br />
-        TESTIMONIALS
+        <Testimonial />
       </div>
       <Footer />
     </div>
