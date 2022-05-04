@@ -20,7 +20,6 @@
     },
     "homepage": "https://github.com/TheDa21crj/E-Commerce#readme",
     "dependencies": {
-        "axios": "^0.26.1",
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.2",
         "client": "^0.0.1",
