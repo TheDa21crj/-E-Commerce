@@ -1,9 +1,13 @@
+.mDiv {
+    margin-bottom: 100px;
+}
+
 .TestimonialtitlePTag {
     text-align: center;
     font-size: 32px;
     font-family: ManropeExtraBold;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .SlidermDiv {
@@ -24,4 +28,12 @@
     font-family: ManropeRegular;
     font-size: 18px;
     color: #5a5b5d;
+}
+
+.SliderNameDiv {
+    margin-top: 15px;
+    font-weight: 600;
+    color: rgb(73, 76, 99);
+    font-size: 26px;
+    text-align: center;
 }
