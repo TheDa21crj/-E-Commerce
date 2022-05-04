@@ -3,7 +3,7 @@ import BenifitsCss from "./CSS/Benifits.module.css";
 
 export default function Benifits(props) {
   return (
-    <div>
+    <div className={BenifitsCss.mDiv}>
       <div>
         <p className={BenifitsCss.titlePTag}>{props.title}</p>
       </div>
