@@ -55,8 +55,12 @@ export default function TopSelling() {
         <Sliders {...settingTS} className={TSCss.Hslide}>
           {showTS.map((value, key) => {
             return (
-              <Link to={`/products/${value._id}`} className="LinkStyle">
-                <div key={value._id} className={TSCss.MapMDiv}>
+              <Link
+                to={`/products/${value._id}`}
+                className="LinkStyle"
+                key={value._id}
+              >
+                <div className={TSCss.MapMDiv}>
                   <div>
                     <img
                       src={value.imageSrc}
