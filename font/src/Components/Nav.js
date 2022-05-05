@@ -187,7 +187,7 @@ export default function Nav() {
           <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
         </Link>
       </div>
-      wish No:- {myWish}
+      wish No:- {myWish.msgW}
     </div>
   );
 }
