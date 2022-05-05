@@ -6,8 +6,11 @@ import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
 import { Link, useParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
+import { incWish } from "./../Actions/index";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Cart() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [showData, setData] = useState("");
@@ -76,7 +79,7 @@ export default function Cart() {
     <div>
       <Nav />
       <NavMobo />
-      <div className={CartCss.mDiv}>
+      <div className={CartCss.mDiv} onClick={() => dispatch(incWish(4))}>
         <p className={CartCss.MainPTag}>
           My Wishlist ({showNumberItems} items)
         </p>
