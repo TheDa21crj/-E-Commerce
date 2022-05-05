@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleNav } from "./../Actions/index";
+import { incWish } from "./../Actions/index";
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
 import ImgNav3 from "./../Img/kids.jpg";
 
 export default function Nav() {
+  const [showNumberItems, setNumberItems] = useState(0);
+
   const myState = useSelector((state) => state.toggleNav);
   const myWish = useSelector((state) => state.incWish);
 
@@ -43,7 +46,8 @@ export default function Nav() {
 
   useEffect(() => {
     AuthMiddleware();
-  }, []);
+  });
+
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
