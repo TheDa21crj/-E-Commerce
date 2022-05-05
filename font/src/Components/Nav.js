@@ -14,6 +14,7 @@ import ImgNav3 from "./../Img/kids.jpg";
 
 export default function Nav() {
   const myState = useSelector((state) => state.toggleNav);
+  const myWish = useSelector((state) => state.incWish);
 
   const dispatch = useDispatch();
 
@@ -186,6 +187,7 @@ export default function Nav() {
           <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
         </Link>
       </div>
+      wish No:- {myWish}
     </div>
   );
 }
