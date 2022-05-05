@@ -1,15 +1,9 @@
-export const initialState = {
-    _id: "",
-    quantity: "",
-};
+export const initialState = 0;
 
-const toggleNav = (state = initialState, action) => {
+const incWish = (state = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
-        case "WISH":
-            return {
-                ...state,
-            };
+        case "INCWISH":
             state = payload;
             return state;
         default:
@@ -17,4 +11,4 @@ const toggleNav = (state = initialState, action) => {
     }
 };
 
-export default toggleNav;
+export default incWish;
