@@ -4,3 +4,10 @@ export const toggleNav = (msg) => {
         payload: { msg },
     };
 };
+
+export const incWish = (msg) => {
+    return {
+        type: "INCWISH",
+        payload: { msg },
+    };
+};
