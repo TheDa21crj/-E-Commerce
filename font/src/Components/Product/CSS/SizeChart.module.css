@@ -1,0 +1,109 @@
+.mDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ConDiv {
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+}
+
+.ConDiv h1 {
+    margin: 20px 0px 0px 30px;
+    font-family: ManropeExtraBold;
+}
+
+.mDivInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.CloseIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.rowDIvP {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowDIv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.InCmDiv {
+    float: right;
+    border-style: solid;
+    border-color: gold;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.InPTag,
+.CmPTag {
+    padding: 7px 5px;
+    font-family: ManropeRegular;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.CmPTag {
+    border-style: solid;
+    border-color: gold;
+    border-width: 0px 0px 0px 1px;
+}
+
+.ImgTag {
+    width: 100%;
+}
+
+.RightDiv {
+    width: 60%;
+}
+
+.LeftDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.TableDiv {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89%;
+}

@@ -1,0 +1,32 @@
+.slick-dots {
+    bottom: -70px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    color: #fff;
+    opacity: 0.5;
+    text-shadow: 2px 2px 5px black;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #fff;
+}
+
+#notSelected {
+    filter: brightness(0.9);
+    box-shadow: 10px 10px 50px lightgrey;
+    transition: all 0.3s;
+}
+
+#notSelected:hover,
+#Selected:hover {
+    filter: brightness(1);
+    box-shadow: 10px 10px 50px #ffe96e;
+}
+
+#Selected {
+    transition: all 0.3s;
+    box-shadow: 10px 10px 50px lightgrey;
+}

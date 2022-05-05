@@ -1,0 +1,78 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+.LoginPTag {
+    text-align: center;
+    font-family: ManropeExtraBold;
+    font-size: 2.5rem;
+    margin: 40px 0px 30px 0px;
+}
+
+.LoginFormTag {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.passwordDiv {
+    position: relative;
+}
+
+#email,
+#password {
+    outline: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+#email:hover,
+#password:hover {
+    border-color: #60b4df;
+}
+
+#email:focus,
+#password:focus {
+    border-radius: 0px;
+    background-color: transparent;
+    border-color: transparent transparent #60b4df transparent;
+    box-shadow: 0px 5px 50px #c6ecff;
+}
+
+#ShowPasswordDiv {
+    position: absolute;
+    top: 20%;
+    right: 3%;
+    transition: all 0.3s;
+}
+
+.LoginBtn {
+    font-family: ManropeExtraBold;
+    background-color: #fff;
+    border: solid 1px lightgrey;
+    padding: 12px 32px;
+    border-radius: 5px;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    color: #60b4df;
+    transition: all 0.3s;
+}
+
+.LoginBtn:hover {
+    border-color: #60b4df;
+}
+
+.LoginDivBTN {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.AlreadyPTag {
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: ManropeLight;
+    src: url(./../../../Manrope/static/Manrope-Light.ttf);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 10px 35px;
+    font-family: ManropeLight;
+}
+
+.th1 {
+    background-color: lightgrey;
+    border: 1px solid #dddddd;
+    color: #fff;
+}

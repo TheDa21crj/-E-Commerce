@@ -1,0 +1,218 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../Manrope/static/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: ManropeMedium;
+    src: url(./../../Manrope/static/Manrope-Medium.ttf);
+}
+
+.MDiv {
+    margin: 30px 0px 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.rightDiv,
+.leftDiv {
+    width: 45%;
+}
+
+.ImageSrc {
+    width: 100%;
+}
+
+.PName {
+    font-family: ManropeExtraBold;
+    color: #2a2a2a;
+    border-style: solid;
+    border-color: lightgrey;
+    padding-bottom: 10px;
+    border-width: 0px 0px 1px 0px;
+}
+
+.Price {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: ManropeExtraBold;
+}
+
+.PriceSub {
+    font-family: ManropeRegular;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+.SizeMDiv {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SizeRoundDivP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+}
+
+.SizeRoundDiv,
+.SizeRoundDivTrue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gold;
+    transition: all 0.3s;
+}
+
+.SizeRoundDiv:hover {
+    box-shadow: 2px 2px 50px gold;
+}
+
+.SizeRoundDivTrue {
+    font-family: ManropeMedium;
+    font-weight: bold;
+    color: white;
+    background-color: gold;
+}
+
+.SizeRoundDiv p {
+    font-family: ManropeMedium;
+}
+
+.SizeChart {
+    font-family: ManropeMedium;
+    margin-top: 15px;
+}
+
+.SizeChartSpan {
+    text-decoration: underline;
+    color: gold;
+    cursor: pointer;
+}
+
+.QuantityDiv {
+    margin-top: 20px;
+    font-family: ManropeMedium;
+    display: flex;
+    align-items: center;
+}
+
+.QuantityINP {
+    font-family: ManropeMedium;
+    outline: none;
+    margin-left: 10px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.BuyDiv {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AddCART {
+    font-family: ManropeExtraBold;
+    background-color: gold;
+    color: #fff;
+    padding: 10px 0px;
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.AddWISHLIST {
+    font-family: ManropeExtraBold;
+    padding: 10px 0px;
+    width: 45%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: gold;
+    color: gold;
+    cursor: pointer;
+}
+
+.DesDiv {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.DesHeadDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Description,
+.Details {
+    position: relative;
+    font-family: ManropeExtraBold;
+}
+
+.ContentDiv {
+    margin-top: 20px;
+    font-family: ManropeMedium;
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(252, 239, 166);
+    padding: 20px;
+}
+
+.Des {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: linear-gradient(to bottom right, gold 50%, white 50%);
+    top: 35px;
+    left: 50%;
+    transform: rotate(45deg);
+}
+
+.RowDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Rating {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: ManropeExtraBold;
+}
+
+.StarIcon {
+    color: gold;
+}
