@@ -10,6 +10,8 @@ import { incWish } from "./../Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function Cart() {
+  const myWish = useSelector((state) => state.incWish);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -77,7 +79,7 @@ export default function Cart() {
   };
 
   const add = async () => {
-    dispatch(incWish(4));
+    dispatch(incWish(showNumberItems));
   };
   return (
     <div>
