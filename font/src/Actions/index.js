@@ -5,9 +5,9 @@ export const toggleNav = (msg) => {
     };
 };
 
-export const incWish = (msg) => {
+export const incWish = (msgW) => {
     return {
         type: "INCWISH",
-        payload: { msg },
+        payload: { msgW },
     };
 };
