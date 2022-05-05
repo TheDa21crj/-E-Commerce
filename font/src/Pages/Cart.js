@@ -55,7 +55,7 @@ export default function Cart() {
   const deleteWish = async (deleteID) => {
     let _id = deleteID;
     if (_id === "") {
-      console.log("_id-null");
+      return;
     } else {
       try {
         const res = await fetch("/api/Wishlist/delete", {
@@ -75,11 +75,15 @@ export default function Cart() {
       }
     }
   };
+
+  const add = async () => {
+    dispatch(incWish(4));
+  };
   return (
     <div>
       <Nav />
       <NavMobo />
-      <div className={CartCss.mDiv} onClick={() => dispatch(incWish(4))}>
+      <div className={CartCss.mDiv} onClick={add}>
         <p className={CartCss.MainPTag}>
           My Wishlist ({showNumberItems} items)
         </p>
