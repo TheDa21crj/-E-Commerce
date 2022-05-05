@@ -25,8 +25,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", require("./routes/User"));
-// app.use("/api/login", require("./routes/login"));
-// app.use("/api/myAccount", require("./routes/myAccount"));
 // app.use("/api/TrackOrder", require("./routes/TrackOrder"));
 // app.use("/api/Order", require("./routes/Order"));
 app.use("/api/Wishlist", require("./routes/WishList"));
