@@ -200,7 +200,7 @@ const Nav = (props) => {
           </Link>
           <div className={NavCss.HoverDiv}>
             <div className={NavCss.UserHoverDiv}>
-              {toggle ? (
+              {toggle == "true" ? (
                 <Link to="/logout" className="LinkStyle">
                   Logout
                 </Link>
