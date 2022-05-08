@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./../Components/Nav";
 import { Link, useParams } from "react-router-dom";
-import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
@@ -33,10 +32,8 @@ export default function ProductsDeatils() {
   const [showDetails, setDetails] = useState(false);
 
   const dispatch = useDispatch();
-
-  const { id } = useParams();
-
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const ProductData = async () => {
     try {
@@ -115,7 +112,6 @@ export default function ProductsDeatils() {
   return (
     <div>
       <Nav />
-      <NavMobo />
       <div className={PDCss.MDiv}>
         <div className={PDCss.leftDiv}>
           <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
