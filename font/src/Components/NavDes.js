@@ -10,6 +10,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 // redux
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
+import { toggleN } from "./../redux/toggleNav";
 import { useDispatch } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
@@ -32,12 +33,15 @@ const Nav = (props) => {
 
       const data = await res.json();
       if (data.errors) {
+        dispatch(toggleN({ toggle: "false" }));
         return;
       }
       if (data) {
-        // dispatch(toggleNav("true"));
+        dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
+      dispatch(toggleN({ toggle: "false" }));
+
       return;
     }
   };
