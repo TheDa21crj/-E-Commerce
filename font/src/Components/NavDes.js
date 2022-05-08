@@ -117,7 +117,7 @@ const Nav = (props) => {
             </li>
             <li>
               <p className={NavCss.NavListPTag}>Women</p>
-              {/* <div className={NavCss.dropDownDiv}>
+              <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
                   H22="BOTTOMWEAR"
@@ -141,11 +141,11 @@ const Nav = (props) => {
                   li23="Socks"
                   li33="Backpacks"
                 />
-              </div> */}
+              </div>
             </li>
             <li>
               <p className={NavCss.NavListPTag}>Kids</p>
-              {/* <div className={NavCss.dropDownDiv}>
+              <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
                   H22="BOTTOMWEAR"
@@ -179,7 +179,7 @@ const Nav = (props) => {
                   li83="Socks"
                   li93="Backpacks"
                 />
-              </div> */}
+              </div>
             </li>
             <li>
               <p className={NavCss.NavListPTag}>New</p>
