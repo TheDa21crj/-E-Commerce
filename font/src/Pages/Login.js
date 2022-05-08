@@ -6,6 +6,7 @@ import LoginCss from "./Css/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import img from "./../Img/sign.png";
 // redux
 import { toggleN } from "./../redux/toggleNav";
 import { useDispatch } from "react-redux";
@@ -99,7 +100,9 @@ const Login = (props) => {
               Already have a Account? <Link to="/register">Register</Link>
             </p>
           </div>
-          <div></div>
+          <div className={LoginCss.RightDiv}>
+            <img src={img} alt="" className={LoginCss.ImgLogin} />
+          </div>
         </div>
       </div>
 
