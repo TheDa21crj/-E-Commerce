@@ -17,12 +17,6 @@ export default function Error() {
         <p className={ErrCss.Therequested}>
           The requested page dose not exist.
         </p>
-        {/* <Link to="/" className="LinkStyle">
-          <div className={ErrCss.BacktoHome}>
-            <HomeOutlinedIcon className={ErrCss.HomeOutlinedIcon} /> Back to
-            Home
-          </div>
-        </Link> */}
       </div>
     </div>
   );
