@@ -57,44 +57,51 @@ const Login = (props) => {
   return (
     <div className={LoginCss.LoginMDiv}>
       <Nav />
-      <p className={LoginCss.LoginPTag}>Login</p>
-      <form action="" method="POST" className={LoginCss.LoginFormTag}>
-        <input
-          type="email"
-          name="email"
-          id={LoginCss.email}
-          placeholder="Email"
-          value={showUser.email}
-          onChange={DataInp}
-        />
-        <div className={LoginCss.passwordDiv}>
-          <input
-            type={showPassword ? "text" : "password"}
-            name="password"
-            id={LoginCss.password}
-            placeholder="Password"
-            value={showUser.password}
-            onChange={DataInp}
-          />
-          <div
-            id={LoginCss.ShowPasswordDiv}
-            onClick={() => {
-              setPassword(!showPassword);
-            }}
-          >
-            {showPassword ? <RemoveRedEyeIcon /> : <VisibilityOffIcon />}
+      <div className={LoginCss.contentMDiv}>
+        <div className={LoginCss.Div}>
+          <div>
+            <p className={LoginCss.LoginPTag}>Login</p>
+            <form action="" method="POST" className={LoginCss.LoginFormTag}>
+              <input
+                type="email"
+                name="email"
+                id={LoginCss.email}
+                placeholder="Email"
+                value={showUser.email}
+                onChange={DataInp}
+              />
+              <div className={LoginCss.passwordDiv}>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  id={LoginCss.password}
+                  placeholder="Password"
+                  value={showUser.password}
+                  onChange={DataInp}
+                />
+                <div
+                  id={LoginCss.ShowPasswordDiv}
+                  onClick={() => {
+                    setPassword(!showPassword);
+                  }}
+                >
+                  {showPassword ? <RemoveRedEyeIcon /> : <VisibilityOffIcon />}
+                </div>
+              </div>
+            </form>
+            <div className={LoginCss.LoginDivBTN}>
+              <button onClick={PostData} className={LoginCss.LoginBtn}>
+                Login
+              </button>
+            </div>
+            <br />
+            <p className={LoginCss.AlreadyPTag}>
+              Already have a Account? <Link to="/register">Register</Link>
+            </p>
           </div>
+          <div></div>
         </div>
-      </form>
-      <div className={LoginCss.LoginDivBTN}>
-        <button onClick={PostData} className={LoginCss.LoginBtn}>
-          Login
-        </button>
       </div>
-      <br />
-      <p className={LoginCss.AlreadyPTag}>
-        Already have a Account? <Link to="/register">Register</Link>
-      </p>
 
       <Footer />
     </div>
