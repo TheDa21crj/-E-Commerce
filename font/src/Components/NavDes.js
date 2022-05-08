@@ -77,13 +77,11 @@ const Nav = (props) => {
   const wish = useSelector((state) => state.wish.start);
   const toggle = useSelector((state) => state.toggle.toggle);
 
-  console.log(toggle);
-
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
         <Link to="/" className={NavCss.LinkTag}>
-          <h1>The Da</h1>
+          <h1 className={NavCss.TitleH1}>The Da</h1>
         </Link>
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
@@ -119,7 +117,7 @@ const Nav = (props) => {
             </li>
             <li>
               <p className={NavCss.NavListPTag}>Women</p>
-              <div className={NavCss.dropDownDiv}>
+              {/* <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
                   H22="BOTTOMWEAR"
@@ -143,11 +141,11 @@ const Nav = (props) => {
                   li23="Socks"
                   li33="Backpacks"
                 />
-              </div>
+              </div> */}
             </li>
             <li>
               <p className={NavCss.NavListPTag}>Kids</p>
-              <div className={NavCss.dropDownDiv}>
+              {/* <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
                   H22="BOTTOMWEAR"
@@ -181,7 +179,7 @@ const Nav = (props) => {
                   li83="Socks"
                   li93="Backpacks"
                 />
-              </div>
+              </div> */}
             </li>
             <li>
               <p className={NavCss.NavListPTag}>New</p>
