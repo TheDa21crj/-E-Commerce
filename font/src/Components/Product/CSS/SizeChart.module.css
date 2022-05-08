@@ -9,14 +9,19 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(4px); */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%); */
 }
 
 .ConDiv {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
+    backdrop-filter: blur(2rem);
     width: 80%;
+    border-radius: 10px;
+    padding: 0px 0px 1.5% 0px;
 }
 
 .ConDiv h1 {
