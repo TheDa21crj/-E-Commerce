@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./../Components/Nav";
-import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import { Link } from "react-router-dom";
 import LoginCss from "./Css/Login.module.css";
@@ -58,7 +57,6 @@ const Login = (props) => {
   return (
     <div className={LoginCss.LoginMDiv}>
       <Nav />
-      <NavMobo />
       <p className={LoginCss.LoginPTag}>Login</p>
       <form action="" method="POST" className={LoginCss.LoginFormTag}>
         <input
@@ -71,7 +69,6 @@ const Login = (props) => {
         />
         <div className={LoginCss.passwordDiv}>
           <input
-            // type="password"
             type={showPassword ? "text" : "password"}
             name="password"
             id={LoginCss.password}
