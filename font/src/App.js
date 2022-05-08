@@ -14,29 +14,25 @@ import ProductsDeatils from "./Pages/ProductsDeatils";
 import Cart from "./Pages/Cart";
 
 // redux
-import { Provider } from "react-redux";
-import store from "./store";
 
 function App() {
   return (
     <BrowserRouter>
-      <Provider store={store}>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Membership" element={<Membership />} />
-            <Route path="/products/:id" element={<ProductsDeatils />} />
-            <Route path="/wishlist" element={<Cart />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/my-account" element={<MyAccount />} />
-            <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/post-content" element={<PostContent />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </Layout>
-      </Provider>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Membership" element={<Membership />} />
+          <Route path="/products/:id" element={<ProductsDeatils />} />
+          <Route path="/wishlist" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/my-account" element={<MyAccount />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/post-content" element={<PostContent />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }

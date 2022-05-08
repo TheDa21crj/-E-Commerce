@@ -5,22 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-// import { useSelector, useDispatch } from "react-redux";
-// import { toggleNav } from "./../Actions/index";
-// import { incWish } from "./../Actions/index";
+// redux
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
 import ImgNav3 from "./../Img/kids.jpg";
 
-export default function Nav() {
-  const [showNumberItems, setNumberItems] = useState(0);
-
-  // const myState = useSelector((state) => state.toggleNav);
-  // const myWish = useSelector((state) => state.incWish);
-
-  // const dispatch = useDispatch();
-
+const Nav = (props) => {
   const AuthMiddleware = async () => {
     try {
       const res = await fetch("/api/account", {
@@ -172,17 +163,17 @@ export default function Nav() {
             <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
           </Link>
           <div className={NavCss.HoverDiv}>
-            {/* <div className={NavCss.UserHoverDiv}>
-              {myState.msg === "true" ? (
-                <Link to="/logout" className="LinkStyle">
-                  Logout
-                </Link>
-              ) : (
-                <Link to="/login" className="LinkStyle">
-                  Login/Register
-                </Link>
-              )}
-            </div> */}
+            <div className={NavCss.UserHoverDiv}>
+              {/* {myState.msg === "true" ? ( */}
+              {/* <Link to="/logout" className="LinkStyle"> */}
+              {/* Logout */}
+              {/* </Link> */}
+              {/* ) : ( */}
+              <Link to="/login" className="LinkStyle">
+                Login/Register
+              </Link>
+              {/* )} */}
+            </div>
             <div className={NavCss.arrow}></div>
           </div>
         </div>
@@ -193,4 +184,6 @@ export default function Nav() {
       </div>
     </div>
   );
-}
+};
+
+export default Nav;
