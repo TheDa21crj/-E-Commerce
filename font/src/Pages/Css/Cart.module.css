@@ -34,18 +34,30 @@
 
 .CardGridDiv {
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.5) -7.21%, rgba(255, 255, 255, 0.3) 118.08%);
+    box-shadow: 0 10px 20px 0 lightgrey;
+    transition: all 0.3s;
+}
+
+.CardGridDiv:hover {
+    box-shadow: 0 10px 20px 0 #ff9bb9;
 }
 
 .Name {
     font-weight: bold;
     font-family: ManropeExtraBold;
-    margin: 7px 0px 7px 0px;
+    margin: 7px 0px 7px 20px;
     border-style: solid;
+    padding-bottom: 4px;
     border-width: 0px 0px 1px 0px;
-    border-color: lightgrey;
+    border-color: rgb(228, 228, 228);
+    width: 93%;
 }
 
 .Price {
+    margin: 0px 0px 10px 20px;
     font-family: ManropeRegular;
     color: rgb(57, 57, 57);
 }
