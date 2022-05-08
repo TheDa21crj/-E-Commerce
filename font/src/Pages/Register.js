@@ -84,9 +84,15 @@ export default function Register() {
                 </div>
               </div>
             </form>
-            <button onClick={PostData}>Register</button>
+            <div className={LoginCss.LoginDivBTN}>
+              <button onClick={PostData} className={LoginCss.LoginBtn}>
+                Register
+              </button>
+            </div>
             <br />
-            <Link to="/login">Login</Link>
+            <p className={LoginCss.AlreadyPTag}>
+              Already have a Account? <Link to="/login">Login</Link>
+            </p>
           </div>
           <div className={LoginCss.RightDiv}>
             <img src={img} alt="" className={LoginCss.ImgLogin} />
