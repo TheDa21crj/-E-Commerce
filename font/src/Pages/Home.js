@@ -12,7 +12,7 @@ export default function Home() {
     document.title = "Online Shopping for Men & Women: The Da";
   });
   return (
-    <div>
+    <div className="homeBodymDiv">
       <Nav />
       <NavMobo />
       <Header />
