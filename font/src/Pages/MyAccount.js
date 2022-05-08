@@ -8,8 +8,10 @@ import MyAddress from "./../Components/Account/MyAddress";
 import Myorders from "./../Components/Account/Myorders";
 import Footer from "./../Components/Footer";
 import MACss from "./Css/MyAccount.module.css";
-// import { toggleNav } from "./../Actions/index";
-// import { useSelector, useDispatch } from "react-redux";
+
+// redux
+import { toggleN } from "./../redux/toggleNav";
+import { useDispatch } from "react-redux";
 
 export default function MyAccount() {
   useEffect(() => {
@@ -26,7 +28,7 @@ export default function MyAccount() {
   const [showProfileState, setProfileState] = useState("My Orders");
   const navigate = useNavigate();
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const AuthMiddleware = async () => {
     try {
@@ -51,7 +53,7 @@ export default function MyAccount() {
         setlastName(data.message.LastName);
         setGender(data.message.gender);
         setnum(data.message.PhoneNumber);
-        // dispatch(toggleNav("true"));
+        dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
       // console.log(error);
