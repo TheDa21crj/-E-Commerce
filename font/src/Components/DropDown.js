@@ -4,7 +4,8 @@ import DdCss from "./Css/DropDown.module.css";
 export default function DropDown(props) {
   return (
     <div className={DdCss.DropDown}>
-      <div className={DdCss.rowDivs}>
+      <p>hello</p>
+      {/* <div className={DdCss.rowDivs}>
         <h4> {props.H21} </h4>{" "}
         <ul>
           <li> {props.li1} </li> <li> {props.li2} </li> <li> {props.li3} </li>{" "}
@@ -38,7 +39,7 @@ export default function DropDown(props) {
       </div>{" "}
       <div className={DdCss.rowDivs}>
         <img src={props.imgNav} alt="" className={DdCss.imgNav} />{" "}
-      </div>{" "}
+      </div>{" "} */}
     </div>
   );
 }
