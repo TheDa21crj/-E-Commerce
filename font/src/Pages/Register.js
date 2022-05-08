@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Nav from "./../Components/Nav";
-import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import { Link } from "react-router-dom";
 import RegCss from "./Css/Register.module.css";
 import { useNavigate } from "react-router-dom";
-// import { GoogleLogin } from "react-google-login";
 
 export default function Register() {
   const [showUser, setUser] = useState({ email: "", password: "" });
@@ -50,7 +48,6 @@ export default function Register() {
   return (
     <div>
       <Nav />
-      <NavMobo />
       Register
       <form action="" method="POST">
         <input
