@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-
 // redux
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
@@ -210,7 +209,7 @@ const Nav = (props) => {
                 <Link to="/login" className="LinkStyle">
                   Login/Register
                 </Link>
-              )}{" "}
+              )}
             </div>
             <div className={NavCss.arrow}></div>
           </div>
