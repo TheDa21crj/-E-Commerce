@@ -7,7 +7,7 @@ const toggleSlice = createSlice({
     },
     reducers: {
         toggleN: (state, action) => {
-            state.toggle = action.payload.start;
+            state.toggle = action.payload.toggle;
         },
     },
 });
