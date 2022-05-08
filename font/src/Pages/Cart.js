@@ -81,10 +81,7 @@ export default function Cart() {
       <Nav />
       <NavMobo />
       <div className={CartCss.mDiv}>
-        <p className={CartCss.MainPTag}>
-          My Wishlist({showNumberItems}
-          items){" "}
-        </p>{" "}
+        <p className={CartCss.MainPTag}>My Wishlist({showNumberItems} items)</p>{" "}
         <div className={CartCss.CardDivM}>
           {" "}
           {showData ? (

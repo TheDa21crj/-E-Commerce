@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
+import Wish from "./Wish.js";
 import { Link, useNavigate } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
 // redux
+import { useSelector } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
@@ -38,6 +41,8 @@ const Nav = (props) => {
   useEffect(() => {
     AuthMiddleware();
   });
+
+  const wish = useSelector((state) => state.wish.number);
 
   return (
     <div className={NavCss.NavmDiv}>
@@ -179,7 +184,13 @@ const Nav = (props) => {
         </div>
         <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
         <Link to="/wishlist" className="LinkStyle">
-          <FavoriteBorderIcon fontSize="large" className={NavCss.IconsClass2} />
+          <div className={NavCss.wishDiv}>
+            <FavoriteBorderIcon
+              fontSize="large"
+              className={NavCss.IconsClass2}
+            />
+            <Wish value={wish} />
+          </div>
         </Link>
       </div>
     </div>

@@ -9,6 +9,10 @@ import StarIcon from "@mui/icons-material/Star";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+// redux
+import { addWish } from "./../redux/userSlice";
+import { useDispatch } from "react-redux";
+
 export default function ProductsDeatils() {
   const [showid, setid] = useState("");
   const [showname, setname] = useState("");
@@ -26,6 +30,8 @@ export default function ProductsDeatils() {
 
   const [showSelect, setSelect] = useState(1);
   const [showDetails, setDetails] = useState(false);
+
+  const dispatch = useDispatch();
 
   const { id } = useParams();
 
@@ -97,6 +103,7 @@ export default function ProductsDeatils() {
         return navigate("/login");
       }
       if (data) {
+        dispatch(addWish());
         return console.log(data);
       }
     } catch (error) {
