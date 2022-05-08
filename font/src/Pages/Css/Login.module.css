@@ -107,12 +107,14 @@
     border-radius: 5px;
     font-size: 1rem;
     letter-spacing: 0.2px;
-    color: #60b4df;
+    color: #f56692;
     transition: all 0.3s;
 }
 
 .LoginBtn:hover {
-    border-color: #60b4df;
+    color: #fff;
+    background-color: #f56692;
+    border-color: #f34278;
 }
 
 .LoginDivBTN {
@@ -122,6 +124,7 @@
 }
 
 .AlreadyPTag {
-    text-align: center;
+    font-family: ManropeRegular;
+    text-align: left;
     margin-bottom: 20px;
 }
