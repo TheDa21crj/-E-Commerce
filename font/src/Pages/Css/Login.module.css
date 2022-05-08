@@ -14,7 +14,7 @@
 }
 
 .Div {
-    width: 80%;
+    width: 70%;
     background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
     backdrop-filter: blur(8px);
     border-radius: 10px;
@@ -22,16 +22,21 @@
     box-shadow: 0 10px 20px 0 lightgrey;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
+.LeftDiv {
+    margin: 0px 0px 0px 30px;
+    width: 45%;
+}
+
 .RightDiv {
-    margin: 20px 0px;
+    margin: 20px -30px 20px 0px;
 }
 
 .ImgLogin {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .LoginFormTag {
@@ -47,6 +52,7 @@
 
 #email,
 #password {
+    width: 80%;
     outline: none;
     background-color: #fff;
     padding: 10px 15px;
@@ -58,38 +64,38 @@
 
 #email:hover,
 #password:hover {
-    border-color: #60b4df;
+    border-color: #f56692;
 }
 
 #email:focus,
 #password:focus {
     border-radius: 0px;
     background-color: transparent;
-    border-color: transparent transparent #60b4df transparent;
-    box-shadow: 0px 5px 50px #c6ecff;
+    border-color: transparent transparent #f34278 transparent;
 }
 
 #email::-webkit-input-placeholder,
 #password::-webkit-input-placeholder {
-    /* Edge */
     font-family: ManropeRegular;
+    letter-spacing: 0.12rem;
 }
 
 #email:-ms-input-placeholder,
 #password:-ms-input-placeholder {
-    /* Internet Explorer */
     font-family: ManropeRegular;
+    letter-spacing: 0.12rem;
 }
 
 #email::placeholder,
 #password::placeholder {
     font-family: ManropeRegular;
+    letter-spacing: 0.12rem;
 }
 
 #ShowPasswordDiv {
     position: absolute;
     top: 20%;
-    right: 3%;
+    right: 15%;
     transition: all 0.3s;
 }
 
