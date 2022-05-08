@@ -71,6 +71,9 @@ const Nav = (props) => {
   });
 
   const wish = useSelector((state) => state.wish.start);
+  const toggle = useSelector((state) => state.toggle.toggle);
+
+  console.log(toggle);
 
   return (
     <div className={NavCss.NavmDiv}>
@@ -197,15 +200,15 @@ const Nav = (props) => {
           </Link>
           <div className={NavCss.HoverDiv}>
             <div className={NavCss.UserHoverDiv}>
-              {/* {myState.msg === "true" ? ( */}
-              {/* <Link to="/logout" className="LinkStyle"> */}
-              {/* Logout */}
-              {/* </Link> */}
-              {/* ) : ( */}
-              <Link to="/login" className="LinkStyle">
-                Login/Register
-              </Link>
-              {/* )} */}
+              {toggle ? (
+                <Link to="/logout" className="LinkStyle">
+                  Logout
+                </Link>
+              ) : (
+                <Link to="/login" className="LinkStyle">
+                  Login/Register
+                </Link>
+              )}{" "}
             </div>
             <div className={NavCss.arrow}></div>
           </div>
