@@ -17,6 +17,8 @@ import ImgNav2 from "./../Img/women.jpg";
 import ImgNav3 from "./../Img/kids.jpg";
 
 const Nav = (props) => {
+  const [showimg, setimg] = useState("");
+
   const dispatch = useDispatch();
 
   const AuthMiddleware = async () => {
@@ -36,11 +38,11 @@ const Nav = (props) => {
         return;
       }
       if (data) {
+        setimg(data.message.avatar);
         dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
       dispatch(toggleN({ toggle: "false" }));
-
       return;
     }
   };
@@ -197,7 +199,11 @@ const Nav = (props) => {
       <div className={NavCss.IconsDiv}>
         <div className={NavCss.UserDiv}>
           <Link to="/my-account" className="LinkStyle">
-            <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
+            {showimg == "" ? (
+              <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
+            ) : (
+              <img src={showimg} alt="" className={NavCss.UserIcon} />
+            )}
           </Link>
           <div className={NavCss.HoverDiv}>
             <div className={NavCss.UserHoverDiv}>
