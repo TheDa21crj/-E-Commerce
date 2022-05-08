@@ -9,12 +9,16 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 // redux
 import { useSelector } from "react-redux";
+import { addWish } from "./../redux/userSlice";
+import { useDispatch } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
 import ImgNav2 from "./../Img/women.jpg";
 import ImgNav3 from "./../Img/kids.jpg";
 
 const Nav = (props) => {
+  const dispatch = useDispatch();
+
   const AuthMiddleware = async () => {
     try {
       const res = await fetch("/api/account", {
@@ -38,11 +42,35 @@ const Nav = (props) => {
     }
   };
 
+  const CartCheck = async () => {
+    try {
+      const res = await fetch("/api/Wishlist", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+      const data = await res.json();
+      if (data.errors) {
+        return;
+      }
+      if (data) {
+        dispatch(addWish({ start: data.message.length }));
+        return;
+      }
+    } catch (error) {
+      return;
+    }
+  };
+
   useEffect(() => {
     AuthMiddleware();
+    CartCheck();
   });
 
-  const wish = useSelector((state) => state.wish.number);
+  const wish = useSelector((state) => state.wish.start);
 
   return (
     <div className={NavCss.NavmDiv}>

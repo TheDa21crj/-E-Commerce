@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 // redux
+import { useSelector } from "react-redux";
 import { addWish } from "./../redux/userSlice";
 import { useDispatch } from "react-redux";
 
@@ -103,8 +104,7 @@ export default function ProductsDeatils() {
         return navigate("/login");
       }
       if (data) {
-        dispatch(addWish());
-        return console.log(data);
+        return;
       }
     } catch (error) {
       console.log(error);
