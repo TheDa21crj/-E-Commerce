@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Css/Member.css";
 import Nav from "./../Components/Nav";
-import NavMobo from "./../Components/NavMobo";
 import Footer from "./../Components/Footer";
 import HeaderM from "./../Components/Membership/HeaderM";
 import Excusive from "./../Components/Membership/Excusive";
@@ -17,7 +16,6 @@ export default function Membership() {
   return (
     <div>
       <Nav />
-      <NavMobo />
       <HeaderM />
       <div>
         <Excusive />
