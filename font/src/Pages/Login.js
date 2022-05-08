@@ -60,7 +60,7 @@ const Login = (props) => {
       <Nav />
       <div className={LoginCss.contentMDiv}>
         <div className={LoginCss.Div}>
-          <div>
+          <div className={LoginCss.LeftDiv}>
             <p className={LoginCss.LoginPTag}>Login</p>
             <form action="" method="POST" className={LoginCss.LoginFormTag}>
               <input
