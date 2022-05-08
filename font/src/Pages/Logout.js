@@ -31,5 +31,5 @@ export default function Logout() {
         console.log(err);
       });
   });
-  return <div> Logout </div>;
+  return <div>Logout</div>;
 }
