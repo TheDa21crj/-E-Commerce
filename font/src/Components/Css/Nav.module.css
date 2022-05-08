@@ -75,7 +75,7 @@
 }
 
 .IconsClass1 :hover {
-    color: gold;
+    color: #f56692;
 }
 
 .dropDownDiv {
@@ -83,12 +83,14 @@
     visibility: hidden;
     position: absolute;
     padding: 2%;
-    top: 38px;
+    top: 50px;
     left: 0%;
     width: 96%;
     height: auto;
     background-color: white;
     z-index: 2;
+    background: linear-gradient ( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
+    backdrop-filter: blur(2rem);
 }
 
 #Dd li:hover>.dropDownDiv {
@@ -139,12 +141,14 @@
 
 .NavListPTag {
     position: relative;
+    /* background-color: #60b4df; */
+    padding: 12px 0px;
 }
 
 .NavListPTag::after {
     content: "";
     position: absolute;
-    background-color: gold;
+    background-color: #f56692;
     height: 2px;
     width: 0%;
     left: 0px;
@@ -180,7 +184,7 @@
 }
 
 .wishDiv:hover {
-    color: gold;
+    color: #f56692;
     transition: all 0.3s;
 }
 
