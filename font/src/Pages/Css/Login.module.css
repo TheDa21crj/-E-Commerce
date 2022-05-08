@@ -10,6 +10,27 @@
     margin: 40px 0px 30px 0px;
 }
 
+.contentMDiv {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Div {
+    width: 80%;
+    background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 10px 20px 0 lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .LoginFormTag {
     display: flex;
     justify-content: space-evenly;
