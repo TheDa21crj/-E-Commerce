@@ -89,15 +89,13 @@
 }
 
 .dropDownDiv {
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0; */
+    /* visibility: hidden; */
     position: absolute;
-    padding: 2%;
     top: 50px;
     left: 0%;
-    width: 96%;
+    width: 100%;
     height: auto;
-    background-color: white;
     z-index: 2;
 }
 
