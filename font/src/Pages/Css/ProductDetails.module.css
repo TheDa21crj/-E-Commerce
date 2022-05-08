@@ -195,7 +195,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background-image: linear-gradient(to bottom right, gold 50%, white 50%);
+    background-image: linear-gradient(to bottom right, gold 50%, transparent 50%);
     top: 35px;
     left: 50%;
     transform: rotate(45deg);
