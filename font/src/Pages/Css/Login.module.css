@@ -31,6 +31,14 @@
     align-items: center;
 }
 
+.RightDiv {
+    margin: 20px 0px;
+}
+
+.ImgLogin {
+    max-width: 90%;
+}
+
 .LoginFormTag {
     display: flex;
     justify-content: space-evenly;
