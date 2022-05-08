@@ -9,7 +9,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 // redux
 import { useSelector } from "react-redux";
-import { addWish } from "./../redux/userSlice";
+import { addWish } from "../redux/userSlice";
 import { useDispatch } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
