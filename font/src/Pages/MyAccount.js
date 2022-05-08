@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Nav from "./../Components/Nav";
-import NavMobo from "./../Components/NavMobo";
 import Profile from "./../Components/Account/Profile";
 import MyAddress from "./../Components/Account/MyAddress";
 import Myorders from "./../Components/Account/Myorders";
@@ -71,7 +70,6 @@ export default function MyAccount() {
   return (
     <div>
       <Nav />
-      <NavMobo />
       <div className={MACss.mdiv}>
         <div className={MACss.leftDiv}>
           <img src={showUrl} alt="" className={MACss.ImgTag} />
