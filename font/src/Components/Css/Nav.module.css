@@ -8,6 +8,16 @@
     src: url(./../../Manrope/static/Manrope-Regular.ttf);
 }
 
+@font-face {
+    font-family: MiaLove;
+    src: url(./../../MiaLove/FontsFree-Net-Mia-Love.ttf);
+}
+
+.TitleH1 {
+    font-family: MiaLove;
+    font-weight: 100;
+}
+
 .underNav {
     width: 100%;
     height: 53px;
@@ -22,7 +32,7 @@
     height: 53px;
     background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
     backdrop-filter: blur(8px);
-    z-index: 99;
+    z-index: 2;
 }
 
 .NavmDiv,
@@ -89,8 +99,6 @@
     height: auto;
     background-color: white;
     z-index: 2;
-    background: linear-gradient ( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
-    backdrop-filter: blur(2rem);
 }
 
 #Dd li:hover>.dropDownDiv {
