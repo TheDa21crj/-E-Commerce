@@ -7,6 +7,7 @@ export default function Nav() {
   return (
     <div>
       <NavDes />
+      <div className={NavCss.underNav}></div>
       <NavMobo />
     </div>
   );
