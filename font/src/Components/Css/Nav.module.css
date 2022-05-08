@@ -88,11 +88,23 @@
     color: #f56692;
 }
 
+.dropDownDiv {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 2%;
+    background-color: #fff;
+    top: 50px;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
 
-/* #Dd li:hover>.dropDownDiv {
+#Dd li:hover>.dropDownDiv {
     opacity: 1;
     visibility: visible;
-} */
+}
 
 .UserDiv {
     z-index: 1;
