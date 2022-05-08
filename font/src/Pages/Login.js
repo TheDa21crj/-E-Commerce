@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 // redux
+import { toggleN } from "./../redux/toggleNav";
+import { useDispatch } from "react-redux";
 
 const Login = (props) => {
   useEffect(() => {
@@ -17,8 +19,7 @@ const Login = (props) => {
   const [showUser, setUser] = useState({ email: "", password: "" });
   const [showPassword, setPassword] = useState(false);
 
-  // const dispatch = useDispatch();
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const DataInp = (e) => {
@@ -47,7 +48,7 @@ const Login = (props) => {
     if (r.errors) {
       console.log("Error");
     } else if (!r.errors) {
-      // dispatch(toggleNav("true"));
+      dispatch(toggleN({ toggle: "true" }));
       navigate("/my-account");
     } else {
       console.log("Unwanted Error");
