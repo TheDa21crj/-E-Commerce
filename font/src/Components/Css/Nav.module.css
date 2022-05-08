@@ -99,6 +99,8 @@
     left: 0%;
     width: 100%;
     height: auto;
+    /* background: linear-gradient( 117.76deg, rgba(255, 255, 255, 1) -7.21%, rgba(255, 255, 255, 0.8) 118.08%); */
+    /* backdrop-filter: blur(4px); */
     z-index: 2;
 }
 
