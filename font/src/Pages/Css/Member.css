@@ -24,7 +24,7 @@
 #notSelected:hover,
 #Selected:hover {
     filter: brightness(1);
-    box-shadow: 10px 10px 50px #ffe96e;
+    box-shadow: 10px 10px 50px #f56692;
 }
 
 #Selected {
