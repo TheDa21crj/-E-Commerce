@@ -15,7 +15,7 @@ export default function Header() {
     dots: false,
     infinite: true,
     arrows: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
