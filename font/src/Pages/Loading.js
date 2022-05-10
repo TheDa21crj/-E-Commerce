@@ -4,7 +4,7 @@ import LoadCss from "./Css/Loading.module.css";
 export default function Loading() {
   return (
     <div className={LoadCss.mDiv}>
-      <div className={LoadCss.loader}>
+      <div className={LoadCss.Loader}>
         <span style={{ "--i": 1 }}></span>
         <span style={{ "--i": 2 }}></span>
         <span style={{ "--i": 3 }}></span>
@@ -14,7 +14,10 @@ export default function Loading() {
         <span style={{ "--i": 7 }}></span>
         <span style={{ "--i": 8 }}></span>
         <span style={{ "--i": 9 }}></span>
-        <span style={{ "--i": 10 }}></span>a
+        <span style={{ "--i": 10 }}></span>
+        <div className={LoadCss.LoadingDiv}>
+          <p className={LoadCss.Loading}>Loading...</p>
+        </div>
       </div>
     </div>
   );
