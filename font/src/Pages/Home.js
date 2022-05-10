@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     document.title = "Online Shopping for Men & Women: The Da";
-    // dispatch(seeload({ start: "false" }));
+    dispatch(seeload({ start: "false" }));
   });
 
   const load = useSelector((state) => state.load.start);
