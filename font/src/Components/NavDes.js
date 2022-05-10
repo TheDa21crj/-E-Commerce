@@ -220,7 +220,9 @@ const Nav = (props) => {
             <div className={NavCss.arrow}></div>
           </div>
         </div>
-        <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
+        <Link to="/ShopCart" className="LinkStyle">
+          <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
+        </Link>
         <Link to="/wishlist" className="LinkStyle">
           <div className={NavCss.wishDiv}>
             <FavoriteBorderIcon
