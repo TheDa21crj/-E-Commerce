@@ -12,6 +12,7 @@ import Logout from "./Pages/Logout";
 import Membership from "./Pages/Membership";
 import ProductsDeatils from "./Pages/ProductsDeatils";
 import Cart from "./Pages/Cart";
+import ShopCart from "./Pages/ShopCart";
 import Loading from "./Pages/Loading";
 
 // redux
@@ -34,6 +35,7 @@ function App() {
             <Route path="/my-account" element={<MyAccount />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
+            <Route path="/ShopCart" element={<ShopCart />} />
             <Route path="/Loading" element={<Loading />} />
             <Route path="*" element={<Error />} />
           </Routes>
