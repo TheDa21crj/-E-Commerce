@@ -75,41 +75,50 @@ export default function Cart() {
   return (
     <div>
       <Nav />
-      <div className={CartCss.mDiv}>
-        <p className={CartCss.MainPTag}>My Wishlist({showNumberItems} items)</p>
-        <div className={CartCss.CardDivM}>
-          {showData ? (
-            <div className={CartCss.CardDivMap}>
-              {showData.map((value, key) => {
-                return (
-                  <div key={value._id} className={CartCss.CardGridDiv}>
-                    <Link to={`/products/${value.id}`} className="LinkStyle">
-                      <div className={CartCss.CardImgDiv}>
-                        <img
-                          src={value.imgSrc}
-                          alt=""
-                          className={CartCss.ImgTag}
-                        />
-                      </div>
-                      <p className={CartCss.Name}> {value.name} </p>
-                      <p className={CartCss.Price}> ₹{value.price} </p>
-                    </Link>
-                    <CloseIcon
-                      className={CartCss.CloseIcon}
-                      fontSize="small"
-                      onClick={() => {
-                        setID(value._id);
-                      }}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            ""
-          )}
+      {showNumberItems ? (
+        <div className={CartCss.mDiv}>
+          <p className={CartCss.MainPTag}>
+            My Wishlist({showNumberItems} items)
+          </p>
+          <div className={CartCss.CardDivM}>
+            {showData ? (
+              <div className={CartCss.CardDivMap}>
+                {showData.map((value, key) => {
+                  return (
+                    <div key={value._id} className={CartCss.CardGridDiv}>
+                      <Link to={`/products/${value.id}`} className="LinkStyle">
+                        <div className={CartCss.CardImgDiv}>
+                          <img
+                            src={value.imgSrc}
+                            alt=""
+                            className={CartCss.ImgTag}
+                          />
+                        </div>
+                        <p className={CartCss.Name}> {value.name} </p>
+                        <p className={CartCss.Price}> ₹{value.price} </p>
+                      </Link>
+                      <CloseIcon
+                        className={CartCss.CloseIcon}
+                        fontSize="small"
+                        onClick={() => {
+                          setID(value._id);
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className={CartCss.mDiv}>
+          <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
+        </div>
+      )}
+
       <Footer />
     </div>
   );
