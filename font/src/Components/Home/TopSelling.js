@@ -49,7 +49,7 @@ export default function TopSelling() {
   return (
     <div className={TSCss.mDiv}>
       <div className={TSCss.H1Div}>
-        <h1 className={TSCss.h1}>Top Selling</h1>
+        <h1 className={TSCss.h1}> Top Selling </h1>
       </div>
       <div className={TSCss.slideDiv}>
         <Sliders {...settingTS} className={TSCss.Hslide}>
@@ -69,12 +69,12 @@ export default function TopSelling() {
                     />
                   </div>
                   <div className={TSCss.DetailsDiv}>
-                    <p className={TSCss.Name}>{value.name}</p>
+                    <p className={TSCss.Name}> {value.name} </p>
                     <p className={TSCss.Rating}>
                       <StarIcon fontSize="small" className={TSCss.StarIcon} />
-                      <span>{value.rating}</span>
+                      <span> {value.rating} </span>
                     </p>
-                    <p className={TSCss.price}>₹ {value.price}</p>
+                    <p className={TSCss.price}> ₹{value.price} </p>
                   </div>
                 </div>
               </Link>
