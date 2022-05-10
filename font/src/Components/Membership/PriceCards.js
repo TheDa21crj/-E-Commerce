@@ -6,7 +6,7 @@ export default function PriceCards(props) {
   const [showP, setP] = useState(props.percentage);
 
   return (
-    <div className={PCss.mDiv} id={props.selected ? "Selected" : "notSelected"}>
+    <div className={PCss.mDiv}>
       {show ? (
         <div className={PCss.popularDiv}>
           <p className={PCss.Mostpopular}>{props.popular}</p>
