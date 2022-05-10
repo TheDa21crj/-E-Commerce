@@ -8,7 +8,7 @@ export default function ShopCart() {
   return (
     <div>
       <Nav />
-      ShopCart
+      Shop Cart
     </div>
   );
 }
