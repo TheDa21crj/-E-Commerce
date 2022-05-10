@@ -1,0 +1,9 @@
+.mDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: red;
+    /* background: O#001f25; */
+}
