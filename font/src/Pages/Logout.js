@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // redux
+import { addWish } from "../redux/userSlice";
 import { toggleN } from "./../redux/toggleNav";
 import { useDispatch } from "react-redux";
 
@@ -21,7 +22,7 @@ export default function Logout() {
     })
       .then((res) => {
         navigate("/");
-        dispatch(toggleN({ toggle: "false" }));
+        dispatch(addWish({ start: 0 }));
         if (res.status !== 200) {
           const error = new Error(res.error);
           throw error;
