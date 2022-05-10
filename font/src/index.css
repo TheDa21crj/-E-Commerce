@@ -23,3 +23,33 @@ input[type="number"] {
     background-attachment: fixed;
     background-size: cover;
 }
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    padding: 0px 20px;
+    background: #fff;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(161, 161, 161);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(145, 145, 145);
+}
