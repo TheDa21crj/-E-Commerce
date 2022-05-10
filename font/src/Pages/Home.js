@@ -15,14 +15,10 @@ export default function Home() {
 
   useEffect(() => {
     document.title = "Online Shopping for Men & Women: The Da";
-    window.onload = () => {
-      dispatch(seeload({ start: "false" }));
-    };
+    // dispatch(seeload({ start: "false" }));
   });
 
   const load = useSelector((state) => state.load.start);
-
-  console.log(load);
   return (
     <div className="homeBodymDiv">
       {load == "true" ? (
