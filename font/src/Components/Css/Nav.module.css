@@ -85,7 +85,8 @@
     transition: all 0.3s;
 }
 
-.IconsClass1 :hover {
+.IconsClass1:hover,
+.IconsClass0:hover {
     color: #f56692;
 }
 
