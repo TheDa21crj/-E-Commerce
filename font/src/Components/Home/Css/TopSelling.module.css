@@ -30,7 +30,7 @@
 .h1::after {
     content: "";
     position: absolute;
-    background-color: gold;
+    background-color: #f56692;
     height: 3px;
     width: 10%;
     left: 0px;
