@@ -15,7 +15,8 @@
 }
 
 #notSelected {
-    filter: brightness(0.9);
+    border-radius: 10px;
+    filter: brightness(0.65);
     box-shadow: 10px 10px 50px lightgrey;
     transition: all 0.3s;
 }
@@ -27,6 +28,7 @@
 }
 
 #Selected {
+    border-radius: 10px;
     transition: all 0.3s;
     box-shadow: 10px 10px 50px lightgrey;
 }
