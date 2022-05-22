@@ -264,7 +264,6 @@ export default function ProductsDeatils() {
             <div className={PDCss.AddCART}>ADD TO CART</div>
             <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
               {check === "true" ? "Done" : "ADD TO WISHLIST"}
-              {/* ADD TO WISHLIST */}
             </div>
           </div>
 
