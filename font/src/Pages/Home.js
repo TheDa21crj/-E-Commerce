@@ -35,9 +35,6 @@ export default function Home() {
           Customer reviews
           <br />
           OFFICIAL MERCHANDISE/Brands
-          <br />
-          <br />
-          Hello world
           <Footer />
         </div>
       )}
