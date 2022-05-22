@@ -57,7 +57,12 @@ const Login = (props) => {
       dispatch(toggleN({ toggle: "true" }));
       navigate("/my-account");
     } else {
-      console.log("Unwanted Error");
+      setTimeout(() => {
+        setError("Unwanted Error");
+        setTimeout(() => {
+          setError("");
+        }, 3000);
+      });
     }
   };
 
