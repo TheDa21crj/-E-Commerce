@@ -10,10 +10,12 @@ import { useNavigate } from "react-router-dom";
 
 // redux
 import { useSelector } from "react-redux";
-import { addWish } from "./../redux/userSlice";
+import { addWish } from "../redux/userSlice";
 import { useDispatch } from "react-redux";
 
 export default function ProductsDeatils() {
+  const wish = useSelector((state) => state.wish.start);
+
   const [showid, setid] = useState("");
   const [showname, setname] = useState("");
   const [showimageSrc, setimageSrc] = useState("");
@@ -101,6 +103,7 @@ export default function ProductsDeatils() {
         return navigate("/login");
       }
       if (data) {
+        dispatch(addWish({ start: +1 }));
         return;
       }
     } catch (error) {
