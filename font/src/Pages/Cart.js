@@ -35,7 +35,6 @@ export default function Cart() {
           setNumberItems(0);
           return;
         } else {
-          console.log(showNumberItems);
           setData(data.message);
           setNumberItems(data.message.length);
           return;
