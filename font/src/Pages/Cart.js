@@ -12,6 +12,7 @@ export default function Cart() {
   const [showData, setData] = useState("");
   const [showNumberItems, setNumberItems] = useState(0);
   const [showID, setID] = useState("");
+  // const [DelImg, setDelImg] = useState("");
 
   const CartCheck = async () => {
     try {
@@ -65,7 +66,7 @@ export default function Cart() {
         });
 
         const data = await res.json();
-        console.log(data);
+        // setDelImg(!DelImg);
       } catch (error) {
         console.log(error);
       }
@@ -102,6 +103,7 @@ export default function Cart() {
                         fontSize="small"
                         onClick={() => {
                           setID(value._id);
+                          // setDelImg(value._id);
                         }}
                       />
                     </div>
