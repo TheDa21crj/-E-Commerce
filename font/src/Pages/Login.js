@@ -17,6 +17,7 @@ const Login = (props) => {
   });
 
   const [showUser, setUser] = useState({ email: "", password: "" });
+  const [error, setError] = useState();
   const [showPassword, setPassword] = useState(false);
 
   const dispatch = useDispatch();
@@ -46,7 +47,12 @@ const Login = (props) => {
     const r = await res.json();
 
     if (r.errors) {
-      console.log("Error");
+      setTimeout(() => {
+        setError("Invalid Credentials");
+        setTimeout(() => {
+          setError("");
+        }, 3000);
+      });
     } else if (!r.errors) {
       dispatch(toggleN({ toggle: "true" }));
       navigate("/my-account");
@@ -105,6 +111,8 @@ const Login = (props) => {
           </div>
         </div>
       </div>
+
+      {error ? <p className={LoginCss.error}>{error}</p> : ""}
 
       <Footer />
     </div>
