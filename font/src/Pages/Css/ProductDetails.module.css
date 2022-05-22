@@ -175,6 +175,7 @@
 
 .Description,
 .Details {
+    cursor: pointer;
     position: relative;
     font-family: ManropeExtraBold;
 }
@@ -185,9 +186,9 @@
     text-align: justify;
     line-height: 1.5;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 5px;
-    border-color: rgb(252, 239, 166);
+    border-color: #f56692;
     padding: 20px;
 }
 
@@ -195,7 +196,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background-image: linear-gradient(to bottom right, gold 50%, transparent 50%);
+    background-image: linear-gradient( to bottom right, #f56692 50%, transparent 50%);
     top: 35px;
     left: 50%;
     transform: rotate(45deg);
