@@ -62,6 +62,7 @@ const Nav = (props) => {
         return;
       }
       if (data) {
+        console.log(data.message.length);
         dispatch(addWish({ start: data.message.length }));
         return;
       }
