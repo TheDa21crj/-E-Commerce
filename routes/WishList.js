@@ -94,4 +94,25 @@ router.delete(
     }
 );
 
+// Private || Check Item || api/Wishlist/check
+router.post(
+    "/check", [UserAuth, check("_id", "_id is Required ").not().isEmpty()],
+    async(req, res) => {
+        let userID = req.userId;
+        try {
+            const { _id } = req.body;
+
+            let userCheck = await WishList.findOne({ user: userID });
+            for (let i = 0; i < userCheck.Product.length; i++) {
+                if (userCheck.Product[i].id == _id) {
+                    return res.status(200).json({ message: "true" });
+                }
+            }
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error });
+        }
+    }
+);
+
 module.exports = router;

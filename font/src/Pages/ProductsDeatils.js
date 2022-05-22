@@ -23,6 +23,7 @@ export default function ProductsDeatils() {
   const [showprice, setprice] = useState("");
   const [showrating, setrating] = useState("");
   const [showChat, setChart] = useState(false);
+  const [check, setcheck] = useState();
 
   const [showS, setS] = useState(false);
   const [showM, setM] = useState(false);
@@ -67,6 +68,7 @@ export default function ProductsDeatils() {
 
   useEffect(() => {
     ProductData();
+    CheckWish();
   }, []);
 
   useEffect(() => {
@@ -78,37 +80,61 @@ export default function ProductsDeatils() {
   };
 
   const CartCheck = async () => {
+    if (check != "true") {
+      try {
+        let imgSrc = showimageSrc;
+        let name = showname;
+        let price = showprice;
+        const res = await fetch("/api/Wishlist/add", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id,
+            name,
+            imgSrc,
+            price,
+          }),
+        });
+        const data = await res.json();
+        if (data === null) {
+          return console.error("errors");
+        }
+        if (data.errors) {
+          return navigate("/login");
+        }
+        if (data) {
+          dispatch(addWish({ start: +1 }));
+          return;
+        }
+      } catch (error) {
+        console.log(error);
+        return navigate("/login");
+      }
+    }
+  };
+
+  const CheckWish = async () => {
     try {
-      let imgSrc = showimageSrc;
-      let name = showname;
-      let price = showprice;
-      const res = await fetch("/api/Wishlist/add", {
+      const res = await fetch("/api/Wishlist/check", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id,
-          name,
-          imgSrc,
-          price,
+          _id: id,
         }),
       });
       const data = await res.json();
-      if (data === null) {
-        return console.error("errors");
-      }
-      if (data.errors) {
-        return navigate("/login");
-      }
       if (data) {
-        dispatch(addWish({ start: +1 }));
+        setcheck(data.message);
         return;
       }
     } catch (error) {
-      console.log(error);
-      return navigate("/login");
+      return;
     }
   };
 
@@ -237,7 +263,8 @@ export default function ProductsDeatils() {
           <div className={PDCss.BuyDiv}>
             <div className={PDCss.AddCART}>ADD TO CART</div>
             <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
-              ADD TO WISHLIST
+              {check === "true" ? "Done" : "ADD TO WISHLIST"}
+              {/* ADD TO WISHLIST */}
             </div>
           </div>
 
