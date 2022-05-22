@@ -81,19 +81,20 @@
     border-radius: 50%;
     border-style: solid;
     border-width: 2px;
-    border-color: gold;
+    border-color: #f56692;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .SizeRoundDiv:hover {
-    box-shadow: 2px 2px 50px gold;
+    box-shadow: 2px 2px 50px #f56692;
 }
 
 .SizeRoundDivTrue {
     font-family: ManropeMedium;
     font-weight: bold;
     color: white;
-    background-color: gold;
+    background-color: #f56692;
 }
 
 .SizeRoundDiv p {
@@ -107,7 +108,7 @@
 
 .SizeChartSpan {
     text-decoration: underline;
-    color: gold;
+    color: #f56692;
     cursor: pointer;
 }
 
@@ -139,7 +140,7 @@
 
 .AddCART {
     font-family: ManropeExtraBold;
-    background-color: gold;
+    background-color: #f56692;
     color: #fff;
     padding: 10px 0px;
     width: 45%;
@@ -154,8 +155,8 @@
     text-align: center;
     border-style: solid;
     border-width: 1.5px;
-    border-color: gold;
-    color: gold;
+    border-color: #f56692;
+    color: #f56692;
     cursor: pointer;
 }
 
