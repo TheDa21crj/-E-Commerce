@@ -29,9 +29,17 @@ export default function Cart() {
         return navigate("/login");
       }
       if (data) {
-        setData(data.message);
-        setNumberItems(data.message.length);
-        return;
+        console.log(data.message);
+        if (data.message == "zero") {
+          setData();
+          setNumberItems(0);
+          return;
+        } else {
+          console.log(showNumberItems);
+          setData(data.message);
+          setNumberItems(data.message.length);
+          return;
+        }
       }
     } catch (error) {
       console.log(error);
@@ -76,7 +84,11 @@ export default function Cart() {
   return (
     <div>
       <Nav />
-      {showNumberItems ? (
+      {showNumberItems == 0 ? (
+        <div className={CartCss.mDiv}>
+          <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
+        </div>
+      ) : (
         <div className={CartCss.mDiv}>
           <p className={CartCss.MainPTag}>
             My Wishlist({showNumberItems} items)
@@ -114,10 +126,6 @@ export default function Cart() {
               ""
             )}
           </div>
-        </div>
-      ) : (
-        <div className={CartCss.mDiv}>
-          <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
         </div>
       )}
 
