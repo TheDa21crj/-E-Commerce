@@ -62,9 +62,11 @@ const Nav = (props) => {
         return;
       }
       if (data) {
-        console.log(data.message.length);
-        dispatch(addWish({ start: data.message.length }));
-        return;
+        if (data.message == "zero") {
+          return dispatch(addWish({ start: 0 }));
+        } else {
+          return dispatch(addWish({ start: data.message.length }));
+        }
       }
     } catch (error) {
       return;
