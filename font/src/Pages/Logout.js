@@ -22,7 +22,7 @@ export default function Logout() {
     })
       .then((res) => {
         navigate("/");
-        dispatch(addWish({ start: 0 }));
+        dispatch(addWish({ length: 0 }));
         if (res.status !== 200) {
           const error = new Error(res.error);
           throw error;
