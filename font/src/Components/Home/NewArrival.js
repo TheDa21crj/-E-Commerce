@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useSelector } from "react-redux";
 
 export default function NewArrival() {
   const [showNA, setNA] = useState([]);
@@ -18,32 +19,8 @@ export default function NewArrival() {
     autoplay: false,
   };
 
-  const DataGet = async () => {
-    try {
-      const res = await fetch("/api/admin/Products/NewArival", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+  const selling = useSelector((state) => state.selling.newArrival);
 
-      const data = await res.json();
-      if (data.errors) {
-        return console.log("error");
-      }
-      if (data) {
-        setNA(data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    DataGet();
-  }, []);
   return (
     <div className={NACss.mDiv}>
       <div className={NACss.H1Div}>
@@ -51,7 +28,7 @@ export default function NewArrival() {
       </div>
       <div className={NACss.slideDiv}>
         <Sliders {...setting} className={NACss.Hslide}>
-          {showNA.map((value, key) => {
+          {selling.map((value, key) => {
             return (
               <div key={value._id} className={NACss.SlidDiv}>
                 <img
