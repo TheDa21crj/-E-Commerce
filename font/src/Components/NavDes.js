@@ -63,9 +63,13 @@ const Nav = (props) => {
       }
       if (data) {
         if (data.message == "zero") {
-          return dispatch(addWish({ start: 0 }));
+          return dispatch(addWish({ length: 0 }));
         } else {
-          return dispatch(addWish({ start: data.message.length }));
+          console.log(data.message.length);
+          dispatch(
+            addWish({ length: data.message.length, data: data.message })
+          );
+          return;
         }
       }
     } catch (error) {
@@ -78,7 +82,7 @@ const Nav = (props) => {
     CartCheck();
   });
 
-  const wish = useSelector((state) => state.wish.start);
+  const wish = useSelector((state) => state.wish.length);
   const toggle = useSelector((state) => state.toggle.toggle);
 
   return (
