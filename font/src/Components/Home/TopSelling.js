@@ -12,8 +12,6 @@ import { useDispatch } from "react-redux";
 export default function TopSelling() {
   const dispatch = useDispatch();
 
-  const [showTS, setTS] = useState([]);
-
   var settingTS = {
     dots: false,
     infinite: true,
@@ -40,7 +38,7 @@ export default function TopSelling() {
         return console.log("error");
       }
       if (data) {
-        setTS(data);
+        dispatch(addselling({ topselling: data }));
       }
     } catch (error) {
       console.log(error);
@@ -60,7 +58,7 @@ export default function TopSelling() {
       </div>
       <div className={TSCss.slideDiv}>
         <Sliders {...settingTS} className={TSCss.Hslide}>
-          {showTS.map((value, key) => {
+          {selling.map((value, key) => {
             return (
               <Link
                 to={`/products/${value._id}`}
