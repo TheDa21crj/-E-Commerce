@@ -3,6 +3,7 @@ import wishReducer from "./userSlice";
 import toggleReducer from "./toggleNav";
 import loading from "./loading";
 import sellingReducer from "./selling";
+import userData from "./user";
 
 export default configureStore({
     reducer: {
@@ -10,5 +11,6 @@ export default configureStore({
         toggle: toggleReducer,
         load: loading,
         selling: sellingReducer,
+        user: userData,
     },
 });
