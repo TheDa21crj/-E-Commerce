@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 export default function NewArrival() {
   const dispatch = useDispatch();
 
-  const [showNA, setNA] = useState([]);
+  // const [showNA, setNA] = useState([]);
 
   var setting = {
     dots: false,
@@ -39,7 +39,7 @@ export default function NewArrival() {
         return console.log("error");
       }
       if (data) {
-        setNA(data);
+        dispatch(addselling({ newArrival: data }));
       }
     } catch (error) {
       console.log(error);
@@ -50,6 +50,8 @@ export default function NewArrival() {
     DataGet();
   }, []);
 
+  const selling = useSelector((state) => state.selling.newArrival);
+
   return (
     <div className={NACss.mDiv}>
       <div className={NACss.H1Div}>
@@ -57,7 +59,7 @@ export default function NewArrival() {
       </div>
       <div className={NACss.slideDiv}>
         <Sliders {...setting} className={NACss.Hslide}>
-          {showNA.map((value, key) => {
+          {selling.map((value, key) => {
             return (
               <div key={value._id} className={NACss.SlidDiv}>
                 <img
