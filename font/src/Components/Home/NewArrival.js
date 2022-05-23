@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useSelector } from "react-redux";
-import { addselling } from "./../../redux/selling";
-import { useDispatch } from "react-redux";
 
 export default function NewArrival() {
-  const dispatch = useDispatch();
+  const [showNA, setNA] = useState([]);
 
   var setting = {
     dots: false,
@@ -37,7 +34,7 @@ export default function NewArrival() {
         return console.log("error");
       }
       if (data) {
-        dispatch(addselling({ newArrival: data }));
+        setNA(data);
       }
     } catch (error) {
       console.log(error);
@@ -47,9 +44,6 @@ export default function NewArrival() {
   useEffect(() => {
     DataGet();
   }, []);
-
-  const selling = useSelector((state) => state.selling.newArrival);
-
   return (
     <div className={NACss.mDiv}>
       <div className={NACss.H1Div}>
@@ -57,7 +51,7 @@ export default function NewArrival() {
       </div>
       <div className={NACss.slideDiv}>
         <Sliders {...setting} className={NACss.Hslide}>
-          {selling.map((value, key) => {
+          {showNA.map((value, key) => {
             return (
               <div key={value._id} className={NACss.SlidDiv}>
                 <img
