@@ -5,12 +5,9 @@ import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import StarIcon from "@mui/icons-material/Star";
-import { useSelector } from "react-redux";
-import { addselling } from "./../../redux/selling";
-import { useDispatch } from "react-redux";
 
 export default function TopSelling() {
-  const dispatch = useDispatch();
+  const [showTS, setTS] = useState([]);
 
   var settingTS = {
     dots: false,
@@ -38,7 +35,7 @@ export default function TopSelling() {
         return console.log("error");
       }
       if (data) {
-        dispatch(addselling({ topselling: data }));
+        setTS(data);
       }
     } catch (error) {
       console.log(error);
@@ -49,8 +46,6 @@ export default function TopSelling() {
     DataGet();
   }, []);
 
-  const selling = useSelector((state) => state.selling.topselling);
-
   return (
     <div className={TSCss.mDiv}>
       <div className={TSCss.H1Div}>
@@ -58,7 +53,7 @@ export default function TopSelling() {
       </div>
       <div className={TSCss.slideDiv}>
         <Sliders {...settingTS} className={TSCss.Hslide}>
-          {selling.map((value, key) => {
+          {showTS.map((value, key) => {
             return (
               <Link
                 to={`/products/${value._id}`}
