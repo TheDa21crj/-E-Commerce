@@ -4,8 +4,13 @@ import { Link } from "react-router-dom";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useSelector } from "react-redux";
+import { addselling } from "./../../redux/selling";
+import { useDispatch } from "react-redux";
 
 export default function NewArrival() {
+  const dispatch = useDispatch();
+
   const [showNA, setNA] = useState([]);
 
   var setting = {
@@ -44,6 +49,7 @@ export default function NewArrival() {
   useEffect(() => {
     DataGet();
   }, []);
+
   return (
     <div className={NACss.mDiv}>
       <div className={NACss.H1Div}>
