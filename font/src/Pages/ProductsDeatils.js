@@ -106,7 +106,7 @@ export default function ProductsDeatils() {
           return navigate("/login");
         }
         if (data) {
-          dispatch(addWish({ start: +1 }));
+          dispatch(addWish({ length: +1 }));
           return;
         }
       } catch (error) {
