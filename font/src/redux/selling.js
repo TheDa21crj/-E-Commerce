@@ -5,7 +5,7 @@ const sellingSlice = createSlice({
     initialState: {
         newArrival: [],
         topselling: [],
-        loading: "false",
+        loading: "true",
     },
     reducers: {
         addselling: (state, action) => {
