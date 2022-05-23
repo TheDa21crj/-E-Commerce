@@ -59,10 +59,6 @@ export default function Home() {
       if (dataNA.errors) {
         return console.log("error");
       }
-      // if (data) {
-      // dispatch(addselling({ newArrival: data }));
-      // setNA(data);
-      // }
 
       const res0 = await fetch("/api/admin/Products/TopSelling", {
         method: "GET",
