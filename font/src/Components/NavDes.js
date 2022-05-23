@@ -45,6 +45,10 @@ const Nav = (props) => {
             _id: data.message._id,
             email: data.message.email,
             imgSrc: data.message.avatar,
+            firstName: data.message.firstName,
+            LastName: data.message.LastName,
+            gender: data.message.gender,
+            PhoneNumber: data.message.PhoneNumber,
           })
         );
         dispatch(toggleN({ toggle: "true" }));
@@ -73,7 +77,6 @@ const Nav = (props) => {
         if (data.message == "zero") {
           return dispatch(addWish({ length: 0 }));
         } else {
-          console.log(data.message.length);
           dispatch(
             addWish({ length: data.message.length, data: data.message })
           );
