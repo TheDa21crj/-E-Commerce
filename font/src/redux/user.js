@@ -3,13 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const userDataSlice = createSlice({
     name: "userData",
     initialState: {
-        newArrival: [],
-        topselling: [],
+        _id: "",
+        email: "",
+        imgSrc: "",
     },
     reducers: {
         adduser: (state, action) => {
-            state.newArrival = action.payload.newArrival;
-            state.topselling = action.payload.topselling;
+            state._id = action.payload._id;
+            state.email = action.payload.email;
+            state.imgSrc = action.payload.imgSrc;
         },
     },
 });
