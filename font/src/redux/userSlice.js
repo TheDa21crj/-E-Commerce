@@ -3,12 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const wishSlice = createSlice({
     name: "wish",
     initialState: {
-        lenght: 0,
+        length: 0,
         data: [],
     },
     reducers: {
         addWish: (state, action) => {
-            state.lenght = action.payload.start;
+            state.length = action.payload.length;
             state.data = action.payload.data;
         },
     },
