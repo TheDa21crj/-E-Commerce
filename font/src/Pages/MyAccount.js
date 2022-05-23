@@ -11,6 +11,7 @@ import MACss from "./Css/MyAccount.module.css";
 // redux
 import { toggleN } from "./../redux/toggleNav";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function MyAccount() {
   useEffect(() => {
@@ -21,7 +22,6 @@ export default function MyAccount() {
   const [showlastName, setlastName] = useState("");
   const [showid, setid] = useState("");
   const [showGender, setGender] = useState("");
-  const [showemail, setemail] = useState("");
   const [showUrl, seturl] = useState("");
   const [shownum, setnum] = useState("");
   const [showProfileState, setProfileState] = useState("My Orders");
@@ -46,7 +46,6 @@ export default function MyAccount() {
       }
       if (data) {
         setid(data.message._id);
-        setemail(data.message.email);
         seturl(data.message.avatar);
         setFirstName(data.message.firstName);
         setlastName(data.message.LastName);
@@ -66,6 +65,9 @@ export default function MyAccount() {
   const ShowProfileState = async (e) => {
     setProfileState(e.target.innerHTML);
   };
+
+  const email = useSelector((state) => state.user.email);
+
   return (
     <div>
       <Nav />
@@ -73,7 +75,7 @@ export default function MyAccount() {
         <div className={MACss.leftDiv}>
           <img src={showUrl} alt="" className={MACss.ImgTag} />
           <p className={MACss.PTagEmail}>
-            <span> {showemail}</span>
+            <span> {email}</span>
           </p>
           <p className={MACss.pTags} onClick={ShowProfileState}>
             Profile
@@ -93,7 +95,7 @@ export default function MyAccount() {
         <div className={MACss.rightDiv}>
           {showProfileState === "Profile" && (
             <Profile
-              email={showemail}
+              email={email}
               id={showid}
               firstName={showFirstName}
               lastName={showlastName}
