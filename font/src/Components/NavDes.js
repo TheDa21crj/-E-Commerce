@@ -92,6 +92,7 @@ const Nav = (props) => {
 
   const wish = useSelector((state) => state.wish.length);
   const toggle = useSelector((state) => state.toggle.toggle);
+  const imgSrc = useSelector((state) => state.user.imgSrc);
 
   return (
     <div className={NavCss.NavmDiv}>
@@ -217,7 +218,7 @@ const Nav = (props) => {
             {showimg == "" ? (
               <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
             ) : (
-              <img src={showimg} alt="" className={NavCss.UserIcon} />
+              <img src={imgSrc} alt="" className={NavCss.UserIcon} />
             )}
           </Link>
           <div className={NavCss.HoverDiv}>
