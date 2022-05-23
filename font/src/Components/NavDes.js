@@ -10,6 +10,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
 import { toggleN } from "./../redux/toggleNav";
+import { adduser } from "./../redux/user";
 import { useDispatch } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
@@ -39,6 +40,13 @@ const Nav = (props) => {
       }
       if (data) {
         setimg(data.message.avatar);
+        dispatch(
+          adduser({
+            _id: data.message._id,
+            email: data.message.email,
+            imgSrc: data.message.avatar,
+          })
+        );
         dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
