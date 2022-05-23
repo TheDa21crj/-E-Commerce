@@ -55,7 +55,6 @@ export default function MyAccount() {
         dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
-      // console.log(error);
       navigate("/login");
     }
   };
