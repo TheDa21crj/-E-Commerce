@@ -11,8 +11,6 @@ import { useDispatch } from "react-redux";
 export default function NewArrival() {
   const dispatch = useDispatch();
 
-  // const [showNA, setNA] = useState([]);
-
   var setting = {
     dots: false,
     infinite: true,
