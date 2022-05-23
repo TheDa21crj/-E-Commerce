@@ -5,9 +5,12 @@ import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import StarIcon from "@mui/icons-material/Star";
+import { useSelector } from "react-redux";
 
 export default function TopSelling() {
   const [showTS, setTS] = useState([]);
+
+  const selling = useSelector((state) => state.selling.topselling);
 
   var settingTS = {
     dots: false,
@@ -19,33 +22,6 @@ export default function TopSelling() {
     autoplay: false,
   };
 
-  const DataGet = async () => {
-    try {
-      const res = await fetch("/api/admin/Products/TopSelling", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
-
-      const data = await res.json();
-      if (data.errors) {
-        return console.log("error");
-      }
-      if (data) {
-        setTS(data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    DataGet();
-  }, []);
-
   return (
     <div className={TSCss.mDiv}>
       <div className={TSCss.H1Div}>
@@ -53,7 +29,7 @@ export default function TopSelling() {
       </div>
       <div className={TSCss.slideDiv}>
         <Sliders {...settingTS} className={TSCss.Hslide}>
-          {showTS.map((value, key) => {
+          {selling.map((value, key) => {
             return (
               <Link
                 to={`/products/${value._id}`}
