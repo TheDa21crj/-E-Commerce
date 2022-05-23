@@ -64,6 +64,7 @@ export default function Home() {
   };
 
   const load = useSelector((state) => state.selling.loading);
+
   return (
     <div className="homeBodymDiv">
       {load == "true" ? (
