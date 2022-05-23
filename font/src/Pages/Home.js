@@ -50,14 +50,20 @@ export default function Home() {
         return console.log("error");
       }
       if (dataNA && dataTS) {
-        dispatch(addselling({ topselling: dataTS, newArrival: dataNA }));
+        dispatch(
+          addselling({
+            topselling: dataTS,
+            newArrival: dataNA,
+            loading: "false",
+          })
+        );
       }
     } catch (error) {
       console.log(error);
     }
   };
 
-  const load = useSelector((state) => state.load.start);
+  const load = useSelector((state) => state.selling.loading);
   return (
     <div className="homeBodymDiv">
       {load == "true" ? (
