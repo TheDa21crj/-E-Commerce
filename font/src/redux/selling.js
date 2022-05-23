@@ -5,11 +5,13 @@ const sellingSlice = createSlice({
     initialState: {
         newArrival: [],
         topselling: [],
+        loading: "false",
     },
     reducers: {
         addselling: (state, action) => {
             state.newArrival = action.payload.newArrival;
             state.topselling = action.payload.topselling;
+            state.loading = action.payload.loading;
         },
     },
 });
