@@ -8,6 +8,7 @@ import Loading from "./Loading";
 // redux
 import { useSelector } from "react-redux";
 import { seeload } from "./../redux/loading";
+import { addselling } from "./../redux/selling";
 import { useDispatch } from "react-redux";
 
 export default function Home() {
@@ -16,7 +17,73 @@ export default function Home() {
   useEffect(() => {
     document.title = "Online Shopping for Men & Women: The Da";
     dispatch(seeload({ start: "false" }));
-  });
+    DataGet();
+  }, []);
+
+  const DataGet1 = async () => {
+    try {
+      const res = await fetch("/api/admin/Products/TopSelling", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (data.errors) {
+        return console.log("error");
+      }
+      if (data) {
+        dispatch(addselling({ topselling: data }));
+        // setTS(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const DataGet = async () => {
+    try {
+      const res = await fetch("/api/admin/Products/NewArival", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const dataNA = await res.json();
+      if (dataNA.errors) {
+        return console.log("error");
+      }
+      // if (data) {
+      // dispatch(addselling({ newArrival: data }));
+      // setNA(data);
+      // }
+
+      const res0 = await fetch("/api/admin/Products/TopSelling", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const dataTS = await res0.json();
+      if (dataNA.errors) {
+        return console.log("error");
+      }
+      if (dataNA && dataTS) {
+        dispatch(addselling({ topselling: dataTS, newArrival: dataNA }));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const load = useSelector((state) => state.load.start);
   return (
