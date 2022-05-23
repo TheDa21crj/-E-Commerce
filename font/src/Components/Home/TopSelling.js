@@ -5,8 +5,13 @@ import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import StarIcon from "@mui/icons-material/Star";
+import { useSelector } from "react-redux";
+import { addselling } from "./../../redux/selling";
+import { useDispatch } from "react-redux";
 
 export default function TopSelling() {
+  const dispatch = useDispatch();
+
   const [showTS, setTS] = useState([]);
 
   var settingTS = {
@@ -45,6 +50,8 @@ export default function TopSelling() {
   useEffect(() => {
     DataGet();
   }, []);
+
+  const selling = useSelector((state) => state.selling.topselling);
 
   return (
     <div className={TSCss.mDiv}>
