@@ -20,30 +20,6 @@ export default function Home() {
     DataGet();
   }, []);
 
-  const DataGet1 = async () => {
-    try {
-      const res = await fetch("/api/admin/Products/TopSelling", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
-
-      const data = await res.json();
-      if (data.errors) {
-        return console.log("error");
-      }
-      if (data) {
-        dispatch(addselling({ topselling: data }));
-        // setTS(data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const DataGet = async () => {
     try {
       const res = await fetch("/api/admin/Products/NewArival", {
