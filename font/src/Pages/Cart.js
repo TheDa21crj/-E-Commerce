@@ -5,9 +5,13 @@ import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
 import { Link, useParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
+import { useSelector } from "react-redux";
+import { addWish } from "../redux/userSlice";
+import { useDispatch } from "react-redux";
 
 export default function Cart() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [showData, setData] = useState("");
   const [showNumberItems, setNumberItems] = useState(0);
@@ -73,6 +77,9 @@ export default function Cart() {
         });
 
         const data = await res.json();
+
+        console.log(data);
+        dispatch(addWish({ length: -1 }));
         // setDelImg(!DelImg);
       } catch (error) {
         console.log(error);
