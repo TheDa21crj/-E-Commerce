@@ -16,51 +16,9 @@ import { useSelector } from "react-redux";
 export default function MyAccount() {
   useEffect(() => {
     document.title = "My Account";
-  });
+  }, []);
 
-  const [showFirstName, setFirstName] = useState("");
-  const [showlastName, setlastName] = useState("");
-  const [showid, setid] = useState("");
-  const [showGender, setGender] = useState("");
-  const [showUrl, seturl] = useState("");
-  const [shownum, setnum] = useState("");
   const [showProfileState, setProfileState] = useState("My Orders");
-  const navigate = useNavigate();
-
-  const dispatch = useDispatch();
-
-  // const AuthMiddleware = async () => {
-  //   try {
-  //     const res = await fetch("/api/account", {
-  //       method: "GET",
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json",
-  //       },
-  //       credentials: "include",
-  //     });
-
-  //     const data = await res.json();
-  //     if (data.errors) {
-  //       // navigate("/login");
-  //     }
-  //     if (data) {
-  //       setid(data.message._id);
-  //       seturl(data.message.avatar);
-  //       setFirstName(data.message.firstName);
-  //       setlastName(data.message.LastName);
-  //       setGender(data.message.gender);
-  //       setnum(data.message.PhoneNumber);
-  //       dispatch(toggleN({ toggle: "true" }));
-  //     }
-  //   } catch (error) {
-  //     // navigate("/login");
-  //   }
-  // };
-
-  // useEffect(() => {
-  // AuthMiddleware();
-  // }, []);
 
   const ShowProfileState = async (e) => {
     setProfileState(e.target.innerHTML);
