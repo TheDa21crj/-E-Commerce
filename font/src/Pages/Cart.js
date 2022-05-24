@@ -44,9 +44,8 @@ export default function Cart() {
           }),
         });
 
-        const data = await res.json();
+        await res.json();
 
-        console.table(data);
         dispatch(addWish({ length: -1 }));
       } catch (error) {
         console.log(error);
