@@ -21,8 +21,8 @@ export default function Logout() {
       credentials: "include",
     })
       .then((res) => {
+        dispatch(addWish({ length: 0, data: [] }));
         navigate("/");
-        dispatch(addWish({ length: 0 }));
         if (res.status !== 200) {
           const error = new Error(res.error);
           throw error;
