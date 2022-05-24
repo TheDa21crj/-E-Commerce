@@ -44,36 +44,33 @@ export default function AdminLogin() {
   return (
     <div className={AdminCss.mDiv}>
       <div className={AdminCss.ContDiv}>
-        <div className={AdminCss.LeftDiv}>
-          <form action="" method="POST">
-            <div>
-              <label htmlFor="username"> username </label>
-              <input
-                type="text"
-                name="username"
-                id=""
-                placeholder="username"
-                value={showUser.username}
-                onChange={DataInp}
-                autoComplete="off"
-              />
-            </div>
-            <div>
-              <label htmlFor="password"> password </label>
-              <input
-                type="password"
-                name="password"
-                id=""
-                placeholder="password"
-                value={showUser.password}
-                onChange={DataInp}
-                autoComplete="off"
-              />
-            </div>
-          </form>
-          <button onClick={PostData}> Login </button>
-        </div>
-        <div></div>
+        <form action="" method="POST">
+          <div>
+            <label htmlFor="username"> username </label>
+            <input
+              type="text"
+              name="username"
+              id=""
+              placeholder="username"
+              value={showUser.username}
+              onChange={DataInp}
+              autoComplete="off"
+            />
+          </div>
+          <div>
+            <label htmlFor="password"> password </label>
+            <input
+              type="password"
+              name="password"
+              id=""
+              placeholder="password"
+              value={showUser.password}
+              onChange={DataInp}
+              autoComplete="off"
+            />
+          </div>
+        </form>
+        <button onClick={PostData}> Login </button>
       </div>
     </div>
   );
