@@ -17,6 +17,11 @@
     align-items: center;
     width: 35%;
     position: relative;
+    transition: all 0.3s;
+}
+
+.ContDiv:hover {
+    box-shadow: 10px 10px 50px rgb(235, 235, 235);
 }
 
 .ContDiv form {
