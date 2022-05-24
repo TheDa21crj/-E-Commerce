@@ -15,6 +15,39 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 40%;
+}
+
+.PasswordDiv,
+.UsernameDiv {
+    margin-top: 30px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.PasswordDiv label,
+.UsernameDiv label {
+    font-family: ManropeExtraBold;
+    font-size: 1.5rem;
+    text-align: left;
+    /* margin-right: 20px; */
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
+.PasswordDiv input,
+.UsernameDiv input {
+    width: 80%;
+    font-family: ManropeExtraBold;
+    outline: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
 }
 
 .LoginBtn {
