@@ -14,6 +14,7 @@ import ProductsDeatils from "./Pages/ProductsDeatils";
 import Cart from "./Pages/Cart";
 import ShopCart from "./Pages/ShopCart";
 import Loading from "./Pages/Loading";
+import PrivateRoute from "./route/PrivateRouting";
 
 // redux
 import { Provider } from "react-redux";
@@ -32,7 +33,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
-            <Route path="/my-account" element={<MyAccount />} />
+            {/* <PrivateRoute path="/my-account" element={<MyAccount />} /> */}
+            <Route exact path="/my-account" element={<PrivateRoute />}>
+              <Route exact path="/my-account" element={<MyAccount />} />
+            </Route>
+            {/*  */}
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
