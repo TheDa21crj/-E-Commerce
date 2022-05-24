@@ -115,32 +115,31 @@ export default function ProductsDeatils() {
         console.log(error);
         return navigate("/login");
       }
+    }
+  };
+
+  const deleteWish = async (deleteID) => {
+    let id = deleteID;
+    if (id === "") {
+      return;
     } else {
-      let _id = showid;
-      if (_id === "") {
-        return;
-      } else {
-        try {
-          const res = await fetch("/api/Wishlist/delete", {
-            method: "DELETE",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              _id,
-            }),
-          });
+      try {
+        const res = await fetch("/api/Wishlist/delete/product", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id,
+          }),
+        });
 
-          const data = await res.json();
+        const data = await res.json();
 
-          console.log(_id);
-
-          console.log(data);
-          dispatch(addWish({ length: -1 }));
-          setcheck("false");
-        } catch (error) {
-          console.log(error);
-        }
+        dispatch(addWish({ length: -1 }));
+        setcheck("false");
+      } catch (error) {
+        console.log(error);
       }
     }
   };
@@ -291,9 +290,18 @@ export default function ProductsDeatils() {
 
           <div className={PDCss.BuyDiv}>
             <div className={PDCss.AddCART}>ADD TO CART</div>
-            <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
-              {check === "true" ? <FavoriteIcon /> : "ADD TO WISHLIST"}
-            </div>
+            {check === "true" ? (
+              <div
+                className={PDCss.AddWISHLIST}
+                onClick={() => deleteWish(showid)}
+              >
+                <FavoriteIcon />
+              </div>
+            ) : (
+              <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
+                ADD TO WISHLIST
+              </div>
+            )}
           </div>
 
           <div className={PDCss.DesDiv}>
