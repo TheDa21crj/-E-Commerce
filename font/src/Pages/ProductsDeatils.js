@@ -5,6 +5,7 @@ import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 // import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -106,6 +107,7 @@ export default function ProductsDeatils() {
           return navigate("/login");
         }
         if (data) {
+          setcheck("true");
           dispatch(addWish({ length: +1 }));
           return;
         }
@@ -263,7 +265,7 @@ export default function ProductsDeatils() {
           <div className={PDCss.BuyDiv}>
             <div className={PDCss.AddCART}>ADD TO CART</div>
             <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
-              {check === "true" ? "Done" : "ADD TO WISHLIST"}
+              {check === "true" ? <FavoriteIcon /> : "ADD TO WISHLIST"}
             </div>
           </div>
 
