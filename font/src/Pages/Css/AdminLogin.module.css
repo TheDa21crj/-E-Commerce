@@ -95,3 +95,14 @@
     background-color: #f56692;
     border-color: #f34278;
 }
+
+.logoDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
