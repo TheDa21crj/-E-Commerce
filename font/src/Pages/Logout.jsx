@@ -24,7 +24,9 @@ export default function Logout() {
 
       const data = await res.json();
 
-      if (data.message === "Logout") {
+      if (data.message) {
+        console.log("data.message");
+        console.log(data.message);
         dispatch(addWish({ length: 0, data: [null] }));
         dispatch(
           adduser({
@@ -50,7 +52,7 @@ export default function Logout() {
 
   useEffect(() => {
     logout();
-  });
+  }, []);
 
   return <div>Logout</div>;
 }
