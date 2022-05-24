@@ -29,51 +29,57 @@ export default function MyAccount() {
 
   const dispatch = useDispatch();
 
-  const AuthMiddleware = async () => {
-    try {
-      const res = await fetch("/api/account", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+  // const AuthMiddleware = async () => {
+  //   try {
+  //     const res = await fetch("/api/account", {
+  //       method: "GET",
+  //       headers: {
+  //         Accept: "application/json",
+  //         "Content-Type": "application/json",
+  //       },
+  //       credentials: "include",
+  //     });
 
-      const data = await res.json();
-      if (data.errors) {
-        // navigate("/login");
-      }
-      if (data) {
-        setid(data.message._id);
-        seturl(data.message.avatar);
-        setFirstName(data.message.firstName);
-        setlastName(data.message.LastName);
-        setGender(data.message.gender);
-        setnum(data.message.PhoneNumber);
-        dispatch(toggleN({ toggle: "true" }));
-      }
-    } catch (error) {
-      // navigate("/login");
-    }
-  };
+  //     const data = await res.json();
+  //     if (data.errors) {
+  //       // navigate("/login");
+  //     }
+  //     if (data) {
+  //       setid(data.message._id);
+  //       seturl(data.message.avatar);
+  //       setFirstName(data.message.firstName);
+  //       setlastName(data.message.LastName);
+  //       setGender(data.message.gender);
+  //       setnum(data.message.PhoneNumber);
+  //       dispatch(toggleN({ toggle: "true" }));
+  //     }
+  //   } catch (error) {
+  //     // navigate("/login");
+  //   }
+  // };
 
-  useEffect(() => {
-    AuthMiddleware();
-  }, []);
+  // useEffect(() => {
+  // AuthMiddleware();
+  // }, []);
 
   const ShowProfileState = async (e) => {
     setProfileState(e.target.innerHTML);
   };
 
+  const _id = useSelector((state) => state.user._id);
   const email = useSelector((state) => state.user.email);
+  const imgSrc = useSelector((state) => state.user.imgSrc);
+  const firstName = useSelector((state) => state.user.firstName);
+  const LastName = useSelector((state) => state.user.LastName);
+  const gender = useSelector((state) => state.user.gender);
+  const PhoneNumber = useSelector((state) => state.user.PhoneNumber);
 
   return (
     <div>
       <Nav />
       <div className={MACss.mdiv}>
         <div className={MACss.leftDiv}>
-          <img src={showUrl} alt="" className={MACss.ImgTag} />
+          <img src={imgSrc} alt="" className={MACss.ImgTag} />
           <p className={MACss.PTagEmail}>
             <span> {email}</span>
           </p>
@@ -96,15 +102,15 @@ export default function MyAccount() {
           {showProfileState === "Profile" && (
             <Profile
               email={email}
-              id={showid}
-              firstName={showFirstName}
-              lastName={showlastName}
-              gender={showGender}
-              phone={shownum}
+              id={_id}
+              firstName={firstName}
+              lastName={LastName}
+              gender={gender}
+              phone={PhoneNumber}
             />
           )}
-          {showProfileState === "My Orders" && <Myorders id={showid} />}
-          {showProfileState === "My Addresses" && <MyAddress id={showid} />}
+          {showProfileState === "My Orders" && <Myorders id={_id} />}
+          {showProfileState === "My Addresses" && <MyAddress id={_id} />}
         </div>
       </div>
       <Footer />
