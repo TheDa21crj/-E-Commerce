@@ -98,7 +98,7 @@ router.delete(
     }
 );
 
-// Private || Delete WishList || api/Wishlist/delete/product
+// Private || Delete WishList Product || api/Wishlist/delete/product
 router.delete(
     "/delete/product", [UserAuth, check("id", "id is Required").not().isEmpty()],
     async(req, res) => {
