@@ -37,7 +37,7 @@
 .PasswordDiv input,
 .UsernameDiv input {
     width: 80%;
-    font-family: ManropeExtraBold;
+    font-family: ManropeRegular;
     outline: none;
     background-color: #fff;
     padding: 10px 15px;
@@ -47,6 +47,51 @@
     transition: all 0.3s;
 }
 
+.PasswordDiv input:hover,
+.UsernameDiv input:hover {
+    border-color: #f56692;
+}
+
+.PasswordDiv input:focus,
+.UsernameDiv input:focus {
+    border-radius: 0px;
+    background-color: transparent;
+    border-color: transparent transparent #f34278 transparent;
+}
+
+.PasswordDiv input::-webkit-input-placeholder,
+.UsernameDiv input::-webkit-input-placeholder {
+    font-family: ManropeRegular;
+    letter-spacing: 0.12rem;
+}
+
+.PasswordDiv input:-ms-input-placeholder,
+.UsernameDiv input:-ms-input-placeholder {
+    font-family: ManropeRegular;
+    letter-spacing: 0.12rem;
+}
+
+.PasswordDiv input::placeholder,
+.UsernameDiv input::placeholder {
+    font-family: ManropeRegular;
+    letter-spacing: 0.12rem;
+}
+
 .LoginBtn {
     margin-top: 30px;
+    font-family: ManropeExtraBold;
+    background-color: #fff;
+    border: solid 1px lightgrey;
+    padding: 7px 32px;
+    border-radius: 5px;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    color: #f56692;
+    transition: all 0.3s;
+}
+
+.LoginBtn:hover {
+    color: #fff;
+    background-color: #f56692;
+    border-color: #f34278;
 }
