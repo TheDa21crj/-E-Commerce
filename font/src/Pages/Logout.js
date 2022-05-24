@@ -11,26 +11,34 @@ export default function Logout() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch("/api/logout", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    })
-      .then((res) => {
+  const logout = async () => {
+    try {
+      const res = await fetch("/api/logout", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+
+      if (data.message === "Logout") {
         dispatch(addWish({ length: 0, data: [] }));
         navigate("/");
-        if (res.status !== 200) {
-          const error = new Error(res.error);
-          throw error;
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      }
+      if (res.status !== 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+    } catch (error) {
+      return;
+    }
+  };
+
+  useEffect(() => {
+    logout();
   });
   return <div>Logout</div>;
 }
