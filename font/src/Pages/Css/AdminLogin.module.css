@@ -30,11 +30,8 @@
 .PasswordDiv label,
 .UsernameDiv label {
     font-family: ManropeExtraBold;
-    font-size: 1.5rem;
-    text-align: left;
-    /* margin-right: 20px; */
+    font-size: 1.2rem;
     width: 100%;
-    /* margin-bottom: 20px; */
 }
 
 .PasswordDiv input,
