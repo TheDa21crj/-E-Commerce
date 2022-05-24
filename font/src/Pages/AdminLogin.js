@@ -45,8 +45,8 @@ export default function AdminLogin() {
     <div className={AdminCss.mDiv}>
       <div className={AdminCss.ContDiv}>
         <form action="" method="POST">
-          <div>
-            <label htmlFor="username"> username </label>
+          <div className={AdminCss.UsernameDiv}>
+            <label htmlFor="username">Username</label>
             <input
               type="text"
               name="username"
@@ -57,8 +57,8 @@ export default function AdminLogin() {
               autoComplete="off"
             />
           </div>
-          <div>
-            <label htmlFor="password"> password </label>
+          <div className={AdminCss.PasswordDiv}>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
