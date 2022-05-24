@@ -71,9 +71,7 @@ export default function AdminLogin() {
         <button onClick={PostData} className={AdminCss.LoginBtn}>
           Login
         </button>
-        <div className={AdminCss.logoDiv}>
-          <div>Img</div>
-        </div>
+        <div className={AdminCss.logoDiv}>img</div>
       </div>
     </div>
   );
