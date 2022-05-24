@@ -70,7 +70,9 @@ export default function AdminLogin() {
             />
           </div>
         </form>
-        <button onClick={PostData}> Login </button>
+        <button onClick={PostData} className={AdminCss.LoginBtn}>
+          Login
+        </button>
       </div>
     </div>
   );
