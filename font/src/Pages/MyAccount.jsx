@@ -42,7 +42,7 @@ export default function MyAccount() {
 
       const data = await res.json();
       if (data.errors) {
-        navigate("/login");
+        // navigate("/login");
       }
       if (data) {
         setid(data.message._id);
@@ -54,7 +54,7 @@ export default function MyAccount() {
         dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
-      navigate("/login");
+      // navigate("/login");
     }
   };
 
