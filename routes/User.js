@@ -87,6 +87,7 @@ router.post(
     }
 );
 
+// Private || Account Data || api/account
 router.get("/account", UserAuth, async(req, res) => {
     res.status(200).send({ message: req.dataUser });
 });
@@ -123,9 +124,10 @@ router.put(
     }
 );
 
+// Private || Logout || api/logout
 router.get("/logout", async(req, res) => {
     res.clearCookie("jwt", { path: "/" });
-    res.status(200).send({ message: `Logout` });
+    res.status(200).send({ message: "Logout" });
 });
 
 module.exports = router;
