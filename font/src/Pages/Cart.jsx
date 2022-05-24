@@ -94,7 +94,7 @@ export default function Cart() {
         </div>
       ) : (
         <div className={CartCss.mDiv}>
-          <p className={CartCss.MainPTag}>My Wishlist(0) items)</p>
+          <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
         </div>
       )}
 
