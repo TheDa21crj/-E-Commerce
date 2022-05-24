@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // redux
 import { addWish } from "../redux/userSlice";
-import { toggleN } from "./../redux/toggleNav";
+import { toggleN } from "../redux/toggleNav";
+import { adduser } from "../redux/user";
 import { useDispatch } from "react-redux";
 
 export default function Logout() {
@@ -25,6 +26,17 @@ export default function Logout() {
 
       if (data.message === "Logout") {
         dispatch(addWish({ length: 0, data: [] }));
+        dispatch(
+          adduser({
+            _id: "",
+            email: "",
+            imgSrc: "",
+            firstName: "",
+            LastName: "",
+            gender: "",
+            PhoneNumber: "",
+          })
+        );
         navigate("/");
       }
       if (res.status !== 200) {
