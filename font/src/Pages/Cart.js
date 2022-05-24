@@ -46,9 +46,8 @@ export default function Cart() {
 
         const data = await res.json();
 
-        console.log(data);
+        console.table(data);
         dispatch(addWish({ length: -1 }));
-        // setDelImg(!DelImg);
       } catch (error) {
         console.log(error);
       }
