@@ -120,3 +120,21 @@
     width: 100px;
     height: 100px;
 }
+
+#navigateDiv {
+    font-family: ManropeRegular;
+    position: absolute;
+    text-align: center;
+    background-color: #f56692;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #fff;
+    left: 20px;
+    bottom: 20px;
+    transition: all 0.3s;
+}
+
+#navigateDiv:hover {
+    background-color: #fff;
+    color: #f56692;
+}
