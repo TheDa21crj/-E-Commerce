@@ -25,7 +25,7 @@ export default function Logout() {
       const data = await res.json();
 
       if (data.message === "Logout") {
-        dispatch(addWish({ length: 0, data: [] }));
+        dispatch(addWish({ length: 0, data: [null] }));
         dispatch(
           adduser({
             _id: "",
