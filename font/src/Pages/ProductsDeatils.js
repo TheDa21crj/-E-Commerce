@@ -134,7 +134,7 @@ export default function ProductsDeatils() {
           }),
         });
 
-        const data = await res.json();
+        await res.json();
 
         dispatch(addWish({ length: -1 }));
         setcheck("false");
