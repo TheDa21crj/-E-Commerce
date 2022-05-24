@@ -116,7 +116,32 @@ export default function ProductsDeatils() {
         return navigate("/login");
       }
     } else {
-      console.log("first");
+      let _id = showid;
+      if (_id === "") {
+        return;
+      } else {
+        try {
+          const res = await fetch("/api/Wishlist/delete", {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              _id,
+            }),
+          });
+
+          const data = await res.json();
+
+          console.log(_id);
+
+          console.log(data);
+          dispatch(addWish({ length: -1 }));
+          setcheck("false");
+        } catch (error) {
+          console.log(error);
+        }
+      }
     }
   };
 
