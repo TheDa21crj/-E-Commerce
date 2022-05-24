@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import AdminCss from "./Css/AdminLogin.module.css";
 import img from "./../Img/adminLogo.png";
@@ -76,6 +77,9 @@ export default function AdminLogin() {
           <img src={img} alt="" className={AdminCss.adminLogoDiv} />
         </div>
       </div>
+      <Link to="/" className="LinkStyle" id={AdminCss.navigateDiv}>
+        Home
+      </Link>
     </div>
   );
 }
