@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminCss from "./Css/AdminLogin.module.css";
+import img from "./../Img/adminLogo.png";
 
 export default function AdminLogin() {
   const [showUser, setUser] = useState({ username: "", password: "" });
@@ -71,7 +72,9 @@ export default function AdminLogin() {
         <button onClick={PostData} className={AdminCss.LoginBtn}>
           Login
         </button>
-        <div className={AdminCss.logoDiv}>img</div>
+        <div className={AdminCss.logoDiv}>
+          <img src={img} alt="" className={AdminCss.adminLogoDiv} />
+        </div>
       </div>
     </div>
   );
