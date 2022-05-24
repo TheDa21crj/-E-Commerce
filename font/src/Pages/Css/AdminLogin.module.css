@@ -15,8 +15,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 35%;
     position: relative;
+}
+
+.ContDiv form {
+    margin-top: 40px;
 }
 
 .PasswordDiv,
@@ -78,7 +82,7 @@
 }
 
 .LoginBtn {
-    margin-top: 30px;
+    margin: 30px 0px;
     font-family: ManropeExtraBold;
     background-color: #fff;
     border: solid 1px lightgrey;
@@ -98,11 +102,15 @@
 
 .logoDiv {
     position: absolute;
-    top: 0px;
+    top: -50px;
     left: 0px;
-    background-color: red;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.adminLogoDiv {
+    width: 100px;
+    height: 100px;
 }
