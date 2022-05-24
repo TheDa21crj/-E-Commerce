@@ -5,7 +5,7 @@ import Footer from "./../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "./../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 // redux
@@ -80,7 +80,7 @@ export default function ProductsDeatils() {
   };
 
   const CartCheck = async () => {
-    if (check != "true") {
+    if (check !== "true") {
       try {
         let imgSrc = showimageSrc;
         let name = showname;
