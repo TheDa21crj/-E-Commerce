@@ -80,7 +80,6 @@ export default function Cart() {
                       fontSize="small"
                       onClick={() => {
                         setID(value._id);
-                        // setDelImg(value._id);
                       }}
                     />
                   </div>
