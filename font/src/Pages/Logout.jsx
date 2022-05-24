@@ -51,5 +51,6 @@ export default function Logout() {
   useEffect(() => {
     logout();
   });
+
   return <div>Logout</div>;
 }
