@@ -115,6 +115,8 @@ export default function ProductsDeatils() {
         console.log(error);
         return navigate("/login");
       }
+    } else {
+      console.log("first");
     }
   };
 
