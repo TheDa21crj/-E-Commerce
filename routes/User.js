@@ -76,7 +76,7 @@ router.post(
 
             let token = await user.generateToken();
             res.cookie("jwt", token, {
-                expires: new Date(Date.now() + 360000),
+                expires: new Date(Date.now() + 25892000000),
                 httpOnly: true,
             });
 
