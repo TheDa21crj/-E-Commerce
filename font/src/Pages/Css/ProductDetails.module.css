@@ -259,8 +259,9 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .ImageSrc {
-        width: 100%;
+@media only screen and (max-width: 430px) {
+    .SizeChart {
+        display: flex;
+        flex-direction: column;
     }
 }
