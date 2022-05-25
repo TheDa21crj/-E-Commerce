@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MoBoDrop from "./MoBoDrop";
 import DbmCss from "./Css/DropDownMobo.module.css";
 
@@ -6,6 +6,7 @@ export default function DropDownMobo(props) {
   const [showMen, setMen] = useState(false);
   const [showWoMen, setWoMen] = useState(false);
   const [showKid, setKid] = useState(false);
+
   return (
     <div className={DbmCss.mDiv}>
       <ul className={DbmCss.ulTag}>
