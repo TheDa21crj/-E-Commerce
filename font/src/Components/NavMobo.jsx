@@ -58,7 +58,7 @@ export default function NavMobo() {
                     </Link>
                   </div>
                   <div id={NCss.LinkTagPDiv}>
-                    <Link to="/my-account" className="LinkStyle">
+                    <Link to="/wishlist" className="LinkStyle">
                       Wishlist
                     </Link>
                   </div>
