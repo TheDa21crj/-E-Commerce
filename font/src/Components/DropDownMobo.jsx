@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MoBoDrop from "./MoBoDrop";
 import DbmCss from "./Css/DropDownMobo.module.css";
+import { Link } from "react-router-dom";
 
 export default function DropDownMobo(props) {
   const [showMen, setMen] = useState(false);
@@ -122,7 +123,9 @@ export default function DropDownMobo(props) {
           <p className={DbmCss.LiPTag}>Beauty</p>
         </li>
         <li>
-          <p className={DbmCss.LiPTag}>Membership</p>
+          <Link to="/Membership" className="LinkStyle">
+            <p className={DbmCss.LiPTag}>Membership</p>
+          </Link>
         </li>
       </ul>
     </div>
