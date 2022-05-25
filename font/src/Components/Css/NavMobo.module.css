@@ -70,16 +70,16 @@
     .PersonIcon {
         position: relative;
     }
-    /* .PersonIcon:hover>.SoWDivPersonIcon {
+    .PersonIcon:hover>.SoWDivPersonIcon {
         transform: translate(0px, 0px);
         z-index: 10;
         opacity: 1;
         pointer-events: auto;
-    } */
+    }
     .SoWDivPersonIcon {
-        /* transform: translateY(10px); */
-        /* opacity: 0; */
-        /* pointer-events: none; */
+        transform: translateY(10px);
+        opacity: 0;
+        pointer-events: none;
         transition: all 0.3s;
         position: absolute;
         top: 38px;
@@ -90,7 +90,7 @@
         color: #fff;
         font-family: ManropeRegular;
         font-size: 0.8rem;
-        width: 100px;
+        width: 180px;
         text-align: center;
     }
     .arrow {
@@ -103,14 +103,19 @@
         transform: rotate(45deg);
     }
     #LinkTagPDiv {
-        padding-bottom: 5px;
-        margin-bottom: 5px;
+        padding-bottom: 15px;
+        margin: 15px 0px;
         border-style: solid;
         border-width: 0px 0px 1px 0px;
         border-color: #ff90b2;
+        /* font-size: 0.8rem; */
+        font-size: 16px;
     }
     #logoutPDiv {
         font-weight: bold;
         letter-spacing: 0.1rem;
+        /* font-size: 0.8rem; */
+        margin: 15px 0px;
+        font-size: 16px;
     }
 }
