@@ -8,13 +8,13 @@ import "./Css/Nav.css";
 export default function NavMobo() {
   const [show, setShow] = useState(false);
 
-  // useEffect(() => {
-  //   if (show) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
-  // }, [show]);
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [show]);
   return (
     <div className={NCss.mDiv}>
       <div className={NCss.ChilDiv}>
