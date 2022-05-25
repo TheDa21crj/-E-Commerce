@@ -7,7 +7,7 @@ import SizeChart from "../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useNavigate } from "react-router-dom";
-
+import "./../Components/Product/CSS/ProductC.css";
 // redux
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
@@ -316,11 +316,16 @@ export default function ProductsDeatils() {
               <div
                 className={PDCss.Description}
                 onClick={() => setDetails(false)}
+                id={showDetails ? "" : "Details"}
               >
                 Product Description
                 {showDetails ? "" : <div className={PDCss.Des}></div>}
               </div>
-              <div className={PDCss.Details} onClick={() => setDetails(true)}>
+              <div
+                className={PDCss.Details}
+                onClick={() => setDetails(true)}
+                id={showDetails ? "Details" : ""}
+              >
                 Product Details
                 {showDetails ? <div className={PDCss.Des}></div> : ""}
               </div>
