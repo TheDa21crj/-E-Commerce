@@ -110,6 +110,11 @@
     height: 89%;
 }
 
+.InCmDiv1,
+.TableDiv1 {
+    display: none;
+}
+
 .rowDIvPMobo {
     display: none;
     margin-top: 30px;
@@ -135,10 +140,28 @@
     .rowDIvPMobo {
         font-family: ManropeRegular;
         display: flex;
-        /* flex-direction: row; */
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
         font-size: 1.2rem;
+    }
+    .InCmDiv1 {
+        margin: 20px 20px 20px 0px;
+        float: right;
+        border-style: solid;
+        border-color: #f56692;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100px;
+    }
+    .TableDiv1 {
+        /* margin-top: 50px; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 89%;
     }
 }
