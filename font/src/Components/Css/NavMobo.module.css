@@ -8,6 +8,14 @@
 }
 
 @media only screen and (max-width: 850px) {
+    .mDiv {
+        position: fixed;
+        width: 100%;
+        height: 53px;
+        background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
+        backdrop-filter: blur(8px);
+        z-index: 2;
+    }
     .mDiv,
     .ChilDiv {
         display: flex;
