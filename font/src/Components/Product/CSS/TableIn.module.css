@@ -34,6 +34,13 @@ th {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    td,
+    th {
+        padding: 10px 25px;
+    }
+}
+
 
 /* @media only screen and (max-width: 900px) {
     table {
