@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Nav from "./../Components/Nav";
+import Nav from "../Components/Nav";
 import { Link, useParams } from "react-router-dom";
-import Footer from "./../Components/Footer";
+import Footer from "../Components/Footer";
 import PDCss from "./Css/ProductDetails.module.css";
-import SizeChart from "./../Components/Product/SizeChart";
+import SizeChart from "../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 // import { motion } from "framer-motion";
