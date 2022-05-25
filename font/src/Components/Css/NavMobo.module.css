@@ -90,6 +90,8 @@
         color: #fff;
         font-family: ManropeRegular;
         font-size: 0.8rem;
+        width: 100px;
+        text-align: center;
     }
     .arrow {
         position: absolute;
@@ -99,5 +101,16 @@
         right: 12px;
         background-color: #f56692;
         transform: rotate(45deg);
+    }
+    #LinkTagPDiv {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: #ff90b2;
+    }
+    #logoutPDiv {
+        font-weight: bold;
+        letter-spacing: 0.1rem;
     }
 }
