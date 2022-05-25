@@ -44,7 +44,6 @@ export default function NavMobo() {
             <PersonIcon fontSize="large" />
             <div className={NCss.SoWDivPersonIcon}>
               <div className={NCss.arrow}></div>
-              {/* Login/Register */}
               {toggle == "true" ? (
                 <div>
                   <div id={NCss.LinkTagPDiv}>
