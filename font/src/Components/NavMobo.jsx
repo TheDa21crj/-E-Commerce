@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NCss from "./Css/NavMobo.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import DropDownMobo from "./DropDownMobo";
@@ -6,6 +6,14 @@ import CloseIcon from "@mui/icons-material/Close";
 
 export default function NavMobo() {
   const [show, setShow] = useState(false);
+
+  // useEffect(() => {
+  //   if (show) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // }, [show]);
   return (
     <div className={NCss.mDiv}>
       <div className={NCss.ChilDiv}>
