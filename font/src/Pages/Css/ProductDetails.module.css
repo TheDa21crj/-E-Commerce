@@ -239,3 +239,25 @@
     -ms-user-select: none;
     /* Internet Explorer/Edge */
 }
+
+@media only screen and (max-width: 770px) {
+    .MDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightDiv,
+    .leftDiv {
+        width: 90%;
+    }
+    .leftDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightDiv {
+        margin-top: 30px;
+    }
+    .ImageSrc {
+        width: 50%;
+    }
+}
