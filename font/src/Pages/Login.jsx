@@ -88,7 +88,7 @@ const Login = (props) => {
                 type="email"
                 name="email"
                 id={LoginCss.email}
-                placeholder="Enter Your Email"
+                placeholder="Email"
                 value={showUser.email}
                 onChange={DataInp}
               />
@@ -97,7 +97,7 @@ const Login = (props) => {
                   type={showPassword ? "text" : "password"}
                   name="password"
                   id={LoginCss.password}
-                  placeholder="Enter Your Password"
+                  placeholder="Password"
                   value={showUser.password}
                   onChange={DataInp}
                 />
