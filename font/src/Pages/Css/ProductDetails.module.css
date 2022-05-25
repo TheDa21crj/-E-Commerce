@@ -257,7 +257,10 @@
     .rightDiv {
         margin-top: 30px;
     }
+}
+
+@media only screen and (max-width: 600px) {
     .ImageSrc {
-        width: 50%;
+        width: 100%;
     }
 }
