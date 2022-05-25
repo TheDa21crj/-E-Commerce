@@ -111,7 +111,8 @@
 }
 
 .InCmDiv1,
-.TableDiv1 {
+.TableDiv1,
+.imgMoboHTM {
     display: none;
 }
 
@@ -171,7 +172,15 @@
         justify-content: center;
     }
     .imgMoboHTM {
+        display: flex;
         width: 400px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .imgMoboHTM {
+        width: 95%;
         height: 350px;
     }
 }
