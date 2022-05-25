@@ -40,6 +40,7 @@ export default function Logout() {
           })
         );
         navigate("/");
+        window.location.reload();
       }
       if (res.status !== 200) {
         const error = new Error(res.error);
