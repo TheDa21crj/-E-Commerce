@@ -36,7 +36,7 @@ export default function NavMobo() {
           </Link>
         </div>
         <div>
-          <div>
+          <div className={NCss.PersonIcon}>
             <PersonIcon fontSize="large" />
           </div>
         </div>
