@@ -63,7 +63,7 @@
 .InCmDiv {
     float: right;
     border-style: solid;
-    border-color: gold;
+    border-color: #f56692;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -82,7 +82,7 @@
 
 .CmPTag {
     border-style: solid;
-    border-color: gold;
+    border-color: #f56692;
     border-width: 0px 0px 0px 1px;
 }
 
@@ -108,4 +108,25 @@
     justify-content: center;
     align-items: center;
     height: 89%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .rowDIv {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .rowDIv {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .RightDiv,
+    .LeftDiv {
+        width: 98%;
+    }
+    .ImgTag {
+        width: 40%;
+    }
 }
