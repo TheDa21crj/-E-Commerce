@@ -5,6 +5,7 @@ import DropDownMobo from "./DropDownMobo";
 import CloseIcon from "@mui/icons-material/Close";
 import "./Css/Nav.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function NavMobo() {
   const [show, setShow] = useState(false);
@@ -16,6 +17,9 @@ export default function NavMobo() {
       document.body.style.overflow = "auto";
     }
   }, [show]);
+
+  const toggle = useSelector((state) => state.toggle.toggle);
+
   return (
     <div className={NCss.mDiv}>
       <div className={NCss.ChilDiv}>
@@ -40,7 +44,35 @@ export default function NavMobo() {
             <PersonIcon fontSize="large" />
             <div className={NCss.SoWDivPersonIcon}>
               <div className={NCss.arrow}></div>
-              Login/Register
+              {/* Login/Register */}
+              {toggle == "true" ? (
+                <div>
+                  <div id={NCss.LinkTagPDiv}>
+                    <Link to="/my-account" className="LinkStyle">
+                      My Account
+                    </Link>
+                  </div>
+                  <div id={NCss.LinkTagPDiv}>
+                    <Link to="/ShopCart" className="LinkStyle">
+                      Cart
+                    </Link>
+                  </div>
+                  <div id={NCss.LinkTagPDiv}>
+                    <Link to="/my-account" className="LinkStyle">
+                      Wishlist
+                    </Link>
+                  </div>
+                  <div id={NCss.logoutPDiv}>
+                    <Link to="/logout" className="LinkStyle">
+                      Logout
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <Link to="/login" className="LinkStyle">
+                  Login/Register
+                </Link>
+              )}
             </div>
           </div>
         </div>
