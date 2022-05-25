@@ -55,4 +55,19 @@
     margin-top: 40px;
 }
 
-@media only screen and (max-width: 900px) {}
+@media only screen and (max-width: 900px) {
+    .BenifitsDiv {
+        width: 95%;
+    }
+    .BenifitsTopDiv,
+    .BenifitsBottomDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titlemDiv {
+        margin: 0px;
+    }
+    .BenifitsBottomDiv {
+        margin-top: 0px;
+    }
+}
