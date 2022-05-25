@@ -4,6 +4,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import DropDownMobo from "./DropDownMobo";
 import CloseIcon from "@mui/icons-material/Close";
 import "./Css/Nav.css";
+import { Link } from "react-router-dom";
 
 export default function NavMobo() {
   const [show, setShow] = useState(false);
@@ -30,7 +31,9 @@ export default function NavMobo() {
           )}
         </div>
         <div>
-          <h1 className={NCss.h1}>The Da</h1>
+          <Link to="/" className="LinkStyle">
+            <h1 className={NCss.h1}>The Da</h1>
+          </Link>
         </div>
         <div>
           <div>
