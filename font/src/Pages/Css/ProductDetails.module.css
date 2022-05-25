@@ -146,6 +146,7 @@
     width: 45%;
     text-align: center;
     cursor: pointer;
+    height: 22px;
 }
 
 .AddWISHLIST {
@@ -158,6 +159,7 @@
     border-color: #f56692;
     color: #f56692;
     cursor: pointer;
+    height: 22px;
 }
 
 .DesDiv {
