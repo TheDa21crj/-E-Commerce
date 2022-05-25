@@ -27,6 +27,7 @@ export default function Member() {
           onClick={() => {
             setSelect("2");
           }}
+          className={MemCss.cardsDiv}
         >
           <PriceCards
             monthNum="3"
@@ -40,6 +41,7 @@ export default function Member() {
           onClick={() => {
             setSelect("3");
           }}
+          className={MemCss.cardsDiv}
         >
           <PriceCards monthNum="1" monthPrice="199" price="199" />
         </div>
