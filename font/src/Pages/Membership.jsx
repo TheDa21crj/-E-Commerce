@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Css/Member.css";
-import Nav from "./../Components/Nav";
-import Footer from "./../Components/Footer";
-import HeaderM from "./../Components/Membership/HeaderM";
-import Excusive from "./../Components/Membership/Excusive";
-import Member from "./../Components/Membership/Member";
-import Testimonial from "./../Components/Membership/Testimonial";
+import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
+import HeaderM from "../Components/Membership/HeaderM";
+import Excusive from "../Components/Membership/Excusive";
+import Member from "../Components/Membership/Member";
+import Testimonial from "../Components/Membership/Testimonial";
 
 export default function Membership() {
   useEffect(() => {
