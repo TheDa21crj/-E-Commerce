@@ -110,6 +110,11 @@
     height: 89%;
 }
 
+.rowDIvPMobo {
+    display: none;
+    margin-top: 30px;
+}
+
 @media only screen and (max-width: 1100px) {
     .rowDIv {
         width: 98%;
@@ -123,4 +128,17 @@
     }
 }
 
-@media only screen and (max-width: 700px) {}
+@media only screen and (max-width: 700px) {
+    .rowDIvP {
+        display: none;
+    }
+    .rowDIvPMobo {
+        font-family: ManropeRegular;
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
