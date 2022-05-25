@@ -7,6 +7,9 @@ import "./CSS/ProductC.css";
 
 export default function SizeChart(props) {
   const [showM, setM] = useState(true);
+  const [showSC, setSC] = useState(true);
+  // const [showHTM, setHTM] = useState(false);
+
   return (
     <div className={SCCss.mDiv}>
       <div className={SCCss.mDivInner}>
@@ -46,9 +49,18 @@ export default function SizeChart(props) {
             </div>
           </div>
           <div className={SCCss.rowDIvPMobo}>
-            <p>Size Chart</p>
-            <p>How To Measure</p>
+            <p
+            //  onClick={setSC(false)}
+            >
+              Size Chart
+            </p>
+            <p
+            // onClick={setSC(true)}
+            >
+              How To Measure
+            </p>
           </div>
+          {showSC ? "Hello" : ""}
           <div>
             <div>
               <div className={SCCss.InCmDiv1}>
