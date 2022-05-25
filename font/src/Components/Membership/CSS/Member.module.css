@@ -38,11 +38,37 @@
     letter-spacing: 0.1rem;
 }
 
+@media only screen and (max-width: 785px) {
+    .AddMembership {
+        width: 60%;
+    }
+}
+
 @media only screen and (max-width: 770px) {
     .CarsPricemDiv {
         flex-direction: column;
     }
     .cardsDiv {
         margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .AddMembership {
+        width: 360px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .AddMembership {
+        width: 320px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .AddMembership {
+        width: 300px;
+        font-size: 12px;
     }
 }
