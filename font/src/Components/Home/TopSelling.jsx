@@ -8,8 +8,6 @@ import StarIcon from "@mui/icons-material/Star";
 import { useSelector } from "react-redux";
 
 export default function TopSelling() {
-  const [showTS, setTS] = useState([]);
-
   const selling = useSelector((state) => state.selling.topselling);
 
   var settingTS = {
@@ -27,7 +25,6 @@ export default function TopSelling() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          // infinite: true,
         },
       },
       {
@@ -35,13 +32,8 @@ export default function TopSelling() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          // dots: true,
         },
       },
-      // {
-      //   breakpoint: 300,
-      //   settings: "unslick", // destroys slick
-      // },
     ],
   };
 
