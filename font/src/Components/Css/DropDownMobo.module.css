@@ -3,18 +3,6 @@
     src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
 }
 
-.mDiv {
-    /* position: absolute; */
-    /* top: 86.208px; */
-    /* top: 53px; */
-    /* left: 0px; */
-    /* width: 100%; */
-    /* height: auto; */
-    /* overflow: scroll; */
-    /* background-color: white; */
-    /* z-index: 2; */
-}
-
 .ulTag {
     margin: 0px 3%;
     background-color: white;
