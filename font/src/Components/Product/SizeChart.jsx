@@ -8,7 +8,6 @@ import "./CSS/ProductC.css";
 export default function SizeChart(props) {
   const [showM, setM] = useState(true);
   const [showSC, setSC] = useState(true);
-  // const [showHTM, setHTM] = useState(false);
 
   return (
     <div className={SCCss.mDiv}>
@@ -89,7 +88,9 @@ export default function SizeChart(props) {
               </div>
             </div>
           ) : (
-            " How To Measure"
+            <div>
+              <img src="" alt="" />
+            </div>
           )}
         </div>
       </div>
