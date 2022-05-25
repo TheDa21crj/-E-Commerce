@@ -49,6 +49,29 @@ export default function SizeChart(props) {
             <p>Size Chart</p>
             <p>How To Measure</p>
           </div>
+          <div>
+            <div>
+              <div className={SCCss.InCmDiv1}>
+                <p
+                  className={SCCss.InPTag}
+                  id={showM ? "select" : ""}
+                  onClick={() => setM(true)}
+                >
+                  In
+                </p>
+                <p
+                  className={SCCss.CmPTag}
+                  id={showM ? "" : "select"}
+                  onClick={() => setM(false)}
+                >
+                  Cm
+                </p>
+              </div>
+              <div className={SCCss.TableDiv1}>
+                {showM ? <TableIn /> : <TableCm />}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
