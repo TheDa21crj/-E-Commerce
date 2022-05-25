@@ -21,31 +21,26 @@ export default function Testimonial() {
         <Sliders {...settingT} className={TeCss.Hslide}>
           <div className={TeCss.SlidermDiv}>
             <div className={TeCss.SliderinsideDiv}>
-              <p className={TeCss.QoutesS}>"</p>
               <p className={TeCss.SliderContentDiv}>
                 The exclusive membership is great, it helps save so much money.
                 You not only recover the money you've spent on it, but save so
                 much more!
               </p>
               <p className={TeCss.SliderNameDiv}>Atharva, Pune</p>
-              <p className={TeCss.QoutesE}>"</p>
             </div>
           </div>
           <div className={TeCss.SlidermDiv}>
             <div className={TeCss.SliderinsideDiv}>
-              <p className={TeCss.QoutesS}>"</p>
               <p className={TeCss.SliderContentDiv}>
                 The exclusive membership has definitely been worth the value.
                 I've never had a bad experience with the membership and all
                 these continuous discounts are very beneficial to the customer.
               </p>
               <p className={TeCss.SliderNameDiv}>Bhuvandeep, Bangalore</p>
-              <p className={TeCss.QoutesE}>"</p>
             </div>
           </div>
           <div className={TeCss.SlidermDiv}>
             <div className={TeCss.SliderinsideDiv}>
-              <p className={TeCss.QoutesS}>"</p>
               <p className={TeCss.SliderContentDiv}>
                 The exclusive membership has been a real blessing, it gives you
                 first preference for limited edition clothes, it also helps you
@@ -53,7 +48,6 @@ export default function Testimonial() {
                 what you save.
               </p>
               <p className={TeCss.SliderNameDiv}>Rahul, Pune</p>
-              <p className={TeCss.QoutesE}>"</p>
             </div>
           </div>
         </Sliders>
