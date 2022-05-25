@@ -72,4 +72,10 @@
     .titlePTag {
         font-size: 20px;
     }
+    .contentDivPTag {
+        letter-spacing: 0rem;
+        text-align: justify;
+    }
 }
+
+@media only screen and (max-width: 375px) {}
