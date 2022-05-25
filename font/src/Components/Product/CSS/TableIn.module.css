@@ -19,3 +19,33 @@ th {
     border: 1px solid #dddddd;
     color: #fff;
 }
+
+@media only screen and (max-width: 1100px) {
+    td,
+    th {
+        padding: 10px 25px;
+    }
+}
+
+
+/*
+table {
+    display: block;
+    max-width: 100%;
+    overflow-x: scroll;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    max-height: 450px;
+    overflow-y: hidden;
+}
+
+#Data tr td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: pink;
+    box-shadow: 0px 5px 0px 0px 1px lightgrey;
+}
+*/
