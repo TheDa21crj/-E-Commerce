@@ -77,3 +77,9 @@
         width: 98%;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .ExclusiveMemberBenefits {
+        font-size: 1.2rem;
+    }
+}
