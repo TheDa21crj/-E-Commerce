@@ -59,35 +59,38 @@ export default function SizeChart(props) {
             <p
               onClick={() => {
                 setSC(false);
-              }} // onClick={setSC(true)}
+              }}
             >
               How To Measure
             </p>
           </div>
-          {showSC ? "Size" : " How To Measure"}
-          <div>
+          {showSC ? (
             <div>
-              <div className={SCCss.InCmDiv1}>
-                <p
-                  className={SCCss.InPTag}
-                  id={showM ? "select" : ""}
-                  onClick={() => setM(true)}
-                >
-                  In
-                </p>
-                <p
-                  className={SCCss.CmPTag}
-                  id={showM ? "" : "select"}
-                  onClick={() => setM(false)}
-                >
-                  Cm
-                </p>
-              </div>
-              <div className={SCCss.TableDiv1}>
-                {showM ? <TableIn /> : <TableCm />}
+              <div>
+                <div className={SCCss.InCmDiv1}>
+                  <p
+                    className={SCCss.InPTag}
+                    id={showM ? "select" : ""}
+                    onClick={() => setM(true)}
+                  >
+                    In
+                  </p>
+                  <p
+                    className={SCCss.CmPTag}
+                    id={showM ? "" : "select"}
+                    onClick={() => setM(false)}
+                  >
+                    Cm
+                  </p>
+                </div>
+                <div className={SCCss.TableDiv1}>
+                  {showM ? <TableIn /> : <TableCm />}
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            " How To Measure"
+          )}
         </div>
       </div>
     </div>
