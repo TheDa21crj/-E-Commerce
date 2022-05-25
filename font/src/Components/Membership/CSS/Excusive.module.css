@@ -71,3 +71,9 @@
         margin-top: 0px;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .BenifitsDiv {
+        width: 98%;
+    }
+}
