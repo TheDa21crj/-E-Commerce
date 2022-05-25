@@ -178,6 +178,7 @@
 
 .Description,
 .Details {
+    color: grey;
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
