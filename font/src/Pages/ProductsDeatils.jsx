@@ -6,7 +6,6 @@ import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-// import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 // redux
