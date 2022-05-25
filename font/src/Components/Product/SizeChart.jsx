@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import TableIn from "./TableIn";
 import TableCm from "./TableCm";
 import "./CSS/ProductC.css";
+import img1 from "./../../Img/measure.png";
 
 export default function SizeChart(props) {
   const [showM, setM] = useState(true);
@@ -88,8 +89,8 @@ export default function SizeChart(props) {
               </div>
             </div>
           ) : (
-            <div>
-              <img src="" alt="" />
+            <div className={SCCss.imgMoboHTMDiv}>
+              <img src={img1} alt="" className={SCCss.imgMoboHTM} />
             </div>
           )}
         </div>
