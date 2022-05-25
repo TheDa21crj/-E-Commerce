@@ -163,4 +163,16 @@
         align-items: center;
         height: 89%;
     }
+    .imgMoboHTMDiv {
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    .imgMoboHTM {
+        width: 400px;
+        height: 350px;
+    }
 }
