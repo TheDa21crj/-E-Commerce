@@ -50,17 +50,21 @@ export default function SizeChart(props) {
           </div>
           <div className={SCCss.rowDIvPMobo}>
             <p
-            //  onClick={setSC(false)}
+              onClick={() => {
+                setSC(true);
+              }}
             >
               Size Chart
             </p>
             <p
-            // onClick={setSC(true)}
+              onClick={() => {
+                setSC(false);
+              }} // onClick={setSC(true)}
             >
               How To Measure
             </p>
           </div>
-          {showSC ? "Hello" : ""}
+          {showSC ? "Size" : " How To Measure"}
           <div>
             <div>
               <div className={SCCss.InCmDiv1}>
