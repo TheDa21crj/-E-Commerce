@@ -52,3 +52,21 @@
     font-weight: 500;
     height: 12px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .mDiv {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .mDiv {
+        width: 230px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .mDiv {
+        width: 300px;
+    }
+}
