@@ -45,6 +45,10 @@ export default function SizeChart(props) {
               </div>
             </div>
           </div>
+          <div className={SCCss.rowDIvPMobo}>
+            <p>Size Chart</p>
+            <p>How To Measure</p>
+          </div>
         </div>
       </div>
     </div>
