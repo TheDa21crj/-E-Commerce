@@ -265,3 +265,16 @@
         flex-direction: column;
     }
 }
+
+@media only screen and (max-width: 350px) {
+    .SizeChart {
+        display: flex;
+        flex-direction: column;
+    }
+    .AddCART,
+    .AddWISHLIST,
+    .Description,
+    .Details {
+        font-size: 14px;
+    }
+}
