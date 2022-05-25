@@ -117,16 +117,10 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .rowDIv {
-        flex-direction: column;
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
-    .RightDiv,
-    .LeftDiv {
-        width: 98%;
-    }
-    .ImgTag {
-        width: 40%;
+    .ConDiv {
+        width: 100%;
+        height: 100vh;
     }
 }
+
+@media only screen and (max-width: 700px) {}
