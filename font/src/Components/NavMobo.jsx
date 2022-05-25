@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 
 export default function NavMobo() {
   const [show, setShow] = useState(false);
+  const [showimg, setimg] = useState("");
 
   useEffect(() => {
     if (show) {
@@ -19,6 +20,7 @@ export default function NavMobo() {
   }, [show]);
 
   const toggle = useSelector((state) => state.toggle.toggle);
+  const imgSrc = useSelector((state) => state.user.imgSrc);
 
   return (
     <div className={NCss.mDiv}>
@@ -41,7 +43,14 @@ export default function NavMobo() {
         </div>
         <div>
           <div className={NCss.PersonIcon}>
-            <PersonIcon fontSize="large" />
+            {/* <PersonIcon fontSize="large" /> */}
+            {/*  */}
+            {imgSrc == "" ? (
+              <PersonIcon fontSize="large" className={NCss.IconsClass0} />
+            ) : (
+              <img src={imgSrc} alt="" className={NCss.UserIcon} />
+            )}
+            {/*  */}
             <div className={NCss.SoWDivPersonIcon}>
               <div className={NCss.arrow}></div>
               {toggle == "true" ? (
