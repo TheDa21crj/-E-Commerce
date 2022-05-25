@@ -116,4 +116,16 @@
         margin: 15px 0px;
         font-size: 16px;
     }
+    .IconsClass0 {
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .IconsClass0:hover {
+        color: #f56692;
+    }
+    .UserIcon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
 }
