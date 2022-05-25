@@ -38,6 +38,10 @@ export default function NavMobo() {
         <div>
           <div className={NCss.PersonIcon}>
             <PersonIcon fontSize="large" />
+            <div className={NCss.SoWDivPersonIcon}>
+              <div className={NCss.arrow}></div>
+              Login/Register
+            </div>
           </div>
         </div>
       </div>
