@@ -3,6 +3,7 @@ import NCss from "./Css/NavMobo.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import DropDownMobo from "./DropDownMobo";
 import CloseIcon from "@mui/icons-material/Close";
+import "./Css/Nav.css";
 
 export default function NavMobo() {
   const [show, setShow] = useState(false);
@@ -37,7 +38,9 @@ export default function NavMobo() {
           </div>
         </div>
       </div>
-      {show ? <DropDownMobo /> : ""}
+      <div className={NCss.DropDownMobo} id={show ? "show" : "hide"}>
+        {show ? <DropDownMobo /> : ""}
+      </div>
     </div>
   );
 }
