@@ -45,6 +45,9 @@
     .MoboUlTag {
         margin-bottom: 20px;
     }
+    .MoboUlTag li {
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
