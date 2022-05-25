@@ -7,8 +7,8 @@ export default function Benifits(props) {
       <div className={BenifitsCss.imgDiv}>
         <img src={props.img} alt="ImgHint" className={BenifitsCss.imgTag} />
       </div>
-      <div>
-        <div>
+      <div className={BenifitsCss.ContentDivParent}>
+        <div className={BenifitsCss.ContentDivBef}>
           <p className={BenifitsCss.titlePTag}>{props.title}</p>
         </div>
         <div className={BenifitsCss.LineDiv}>
