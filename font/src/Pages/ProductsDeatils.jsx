@@ -166,6 +166,14 @@ export default function ProductsDeatils() {
     }
   };
 
+  useEffect(() => {
+    if (showChat) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showChat]);
+
   return (
     <div>
       <Nav />
