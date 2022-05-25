@@ -5,6 +5,7 @@ import TableIn from "./TableIn";
 import TableCm from "./TableCm";
 import "./CSS/ProductC.css";
 import img1 from "./../../Img/measure.png";
+import "./CSS/ProductC.css";
 
 export default function SizeChart(props) {
   const [showM, setM] = useState(true);
@@ -53,6 +54,7 @@ export default function SizeChart(props) {
               onClick={() => {
                 setSC(true);
               }}
+              className={showSC ? "pink" : "grey"}
             >
               Size Chart
             </p>
@@ -60,6 +62,7 @@ export default function SizeChart(props) {
               onClick={() => {
                 setSC(false);
               }}
+              className={showSC ? "grey" : "pink"}
             >
               How To Measure
             </p>
