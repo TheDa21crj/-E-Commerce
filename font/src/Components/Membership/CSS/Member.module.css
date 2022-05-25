@@ -37,3 +37,12 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+
+@media only screen and (max-width: 770px) {
+    .CarsPricemDiv {
+        flex-direction: column;
+    }
+    .cardsDiv {
+        margin-top: 30px;
+    }
+}
