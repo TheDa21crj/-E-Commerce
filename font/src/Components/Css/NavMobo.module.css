@@ -70,4 +70,34 @@
     .PersonIcon {
         position: relative;
     }
+    /* .PersonIcon:hover>.SoWDivPersonIcon {
+        transform: translate(0px, 0px);
+        z-index: 10;
+        opacity: 1;
+        pointer-events: auto;
+    } */
+    .SoWDivPersonIcon {
+        /* transform: translateY(10px); */
+        /* opacity: 0; */
+        /* pointer-events: none; */
+        transition: all 0.3s;
+        position: absolute;
+        top: 38px;
+        right: 0px;
+        background-color: #f56692;
+        padding: 10px 8px;
+        border-radius: 10px;
+        color: #fff;
+        font-family: ManropeRegular;
+        font-size: 0.8rem;
+    }
+    .arrow {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        top: -5px;
+        right: 12px;
+        background-color: #f56692;
+        transform: rotate(45deg);
+    }
 }
