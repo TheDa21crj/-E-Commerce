@@ -50,7 +50,7 @@ export default function MyAddress(props) {
       body: JSON.stringify({
         name: "rishav",
         address: "st-70,qt-2a",
-        pinCode: "815354",
+        pinCode: "703330",
         town: "crj",
         state: "wb",
         country: "india",
@@ -73,12 +73,12 @@ export default function MyAddress(props) {
             <p>ADD ADDRESS</p>
           </div>
         </div>
-        <div className={AddCss.AmDiv}>
+        <div className={AddCss.mapPArent}>
           {show ? (
-            <div>
+            <div className={AddCss.mapPArentDiv}>
               {show.map((value, key) => {
                 return (
-                  <div key={value._id}>
+                  <div key={value._id} className={AddCss.AmDiv}>
                     <p>
                       <b>name:</b> {value.name}
                     </p>
