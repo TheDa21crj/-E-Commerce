@@ -6,7 +6,10 @@ export default function Profile(props) {
   return (
     <div className={Common.mdiv}>
       <div>
-        <KeyboardBackspaceIcon onClick={() => props.state("")} />
+        <KeyboardBackspaceIcon
+          fontSize="large"
+          onClick={() => props.state("")}
+        />
       </div>
       <p>Profile</p>
     </div>
