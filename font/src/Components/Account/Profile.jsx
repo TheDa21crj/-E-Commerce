@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProfileCss from "./CSS/Profile.module.css";
-import CloseIcon from "@mui/icons-material/Close";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 export default function Profile(props) {
   return (
@@ -102,7 +102,7 @@ export default function Profile(props) {
           </form>
         </div>
       </div>
-      <CloseIcon onClick={() => props.state()} />
+      <KeyboardBackspaceIcon onClick={() => props.state()} />
     </div>
   );
 }
