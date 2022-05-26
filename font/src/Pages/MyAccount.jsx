@@ -68,10 +68,15 @@ export default function MyAccount() {
               lastName={LastName}
               gender={gender}
               phone={PhoneNumber}
+              state={setProfileState}
             />
           )}
-          {showProfileState === "My Orders" && <Myorders id={_id} />}
-          {showProfileState === "My Addresses" && <MyAddress id={_id} />}
+          {showProfileState === "My Orders" && (
+            <Myorders id={_id} state={setProfileState} />
+          )}
+          {showProfileState === "My Addresses" && (
+            <MyAddress id={_id} state={setProfileState} />
+          )}
         </div>
       </div>
       <Footer />
