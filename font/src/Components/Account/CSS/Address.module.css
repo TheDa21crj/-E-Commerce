@@ -1,0 +1,22 @@
+.AddressmDiv {
+    margin-top: 20px;
+}
+
+.AddAddressmDiv {
+    border-style: dashed;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #f56692;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.AddAddressmDiv p {
+    font-family: ManropeRegular;
+    margin-top: 20px;
+}
