@@ -10,7 +10,6 @@ export default function MyAddress(props) {
   const [showAdd, setAdd] = useState(false);
 
   useEffect(() => {
-    address();
     seeAddress();
   }, []);
 
@@ -39,29 +38,6 @@ export default function MyAddress(props) {
     } catch (error) {
       return;
     }
-  };
-
-  const address = async () => {
-    // const { name, address, pinCode, town, state, country, phoneNumber } =
-    // showUser;
-    const res = await fetch("/api/Address/add", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: "rishav",
-        address: "st-70,qt-2a",
-        pinCode: "703330",
-        town: "crj",
-        state: "wb",
-        country: "india",
-        phoneNumber: "9939197376",
-      }),
-    });
-
-    const r = await res.json();
-    console.log(r);
   };
 
   return (
