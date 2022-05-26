@@ -28,7 +28,9 @@
     border-radius: 10px;
     border-width: 2px;
     border-color: #f56692;
-    width: 200px;
+    /* width: 200px;
+    height: 200px; */
+    width: 250px;
     height: 200px;
     display: flex;
     flex-direction: column;
