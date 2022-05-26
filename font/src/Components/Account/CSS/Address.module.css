@@ -1,4 +1,6 @@
 .AddressmDiv {
+    width: 100%;
+    display: flex;
     margin-top: 20px;
 }
 
@@ -56,4 +58,8 @@
     align-items: center;
 }
 
-@media only screen and (max-width: 1040px) {}
+@media only screen and (max-width: 1040px) {
+    .AddAddressmDiv {
+        width: 250px;
+    }
+}
