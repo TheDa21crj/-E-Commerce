@@ -98,6 +98,10 @@ export default function MyAddress(props) {
                     <p>
                       <b>Phone Number:</b> {value.phoneNumber}
                     </p>
+                    <div className={AddCss.editHoverDiv}>
+                      <p>Edit</p>
+                      <p className={AddCss.editHoverDelete}>Delete</p>
+                    </div>
                   </div>
                 );
               })}
