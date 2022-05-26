@@ -18,7 +18,8 @@ export default function MyAccount() {
     document.title = "My Account";
   }, []);
 
-  const [showProfileState, setProfileState] = useState("");
+  const [showProfileState, setProfileState] = useState("My Orders");
+  const [showProfileStateDes, setProfileStateDes] = useState("");
 
   const ShowProfileState = async (e) => {
     setProfileState(e.target.innerHTML);
@@ -32,13 +33,13 @@ export default function MyAccount() {
   const gender = useSelector((state) => state.user.gender);
   const PhoneNumber = useSelector((state) => state.user.PhoneNumber);
 
-  useEffect(() => {
-    if (showProfileState === "") {
-      document.body.style.overflow = "auto";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  }, [showProfileState]);
+  // useEffect(() => {
+  //   if (showProfileState === "") {
+  //     document.body.style.overflow = "auto";
+  //   } else {
+  //     document.body.style.overflow = "hidden";
+  //   }
+  // }, [showProfileState]);
 
   return (
     <div>
