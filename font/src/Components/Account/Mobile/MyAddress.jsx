@@ -11,7 +11,7 @@ export default function MyAddress(props) {
           onClick={() => props.state("")}
         />
       </div>
-      <p>My Address</p>
+      <p className={Common.MyPTag}>My Address</p>
     </div>
   );
 }
