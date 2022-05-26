@@ -4,10 +4,7 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 export default function Profile(props) {
   return (
-    <div
-      className={ProfileCss.mdiv}
-      style={{ height: "100vh", padding: "20px" }}
-    >
+    <div className={ProfileCss.mdiv}>
       <h1 className={ProfileCss.h1}>Profile</h1>
       <div className={ProfileCss.conMDiv}>
         <div className={ProfileCss.EmailDiv}>
@@ -105,7 +102,6 @@ export default function Profile(props) {
           </form>
         </div>
       </div>
-      <KeyboardBackspaceIcon onClick={() => props.state()} />
     </div>
   );
 }
