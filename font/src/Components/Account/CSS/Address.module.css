@@ -1,14 +1,9 @@
-.AddressmDiv {
-    width: 100%;
-    display: flex;
-    margin-top: 20px;
-}
-
 .AddressRowDiv {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 20px;
 }
 
 .mapPArent {
