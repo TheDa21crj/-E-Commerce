@@ -6,7 +6,7 @@ export default function MyAddress(props) {
     <div>
       <h1>My Address</h1>
       <p>{props.id}</p>
-      <CloseIcon />
+      <CloseIcon onClick={() => props.state()} />
     </div>
   );
 }
