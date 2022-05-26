@@ -6,7 +6,10 @@ export default function Myorders(props) {
   return (
     <div className={Common.mdiv}>
       <div>
-        <KeyboardBackspaceIcon onClick={() => props.state("")} />
+        <KeyboardBackspaceIcon
+          fontSize="large"
+          onClick={() => props.state("")}
+        />
       </div>
       <p>My Orders</p>
     </div>
