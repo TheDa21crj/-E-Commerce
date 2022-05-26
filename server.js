@@ -33,6 +33,7 @@ app.use("/api/RegAdmin", require("./routes/RegAdmin"));
 app.use("/api/admin/login", require("./routes/Admin"));
 app.use("/api/admin/Products", require("./routes/Products"));
 app.use("/api/admin/", require("./routes/AdminPost"));
+app.use("/api/Address/", require("./routes/Address"));
 
 const port = process.env.PORT || 5000;
 
