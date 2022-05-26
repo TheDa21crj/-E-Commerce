@@ -11,7 +11,7 @@ export default function Profile(props) {
           onClick={() => props.state("")}
         />
       </div>
-      <p>Profile</p>
+      <p className={Common.MyPTag}>Profile</p>
     </div>
   );
 }
