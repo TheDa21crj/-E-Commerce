@@ -35,7 +35,24 @@ export default function AddAddress(props) {
       <div className={AddCss.ConDiv}>
         AddAddress
         <br />
-        <CloseIcon onClick={() => props.state(false)} />
+        <CloseIcon onClick={() => props.state(false)} fontSize="large" />
+        <div>
+          {/* 
+        phoneNumber
+        */}
+          <input type="text" name="name" id="" placeholder="Name" />
+          <input type="number" name="pinCode" id="" placeholder="Pin Code" />
+          <input type="text" name="address" id="" placeholder="Address" />
+          <input type="text" name="town" id="" placeholder="town" />
+          <input type="text" name="state" id="" placeholder="state" />
+          <input type="text" name="country" id="" placeholder="country" />
+          <input
+            type="text"
+            name="phoneNumber"
+            id=""
+            placeholder="phoneNumber"
+          />
+        </div>
       </div>
     </div>
   );
