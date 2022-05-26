@@ -8,7 +8,7 @@ const Address = require("./../Schema/Address");
 const UserAuth = require("./../middleware/UserAuth");
 const UserSchema = require("./../Schema/User");
 
-// Private || Add Address || api/address/add
+// Private || Add Address || api/Address/add
 router.post(
     "/add", [
         UserAuth,
@@ -41,6 +41,12 @@ router.post(
                 addressed.country = country;
                 addressed.phoneNumber = phoneNumber;
 
+                for (let i = 0; i < userCheck.address.length; i++) {
+                    if (userCheck.address[i].pinCode == pinCode) {
+                        return res.status(400).json({ message: "same" });
+                    }
+                }
+
                 let add = await Address.findOneAndUpdate({ user: userID }, {
                     $push: {
                         address: addressed,
@@ -71,5 +77,22 @@ router.post(
         }
     }
 );
+
+// Private || View Address || api/Address
+router.get("/", [UserAuth], async(req, res) => {
+    let userID = req.userId;
+
+    try {
+        let userCheck = await Address.findOne({ user: userID });
+        if (userCheck) {
+            return res.status(200).json({ message: userCheck.address });
+        } else {
+            return res.status(304).json({ message: "zero" });
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: error });
+    }
+});
 
 module.exports = router;
