@@ -68,14 +68,18 @@ export default function MyAddress(props) {
 
       <div className={AddCss.AddressRowDiv}>
         <div className={AddCss.AddressmDiv}>
-          <div className={AddCss.AddAddressmDiv}>
+          {/* <div className={AddCss.AddAddressmDiv}>
             <img src={imgplus} alt="" />
             <p>ADD ADDRESS</p>
-          </div>
+          </div> */}
         </div>
         <div className={AddCss.mapPArent}>
           {show ? (
             <div className={AddCss.mapPArentDiv}>
+              <div className={AddCss.AddAddressmDiv}>
+                <img src={imgplus} alt="" />
+                <p>ADD ADDRESS</p>
+              </div>
               {show.map((value, key) => {
                 return (
                   <div key={value._id} className={AddCss.AmDiv}>
