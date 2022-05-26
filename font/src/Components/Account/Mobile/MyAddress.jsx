@@ -8,7 +8,7 @@ export default function MyAddress(props) {
       <div>
         <KeyboardBackspaceIcon onClick={() => props.state("")} />
       </div>
-      MyAddress
+      <p>My Address</p>
     </div>
   );
 }
