@@ -32,6 +32,14 @@ export default function MyAccount() {
   const gender = useSelector((state) => state.user.gender);
   const PhoneNumber = useSelector((state) => state.user.PhoneNumber);
 
+  useEffect(() => {
+    if (showProfileState === "") {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [showProfileState]);
+
   return (
     <div>
       <Nav />
