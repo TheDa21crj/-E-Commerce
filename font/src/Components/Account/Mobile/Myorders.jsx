@@ -4,11 +4,11 @@ import Common from "./Css/Common.module.css";
 
 export default function Myorders(props) {
   return (
-    <div>
-      Myorders
+    <div className={Common.mdiv}>
       <div>
         <KeyboardBackspaceIcon onClick={() => props.state("")} />
       </div>
+      Myorders
     </div>
   );
 }
