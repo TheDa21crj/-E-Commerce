@@ -111,10 +111,10 @@ export default function MyAccount() {
             />
           )}
           {showProfileStateDes === "My Orders" && (
-            <MyAddressMobo id={_id} state={setProfileStateDes} />
+            <MyordersMobo id={_id} state={setProfileStateDes} />
           )}
           {showProfileStateDes === "My Addresses" && (
-            <MyordersMobo id={_id} state={setProfileStateDes} />
+            <MyAddressMobo id={_id} state={setProfileStateDes} />
           )}
         </div>
       </div>
