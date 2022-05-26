@@ -67,12 +67,6 @@ export default function MyAddress(props) {
       <h1 className={ProfileCss.h1}>My Address</h1>
 
       <div className={AddCss.AddressRowDiv}>
-        <div className={AddCss.AddressmDiv}>
-          {/* <div className={AddCss.AddAddressmDiv}>
-            <img src={imgplus} alt="" />
-            <p>ADD ADDRESS</p>
-          </div> */}
-        </div>
         <div className={AddCss.mapPArent}>
           {show ? (
             <div className={AddCss.mapPArentDiv}>
