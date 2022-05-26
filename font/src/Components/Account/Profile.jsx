@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ProfileCss from "./CSS/Profile.module.css";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 export default function Profile(props) {
   return (
-    <div>
+    <div
+      className={ProfileCss.mdiv}
+      style={{ height: "100vh", padding: "20px" }}
+    >
       <h1 className={ProfileCss.h1}>Profile</h1>
       <div className={ProfileCss.conMDiv}>
         <div className={ProfileCss.EmailDiv}>
