@@ -8,6 +8,9 @@ import Myorders from "../Components/Account/Myorders";
 import Footer from "../Components/Footer";
 import MACss from "./Css/MyAccount.module.css";
 import "./Css/Product.css";
+import ProfileMobo from "./../Components/Account/Mobile/Profile";
+import MyAddressMobo from "./../Components/Account/Mobile/MyAddress";
+import MyordersMobo from "./../Components/Account/Mobile/Myorders";
 // redux
 import { toggleN } from "../redux/toggleNav";
 import { useDispatch } from "react-redux";
@@ -23,6 +26,7 @@ export default function MyAccount() {
 
   const ShowProfileState = async (e) => {
     setProfileState(e.target.innerHTML);
+    setProfileStateDes(e.target.innerHTML);
   };
 
   const _id = useSelector((state) => state.user._id);
@@ -97,6 +101,28 @@ export default function MyAccount() {
           )}
           {showProfileState === "My Addresses" && (
             <MyAddress id={_id} state={setProfileState} />
+          )}
+        </div>
+        <div
+          className={MACss.MobomDiv}
+          id={showProfileStateDes == "" ? "" : "showProfileStateDes"}
+        >
+          {showProfileStateDes === "Profile" && (
+            <ProfileMobo
+              email={email}
+              id={_id}
+              firstName={firstName}
+              lastName={LastName}
+              gender={gender}
+              phone={PhoneNumber}
+              state={setProfileStateDes}
+            />
+          )}
+          {showProfileStateDes === "My Orders" && (
+            <MyAddressMobo id={_id} state={setProfileStateDes} />
+          )}
+          {showProfileStateDes === "My Addresses" && (
+            <MyordersMobo id={_id} state={setProfileStateDes} />
           )}
         </div>
       </div>
