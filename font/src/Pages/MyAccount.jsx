@@ -50,13 +50,25 @@ export default function MyAccount() {
           <p className={MACss.PTagEmail}>
             <span> {email}</span>
           </p>
-          <p className={MACss.pTags} onClick={ShowProfileState}>
+          <p
+            className={MACss.pTags}
+            id={showProfileState == "Profile" ? "showshow" : ""}
+            onClick={ShowProfileState}
+          >
             Profile
           </p>
-          <p className={MACss.pTags} onClick={ShowProfileState}>
+          <p
+            className={MACss.pTags}
+            id={showProfileState == "My Orders" ? "showshow" : ""}
+            onClick={ShowProfileState}
+          >
             My Orders
           </p>
-          <p className={MACss.pTags} onClick={ShowProfileState}>
+          <p
+            className={MACss.pTags}
+            id={showProfileState == "My Addresses" ? "showshow" : ""}
+            onClick={ShowProfileState}
+          >
             My Addresses
           </p>
           <div className={MACss.LinkTagDiv}>
