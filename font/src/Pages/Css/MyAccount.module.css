@@ -117,7 +117,7 @@
         visibility: hidden;
         width: 100%;
         position: absolute;
-        top: 0px;
+        top: -30px;
         left: 0px;
         transform: translateX(-100%);
         background-color: #fff;
