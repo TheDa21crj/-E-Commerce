@@ -4,7 +4,7 @@ import Common from "./Css/Common.module.css";
 
 export default function Profile(props) {
   return (
-    <div>
+    <div className={Common.mdiv}>
       Profile
       <div>
         <KeyboardBackspaceIcon onClick={() => props.state("")} />
