@@ -6,7 +6,7 @@ export default function Myorders(props) {
     <div>
       <h1>My Orders</h1>
       <p>{props.id}</p>
-      <CloseIcon />
+      <CloseIcon onClick={() => props.state("")} />
     </div>
   );
 }
