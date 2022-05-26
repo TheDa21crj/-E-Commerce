@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Nav from "./../Components/Nav";
+import React, { useEffect } from "react";
+import Nav from "../Components/Nav";
 
 export default function ShopCart() {
   useEffect(() => {
