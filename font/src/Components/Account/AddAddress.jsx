@@ -36,19 +36,50 @@ export default function AddAddress(props) {
         Add Address
         <br />
         <CloseIcon onClick={() => props.state(false)} fontSize="large" />
-        <div>
-          <input type="text" name="name" id="" placeholder="Name" />
-          <input type="number" name="pinCode" id="" placeholder="Pin Code" />
-          <input type="text" name="address" id="" placeholder="Address" />
-          <input type="text" name="town" id="" placeholder="Town" />
-          <input type="text" name="state" id="" placeholder="State" />
-          <input type="text" name="country" id="" placeholder="Country" />
+        <div className={AddCss.inpDiv}>
+          <input
+            type="text"
+            name="name"
+            className={AddCss.impTag}
+            placeholder="Name"
+          />
+          <input
+            type="number"
+            name="pinCode"
+            className={AddCss.impTag}
+            placeholder="Pin Code"
+          />
+          <input
+            type="text"
+            name="address"
+            className={AddCss.impTag}
+            placeholder="Address"
+          />
+          <input
+            type="text"
+            name="town"
+            className={AddCss.impTag}
+            placeholder="Town"
+          />
+          <input
+            type="text"
+            name="state"
+            className={AddCss.impTag}
+            placeholder="State"
+          />
+          <input
+            type="text"
+            name="country"
+            className={AddCss.impTag}
+            placeholder="Country"
+          />
           <input
             type="text"
             name="phoneNumber"
-            id=""
+            className={AddCss.impTag}
             placeholder="Phone Number"
           />
+          <button className={AddCss.LoginBtn}>ADD</button>
         </div>
       </div>
     </div>
