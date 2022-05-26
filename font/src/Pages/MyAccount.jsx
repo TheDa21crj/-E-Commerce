@@ -7,7 +7,7 @@ import MyAddress from "../Components/Account/MyAddress";
 import Myorders from "../Components/Account/Myorders";
 import Footer from "../Components/Footer";
 import MACss from "./Css/MyAccount.module.css";
-
+import "./Css/Product.css";
 // redux
 import { toggleN } from "../redux/toggleNav";
 import { useDispatch } from "react-redux";
@@ -18,7 +18,7 @@ export default function MyAccount() {
     document.title = "My Account";
   }, []);
 
-  const [showProfileState, setProfileState] = useState("My Orders");
+  const [showProfileState, setProfileState] = useState("");
 
   const ShowProfileState = async (e) => {
     setProfileState(e.target.innerHTML);
@@ -56,7 +56,10 @@ export default function MyAccount() {
             </Link>
           </div>
         </div>
-        <div className={MACss.rightDiv}>
+        <div
+          className={MACss.rightDiv}
+          id={showProfileState == "" ? "" : "showshowProfileState"}
+        >
           {showProfileState === "Profile" && (
             <Profile
               email={email}
