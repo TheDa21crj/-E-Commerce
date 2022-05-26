@@ -17,7 +17,7 @@ export default function MyAddress(props) {
       body: JSON.stringify({
         name: "rishav",
         address: "st-70,qt-2a",
-        pinCode: "713331",
+        pinCode: "815354",
         town: "crj",
         state: "wb",
         country: "india",
