@@ -3,9 +3,11 @@ import ProfileCss from "./CSS/Profile.module.css";
 import AddCss from "./CSS/Address.module.css";
 import AddIcon from "@mui/icons-material/Add";
 import imgplus from "./../../Img/plus.png";
+import AddAddress from "./AddAddress";
 
 export default function MyAddress(props) {
   const [show, set] = useState();
+  const [showAdd, setAdd] = useState(false);
 
   useEffect(() => {
     address();
@@ -70,7 +72,10 @@ export default function MyAddress(props) {
         <div className={AddCss.mapPArent}>
           {show ? (
             <div className={AddCss.mapPArentDiv}>
-              <div className={AddCss.AddAddressmDiv}>
+              <div
+                className={AddCss.AddAddressmDiv}
+                onClick={() => setAdd(true)}
+              >
                 <img src={imgplus} alt="" />
                 <p>ADD ADDRESS</p>
               </div>
@@ -111,6 +116,7 @@ export default function MyAddress(props) {
           )}
         </div>
       </div>
+      {showAdd ? <AddAddress state={setAdd} /> : ""}
     </div>
   );
 }
