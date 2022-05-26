@@ -102,7 +102,7 @@ export default function Profile(props) {
           </form>
         </div>
       </div>
-      <CloseIcon />;
+      <CloseIcon onClick={() => props.state()} />
     </div>
   );
 }
