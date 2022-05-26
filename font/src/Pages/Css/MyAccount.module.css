@@ -112,9 +112,10 @@
         margin: 0px;
         width: 90%;
     }
-    /* .rightDiv {
-        opacity: 0;
-        visibility: hidden;
+    .rightDiv {
+        display: none;
+        /* opacity: 0; */
+        /* visibility: hidden;
         width: 100%;
         position: absolute;
         top: -30px;
@@ -124,6 +125,6 @@
         background-image: url(./../../Img/background.png);
         background-attachment: fixed;
         background-size: cover;
-        transition: all 0.3s;
-    } */
+        transition: all 0.3s; */
+    }
 }
