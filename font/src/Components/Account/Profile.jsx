@@ -1,6 +1,5 @@
 import React from "react";
 import ProfileCss from "./CSS/Profile.module.css";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 export default function Profile(props) {
   return (
