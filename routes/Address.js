@@ -29,9 +29,46 @@ router.post(
         const { name, address, pinCode, town, state, country, phoneNumber } =
         req.body;
 
-        console.log(name, address, pinCode, town, state, country, phoneNumber);
+        try {
+            let userCheck = await Address.findOne({ user: userID });
+            if (userCheck) {
+                let addressed = {};
+                addressed.name = name;
+                addressed.address = address;
+                addressed.pinCode = pinCode;
+                addressed.town = town;
+                addressed.state = state;
+                addressed.country = country;
+                addressed.phoneNumber = phoneNumber;
 
-        return res.status(200).json({ message: "Hello World!" });
+                let add = await Address.findOneAndUpdate({ user: userID }, {
+                    $push: {
+                        address: addressed,
+                    },
+                });
+
+                console.log(name, address, pinCode, town, state, country, phoneNumber);
+
+                return res.status(200).json("Address Added");
+            } else {
+                let addressLocal = {};
+                addressLocal.user = userID;
+                addressLocal.address = {};
+                addressLocal.address.name = name;
+                addressLocal.address.address = address;
+                addressLocal.address.pinCode = pinCode;
+                addressLocal.address.town = town;
+                addressLocal.address.state = state;
+                addressLocal.address.country = country;
+                addressLocal.address.phoneNumber = phoneNumber;
+                let newaddress = new Address(addressLocal);
+                await newaddress.save();
+                return res.status(200).json("Address Added");
+            }
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error });
+        }
     }
 );
 
