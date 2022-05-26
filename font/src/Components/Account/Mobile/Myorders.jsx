@@ -8,7 +8,7 @@ export default function Myorders(props) {
       <div>
         <KeyboardBackspaceIcon onClick={() => props.state("")} />
       </div>
-      Myorders
+      <p>My Orders</p>
     </div>
   );
 }
