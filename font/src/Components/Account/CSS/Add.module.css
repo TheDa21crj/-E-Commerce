@@ -1,0 +1,17 @@
+.mDiv {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ConDiv {
+    width: 80%;
+    background-color: red;
+}
