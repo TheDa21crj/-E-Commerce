@@ -61,9 +61,18 @@
     font-weight: bold;
 }
 
+.editHoverEdit,
+.editHoverDelete {
+    color: grey;
+    cursor: pointer;
+}
+
+.editHoverEdit:hover {
+    color: #f56692;
+}
+
 .editHoverDelete:hover {
     color: red;
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 1040px) {
