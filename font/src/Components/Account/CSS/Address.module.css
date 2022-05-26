@@ -1,5 +1,18 @@
+#mDiv {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
 .AddressmDiv {
     margin-top: 20px;
+}
+
+.AddressRowDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .AddAddressmDiv {
@@ -19,4 +32,18 @@
 .AddAddressmDiv p {
     font-family: ManropeRegular;
     margin-top: 20px;
+}
+
+.AmDiv {
+    font-family: ManropeRegular;
+    text-transform: capitalize;
+    width: 250px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #f56692;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
