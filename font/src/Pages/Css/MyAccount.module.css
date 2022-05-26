@@ -92,6 +92,10 @@
     margin-right: 50px;
 }
 
+.MobomDiv {
+    display: none;
+}
+
 @media only screen and (max-width: 950px) {
     .leftDiv {
         width: 30%;
@@ -126,5 +130,20 @@
         background-attachment: fixed;
         background-size: cover;
         transition: all 0.3s; */
+    }
+    .MobomDiv {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        position: absolute;
+        top: -30px;
+        left: 0px;
+        transform: translateX(-100%);
+        background-color: #fff;
+        background-image: url(./../../Img/background.png);
+        background-attachment: fixed;
+        background-size: cover;
+        transition: all 0.3s;
     }
 }
