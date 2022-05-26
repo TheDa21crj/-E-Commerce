@@ -33,9 +33,13 @@ export default function AddAddress(props) {
   return (
     <div className={AddCss.mDiv}>
       <div className={AddCss.ConDiv}>
-        Add Address
+        <p className={AddCss.AddAddress}>Add Address</p>
         <br />
-        <CloseIcon onClick={() => props.state(false)} fontSize="large" />
+        <CloseIcon
+          onClick={() => props.state(false)}
+          fontSize="large"
+          className={AddCss.CloseIcon}
+        />
         <div className={AddCss.inpDiv}>
           <input
             type="text"
