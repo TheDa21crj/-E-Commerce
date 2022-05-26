@@ -8,7 +8,7 @@ export default function Profile(props) {
       <div>
         <KeyboardBackspaceIcon onClick={() => props.state("")} />
       </div>
-      Profile
+      <p>Profile</p>
     </div>
   );
 }
