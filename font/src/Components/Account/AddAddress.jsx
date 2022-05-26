@@ -31,10 +31,12 @@ export default function AddAddress(props) {
   };
 
   return (
-    <div>
-      AddAddress
-      <br />
-      <CloseIcon onClick={() => props.state(false)} />
+    <div className={AddCss.mDiv}>
+      <div className={AddCss.ConDiv}>
+        AddAddress
+        <br />
+        <CloseIcon onClick={() => props.state(false)} />
+      </div>
     </div>
   );
 }
