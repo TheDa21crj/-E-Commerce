@@ -1,11 +1,11 @@
 import React from "react";
+import DeleteCss from "./CSS/Delete.module.css";
 
 export default function DeleteAddress(props) {
   return (
-    <div>
-      DeleteAddress
-      <br />
-      {props.DeleteID}
+    <div className={DeleteCss.mdiv}>
+      Delete Address
+      {/* {props.DeleteID} */}
     </div>
   );
 }
