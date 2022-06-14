@@ -44,8 +44,12 @@ export default function MyAddress(props) {
   };
 
   useEffect(() => {
-    console.log(showDeleteID);
-  }, [showDeleteID]);
+    if (showDelete) {
+      setInterval(function () {
+        setDelete(false);
+      }, 5000);
+    }
+  }, [showDelete]);
 
   return (
     <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
