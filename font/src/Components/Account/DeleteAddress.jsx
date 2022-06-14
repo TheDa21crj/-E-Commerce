@@ -14,7 +14,9 @@ export default function DeleteAddress(props) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({}),
+        body: JSON.stringify({
+          _id: props.DeleteID,
+        }),
       });
       const data = await res.json();
       if (data.errors) {
