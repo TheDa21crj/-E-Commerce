@@ -95,4 +95,16 @@ router.get("/", [UserAuth], async(req, res) => {
     }
 });
 
+// Private || Delete Address || api/Address/delete
+router.delete("/delete", [UserAuth], async(req, res) => {
+    let userID = req.userId;
+
+    try {
+        res.status(500).json({ message: userID });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: error });
+    }
+});
+
 module.exports = router;
