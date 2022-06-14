@@ -31,7 +31,7 @@ export default function MyAddress(props) {
         return;
       }
       if (data) {
-        if (data.message == "zero") {
+        if (data.message === "zero") {
           return;
         } else {
           set(data.message);
