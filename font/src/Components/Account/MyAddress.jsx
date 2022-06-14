@@ -112,11 +112,7 @@ export default function MyAddress(props) {
         </div>
       </div>
       {showAdd ? <AddAddress state={setAdd} /> : ""}
-      {showDelete ? (
-        <DeleteAddress DeleteID={showDeleteID} state={setDelete} />
-      ) : (
-        ""
-      )}
+      {showDelete ? <DeleteAddress DeleteID={showDeleteID} /> : ""}
     </div>
   );
 }
