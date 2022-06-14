@@ -3,10 +3,11 @@ import DeleteCss from "./CSS/Delete.module.css";
 
 export default function DeleteAddress(props) {
   useEffect(() => {
-    // setInterval(function () {
     console.log(props.DeleteID);
-    // }, 5000);
+    deleteAddressFun();
   }, [props.DeleteID]);
+
+  const deleteAddressFun = async () => {};
 
   return (
     <div className={DeleteCss.mdiv}>
