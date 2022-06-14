@@ -79,28 +79,44 @@ router.post(
 );
 
 // Private || View Address || api/Address
-router.get("/", [UserAuth], async(req, res) => {
-    let userID = req.userId;
-
-    try {
-        let userCheck = await Address.findOne({ user: userID });
-        if (userCheck) {
-            return res.status(200).json({ message: userCheck.address });
-        } else {
-            return res.status(304).json({ message: "zero" });
+router.get(
+    "/", [UserAuth, check("_id", "_id is required")],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
         }
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: error });
+
+        let userID = req.userId;
+
+        try {
+            let userCheck = await Address.findOne({ user: userID });
+            if (userCheck) {
+                return res.status(200).json({ message: userCheck.address });
+            } else {
+                return res.status(304).json({ message: "zero" });
+            }
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error });
+        }
     }
-});
+);
 
 // Private || Delete Address || api/Address/delete
 router.delete("/delete", [UserAuth], async(req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+    const { _id } = req.body;
+
     let userID = req.userId;
 
     try {
-        res.status(500).json({ message: userID });
+        let userCheck = await Address.updateOne({ user: userID }, { $pull: { address: { _id: _id } } });
+
+        res.status(500).json(userCheck);
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: error });
