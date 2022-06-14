@@ -4,10 +4,13 @@ import AddCss from "./CSS/Address.module.css";
 import AddIcon from "@mui/icons-material/Add";
 import imgplus from "./../../Img/plus.png";
 import AddAddress from "./AddAddress";
+import DeleteAddress from "./DeleteAddress";
 
 export default function MyAddress(props) {
   const [show, set] = useState();
   const [showAdd, setAdd] = useState(false);
+  const [showDelete, setDelete] = useState(false);
+  const [showDeleteID, setDeleteID] = useState("");
 
   useEffect(() => {
     seeAddress();
@@ -39,6 +42,10 @@ export default function MyAddress(props) {
       return;
     }
   };
+
+  useEffect(() => {
+    console.log(showDeleteID);
+  }, [showDeleteID]);
 
   return (
     <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
@@ -81,7 +88,15 @@ export default function MyAddress(props) {
                     </p>
                     <div className={AddCss.editHoverDiv}>
                       <p className={AddCss.editHoverEdit}>Edit</p>
-                      <p className={AddCss.editHoverDelete}>Delete</p>
+                      <p
+                        className={AddCss.editHoverDelete}
+                        onClick={() => {
+                          setDelete(true);
+                          setDeleteID(value._id);
+                        }}
+                      >
+                        Delete
+                      </p>
                     </div>
                   </div>
                 );
@@ -93,6 +108,11 @@ export default function MyAddress(props) {
         </div>
       </div>
       {showAdd ? <AddAddress state={setAdd} /> : ""}
+      {showDelete ? (
+        <DeleteAddress DeleteID={showDeleteID} state={setDelete} />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
