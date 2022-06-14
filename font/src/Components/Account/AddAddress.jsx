@@ -12,9 +12,6 @@ export default function AddAddress(props) {
     country: "",
     phoneNumber: "",
   });
-  // useEffect(() => {
-  //   address();
-  // }, []);
 
   const PostData = async () => {
     const { name, address, pinCode, town, state, country, phoneNumber } =
