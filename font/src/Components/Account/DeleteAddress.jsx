@@ -7,7 +7,26 @@ export default function DeleteAddress(props) {
     deleteAddressFun();
   }, [props.DeleteID]);
 
-  const deleteAddressFun = async () => {};
+  const deleteAddressFun = async () => {
+    try {
+      const res = await fetch("/api/Address/delete", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({}),
+      });
+      const data = await res.json();
+      if (data.errors) {
+        return;
+      }
+      if (data) {
+        console.log(data);
+      }
+    } catch (error) {
+      return;
+    }
+  };
 
   return (
     <div className={DeleteCss.mdiv}>
