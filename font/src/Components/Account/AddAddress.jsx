@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AddCss from "./CSS/Add.module.css";
 import CloseIcon from "@mui/icons-material/Close";
+import Alert from "./Alert";
 
 export default function AddAddress(props) {
   const [showUser, setUser] = useState({
@@ -12,6 +13,8 @@ export default function AddAddress(props) {
     country: "",
     phoneNumber: "",
   });
+
+  const [showMsg, setMsg] = useState("");
 
   const PostData = async () => {
     const { name, address, pinCode, town, state, country, phoneNumber } =
@@ -113,6 +116,7 @@ export default function AddAddress(props) {
           </button>
         </div>
       </div>
+      <Alert msg={showMsg} />
     </div>
   );
 }
