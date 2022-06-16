@@ -34,7 +34,11 @@ export default function AddAddress(props) {
     });
 
     const r = await res.json();
-    console.log(r);
+    if (r && r === "Address Added") {
+      console.log(r);
+    } else if (r && r.message === "same") {
+      console.log("r == same");
+    }
   };
 
   const DataInp = (e) => {
