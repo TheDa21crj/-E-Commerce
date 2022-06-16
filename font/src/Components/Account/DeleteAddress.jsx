@@ -3,7 +3,6 @@ import DeleteCss from "./CSS/Delete.module.css";
 
 export default function DeleteAddress(props) {
   useEffect(() => {
-    console.log(props.DeleteID);
     deleteAddressFun();
   }, [props.DeleteID]);
 
