@@ -30,10 +30,5 @@ export default function DeleteAddress(props) {
     }
   };
 
-  return (
-    <div className={DeleteCss.mdiv}>
-      Delete Address
-      {/* jj */}
-    </div>
-  );
+  return <div className={DeleteCss.mdiv}>Delete Address</div>;
 }
