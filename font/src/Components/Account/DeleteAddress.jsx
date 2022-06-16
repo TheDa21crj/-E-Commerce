@@ -23,7 +23,6 @@ export default function DeleteAddress(props) {
         return;
       }
       if (data) {
-        console.log(data);
       }
     } catch (error) {
       return;
