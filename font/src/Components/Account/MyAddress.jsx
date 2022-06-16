@@ -35,7 +35,6 @@ export default function MyAddress(props) {
           return;
         } else {
           set(data.message);
-          console.table(data.message);
         }
       }
     } catch (error) {
@@ -112,7 +111,7 @@ export default function MyAddress(props) {
         </div>
       </div>
       {showAdd ? <AddAddress state={setAdd} /> : ""}
-      {showDelete ? <DeleteAddress DeleteID={showDeleteID} /> : ""}
+      {showDelete ? <DeleteAddress DeleteID={showDeleteID} state={set} /> : ""}
     </div>
   );
 }
