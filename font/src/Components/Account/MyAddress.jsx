@@ -51,6 +51,10 @@ export default function MyAddress(props) {
     seeAddress();
   }, [showDelete]);
 
+  useEffect(() => {
+    seeAddress();
+  }, [showAdd]);
+
   return (
     <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
       <h1 className={ProfileCss.h1}>My Address</h1>
