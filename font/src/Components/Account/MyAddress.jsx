@@ -48,6 +48,7 @@ export default function MyAddress(props) {
         setDelete(false);
       }, 5000);
     }
+    seeAddress();
   }, [showDelete]);
 
   return (
