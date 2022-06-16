@@ -106,6 +106,7 @@ router.get(
 // Private || Delete Address || api/Address/delete
 router.delete("/delete", [UserAuth], async(req, res) => {
     const errors = validationResult(req);
+
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
