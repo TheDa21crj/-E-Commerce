@@ -95,7 +95,7 @@ export default function MyAddress(props) {
                       <b>Phone Number:</b> {value.phoneNumber}
                     </p>
                     <div className={AddCss.editHoverDiv}>
-                      <p className={AddCss.editHoverEdit}>Edit</p>
+                      <p className={AddCss.editHoverEdit}>{/* Edit */}</p>
                       <p
                         className={AddCss.editHoverDelete}
                         onClick={() => {

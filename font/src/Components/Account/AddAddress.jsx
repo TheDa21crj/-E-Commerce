@@ -40,7 +40,7 @@ export default function AddAddress(props) {
     if (r && r === "Address Added") {
       setMsg("Address Added");
     } else if (r && r.message === "same") {
-      setMsg("Same");
+      setMsg("Alredy Exists");
     }
   };
 
