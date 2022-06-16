@@ -5,7 +5,7 @@ import SCCss from "./Css/ShopCart.module.css";
 export default function ShopCart() {
   useEffect(() => {
     document.title = "The Da: Shopping Cart";
-  });
+  }, []);
   return (
     <div>
       <Nav />
