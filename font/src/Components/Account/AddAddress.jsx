@@ -39,7 +39,9 @@ export default function AddAddress(props) {
     const r = await res.json();
     if (r && r === "Address Added") {
       console.log(r);
+      setMsg("Address Added");
     } else if (r && r.message === "same") {
+      setMsg("Same");
       console.log("r == same");
     }
   };
@@ -116,7 +118,7 @@ export default function AddAddress(props) {
           </button>
         </div>
       </div>
-      <Alert msg={showMsg} />
+      {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
     </div>
   );
 }
