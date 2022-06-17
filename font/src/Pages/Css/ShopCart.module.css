@@ -120,6 +120,7 @@
     transition: all 0.3s;
     width: 0px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .MapMDiv:hover>.DeleteDiv {
