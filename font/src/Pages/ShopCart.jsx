@@ -63,9 +63,13 @@ export default function ShopCart() {
                     </div>
                     <div className={SCCss.MapRightDiv}>
                       <p className={SCCss.name}>{value.name}</p>
-                      <p>Qunatity: {value.qunatity}</p>
-                      <p>{value.size}</p>
-                      <p>{value.price}</p>
+                      <p className={SCCss.Qunatity}>
+                        Qunatity: {value.qunatity}
+                      </p>
+                      <div className={SCCss.MapRowDivBottom}>
+                        <p>{value.size}</p>
+                        <p>{value.price}</p>
+                      </div>
                     </div>
                   </div>
                 );
