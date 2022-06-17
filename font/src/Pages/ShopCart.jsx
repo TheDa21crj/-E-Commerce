@@ -59,7 +59,9 @@ export default function ShopCart() {
                 <div>
                   <img src={value.imageSrc} alt="" />
                 </div>
-                <div></div>
+                <div>
+                  <p>{value.name}</p>
+                </div>
               </div>
             );
           })}
