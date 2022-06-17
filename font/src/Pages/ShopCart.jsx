@@ -80,7 +80,7 @@ export default function ShopCart() {
                         <p>Da Assured Delivered</p>
                       </div>
                     </div>
-                    <div className={SCCss.DeleteDiv}>hello</div>
+                    <div className={SCCss.DeleteDiv}>Delete</div>
                   </div>
                 );
               })}
