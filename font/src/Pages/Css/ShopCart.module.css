@@ -99,9 +99,11 @@
     margin-top: 20px;
     display: flex;
     align-items: center;
+    font-family: ManropeRegular;
 }
 
 .DeliveryDiv img {
     width: 80px;
     height: 50px;
+    margin-right: 20px;
 }
