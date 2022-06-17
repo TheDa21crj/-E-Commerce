@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
 import Wish from "./Wish.js";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
 import { toggleN } from "./../redux/toggleNav";
 import { adduser } from "./../redux/user";
-import { addshop } from "./../redux/shopping";
 import { useDispatch } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
@@ -75,7 +74,7 @@ const Nav = (props) => {
         return;
       }
       if (data) {
-        if (data.message == "zero") {
+        if (data.message === "zero") {
           return dispatch(addWish({ length: 0 }));
         } else {
           dispatch(
