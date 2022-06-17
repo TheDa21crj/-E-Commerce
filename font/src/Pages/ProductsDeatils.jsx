@@ -31,6 +31,8 @@ export default function ProductsDeatils() {
   const [showXL, setXL] = useState(false);
   const [showXXL, setXXL] = useState(false);
 
+  const [showSize, setSize] = useState("");
+
   const [showSelect, setSelect] = useState(1);
   const [showDetails, setDetails] = useState(false);
 
@@ -216,8 +218,12 @@ export default function ProductsDeatils() {
           </div>
           <div></div>
           <div className={PDCss.SizeMDiv}>
-            <div className={PDCss.SizeRoundDivP} onClick={() => setS(!showS)}>
-              {showS ? (
+            <div
+              className={PDCss.SizeRoundDivP}
+              // onClick={() => setS(!showS)}
+              onClick={() => setSize("S")}
+            >
+              {showSize === "S" ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>S</p>
                 </div>
@@ -228,8 +234,12 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setM(!showM)}>
-              {showM ? (
+            <div
+              className={PDCss.SizeRoundDivP}
+              // onClick={() => setM(!showM)}
+              onClick={() => setSize("M")}
+            >
+              {showSize === "M" ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>M</p>
                 </div>
@@ -240,8 +250,12 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setL(!showL)}>
-              {showL ? (
+            <div
+              className={PDCss.SizeRoundDivP}
+              onClick={() => setSize("L")}
+              // onClick={() => setL(!showL)}
+            >
+              {showSize === "L" ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>L</p>
                 </div>
@@ -252,8 +266,12 @@ export default function ProductsDeatils() {
               )}
             </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setXL(!showXL)}>
-              {showXL ? (
+            <div
+              className={PDCss.SizeRoundDivP}
+              onClick={() => setSize("XL")}
+              // onClick={() => setXL(!showXL)}
+            >
+              {showSize === "XL" ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>XL</p>
                 </div>
@@ -266,9 +284,10 @@ export default function ProductsDeatils() {
 
             <div
               className={PDCss.SizeRoundDivP}
-              onClick={() => setXXL(!showXXL)}
+              onClick={() => setSize("XXL")}
+              // onClick={() => setXXL(!showXXL)}
             >
-              {showXXL ? (
+              {showSize === "XXL" ? (
                 <div className={PDCss.SizeRoundDivTrue}>
                   <p>XXL</p>
                 </div>
