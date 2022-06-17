@@ -68,7 +68,9 @@ export default function ShopCart() {
                         Qunatity: {value.qunatity}
                       </p>
                       <div className={SCCss.MapRowDivBottom}>
-                        <p>{value.size}</p>
+                        <p>
+                          Size: <b>{value.size}</b>
+                        </p>
                         <p className={SCCss.price}>
                           <b>₹ {value.price}</b>
                         </p>
