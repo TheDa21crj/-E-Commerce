@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../Components/Nav";
 import SCCss from "./Css/ShopCart.module.css";
+import img from "./../Img/delivery_truck.svg";
 
 export default function ShopCart() {
   const [showTPrice, setTPrice] = useState();
@@ -71,6 +72,10 @@ export default function ShopCart() {
                         <p className={SCCss.price}>
                           <b>₹ {value.price}</b>
                         </p>
+                      </div>
+                      <div className={SCCss.DeliveryDiv}>
+                        <img src={img} alt="" />
+                        <p>Da Assured Delivered</p>
                       </div>
                     </div>
                   </div>
