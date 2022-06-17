@@ -66,7 +66,9 @@ export default function ShopCart() {
 
         await res.json();
 
-        dispatch(addWish({ length: -1 }));
+        console.log("delete");
+
+        seeList();
       } catch (error) {
         console.log(error);
       }
@@ -105,7 +107,12 @@ export default function ShopCart() {
                         <p>Da Assured Delivered</p>
                       </div>
                     </div>
-                    <div className={SCCss.DeleteDiv} onClick={}>Delete</div>
+                    <div
+                      className={SCCss.DeleteDiv}
+                      onClick={() => deleteWish(value.id)}
+                    >
+                      Delete
+                    </div>
                   </div>
                 );
               })}
