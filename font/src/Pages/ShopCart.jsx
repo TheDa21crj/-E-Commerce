@@ -53,18 +53,27 @@ export default function ShopCart() {
       <p className={SCCss.MainPTag}>Shop Cart</p>
       <div className={SCCss.RoWDiv}>
         <div className={SCCss.LeftDiv}>
-          {show.map((value, key) => {
-            return (
-              <div key={value.id}>
-                <div>
-                  <img src={value.imageSrc} alt="" />
-                </div>
-                <div>
-                  <p>{value.name}</p>
-                </div>
-              </div>
-            );
-          })}
+          {show ? (
+            <div>
+              {show.map((value, key) => {
+                return (
+                  <div key={value.id} className={SCCss.MapMDiv}>
+                    <div className={SCCss.MapLeftDiv}>
+                      <img src={value.imageSrc} alt="" />
+                    </div>
+                    <div>
+                      <p>{value.name}</p>
+                      <p>{value.qunatity}</p>
+                      <p>{value.size}</p>
+                      <p>{value.price}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className={SCCss.RightDiv}>
           <p>
