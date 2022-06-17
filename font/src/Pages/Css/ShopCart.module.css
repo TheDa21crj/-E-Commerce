@@ -34,10 +34,20 @@
     align-items: center;
 }
 
+#checkShowDiv {
+    width: 100%;
+}
+
 .MapMDiv {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.MapLeftDiv {
+    margin-right: 30px;
 }
 
 .MapLeftDiv,
