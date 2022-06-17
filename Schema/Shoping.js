@@ -23,6 +23,10 @@ const ShoppingSchema = new mongoose.Schema({
             required: true,
             default: 0,
         },
+        size: {
+            type: "string",
+            required: true,
+        },
         qunatity: {
             type: "Number",
             required: true,
