@@ -9,7 +9,9 @@
     margin: 30px 0px 30px 3%;
 }
 
-.SubtotalPTag {}
+.SubtotalPTag {
+    margin: 30px 0px 30px 0%;
+}
 
 .RoWDiv {
     display: flex;
