@@ -12,13 +12,25 @@ const Product = require("./../Schema/Products");
 router.post(
     "/add", [
         UserAuth,
-        // check("id", "id is Required").not().isEmpty(),
-        // check("name", "name is Required").not().isEmpty(),
-        // check("imgSrc", "imgSrc is Required").not().isEmpty(),
-        // check("price", "price is Required").not().isEmpty(),
+        check("id", "id is Required").not().isEmpty(),
+        check("name", "name is Required").not().isEmpty(),
+        check("imgSrc", "imgSrc is Required").not().isEmpty(),
+        check("price", "price is Required").not().isEmpty(),
     ],
     async(req, res) => {
-        return res.status(202).json({ message: "Hello Server" });
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { id, name, imgSrc, price } = req.body;
+
+        console.log(id);
+        console.log(name);
+        console.log(imgSrc);
+        console.log(price);
+
+        return res.status(202).json({ message: id });
     }
 );
 
