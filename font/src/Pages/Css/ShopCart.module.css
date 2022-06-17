@@ -45,6 +45,9 @@
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     transition: all 0.3s;
+}
+
+.MapMDiv:hover {
     box-shadow: 5px 5px 30px lightgrey;
 }
 
@@ -68,9 +71,10 @@
 
 .name {
     text-align: center;
-    font-weight: bold;
+    font-size: 18px;
     margin: 10px 0px;
     font-family: ManropeExtraBold;
+    font-weight: bold;
     border-style: solid;
     padding-bottom: 4px;
     border-width: 0px 0px 1px 0px;
