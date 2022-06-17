@@ -7,7 +7,7 @@ const shopSlice = createSlice({
         data: [],
     },
     reducers: {
-        addWish: (state, action) => {
+        addshop: (state, action) => {
             state.length = action.payload.length;
             state.data = action.payload.data;
         },
