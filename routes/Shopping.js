@@ -17,6 +17,7 @@ router.post(
         check("imgSrc", "imgSrc is Required").not().isEmpty(),
         check("price", "price is Required").not().isEmpty(),
         check("qunatity", "qunatity is Required").not().isEmpty(),
+        check("size", "size is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
@@ -36,6 +37,7 @@ router.post(
             List.imageSrc = imgSrc;
             List.price = price;
             List.qunatity = qunatity;
+            List.size = size;
 
             for (let i = 0; i < userCheck.List.length; i++) {
                 if (userCheck.List[i].id === id) {
@@ -59,6 +61,7 @@ router.post(
             Shop.List.imageSrc = imgSrc;
             Shop.List.price = price;
             Shop.List.qunatity = qunatity;
+            Shop.List.size = size;
 
             let newShop = new Shoping(Shop);
             await newShop.save();
