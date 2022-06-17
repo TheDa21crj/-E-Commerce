@@ -34,7 +34,7 @@ router.post(
                 products.imgSrc = imgSrc;
                 products.price = price;
                 for (let i = 0; i < userCheck.Product.length; i++) {
-                    if (userCheck.Product[i].id == id) {
+                    if (userCheck.Product[i].id === id) {
                         return res.status(400).json({ message: "same" });
                     }
                 }
