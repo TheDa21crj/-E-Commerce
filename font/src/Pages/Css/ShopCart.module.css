@@ -111,11 +111,17 @@
 
 .DeleteDiv {
     font-family: ManropeExtraBold;
-    width: 200px;
-    background-color: red;
+    background-color: #ff0000;
     border-radius: 0px 10px 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    transition: all 0.3s;
+    width: 0px;
+    overflow: hidden;
+}
+
+.MapMDiv:hover>.DeleteDiv {
+    width: 200px;
 }
