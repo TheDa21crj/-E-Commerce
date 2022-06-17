@@ -60,6 +60,10 @@
     border-radius: 10px;
 }
 
+.MapRightDiv {
+    width: 100%;
+}
+
 .name {
     font-weight: bold;
     font-family: ManropeExtraBold;
@@ -74,4 +78,8 @@
     font-family: ManropeRegular;
 }
 
-.MapRowDivBottom {}
+.MapRowDivBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
