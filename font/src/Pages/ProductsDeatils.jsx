@@ -185,6 +185,7 @@ export default function ProductsDeatils() {
         name: showname,
         imgSrc: showimageSrc,
         price: showprice,
+        qunatity: showSelect,
       }),
     });
     const data = await res.json();
