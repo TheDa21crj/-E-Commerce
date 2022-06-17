@@ -8,6 +8,7 @@ import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useNavigate } from "react-router-dom";
 import "./../Components/Product/CSS/ProductC.css";
+import Alert from "./../Components/Account/Alert";
 // redux
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
@@ -26,6 +27,7 @@ export default function ProductsDeatils() {
   const [check, setcheck] = useState();
 
   const [showSize, setSize] = useState("");
+  const [showMsg, setMsg] = useState("");
 
   const [showSelect, setSelect] = useState(1);
   const [showDetails, setDetails] = useState(false);
@@ -170,23 +172,29 @@ export default function ProductsDeatils() {
   }, [showChat]);
 
   const addToCart = async () => {
-    const res = await fetch("/api/Shoping/add", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: id,
-        name: showname,
-        imgSrc: showimageSrc,
-        price: showprice,
-        qunatity: showSelect,
-      }),
-    });
-    const data = await res.json();
-
-    console.log(data);
+    if (showSize !== "") {
+      const res = await fetch("/api/Shoping/add", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: id,
+          name: showname,
+          imgSrc: showimageSrc,
+          price: showprice,
+          qunatity: showSelect,
+          size: showSize,
+        }),
+      });
+      const data = await res.json();
+      console.log(data);
+    } else {
+      setInterval(() => {
+        setMsg("Select a Size");
+      }, 500);
+    }
   };
 
   return (
@@ -373,6 +381,8 @@ export default function ProductsDeatils() {
           </div>
         </div>
       </div>
+
+      {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
 
       <Footer />
     </div>
