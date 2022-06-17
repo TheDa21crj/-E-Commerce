@@ -111,4 +111,8 @@
 .DeleteDiv {
     width: 200px;
     background-color: red;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
