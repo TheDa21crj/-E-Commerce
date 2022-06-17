@@ -24,6 +24,9 @@ router.post(
         }
 
         const { id, name, imgSrc, price } = req.body;
+        let userID = req.userId;
+
+        let userCheck = await WishList.findOne({ user: userID });
 
         console.log(id);
         console.log(name);
