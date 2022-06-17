@@ -107,3 +107,8 @@
     height: 50px;
     margin-right: 20px;
 }
+
+.DeleteDiv {
+    width: 200px;
+    background-color: red;
+}
