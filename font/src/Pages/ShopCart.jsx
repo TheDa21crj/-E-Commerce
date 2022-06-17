@@ -5,7 +5,37 @@ import SCCss from "./Css/ShopCart.module.css";
 export default function ShopCart() {
   useEffect(() => {
     document.title = "The Da: Shopping Cart";
+    seeList();
   }, []);
+
+  const seeList = async () => {
+    try {
+      const res = await fetch("/api/Wishlist", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+      const data = await res.json();
+      if (data.errors) {
+        return;
+      }
+      if (data) {
+        if (data.message == "zero") {
+          return dispatch(addWish({ length: 0 }));
+        } else {
+          dispatch(
+            addWish({ length: data.message.length, data: data.message })
+          );
+          return;
+        }
+      }
+    } catch (error) {
+      return;
+    }
+  };
 
   return (
     <div>
