@@ -33,7 +33,7 @@ export default function ShopCart() {
         } else {
           let TotalPrice = 0;
           data.message.forEach((e) => {
-            TotalPrice += e.price;
+            TotalPrice += e.price * e.qunatity;
           });
           setTPrice(TotalPrice);
           setTProducts(data.message.length);
@@ -65,7 +65,7 @@ export default function ShopCart() {
                     <div className={SCCss.MapRightDiv}>
                       <p className={SCCss.name}>{value.name}</p>
                       <p className={SCCss.Qunatity}>
-                        Qunatity: {value.qunatity}
+                        Qunatity: <b>{value.qunatity}</b>
                       </p>
                       <div className={SCCss.MapRowDivBottom}>
                         <p>
@@ -90,12 +90,7 @@ export default function ShopCart() {
           )}
         </div>
         <div className={SCCss.RightDiv}>
-          <p>
-            Your order qualifies for FREE Delivery. Select this option at
-            checkout.
-            <br />
-            Details
-          </p>
+          <p>Your order qualifies for FREE Delivery.</p>
           <p className={SCCss.SubtotalPTag}>
             Subtotal ({showTProducts} item): {showTPrice}
           </p>
