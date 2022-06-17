@@ -48,6 +48,31 @@ export default function ShopCart() {
     }
   };
 
+  const deleteWish = async (deleteID) => {
+    let id = deleteID;
+    if (id === "") {
+      return;
+    } else {
+      try {
+        const res = await fetch("/api/Shoping/delete/product", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id,
+          }),
+        });
+
+        await res.json();
+
+        dispatch(addWish({ length: -1 }));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
   return (
     <div>
       <Nav />
@@ -80,7 +105,7 @@ export default function ShopCart() {
                         <p>Da Assured Delivered</p>
                       </div>
                     </div>
-                    <div className={SCCss.DeleteDiv}>Delete</div>
+                    <div className={SCCss.DeleteDiv} onClick={}>Delete</div>
                   </div>
                 );
               })}
