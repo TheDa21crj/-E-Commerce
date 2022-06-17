@@ -25,7 +25,7 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
 
-        const { id, name, imgSrc, price, qunatity } = req.body;
+        const { id, name, imgSrc, price, qunatity, size } = req.body;
         let userID = req.userId;
 
         let userCheck = await Shoping.findOne({ user: userID });
