@@ -16,6 +16,7 @@ router.post(
         check("name", "name is Required").not().isEmpty(),
         check("imgSrc", "imgSrc is Required").not().isEmpty(),
         check("price", "price is Required").not().isEmpty(),
+        check("qunatity", "qunatity is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
@@ -23,7 +24,7 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
 
-        const { id, name, imgSrc, price } = req.body;
+        const { id, name, imgSrc, price, qunatity } = req.body;
         let userID = req.userId;
 
         let userCheck = await Shoping.findOne({ user: userID });
@@ -34,6 +35,7 @@ router.post(
             List.name = name;
             List.imageSrc = imgSrc;
             List.price = price;
+            List.qunatity = qunatity;
 
             for (let i = 0; i < userCheck.List.length; i++) {
                 if (userCheck.List[i].id === id) {
@@ -56,6 +58,7 @@ router.post(
             Shop.List.name = name;
             Shop.List.imageSrc = imgSrc;
             Shop.List.price = price;
+            Shop.List.qunatity = qunatity;
 
             let newShop = new Shoping(Shop);
             await newShop.save();
