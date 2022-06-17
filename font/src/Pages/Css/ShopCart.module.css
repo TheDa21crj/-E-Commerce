@@ -134,3 +134,7 @@
 .MapMDiv:hover>.DeleteDiv {
     width: 200px;
 }
+
+.FalseDiv {
+    text-align: center;
+}
