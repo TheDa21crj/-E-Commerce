@@ -43,11 +43,12 @@
     margin-bottom: 20px;
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.4);
     transition: all 0.3s;
 }
 
 .MapMDiv:hover {
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 5px 5px 30px lightgrey;
 }
 
