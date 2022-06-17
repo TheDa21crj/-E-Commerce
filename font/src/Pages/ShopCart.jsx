@@ -3,6 +3,10 @@ import Nav from "../Components/Nav";
 import SCCss from "./Css/ShopCart.module.css";
 
 export default function ShopCart() {
+  const [showTPrice, setTPrice] = useState();
+  const [showTProducts, setTProducts] = useState();
+  const [show, set] = useState();
+
   useEffect(() => {
     document.title = "The Da: Shopping Cart";
     seeList();
@@ -26,6 +30,13 @@ export default function ShopCart() {
         if (data.message == "zero") {
           console.log("Zero = Data");
         } else {
+          let TotalPrice = 0;
+          data.message.forEach((e) => {
+            TotalPrice += e.price;
+          });
+          setTPrice(TotalPrice);
+          setTProducts(data.message.length);
+          set(data.message);
           console.table(data.message);
           return;
         }
@@ -42,7 +53,16 @@ export default function ShopCart() {
       <p className={SCCss.MainPTag}>Shop Cart</p>
       <div className={SCCss.RoWDiv}>
         <div className={SCCss.LeftDiv}>
-          <p>hello e</p>
+          {show.map((value, key) => {
+            return (
+              <div key={value.id}>
+                <div>
+                  <img src={value.imageSrc} alt="" />
+                </div>
+                <div></div>
+              </div>
+            );
+          })}
         </div>
         <div className={SCCss.RightDiv}>
           <p>
@@ -51,7 +71,9 @@ export default function ShopCart() {
             <br />
             Details
           </p>
-          <p className={SCCss.SubtotalPTag}>Subtotal (1 item): 269.00</p>
+          <p className={SCCss.SubtotalPTag}>
+            Subtotal ({showTProducts} item): {showTPrice}
+          </p>
         </div>
       </div>
     </div>
