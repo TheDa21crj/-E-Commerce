@@ -62,8 +62,8 @@ export default function ShopCart() {
                       <img src={value.imageSrc} alt="" />
                     </div>
                     <div className={SCCss.MapRightDiv}>
-                      <p>{value.name}</p>
-                      <p>{value.qunatity}</p>
+                      <p className={SCCss.name}>{value.name}</p>
+                      <p>Qunatity: {value.qunatity}</p>
                       <p>{value.size}</p>
                       <p>{value.price}</p>
                     </div>
