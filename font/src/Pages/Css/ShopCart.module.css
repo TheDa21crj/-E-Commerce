@@ -94,3 +94,14 @@
     justify-content: space-evenly;
     font-family: ManropeRegular;
 }
+
+.DeliveryDiv {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.DeliveryDiv img {
+    width: 80px;
+    height: 50px;
+}
