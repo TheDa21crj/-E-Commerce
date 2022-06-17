@@ -132,7 +132,7 @@ export default function ShopCart() {
           </div>
         </div>
       ) : (
-        <div>
+        <div className={SCCss.FalseDiv}>
           <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
       )}
