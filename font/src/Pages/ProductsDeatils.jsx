@@ -189,6 +189,17 @@ export default function ProductsDeatils() {
         }),
       });
       const data = await res.json();
+      if (data.message === "same") {
+        setMsg("Already Exists");
+        setInterval(function () {
+          setMsg("");
+        }, 2000);
+        return;
+      }
+      setMsg("Added to Shopping Cart");
+      setInterval(function () {
+        setMsg("");
+      }, 2000);
       console.log(data);
     } else {
       setMsg("Select a Size");
