@@ -67,8 +67,6 @@ router.post(
             await newShop.save();
             return res.status(200).json("Added to Shopping Cart");
         }
-
-        return res.status(202).json({ message: id });
     }
 );
 
