@@ -25,12 +25,6 @@ export default function ProductsDeatils() {
   const [showChat, setChart] = useState(false);
   const [check, setcheck] = useState();
 
-  const [showS, setS] = useState(false);
-  const [showM, setM] = useState(false);
-  const [showL, setL] = useState(false);
-  const [showXL, setXL] = useState(false);
-  const [showXXL, setXXL] = useState(false);
-
   const [showSize, setSize] = useState("");
 
   const [showSelect, setSelect] = useState(1);
