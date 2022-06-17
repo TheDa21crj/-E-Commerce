@@ -13,6 +13,12 @@ export default function ShopCart() {
       <div className={SCCss.RoWDiv}>
         <div className={SCCss.LeftDiv}>hello</div>
         <div className={SCCss.RightDiv}>
+          <p>
+            Your order qualifies for FREE Delivery. Select this option at
+            checkout.
+            <br />
+            Details
+          </p>
           <p className={SCCss.SubtotalPTag}>Subtotal (1 item): 269.00</p>
         </div>
       </div>
