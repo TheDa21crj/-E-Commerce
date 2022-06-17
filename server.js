@@ -28,7 +28,7 @@ app.use("/api", require("./routes/User"));
 // app.use("/api/TrackOrder", require("./routes/TrackOrder"));
 // app.use("/api/Order", require("./routes/Order"));
 app.use("/api/Wishlist", require("./routes/WishList"));
-// app.use("/api/Cart", require("./routes/Cart"));
+app.use("/api/Shoping", require("./routes/Shopping"));
 app.use("/api/RegAdmin", require("./routes/RegAdmin"));
 app.use("/api/admin/login", require("./routes/Admin"));
 app.use("/api/admin/Products", require("./routes/Products"));
