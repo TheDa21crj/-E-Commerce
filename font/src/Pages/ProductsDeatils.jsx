@@ -191,9 +191,10 @@ export default function ProductsDeatils() {
       const data = await res.json();
       console.log(data);
     } else {
-      setInterval(() => {
-        setMsg("Select a Size");
-      }, 500);
+      setMsg("Select a Size");
+      setInterval(function () {
+        setMsg("");
+      }, 2000);
     }
   };
 
