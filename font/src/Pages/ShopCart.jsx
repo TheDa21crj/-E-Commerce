@@ -13,7 +13,7 @@ export default function ShopCart() {
       <p className={SCCss.MainPTag}>Shop Cart</p>
       <div className={SCCss.RoWDiv}>
         <div className={SCCss.LeftDiv}>
-          <p>hello</p>
+          <p>hello e</p>
         </div>
         <div className={SCCss.RightDiv}>
           <p>
