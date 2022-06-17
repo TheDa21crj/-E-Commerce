@@ -10,7 +10,7 @@ export default function ShopCart() {
 
   const seeList = async () => {
     try {
-      const res = await fetch("/api/Wishlist", {
+      const res = await fetch("/api/Shoping", {
         method: "GET",
         headers: {
           Accept: "application/json",
