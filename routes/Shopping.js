@@ -71,5 +71,6 @@ router.post(
 );
 
 // Private || See Shoping || api/Shoping
+router.get("/api/Shoping", UserAuth, async(req, res) => {});
 
 module.exports = router;
