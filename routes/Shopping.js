@@ -97,7 +97,7 @@ router.delete(
         const { id } = req.body;
         let userID = req.userId;
 
-        let userCheck = await Shoping.updateOne({ user: userID }, { $pull: { Product: { id: id } } });
+        let userCheck = await Shoping.updateOne({ user: userID }, { $pull: { List: { id: id } } });
 
         res.status(202).json(userCheck);
     }
