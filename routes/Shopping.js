@@ -86,4 +86,21 @@ router.post(
     }
 );
 
+// Private || Delete WishList Product || api/Shoping/delete/product
+router.delete(
+    "/delete/product", [UserAuth, check("id", "id is Required").not().isEmpty()],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+        const { id } = req.body;
+        let userID = req.userId;
+
+        let userCheck = await Shoping.updateOne({ user: userID }, { $pull: { Product: { id: id } } });
+
+        res.status(202).json(userCheck);
+    }
+);
+
 module.exports = router;
