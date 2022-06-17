@@ -3,6 +3,7 @@ import wishReducer from "./userSlice";
 import toggleReducer from "./toggleNav";
 import loading from "./loading";
 import sellingReducer from "./selling";
+import shopping from "./shopping";
 import userData from "./user";
 
 export default configureStore({
@@ -12,5 +13,6 @@ export default configureStore({
         load: loading,
         selling: sellingReducer,
         user: userData,
+        shop: shopping,
     },
 });
