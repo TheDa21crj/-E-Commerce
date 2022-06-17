@@ -16,6 +16,7 @@
 .RoWDiv {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 0px 3%;
 }
 
@@ -36,6 +37,13 @@
 
 #checkShowDiv {
     width: 100%;
+}
+
+.RightDiv {
+    font-family: ManropeRegular;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .MapMDiv {
