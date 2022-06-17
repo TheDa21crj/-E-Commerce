@@ -24,15 +24,14 @@ export default function ShopCart() {
       }
       if (data) {
         if (data.message == "zero") {
-          return dispatch(addWish({ length: 0 }));
+          console.log("Zero = Data");
         } else {
-          dispatch(
-            addWish({ length: data.message.length, data: data.message })
-          );
+          console.table(data.message);
           return;
         }
       }
     } catch (error) {
+      console.log(error);
       return;
     }
   };
