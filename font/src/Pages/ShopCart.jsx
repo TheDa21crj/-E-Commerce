@@ -68,7 +68,9 @@ export default function ShopCart() {
                       </p>
                       <div className={SCCss.MapRowDivBottom}>
                         <p>{value.size}</p>
-                        <p>{value.price}</p>
+                        <p className={SCCss.price}>
+                          <b>₹ {value.price}</b>
+                        </p>
                       </div>
                     </div>
                   </div>
