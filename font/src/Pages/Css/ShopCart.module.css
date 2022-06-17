@@ -59,3 +59,13 @@
 .MapLeftDiv img {
     border-radius: 10px;
 }
+
+.name {
+    font-weight: bold;
+    font-family: ManropeExtraBold;
+    margin: 0px 0px 0px 20px;
+    border-style: solid;
+    padding-bottom: 4px;
+    border-width: 0px 0px 1px 0px;
+    border-color: rgb(228, 228, 228);
+}
