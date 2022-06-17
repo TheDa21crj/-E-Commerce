@@ -28,7 +28,7 @@ export default function ShopCart() {
         return;
       }
       if (data) {
-        if (data.message == "zero") {
+        if (data.message === "zero") {
           console.log("Zero = Data");
         } else {
           let TotalPrice = 0;
