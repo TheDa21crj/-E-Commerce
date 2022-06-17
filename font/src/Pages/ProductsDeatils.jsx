@@ -173,6 +173,22 @@ export default function ProductsDeatils() {
     }
   }, [showChat]);
 
+  const addToCart = async () => {
+    const res = await fetch("/api/Shoping/add", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // _id: id,
+      }),
+    });
+    const data = await res.json();
+
+    console.log(data);
+  };
+
   return (
     <div>
       <Nav />
@@ -296,7 +312,9 @@ export default function ProductsDeatils() {
           </div>
 
           <div className={PDCss.BuyDiv}>
-            <div className={PDCss.AddCART}>ADD TO CART</div>
+            <div className={PDCss.AddCART} onClick={addToCart}>
+              ADD TO CART
+            </div>
             {check === "true" ? (
               <div
                 className={PDCss.AddWISHLIST}
