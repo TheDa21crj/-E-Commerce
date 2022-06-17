@@ -11,7 +11,9 @@ export default function ShopCart() {
       <Nav />
       <p className={SCCss.MainPTag}>Shop Cart</p>
       <div className={SCCss.RoWDiv}>
-        <div className={SCCss.LeftDiv}>hello</div>
+        <div className={SCCss.LeftDiv}>
+          <p>hello</p>
+        </div>
         <div className={SCCss.RightDiv}>
           <p>
             Your order qualifies for FREE Delivery. Select this option at
