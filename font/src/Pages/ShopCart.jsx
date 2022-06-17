@@ -12,7 +12,9 @@ export default function ShopCart() {
       <p className={SCCss.MainPTag}>Shop Cart</p>
       <div className={SCCss.RoWDiv}>
         <div className={SCCss.LeftDiv}>hello</div>
-        <div className={SCCss.RightDiv}>World</div>
+        <div className={SCCss.RightDiv}>
+          <p className={SCCss.SubtotalPTag}>Subtotal (1 item): 269.00</p>
+        </div>
       </div>
     </div>
   );
