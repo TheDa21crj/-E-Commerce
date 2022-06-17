@@ -54,14 +54,14 @@ export default function ShopCart() {
       <div className={SCCss.RoWDiv}>
         <div className={SCCss.LeftDiv}>
           {show ? (
-            <div>
+            <div id={SCCss.checkShowDiv}>
               {show.map((value, key) => {
                 return (
                   <div key={value.id} className={SCCss.MapMDiv}>
                     <div className={SCCss.MapLeftDiv}>
                       <img src={value.imageSrc} alt="" />
                     </div>
-                    <div>
+                    <div className={SCCss.MapRightDiv}>
                       <p>{value.name}</p>
                       <p>{value.qunatity}</p>
                       <p>{value.size}</p>
