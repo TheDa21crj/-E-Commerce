@@ -6,9 +6,9 @@ const ShoppingSchema = new mongoose.Schema({
         ref: "User",
     },
     List: [{
-        Product: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Product",
+        id: {
+            type: "string",
+            required: true,
         },
         name: {
             type: "string",
