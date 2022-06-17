@@ -181,7 +181,10 @@ export default function ProductsDeatils() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // _id: id,
+        id: id,
+        name: showname,
+        imgSrc: showimageSrc,
+        price: showprice,
       }),
     });
     const data = await res.json();
