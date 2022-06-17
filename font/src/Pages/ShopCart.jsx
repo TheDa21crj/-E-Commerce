@@ -10,6 +10,10 @@ export default function ShopCart() {
     <div>
       <Nav />
       <p className={SCCss.MainPTag}>Shop Cart</p>
+      <div className={SCCss.RoWDiv}>
+        <div className={SCCss.LeftDiv}>hello</div>
+        <div className={SCCss.RightDiv}>World</div>
+      </div>
     </div>
   );
 }
