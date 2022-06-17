@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
 import { toggleN } from "./../redux/toggleNav";
 import { adduser } from "./../redux/user";
+import { addshop } from "./../redux/shopping";
 import { useDispatch } from "react-redux";
 
 import ImgNav1 from "./../Img/men.jpg";
