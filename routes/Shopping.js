@@ -26,12 +26,41 @@ router.post(
         const { id, name, imgSrc, price } = req.body;
         let userID = req.userId;
 
-        let userCheck = await WishList.findOne({ user: userID });
+        let userCheck = await Shoping.findOne({ user: userID });
 
-        console.log(id);
-        console.log(name);
-        console.log(imgSrc);
-        console.log(price);
+        if (userCheck) {
+            let List = {};
+            List.id = id;
+            List.name = name;
+            List.imageSrc = imgSrc;
+            List.price = price;
+
+            for (let i = 0; i < userCheck.List.length; i++) {
+                if (userCheck.List[i].id === id) {
+                    return res.status(400).json({ message: "same" });
+                }
+            }
+
+            // add product
+            let add = await Shoping.findOneAndUpdate({ user: userID }, {
+                $push: {
+                    List: List,
+                },
+            });
+            return res.status(200).json("Added to Shopping Cart");
+        } else {
+            let Shop = {};
+            Shop.user = userID;
+            Shop.List = {};
+            Shop.List.id = id;
+            Shop.List.name = name;
+            Shop.List.imageSrc = imgSrc;
+            Shop.List.price = price;
+
+            let newShop = new Shoping(Shop);
+            await newShop.save();
+            return res.status(200).json("Added to Shopping Cart");
+        }
 
         return res.status(202).json({ message: id });
     }
