@@ -10,6 +10,19 @@ const ShoppingSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Product",
         },
+        name: {
+            type: "string",
+            required: true,
+        },
+        imageSrc: {
+            type: "string",
+            required: true,
+        },
+        price: {
+            type: "Number",
+            required: true,
+            default: 0,
+        },
     }, ],
 });
 
