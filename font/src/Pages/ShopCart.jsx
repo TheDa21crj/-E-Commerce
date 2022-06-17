@@ -78,56 +78,64 @@ export default function ShopCart() {
   return (
     <div>
       <Nav />
-      <p className={SCCss.MainPTag}>Shop Cart</p>
-      <div className={SCCss.RoWDiv}>
-        <div className={SCCss.LeftDiv}>
-          {show ? (
-            <div id={SCCss.checkShowDiv}>
-              {show.map((value, key) => {
-                return (
-                  <div key={value.id} className={SCCss.MapMDiv}>
-                    <div className={SCCss.MapLeftDiv}>
-                      <img src={value.imageSrc} alt="" />
-                    </div>
-                    <div className={SCCss.MapRightDiv}>
-                      <p className={SCCss.name}>{value.name}</p>
-                      <p className={SCCss.Qunatity}>
-                        Qunatity: <b>{value.qunatity}</b>
-                      </p>
-                      <div className={SCCss.MapRowDivBottom}>
-                        <p>
-                          Size: <b>{value.size}</b>
-                        </p>
-                        <p className={SCCss.price}>
-                          <b>₹ {value.price}</b>
-                        </p>
+      {showTProducts !== 0 ? (
+        <div>
+          <p className={SCCss.MainPTag}>Shop Cart</p>
+          <div className={SCCss.RoWDiv}>
+            <div className={SCCss.LeftDiv}>
+              {show ? (
+                <div id={SCCss.checkShowDiv}>
+                  {show.map((value, key) => {
+                    return (
+                      <div key={value.id} className={SCCss.MapMDiv}>
+                        <div className={SCCss.MapLeftDiv}>
+                          <img src={value.imageSrc} alt="" />
+                        </div>
+                        <div className={SCCss.MapRightDiv}>
+                          <p className={SCCss.name}>{value.name}</p>
+                          <p className={SCCss.Qunatity}>
+                            Qunatity: <b>{value.qunatity}</b>
+                          </p>
+                          <div className={SCCss.MapRowDivBottom}>
+                            <p>
+                              Size: <b>{value.size}</b>
+                            </p>
+                            <p className={SCCss.price}>
+                              <b>₹ {value.price}</b>
+                            </p>
+                          </div>
+                          <div className={SCCss.DeliveryDiv}>
+                            <img src={img} alt="" />
+                            <p>Da Assured Delivered</p>
+                          </div>
+                        </div>
+                        <div
+                          className={SCCss.DeleteDiv}
+                          onClick={() => deleteWish(value.id)}
+                        >
+                          Delete
+                        </div>
                       </div>
-                      <div className={SCCss.DeliveryDiv}>
-                        <img src={img} alt="" />
-                        <p>Da Assured Delivered</p>
-                      </div>
-                    </div>
-                    <div
-                      className={SCCss.DeleteDiv}
-                      onClick={() => deleteWish(value.id)}
-                    >
-                      Delete
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
-          ) : (
-            ""
-          )}
+            <div className={SCCss.RightDiv}>
+              <p>Your order qualifies for FREE Delivery.</p>
+              <p className={SCCss.SubtotalPTag}>
+                Subtotal ({showTProducts} item): {showTPrice}
+              </p>
+            </div>
+          </div>
         </div>
-        <div className={SCCss.RightDiv}>
-          <p>Your order qualifies for FREE Delivery.</p>
-          <p className={SCCss.SubtotalPTag}>
-            Subtotal ({showTProducts} item): {showTPrice}
-          </p>
+      ) : (
+        <div>
+          <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
-      </div>
+      )}
     </div>
   );
 }
