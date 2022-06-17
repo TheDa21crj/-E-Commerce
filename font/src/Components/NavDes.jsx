@@ -218,7 +218,7 @@ const Nav = (props) => {
       <div className={NavCss.IconsDiv}>
         <div className={NavCss.UserDiv}>
           <Link to="/my-account" className="LinkStyle">
-            {showimg == "" ? (
+            {showimg === "" ? (
               <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
             ) : (
               <img src={imgSrc} alt="" className={NavCss.UserIcon} />
@@ -226,7 +226,7 @@ const Nav = (props) => {
           </Link>
           <div className={NavCss.HoverDiv}>
             <div className={NavCss.UserHoverDiv}>
-              {toggle == "true" ? (
+              {toggle === "true" ? (
                 <Link to="/logout" className="LinkStyle">
                   Logout
                 </Link>
