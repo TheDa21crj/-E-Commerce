@@ -11,7 +11,7 @@ const Product = require("./../Schema/Products");
 // Private || Add Shoping || api/Shoping/add
 router.post(
     "/add", [
-        // UserAuth,
+        UserAuth,
         // check("id", "id is Required").not().isEmpty(),
         // check("name", "name is Required").not().isEmpty(),
         // check("imgSrc", "imgSrc is Required").not().isEmpty(),
