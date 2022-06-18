@@ -6,6 +6,9 @@ import img1 from "./../../Img/MERCHANDISE/DC.webp";
 import img2 from "./../../Img/MERCHANDISE/Disney.webp";
 import img3 from "./../../Img/MERCHANDISE/friends.webp";
 import img4 from "./../../Img/MERCHANDISE/HarryPotter.webp";
+import img5 from "./../../Img/MERCHANDISE/himym.jpeg";
+import img6 from "./../../Img/MERCHANDISE/LooneyTunes.webp";
+import img7 from "./../../Img/MERCHANDISE/";
 
 export default function MERCHANDISE() {
   return (
