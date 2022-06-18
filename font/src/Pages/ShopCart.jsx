@@ -3,6 +3,7 @@ import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
 import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function ShopCart() {
   const [showTPrice, setTPrice] = useState();
