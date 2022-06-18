@@ -1,5 +1,6 @@
 import React from "react";
 import "./Css/MERCHANDISE.css";
+import TSCss from "./Css/TopSelling.module.css";
 
 // img
 import img1 from "./../../Img/MERCHANDISE/DC.webp";
@@ -16,6 +17,10 @@ import img10 from "./../../Img/MERCHANDISE/web-icon.webp";
 export default function MERCHANDISE() {
   return (
     <div>
+      <div className={TSCss.H1Div}>
+        <h1 className={TSCss.h1}>OFFICIAL MERCHANDISE</h1>
+      </div>
+
       <div className="slideParentDiv">
         <div className="slider">
           <div className="slide-track">
