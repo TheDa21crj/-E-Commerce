@@ -4,6 +4,7 @@ import Header from "../Components/Home/Header";
 import Footer from "../Components/Footer";
 import NewArrival from "../Components/Home/NewArrival";
 import TopSelling from "../Components/Home/TopSelling";
+import MERCHANDISE from "../Components/Home/MERCHANDISE";
 import Loading from "./Loading";
 // redux
 import { useSelector } from "react-redux";
@@ -80,7 +81,8 @@ export default function Home() {
           <br />
           Customer reviews
           <br />
-          OFFICIAL MERCHANDISE/Brands
+          <MERCHANDISE />
+          {/* OFFICIAL MERCHANDISE/Brands */}
           <Footer />
         </div>
       )}
