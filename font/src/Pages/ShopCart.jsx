@@ -10,9 +10,12 @@ export default function ShopCart() {
   const [showTProducts, setTProducts] = useState();
   const [show, set] = useState();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "The Da: Shopping Cart";
     seeList();
+    console.log(navigate);
   }, []);
 
   const seeList = async () => {
