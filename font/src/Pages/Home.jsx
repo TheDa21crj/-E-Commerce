@@ -82,7 +82,6 @@ export default function Home() {
           Customer reviews
           <br />
           <MERCHANDISE />
-          {/* OFFICIAL MERCHANDISE/Brands */}
           <Footer />
         </div>
       )}
