@@ -3,7 +3,7 @@ import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
