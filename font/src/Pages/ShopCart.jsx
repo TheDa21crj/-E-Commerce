@@ -3,19 +3,15 @@ import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
 import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
-import { useLocation } from "react-router-dom";
 
 export default function ShopCart() {
   const [showTPrice, setTPrice] = useState();
   const [showTProducts, setTProducts] = useState();
   const [show, set] = useState();
 
-  const location = useLocation();
-
   useEffect(() => {
     document.title = "The Da: Shopping Cart";
     seeList();
-    console.log(location.pathname);
   }, []);
 
   const seeList = async () => {
