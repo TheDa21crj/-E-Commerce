@@ -1,6 +1,10 @@
 import React from "react";
 import "./Css/MERCHANDISE.css";
 
+// img
+import img1 from "./../../Img/MERCHANDISE/DC.webp";
+import img2 from "./../../Img/MERCHANDISE/Disney.webp";
+
 export default function MERCHANDISE() {
   return (
     <div>
