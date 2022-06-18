@@ -88,12 +88,12 @@ export default function ShopCart() {
                 <div id={SCCss.checkShowDiv}>
                   {show.map((value, key) => {
                     return (
-                      <Link
-                        to={`/products/${value.id}`}
-                        key={value.id}
-                        className="LinkStyle"
-                      >
-                        <div className={SCCss.MapMDiv}>
+                      <div key={value.id} className={SCCss.MapMDiv}>
+                        <Link
+                          to={`/products/${value.id}`}
+                          className="LinkStyle"
+                          id={SCCss.Link}
+                        >
                           <div className={SCCss.MapLeftDiv}>
                             <img src={value.imageSrc} alt="" />
                           </div>
@@ -115,14 +115,14 @@ export default function ShopCart() {
                               <p>Da Assured Delivered</p>
                             </div>
                           </div>
-                          <div
-                            className={SCCss.DeleteDiv}
-                            onClick={() => deleteWish(value.id)}
-                          >
-                            Delete
-                          </div>
+                        </Link>
+                        <div
+                          className={SCCss.DeleteDiv}
+                          onClick={() => deleteWish(value.id)}
+                        >
+                          Delete
                         </div>
-                      </Link>
+                      </div>
                     );
                   })}
                 </div>
