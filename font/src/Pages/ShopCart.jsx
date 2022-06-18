@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
 import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
 
@@ -136,6 +137,7 @@ export default function ShopCart() {
           <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
