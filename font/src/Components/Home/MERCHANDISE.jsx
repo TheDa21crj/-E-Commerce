@@ -20,34 +20,34 @@ export default function MERCHANDISE() {
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
-              <img className="img-fluid" src="" alt="Second slide" />
+              <img className="img-fluid" src={img1} alt="Second slide" />
             </div>
             <div className="slide">
-              <img alt="Image" src="" className="img-fluid" />
+              <img alt="Image" src={img2} className="img-fluid" />
             </div>
             <div className="slide">
-              <img alt="Image" src="" className="img-fluid" />
+              <img alt="Image" src={img3} className="img-fluid" />
             </div>
             <div className="slide">
-              <img alt="Image" src="" className="img-fluid" />
+              <img alt="Image" src={img4} className="img-fluid" />
             </div>
             <div className="slide">
-              <img alt="Image" src="" className="img-fluid" />
+              <img alt="Image" src={img5} className="img-fluid" />
             </div>
             <div className="slide">
-              <img alt="Image" src="" className="img-fluid" />
+              <img alt="Image" src={img6} className="img-fluid" />
             </div>
             <div className="slide">
-              <img alt="Image " src="" className="img-fluid " />
+              <img alt="Image " src={img7} className="img-fluid " />
             </div>
             <div className="slide">
-              <img alt="Image " src="" className="img-fluid " />
+              <img alt="Image " src={img8} className="img-fluid " />
             </div>
             <div className="slide">
-              <img alt="Image " src="" className="img-fluid " />
+              <img alt="Image " src={img9} className="img-fluid " />
             </div>
             <div className="slide">
-              <img alt="Image " src="" className="img-fluid " />
+              <img alt="Image " src={img10} className="img-fluid " />
             </div>
           </div>
         </div>
