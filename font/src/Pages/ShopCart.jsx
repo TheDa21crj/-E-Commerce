@@ -39,7 +39,6 @@ export default function ShopCart() {
           setTPrice(TotalPrice);
           setTProducts(data.message.length);
           set(data.message);
-          console.table(data.message);
           return;
         }
       }
