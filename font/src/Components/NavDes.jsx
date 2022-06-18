@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
 import Wish from "./Wish.js";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -100,9 +100,9 @@ const Nav = (props) => {
   return (
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
-        <Link to="/" className={NavCss.LinkTag}>
+        <NavLink to="/" className={NavCss.LinkTag}>
           <h1 className={NavCss.TitleH1}>The Da</h1>
-        </Link>
+        </NavLink>
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
             <li>
@@ -208,22 +208,22 @@ const Nav = (props) => {
               <p className={NavCss.NavListPTag}>Beauty</p>
             </li>
             <li>
-              <Link to="/Membership" className="LinkStyle">
+              <NavLink to="/Membership" className="LinkStyle">
                 <p className={NavCss.NavListPTag}>Membership</p>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
       <div className={NavCss.IconsDiv}>
         <div className={NavCss.UserDiv}>
-          <Link to="/my-account" className="LinkStyle">
+          <NavLink to="/my-account" className="LinkStyle">
             {showimg === "" ? (
               <PersonIcon fontSize="large" className={NavCss.IconsClass0} />
             ) : (
               <img src={imgSrc} alt="" className={NavCss.UserIcon} />
             )}
-          </Link>
+          </NavLink>
           <div className={NavCss.HoverDiv}>
             <div className={NavCss.UserHoverDiv}>
               {toggle === "true" ? (
@@ -239,10 +239,10 @@ const Nav = (props) => {
             <div className={NavCss.arrow}></div>
           </div>
         </div>
-        <Link to="/ShopCart" className="LinkStyle">
+        <NavLink to="/ShopCart" className="LinkStyle">
           <ShoppingCartIcon fontSize="large" className={NavCss.IconsClass1} />
-        </Link>
-        <Link to="/wishlist" className="LinkStyle">
+        </NavLink>
+        <NavLink to="/wishlist" className="LinkStyle">
           <div className={NavCss.wishDiv}>
             <FavoriteBorderIcon
               fontSize="large"
@@ -250,7 +250,7 @@ const Nav = (props) => {
             />
             <Wish value={wish} />
           </div>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
