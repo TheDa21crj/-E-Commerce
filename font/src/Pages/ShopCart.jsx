@@ -3,6 +3,7 @@ import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
 import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
+import { Link } from "react-router-dom";
 
 export default function ShopCart() {
   const [showTPrice, setTPrice] = useState();
@@ -87,35 +88,41 @@ export default function ShopCart() {
                 <div id={SCCss.checkShowDiv}>
                   {show.map((value, key) => {
                     return (
-                      <div key={value.id} className={SCCss.MapMDiv}>
-                        <div className={SCCss.MapLeftDiv}>
-                          <img src={value.imageSrc} alt="" />
-                        </div>
-                        <div className={SCCss.MapRightDiv}>
-                          <p className={SCCss.name}>{value.name}</p>
-                          <p className={SCCss.Qunatity}>
-                            Qunatity: <b>{value.qunatity}</b>
-                          </p>
-                          <div className={SCCss.MapRowDivBottom}>
-                            <p>
-                              Size: <b>{value.size}</b>
-                            </p>
-                            <p className={SCCss.price}>
-                              <b>₹ {value.price}</b>
-                            </p>
+                      <Link
+                        to={`/products/${value.id}`}
+                        key={value.id}
+                        className="LinkStyle"
+                      >
+                        <div className={SCCss.MapMDiv}>
+                          <div className={SCCss.MapLeftDiv}>
+                            <img src={value.imageSrc} alt="" />
                           </div>
-                          <div className={SCCss.DeliveryDiv}>
-                            <img src={img} alt="" />
-                            <p>Da Assured Delivered</p>
+                          <div className={SCCss.MapRightDiv}>
+                            <p className={SCCss.name}>{value.name}</p>
+                            <p className={SCCss.Qunatity}>
+                              Qunatity: <b>{value.qunatity}</b>
+                            </p>
+                            <div className={SCCss.MapRowDivBottom}>
+                              <p>
+                                Size: <b>{value.size}</b>
+                              </p>
+                              <p className={SCCss.price}>
+                                <b>₹ {value.price}</b>
+                              </p>
+                            </div>
+                            <div className={SCCss.DeliveryDiv}>
+                              <img src={img} alt="" />
+                              <p>Da Assured Delivered</p>
+                            </div>
+                          </div>
+                          <div
+                            className={SCCss.DeleteDiv}
+                            onClick={() => deleteWish(value.id)}
+                          >
+                            Delete
                           </div>
                         </div>
-                        <div
-                          className={SCCss.DeleteDiv}
-                          onClick={() => deleteWish(value.id)}
-                        >
-                          Delete
-                        </div>
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
