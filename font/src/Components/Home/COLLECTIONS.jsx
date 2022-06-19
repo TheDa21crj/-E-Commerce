@@ -19,17 +19,9 @@ export default function COLLECTIONS() {
   return (
     <div className="MERCHANDISEmDiv">
       <div className={TSCss.H1Div}>
-        <h1 className={TSCss.h1}>COLLECTIONS</h1>
+        <h1 className={TSCss.h1}>Best Offers</h1>
       </div>
-      <Sliders {...settingTS} className={TSCss.Hslide}>
-        {CollectionJson.map((value, key) => {
-          return (
-            <div className={CollCss.MapMDiv} key={key}>
-              hello
-            </div>
-          );
-        })}
-      </Sliders>
+      hell World
     </div>
   );
 }
