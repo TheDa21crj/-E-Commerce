@@ -57,6 +57,7 @@
     .nor600,
     .nor300 {
         width: 100%;
+        height: calc(100% - 2px);
         margin-bottom: 20px;
     }
     .nor400 img,
