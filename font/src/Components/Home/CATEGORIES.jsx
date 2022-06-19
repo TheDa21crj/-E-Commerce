@@ -4,7 +4,6 @@ import CatCss from "./Css/CATEGORIES.css";
 import data from "./data.json";
 
 export default function CATEGORIES() {
-  console.table(data);
   return (
     <div>
       <div className={TSCss.H1Div}>
@@ -13,7 +12,7 @@ export default function CATEGORIES() {
       <div className="datamapPDiv">
         {data.map((value, key) => {
           return (
-            <div key={value.id}>
+            <div key={value.id} id={value.type}>
               <img src={value.src} alt="" />
             </div>
           );
