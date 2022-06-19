@@ -79,7 +79,7 @@ export default function Home() {
           <br />
           CATEGORIES
           <br />
-          Customer reviews
+          COLLECTIONS
           <br />
           <MERCHANDISE />
           <Footer />
