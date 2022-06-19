@@ -17,7 +17,16 @@
 .nor300 img,
 .nor600 img {
     border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 10px 10px 20px lightgrey;
 }
+
+.nor400:hover,
+.nor400 img:hover,
+.nor600:hover,
+.nor300:hover,
+.nor300 img:hover,
+.nor600 img:hover {}
 
 .nor400,
 .nor400 img {
