@@ -80,7 +80,6 @@ export default function Home() {
           <CATEGORIES />
           <TopSelling />
           <COLLECTIONS />
-          <br />
           <MERCHANDISE />
           <Footer />
         </div>
