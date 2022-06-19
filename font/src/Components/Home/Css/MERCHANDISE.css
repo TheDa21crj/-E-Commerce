@@ -17,11 +17,10 @@
     display: flex;
     width: calc(250px * 10);
     background-color: transparent;
-}
-
-.slide-track:hover {
     animation: scroll 10s linear infinite;
 }
+
+.slide-track:hover {}
 
 @keyframes scroll {
     0% {
