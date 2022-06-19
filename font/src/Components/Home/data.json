@@ -1,37 +1,41 @@
 [{
         "id": "1",
-        "name": "One"
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles2_SclW5qN.jpg?format=webp&w=400&dpr=1.5"
+    },
+    {
+        "id": "2",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/shirts-web_xdLFYjy.jpg?format=webp&w=400&dpr=1.5"
     },
     {
         "id": "3",
-        "name": "Three"
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/dresses--name-tiles.jpg?format=webp&w=400&dpr=1.5"
     },
     {
         "id": "4",
-        "name": "Four"
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womensacivewearhorizontal-tile.jpg?format=webp&w=610&dpr=1.5"
     },
     {
         "id": "5",
-        "name": "Five"
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles_2_Ub3ndMj.jpg?format=webp&w=300&dpr=1.5"
     },
     {
         "id": "6",
-        "name": "Six"
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles1234_1.jpg?format=webp&w=300&dpr=1.5"
     },
     {
         "id": "7",
-        "name": "Seven"
-    },
-    {
-        "id": "7",
-        "name": "Seven"
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womenspjshorizontal-tile.jpg?format=webp&w=610&dpr=1.5"
     },
     {
         "id": "8",
-        "name": "Eight"
+        "src": "Seven"
     },
     {
         "id": "9",
-        "name": "Nine"
+        "src": "Eight"
+    },
+    {
+        "id": "10",
+        "src": "Nine"
     }
 ]
