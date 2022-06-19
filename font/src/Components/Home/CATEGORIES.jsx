@@ -12,9 +12,9 @@ export default function CATEGORIES() {
       <div className="datamapPDiv">
         {data.map((value, key) => {
           return (
-            <div key={value.id} className={value.type}>
-              <img src={value.src} alt="" />
-            </div>
+            // <div key={value.id} className={value.type}>
+            <img src={value.src} alt="" key={value.id} className={value.type} />
+            // </div>
           );
         })}
       </div>
