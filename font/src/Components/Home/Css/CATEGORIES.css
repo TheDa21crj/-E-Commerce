@@ -16,6 +16,7 @@
 .nor300,
 .nor300 img,
 .nor600 img {
+    margin: 0px 0px 20px 0px;
     border-radius: 10px;
     transition: all 0.3s;
     box-shadow: 10px 10px 20px lightgrey;
@@ -37,6 +38,7 @@
 .nor600 img,
 .nor300 img {
     width: 100%;
+    height: 100%;
 }
 
 .nor600 {
