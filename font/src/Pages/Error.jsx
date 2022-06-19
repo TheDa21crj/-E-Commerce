@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../Components/Nav";
 import ErrCss from "./Css/Error.module.css";
 import img404 from "./../Img/new-404.png";
