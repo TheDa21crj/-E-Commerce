@@ -16,7 +16,7 @@ import img10 from "./../../Img/MERCHANDISE/web-icon.webp";
 
 export default function MERCHANDISE() {
   return (
-    <div>
+    <div className="MERCHANDISEmDiv">
       <div className={TSCss.H1Div}>
         <h1 className={TSCss.h1}>OFFICIAL MERCHANDISE</h1>
       </div>
