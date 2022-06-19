@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import NewArrival from "../Components/Home/NewArrival";
 import TopSelling from "../Components/Home/TopSelling";
 import MERCHANDISE from "../Components/Home/MERCHANDISE";
+import CATEGORIES from "./../Components/Home/CATEGORIES";
 import Loading from "./Loading";
 // redux
 import { useSelector } from "react-redux";
@@ -77,7 +78,7 @@ export default function Home() {
           <NewArrival />
           <TopSelling />
           <br />
-          CATEGORIES
+          <CATEGORIES />
           <br />
           COLLECTIONS
           <br />
