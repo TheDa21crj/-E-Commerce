@@ -75,9 +75,9 @@ export default function Home() {
         <div>
           <Nav />
           <Header />
-          <NewArrival />
-          <CATEGORIES />
           <TopSelling />
+          <CATEGORIES />
+          <NewArrival />
           COLLECTIONS
           <br />
           <MERCHANDISE />
