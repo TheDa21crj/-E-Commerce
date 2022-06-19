@@ -10,7 +10,7 @@ export default function CATEGORIES() {
       <div className={TSCss.H1Div}>
         <h1 className={TSCss.h1}>CATEGORIES</h1>
       </div>
-      <div className={CatCss.datamapPDiv}>
+      <div className="datamapPDiv">
         {data.map((value, key) => {
           return (
             <div key={value.id}>
