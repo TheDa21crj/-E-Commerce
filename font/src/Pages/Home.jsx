@@ -78,7 +78,7 @@ export default function Home() {
           <NewArrival />
           <CATEGORIES />
           <TopSelling />
-          COLLECTIONS
+
           <br />
           <MERCHANDISE />
           <Footer />
