@@ -1,12 +1,4 @@
-/* .datamapPDiv {
-    width: 100%;
-    display: grid;
-
-} */
-
 .datamapPDiv {
     display: flex;
     flex-wrap: wrap;
-    /* margin-right: -15px; */
-    /* margin-left: -15px; */
 }
