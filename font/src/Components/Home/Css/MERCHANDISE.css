@@ -20,8 +20,6 @@
     animation: scroll 10s linear infinite;
 }
 
-.slide-track:hover {}
-
 .slide-track:hover {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
