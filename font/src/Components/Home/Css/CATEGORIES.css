@@ -49,4 +49,14 @@
     width: 23.59%;
 }
 
-@media only screen and (max-width: 575px) {}
+@media only screen and (max-width: 575px) {
+    .datamapPDiv {
+        flex-direction: column;
+    }
+    .nor400,
+    .nor600,
+    .nor300 {
+        width: 100%;
+        margin: 0px;
+    }
+}
