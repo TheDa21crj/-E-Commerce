@@ -4,6 +4,9 @@ import ErrCss from "./Css/Error.module.css";
 import img404 from "./../Img/new-404.png";
 
 export default function Error() {
+  useEffect(() => {
+    document.title = "Online Shopping for Men & Women: The Da";
+  });
   return (
     <div>
       <Nav />
