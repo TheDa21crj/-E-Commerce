@@ -1,4 +1,5 @@
 import React from "react";
+import TSCss from "./Css/TopSelling.module.css";
 
 export default function COLLECTIONS() {
   return (
