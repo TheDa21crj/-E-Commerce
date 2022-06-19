@@ -1,4 +1,6 @@
-.MERCHANDISEmDiv {}
+.MERCHANDISEmDiv {
+    margin-top: 20px;
+}
 
 .slideParentDiv {
     position: relative;
