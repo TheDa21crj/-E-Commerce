@@ -29,12 +29,12 @@
 .nor300 img:hover,
 .nor600 img:hover {} */
 
-.nor400,
+.nor400 {
+    width: 31.45%;
+}
+
 .nor400 img {
-    /* width: 400px; */
-    /* height: 400px; */
-    width: 400px;
-    height: 400px;
+    width: 100%;
 }
 
 .nor600,
