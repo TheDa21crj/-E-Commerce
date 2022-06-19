@@ -12,7 +12,11 @@ export default function CATEGORIES() {
       </div>
       <div className={CatCss.datamapPDiv}>
         {data.map((value, key) => {
-          return <div key={value.id}>{value.name}</div>;
+          return (
+            <div key={value.id}>
+              <img src={value.src} alt="" />
+            </div>
+          );
         })}
       </div>
     </div>
