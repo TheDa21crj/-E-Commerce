@@ -13,9 +13,6 @@
 .nor400,
 .nor600,
 .nor300 {
-    /* .nor400 img, */
-    /* .nor300 img, */
-    /* .nor600 img { */
     margin: 0px 0px 20px 0px;
     border-radius: 10px;
     transition: all 0.3s;
