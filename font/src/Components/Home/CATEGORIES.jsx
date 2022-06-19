@@ -1,6 +1,6 @@
 import React from "react";
 import TSCss from "./Css/TopSelling.module.css";
-import CatCss from "./Css/CATEGORIES.module.css";
+import CatCss from "./Css/CATEGORIES.css";
 import data from "./data.json";
 
 export default function CATEGORIES() {
