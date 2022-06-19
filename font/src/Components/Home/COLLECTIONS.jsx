@@ -6,16 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import CollCss from "./Css/COLLECTIONS.module.css";
 
 export default function COLLECTIONS() {
-  var settingTS = {
-    dots: false,
-    infinite: true,
-    arrows: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: false,
-    mobileFirst: true,
-  };
   return (
     <div className="MERCHANDISEmDiv">
       <div className={TSCss.H1Div}>
