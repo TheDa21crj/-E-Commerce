@@ -76,10 +76,8 @@ export default function Home() {
           <Nav />
           <Header />
           <NewArrival />
-          <TopSelling />
-          <br />
           <CATEGORIES />
-          <br />
+          <TopSelling />
           COLLECTIONS
           <br />
           <MERCHANDISE />
