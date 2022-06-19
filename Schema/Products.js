@@ -1,5 +1,10 @@
 const mongoose = require("mongoose");
 
+// To add
+//    1- tags
+//    2- stocks (num of products avilable)
+//    3- offers
+
 const ProductSchema = new mongoose.Schema({
     name: {
         type: "string",
