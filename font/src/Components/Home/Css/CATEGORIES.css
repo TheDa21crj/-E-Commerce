@@ -33,14 +33,13 @@
     width: 31.45%;
 }
 
-.nor400 img {
+.nor400 img,
+.nor600 img {
     width: 100%;
 }
 
-.nor600,
-.nor600 img {
-    width: 600px;
-    height: 300px;
+.nor600 {
+    width: 60%;
 }
 
 .nor300,
