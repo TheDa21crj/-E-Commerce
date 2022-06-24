@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 
 // To add
-//    1- tags
+//    1- tags - <
 //    2- stocks (num of products avilable)
-//    3- offers
 
 const ProductSchema = new mongoose.Schema({
     name: {
@@ -24,6 +23,11 @@ const ProductSchema = new mongoose.Schema({
         default: 0,
     },
     NumReview: {
+        type: "Number",
+        required: true,
+        default: 0,
+    },
+    stocks: {
         type: "Number",
         required: true,
         default: 0,
