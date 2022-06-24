@@ -56,11 +56,9 @@ router.post(
             ProductSave.tags = {};
             ProductSave.tags.name = tags;
 
-            // let ProductData = new Products({
-            //     ProductSave,
-            // });
+            let ProductData = new Products(ProductSave);
 
-            // await ProductData.save();
+            await ProductData.save();
 
             res.status(200).send({ message: "Product Added" });
         } catch (error) {
