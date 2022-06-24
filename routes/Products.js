@@ -44,19 +44,23 @@ router.post(
             }
             console.log(req.body);
 
-            let ProductData = new Products({
-                name,
-                imageSrc,
-                des,
-                rating,
-                NumReview,
-                price,
-                gender,
-                tags,
-                stocks,
-            });
+            let ProductSave = {};
+            ProductSave.name = name;
+            ProductSave.imageSrc = imageSrc;
+            ProductSave.des = des;
+            ProductSave.rating = rating;
+            ProductSave.NumReview = NumReview;
+            ProductSave.price = price;
+            ProductSave.gender = gender;
+            ProductSave.stocks = stocks;
+            ProductSave.tags = {};
+            ProductSave.tags.name = tags;
 
-            await ProductData.save();
+            // let ProductData = new Products({
+            //     ProductSave,
+            // });
+
+            // await ProductData.save();
 
             res.status(200).send({ message: "Product Added" });
         } catch (error) {
