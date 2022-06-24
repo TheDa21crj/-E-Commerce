@@ -50,8 +50,17 @@ export default function PostContent() {
   };
 
   const PostData = async () => {
-    const { name, imageSrc, des, rating, NumReview, price, gender } =
-      showProduct;
+    const {
+      name,
+      imageSrc,
+      des,
+      rating,
+      NumReview,
+      price,
+      gender,
+      tags,
+      stocks,
+    } = showProduct;
 
     const res = await fetch("/api/admin/Products", {
       method: "POST",
@@ -66,6 +75,8 @@ export default function PostContent() {
         NumReview,
         price,
         gender,
+        tags,
+        stocks,
       }),
     });
     const r = await res.json();
