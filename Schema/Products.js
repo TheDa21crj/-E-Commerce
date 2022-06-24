@@ -37,11 +37,12 @@ const ProductSchema = new mongoose.Schema({
         type: "string",
         required: true,
     },
-    tags: {
-        type: "string",
-        default: "null",
-        // required: true,
-    },
+    tags: [{
+        name: {
+            type: "string",
+            required: true,
+        },
+    }, ],
     sold: {
         type: "Number",
         default: 0,
