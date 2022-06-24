@@ -67,8 +67,6 @@ export default function ShopCart() {
 
         await res.json();
 
-        console.log("delete");
-
         seeList();
       } catch (error) {
         console.log(error);
