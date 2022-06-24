@@ -13,6 +13,7 @@ export default function PostContent() {
     gender: "",
     tags: "",
     stocks: "",
+    sold: "",
   });
   const navigate = useNavigate();
   const [showRes, SetRes] = useState("");
@@ -60,6 +61,7 @@ export default function PostContent() {
       gender,
       tags,
       stocks,
+      sold,
     } = showProduct;
 
     const res = await fetch("/api/admin/Products", {
@@ -77,6 +79,7 @@ export default function PostContent() {
         gender,
         tags,
         stocks,
+        sold,
       }),
     });
     const r = await res.json();
@@ -161,6 +164,14 @@ export default function PostContent() {
             id=""
             placeholder="stocks"
             value={showProduct.stocks}
+            onChange={DataInpProduct}
+          />
+          <input
+            type="number"
+            name="sold"
+            id=""
+            placeholder="sold"
+            value={showProduct.sold}
             onChange={DataInpProduct}
           />
         </form>
