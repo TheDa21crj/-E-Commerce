@@ -33,7 +33,7 @@ router.post(
 
             let token = await userE.generateToken();
             res.cookie("jwtTokenAuth", token, {
-                expires: new Date(Date.now() + 360000),
+                expires: new Date(Date.now() + 25892000000),
                 httpOnly: true,
             });
             res.status(202).send({ message: `Token = ${token}` });
