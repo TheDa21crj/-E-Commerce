@@ -17,14 +17,24 @@ router.post(
         check("price", "price is Required").not().isEmpty(),
         check("gender", "gender is Required").not().isEmpty(),
         check("tags", "tags is Required").not().isEmpty(),
+        check("stocks", "stocks is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { name, imageSrc, des, rating, NumReview, price, gender, tags } =
-        req.body;
+        const {
+            name,
+            imageSrc,
+            des,
+            rating,
+            NumReview,
+            price,
+            gender,
+            tags,
+            stocks,
+        } = req.body;
 
         try {
             let imgSrc = await Products.findOne({ imageSrc });
@@ -43,6 +53,7 @@ router.post(
                 price,
                 gender,
                 tags,
+                stocks,
             });
 
             await ProductData.save();
