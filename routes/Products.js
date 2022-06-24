@@ -18,6 +18,7 @@ router.post(
         check("gender", "gender is Required").not().isEmpty(),
         check("tags", "tags is Required").not().isEmpty(),
         check("stocks", "stocks is Required").not().isEmpty(),
+        check("sold", "sold is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
@@ -34,6 +35,7 @@ router.post(
             gender,
             tags,
             stocks,
+            sold,
         } = req.body;
 
         try {
@@ -53,6 +55,7 @@ router.post(
             ProductSave.price = price;
             ProductSave.gender = gender;
             ProductSave.stocks = stocks;
+            ProductSave.sold = sold;
             ProductSave.tags = {};
             ProductSave.tags.name = tags;
 
