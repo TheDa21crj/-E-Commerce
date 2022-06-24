@@ -11,6 +11,8 @@ export default function PostContent() {
     NumReview: "",
     price: "",
     gender: "",
+    tags: "",
+    stocks: "",
   });
   const navigate = useNavigate();
   const [showRes, SetRes] = useState("");
@@ -135,6 +137,22 @@ export default function PostContent() {
             id=""
             value={showProduct.gender}
             placeholder="gender"
+            onChange={DataInpProduct}
+          />
+          <input
+            type="text"
+            name="tags"
+            id=""
+            placeholder="tags"
+            value={showProduct.tags}
+            onChange={DataInpProduct}
+          />
+          <input
+            type="number"
+            name="stocks"
+            id=""
+            placeholder="stocks"
+            value={showProduct.stocks}
             onChange={DataInpProduct}
           />
         </form>
