@@ -37,7 +37,7 @@ const ProductSchema = new mongoose.Schema({
         type: "string",
         required: true,
     },
-    category: {
+    tags: {
         type: "string",
         default: "null",
         // required: true,
