@@ -32,9 +32,6 @@ export default function PostContent() {
       if (data.errors) {
         navigate("/");
       }
-      if (data) {
-        console.log(data);
-      }
     } catch (error) {
       console.log(error);
       navigate("/");
