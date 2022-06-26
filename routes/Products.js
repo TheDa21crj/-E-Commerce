@@ -116,6 +116,21 @@ router.get("/TopSelling", [], async(req, res) => {
     res.status(202).json(data);
 });
 
+// Public || Gender || /api/admin/Products/Gender
+router.get(
+    "/Gender", [check("gender", "gender is Required").not().isEmpty()],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { gender } = req.body;
+        let data = await Products.find({ gender });
+        res.status(202).json(data);
+    }
+);
+
 // Public || Product page || /api/admin/Products/:id
 router.get("/:id", async(req, res) => {
     try {
@@ -131,10 +146,6 @@ router.get("/:id", async(req, res) => {
         console.log(error);
         res.status(500).send("Server Error");
     }
-});
-
-router.get("/hello", (req, res) => {
-    res.status(200).send("Hello World");
 });
 
 module.exports = router;
