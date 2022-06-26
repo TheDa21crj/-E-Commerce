@@ -38,7 +38,8 @@
     {
         "id": "7",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/cordsets-women-web.jpg?format=webp&w=300&dpr=1.5",
-        "type": "nor300"
+        "type": "nor300",
+        "link": "tshirt"
     },
     {
         "id": "8",
