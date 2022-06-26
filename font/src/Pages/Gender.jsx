@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import Nav from "../Components/Nav";
 
 export default function Gender() {
+  const [showGender, setGender] = useState();
+
   const { gender } = useParams();
 
   const DataGet = async () => {
@@ -19,7 +21,8 @@ export default function Gender() {
       });
 
       const data = await res.json();
-      console.log(data);
+      setGender(data);
+      //   console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -32,6 +35,23 @@ export default function Gender() {
   return (
     <div>
       <Nav />
+      {showGender ? (
+        <div>
+          {showGender.map((value, key) => {
+            return (
+              <Link
+                to={`/products/${value._id}`}
+                className="LinkStyle"
+                key={value._id}
+              >
+                <div>{value.name}</div>
+              </Link>
+            );
+          })}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
