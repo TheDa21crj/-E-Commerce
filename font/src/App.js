@@ -40,6 +40,7 @@ function App() {
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
             <Route path="/Loading" element={<Loading />} />
+
             <Route path="*" element={<Error />} />
           </Routes>
         </Layout>
