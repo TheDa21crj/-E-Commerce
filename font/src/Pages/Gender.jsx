@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Nav from "../Components/Nav";
+// import TSCss from "./Css/TopSelling.module.css";
+import TSCss from "./../Components/Home/Css/TopSelling.module.css";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function Gender() {
   const [showGender, setGender] = useState();
@@ -44,7 +47,23 @@ export default function Gender() {
                 className="LinkStyle"
                 key={value._id}
               >
-                <div>{value.name}</div>
+                <div className={TSCss.MapMDiv}>
+                  <div>
+                    <img
+                      src={value.imageSrc}
+                      alt={value.name}
+                      className={TSCss.ImgSrc}
+                    />
+                  </div>
+                  <div className={TSCss.DetailsDiv}>
+                    <p className={TSCss.Name}> {value.name} </p>
+                    <p className={TSCss.Rating}>
+                      <StarIcon fontSize="small" className={TSCss.StarIcon} />
+                      <span> {value.rating} </span>
+                    </p>
+                    <p className={TSCss.price}> ₹{value.price} </p>
+                  </div>
+                </div>
               </Link>
             );
           })}
