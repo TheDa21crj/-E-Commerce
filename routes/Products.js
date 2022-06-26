@@ -117,7 +117,7 @@ router.get("/TopSelling", [], async(req, res) => {
 });
 
 // Public || Gender || /api/admin/Products/Gender
-router.get(
+router.post(
     "/Gender", [check("gender", "gender is Required").not().isEmpty()],
     async(req, res) => {
         const errors = validationResult(req);
