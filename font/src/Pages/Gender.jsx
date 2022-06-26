@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Nav from "../Components/Nav";
 
 export default function Gender() {
   const { gender } = useParams();
@@ -28,5 +29,10 @@ export default function Gender() {
     DataGet();
   });
 
-  return <div>Gender</div>;
+  return (
+    <div>
+      <Nav />
+      Gender
+    </div>
+  );
 }
