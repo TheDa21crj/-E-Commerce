@@ -18,9 +18,7 @@
     border-radius: 10px;
     transition: all 0.3s;
     box-shadow: 10px 10px 20px lightgrey;
-    /* height: 200px; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 
