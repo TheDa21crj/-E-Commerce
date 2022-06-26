@@ -133,4 +133,10 @@ router.get("/:id", async(req, res) => {
     }
 });
 
+// Public || Gender || /api/admin/Products/Gender
+router.get("/Gender", async(req, res) => {
+    let data = await Products.find({ gender: "female" });
+    res.status(202).json(data);
+});
+
 module.exports = router;
