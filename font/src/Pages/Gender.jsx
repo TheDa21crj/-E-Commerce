@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Nav from "../Components/Nav";
 
@@ -32,7 +32,6 @@ export default function Gender() {
   return (
     <div>
       <Nav />
-      Gender
     </div>
   );
 }
