@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "../Components/Nav";
 import { Link, useParams } from "react-router-dom";
 
 export default function ProductsCat() {
@@ -6,6 +7,7 @@ export default function ProductsCat() {
 
   return (
     <div>
+      <Nav />
       ProductsCat
       <br />
       {tag}
