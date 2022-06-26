@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TSCss from "./Css/TopSelling.module.css";
 import CatCss from "./Css/CATEGORIES.css";
 import data from "./JSON/data.json";
@@ -13,9 +14,13 @@ export default function CATEGORIES() {
       <div className="datamapPDiv">
         {data.map((value, key) => {
           return (
-            <div key={value.id} className={value.type}>
+            <Link
+              to={`categories/${value.link}`}
+              key={value.id}
+              className={value.type}
+            >
               <img src={value.src} alt="" className="categoryImgTag" />
-            </div>
+            </Link>
           );
         })}
       </div>
