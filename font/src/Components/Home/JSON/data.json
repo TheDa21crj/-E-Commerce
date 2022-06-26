@@ -1,32 +1,38 @@
 [{
         "id": "1",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles2_SclW5qN.jpg?format=webp&w=400&dpr=1.5",
-        "type": "nor400"
+        "type": "nor400",
+        "link": "tshirt"
     },
     {
         "id": "2",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/shirts-web_xdLFYjy.jpg?format=webp&w=400&dpr=1.5",
-        "type": "nor400"
+        "type": "nor400",
+        "link": "shirt"
     },
     {
         "id": "3",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/dresses--name-tiles.jpg?format=webp&w=400&dpr=1.5",
-        "type": "nor400"
+        "type": "nor400",
+        "link": "dress"
     },
     {
         "id": "4",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womensacivewearhorizontal-tile.jpg?format=webp&w=610&dpr=1.5",
-        "type": "nor600"
+        "type": "nor600",
+        "link": "activewear"
     },
     {
         "id": "5",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles_2_Ub3ndMj.jpg?format=webp&w=300&dpr=1.5",
-        "type": "nor300"
+        "type": "nor300",
+        "link": "polos"
     },
     {
         "id": "6",
         "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles1234_1.jpg?format=webp&w=300&dpr=1.5",
-        "type": "nor300"
+        "type": "nor300",
+        "link": "tshirt"
     },
 
     {
