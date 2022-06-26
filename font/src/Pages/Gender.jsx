@@ -25,7 +25,6 @@ export default function Gender() {
 
       const data = await res.json();
       setGender(data);
-      //   console.log(data);
     } catch (error) {
       console.log(error);
     }
