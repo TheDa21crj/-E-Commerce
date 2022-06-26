@@ -7,7 +7,7 @@ export default function Gender() {
   const DataGet = async () => {
     try {
       const res = await fetch("/api/admin/Products/Gender", {
-        method: "GET",
+        method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -15,7 +15,6 @@ export default function Gender() {
         body: JSON.stringify({
           gender,
         }),
-        credentials: "include",
       });
 
       const data = await res.json();
