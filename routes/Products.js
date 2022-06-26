@@ -131,6 +131,21 @@ router.post(
     }
 );
 
+// Public || Tag || /api/admin/Products/Tag
+router.post(
+    "/Tag", [check("tag", "tag is Required").not().isEmpty()],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { tag } = req.body;
+        // let data = await Products.find({ "tags.name": name });
+        res.status(202).json(data);
+    }
+);
+
 // Public || Product page || /api/admin/Products/:id
 router.get("/:id", async(req, res) => {
     try {
