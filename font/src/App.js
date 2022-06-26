@@ -14,7 +14,7 @@ import ProductsDeatils from "./Pages/ProductsDeatils";
 import Cart from "./Pages/Cart";
 import ShopCart from "./Pages/ShopCart";
 import Loading from "./Pages/Loading";
-import ProductsCat from "./Pages/ProductsCat";
+import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
 import PrivateRoute from "./route/PrivateRouting";
 
@@ -42,7 +42,7 @@ function App() {
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
             <Route path="/Loading" element={<Loading />} />
-            <Route path="/categories/:gender/:tag" element={<ProductsCat />} />
+            <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
             <Route path="*" element={<Error />} />
           </Routes>
