@@ -40,15 +40,11 @@ export default function Gender() {
     <div>
       <Nav />
       {showGender ? (
-        <div>
+        <div className={GenCss.MapPDiv}>
           {showGender.map((value, key) => {
             return (
-              <Link
-                to={`/products/${value._id}`}
-                className="LinkStyle"
-                key={value._id}
-              >
-                <div className={GenCss.MapMDiv}>
+              <div key={value._id} className={GenCss.MapMDiv}>
+                <Link to={`/products/${value._id}`} className="LinkStyle">
                   <div>
                     <img
                       src={value.imageSrc}
@@ -64,8 +60,8 @@ export default function Gender() {
                     </p>
                     <p className={TSCss.price}> ₹{value.price} </p>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             );
           })}
         </div>
