@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Nav from "../Components/Nav";
-// import TSCss from "./Css/TopSelling.module.css";
 import TSCss from "./../Components/Home/Css/TopSelling.module.css";
 import StarIcon from "@mui/icons-material/Star";
 import GenCss from "./Css/Gender.module.css";
