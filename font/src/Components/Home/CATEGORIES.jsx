@@ -15,7 +15,7 @@ export default function CATEGORIES() {
         {data.map((value, key) => {
           return (
             <Link
-              to={`categories/gender/${value.link}`}
+              to={`categories/${value.gender}/${value.link}`}
               key={value.id}
               className={value.type}
             >
