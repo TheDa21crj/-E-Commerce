@@ -4,6 +4,7 @@ import Nav from "../Components/Nav";
 import TSCss from "./../Components/Home/Css/TopSelling.module.css";
 import StarIcon from "@mui/icons-material/Star";
 import GenCss from "./Css/Gender.module.css";
+import Footer from "../Components/Footer";
 
 export default function Gender() {
   const [showGender, setGender] = useState();
@@ -66,6 +67,7 @@ export default function Gender() {
       ) : (
         ""
       )}
+      <Footer />
     </div>
   );
 }
