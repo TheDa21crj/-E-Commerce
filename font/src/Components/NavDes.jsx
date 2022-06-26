@@ -106,7 +106,9 @@ const Nav = (props) => {
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
             <li>
-              <p className={NavCss.NavListPTag}>Men</p>
+              <NavLink to="/categories/male/" className="LinkStyle">
+                <p className={NavCss.NavListPTag}>Men</p>
+              </NavLink>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
@@ -136,7 +138,9 @@ const Nav = (props) => {
               </div>
             </li>
             <li>
-              <p className={NavCss.NavListPTag}>Women</p>
+              <NavLink to="/categories/female/" className="LinkStyle">
+                <p className={NavCss.NavListPTag}>Women</p>
+              </NavLink>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
                   H21="TOPWEAR"
