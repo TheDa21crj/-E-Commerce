@@ -28,7 +28,7 @@ export default function Tag() {
 
   useEffect(() => {
     DataGet();
-  }, [gender]);
+  }, [gender, tag]);
 
   return (
     <div>
