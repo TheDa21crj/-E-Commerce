@@ -38,15 +38,14 @@ export default function Gender() {
   return (
     <div>
       <Nav />
-      {showGender ? (
-        <div className={GenCss.MapPDiv}>
-          {showGender
-            .filter((value) => {
-              console.table(value);
-              console.log(value.price);
-              return value;
-            })
-            .map((value, key) => {
+      <div className={GenCss.mDiv}>
+        <select name="sort" id="" className={GenCss.selectTag}>
+          <option value="low">Low to High</option>
+          <option value="high">High to Low</option>
+        </select>
+        {showGender ? (
+          <div className={GenCss.MapPDiv}>
+            {showGender.map((value, key) => {
               return (
                 <div key={value._id} className={GenCss.MapMDiv}>
                   <Link to={`/products/${value._id}`} className="LinkStyle">
@@ -69,10 +68,11 @@ export default function Gender() {
                 </div>
               );
             })}
-        </div>
-      ) : (
-        ""
-      )}
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
       <Footer />
     </div>
   );
