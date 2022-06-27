@@ -36,7 +36,7 @@ export default function Gender() {
     DataGet();
   }, []);
 
-  const changeSort = async () => {
+  const changeSort = async (e) => {
     const price = "price";
 
     console.log(price, e.target.value);
