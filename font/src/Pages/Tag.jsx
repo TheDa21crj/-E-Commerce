@@ -3,7 +3,7 @@ import Nav from "../Components/Nav";
 import { Link, useParams } from "react-router-dom";
 
 export default function Tag() {
-  const { tag } = useParams();
+  const { tag, gender } = useParams();
 
   return (
     <div>
@@ -11,6 +11,8 @@ export default function Tag() {
       Tag
       <br />
       {tag}
+      <br />
+      {gender}
     </div>
   );
 }
