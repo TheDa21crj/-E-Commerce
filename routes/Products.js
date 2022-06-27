@@ -146,8 +146,8 @@ router.post(
         const { tag, gender } = req.body;
         let data = await Products.find({ gender });
 
-        console.table(data);
-        res.status(202).json(data);
+        // console.table([data[0]]);
+        res.status(202).json(data[0]);
     }
 );
 
