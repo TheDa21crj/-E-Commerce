@@ -26,7 +26,6 @@ export default function Tag() {
       });
 
       const data = await res.json();
-      console.log(data);
       setGender(data);
     } catch (error) {
       console.log(error);
