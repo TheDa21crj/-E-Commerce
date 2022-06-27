@@ -36,17 +36,16 @@ export default function Gender() {
     DataGet();
   }, []);
 
-  const changeSort = async (col) => {
-    console.log(col);
-    // setSelect(e.target.value);
-    // console.table(showGender);
-    // const { price } = showGender;
+  const changeSort = async () => {
+    const price = "price";
+
+    console.log(price, e.target.value);
     // if (e.target.value === "low") {
     //   const sort = [...showGender].sort((a, b) => {
     //     a[price] > b[price] ? 1 : -1;
     //   });
     //   setGender(sort);
-    }
+    // }
   };
 
   return (
@@ -58,7 +57,7 @@ export default function Gender() {
             name="sort"
             id=""
             className={GenCss.selectTag}
-            onChange={changeSort("price")}
+            onChange={changeSort}
           >
             <option value="feature">Featured</option>
             <option value="low">Low to High</option>
