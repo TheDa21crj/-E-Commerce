@@ -37,7 +37,6 @@ export default function Gender() {
   }, []);
 
   const changeSort = async (e) => {
-    const initialData = showGender;
     if (e.target.value === "low") {
       const sort = [...showGender].sort((a, b) => (a.price > b.price ? 1 : -1));
       setGender(sort);
@@ -45,7 +44,8 @@ export default function Gender() {
       const sort = [...showGender].sort((a, b) => (a.price < b.price ? 1 : -1));
       setGender(sort);
     } else if (e.target.value === "feature") {
-      setGender(initialData);
+      const sort = [...showGender].sort((a, b) => (a.date > b.date ? 1 : -1));
+      setGender(sort);
     }
   };
 
