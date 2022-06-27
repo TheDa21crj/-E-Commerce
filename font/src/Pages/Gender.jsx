@@ -38,6 +38,15 @@ export default function Gender() {
 
   const changeSort = async (e) => {
     setSelect(e.target.value);
+    // console.table(showGender);
+    // const { price } = showGender;
+
+    if (e.target.value === "low") {
+      const sort = [...showGender].sort((a, b) => {
+        a[price] > b[price] ? 1 : -1;
+      });
+      setGender(sort);
+    }
   };
 
   return (
