@@ -146,10 +146,6 @@ router.post(
         const { tag, gender } = req.body;
         let data = await Products.find({ "tags.name": tag, gender: gender });
 
-        // console.table([data[0]]);
-
-        for (let i = 0; i < data.length; i++) {}
-        // res.status(202).json(data[0].tags[0].name);
         res.status(202).json(data);
     }
 );
