@@ -41,12 +41,8 @@ export default function Gender() {
       <div className={GenCss.mDiv}>
         <div className={GenCss.SelectDiv}>
           <select name="sort" id="" className={GenCss.selectTag}>
-            <option value="low" className={GenCss.optionTag}>
-              Low to High
-            </option>
-            <option value="high" className={GenCss.optionTag}>
-              High to Low
-            </option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
           </select>
         </div>
         {showGender ? (
