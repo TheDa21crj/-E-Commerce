@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../Components/Nav";
 import { Link, useParams } from "react-router-dom";
 
 export default function Tag() {
+  const [showGender, setGender] = useState();
+
   const { tag, gender } = useParams();
 
   const DataGet = async () => {
