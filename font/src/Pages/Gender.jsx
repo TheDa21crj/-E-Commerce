@@ -33,7 +33,7 @@ export default function Gender() {
 
   useEffect(() => {
     DataGet();
-  });
+  }, []);
 
   return (
     <div>
@@ -41,7 +41,11 @@ export default function Gender() {
       {showGender ? (
         <div className={GenCss.MapPDiv}>
           {showGender
-            .filter((value) => {})
+            .filter((value) => {
+              console.table(value);
+              console.log(value.price);
+              return value;
+            })
             .map((value, key) => {
               return (
                 <div key={value._id} className={GenCss.MapMDiv}>
