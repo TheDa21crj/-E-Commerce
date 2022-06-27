@@ -20,4 +20,8 @@
     height: 380px;
 }
 
-.selectTag {}
+.SelectDiv {
+    margin: 0px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
