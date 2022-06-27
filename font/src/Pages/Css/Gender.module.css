@@ -28,4 +28,9 @@
 
 .selectTag {
     outline: none;
+    padding: 3px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: ManropeRegular;
+    letter-spacing: 0.2px;
 }
