@@ -37,16 +37,15 @@ export default function Gender() {
   }, []);
 
   const changeSort = async (e) => {
-    // const price = "price";
-
-    // console.log(price, e.target.value);
+    const initialData = showGender;
     if (e.target.value === "low") {
       const sort = [...showGender].sort((a, b) => (a.price > b.price ? 1 : -1));
       setGender(sort);
-    }
-    if (e.target.value === "high") {
+    } else if (e.target.value === "high") {
       const sort = [...showGender].sort((a, b) => (a.price < b.price ? 1 : -1));
       setGender(sort);
+    } else if (e.target.value === "feature") {
+      setGender(initialData);
     }
   };
 
