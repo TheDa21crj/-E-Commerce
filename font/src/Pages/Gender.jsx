@@ -39,10 +39,12 @@ export default function Gender() {
     <div>
       <Nav />
       <div className={GenCss.mDiv}>
-        <select name="sort" id="" className={GenCss.selectTag}>
-          <option value="low">Low to High</option>
-          <option value="high">High to Low</option>
-        </select>
+        <div className={GenCss.SelectDiv}>
+          <select name="sort" id="" className={GenCss.selectTag}>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+          </select>
+        </div>
         {showGender ? (
           <div className={GenCss.MapPDiv}>
             {showGender.map((value, key) => {
