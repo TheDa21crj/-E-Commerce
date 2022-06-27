@@ -141,7 +141,7 @@ router.post(
         }
 
         const { tag } = req.body;
-        // let data = await Products.find({ "tags.name": name });
+        let data = await Products.find({ tags });
         res.status(202).json(data);
     }
 );
