@@ -133,15 +133,20 @@ router.post(
 
 // Public || Tag || /api/admin/Products/Tag
 router.post(
-    "/Tag", [check("tag", "tag is Required").not().isEmpty()],
+    "/Tag", [
+        check("tag", "tag is Required").not().isEmpty(),
+        check("gender", "gender is Required").not().isEmpty(),
+    ],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
 
-        const { tag } = req.body;
-        let data = await Products.find({ tags });
+        const { tag, gender } = req.body;
+        let data = await Products.find({ gender });
+
+        console.log(data.tags);
         res.status(202).json(data);
     }
 );
