@@ -11,8 +11,6 @@ export default function Gender() {
 
   const { gender } = useParams();
 
-  console.log(gender);
-
   const DataGet = async () => {
     try {
       const res = await fetch("/api/admin/Products/Gender", {
