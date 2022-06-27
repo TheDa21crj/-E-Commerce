@@ -8,7 +8,7 @@ import Footer from "../Components/Footer";
 
 export default function Gender() {
   const [showGender, setGender] = useState();
-  const [showSelect, setSelect] = useState();
+  const [showSelect, setSelect] = useState("");
 
   const { gender } = useParams();
 
@@ -37,7 +37,7 @@ export default function Gender() {
   }, []);
 
   const changeSort = async (e) => {
-    console.log(e.target.value);
+    setSelect(e.target.value);
   };
 
   return (
