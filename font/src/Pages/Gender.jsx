@@ -8,9 +8,10 @@ import Footer from "../Components/Footer";
 
 export default function Gender() {
   const [showGender, setGender] = useState();
-  const [showSelect, setSelect] = useState("");
 
   const { gender } = useParams();
+
+  console.log(gender);
 
   const DataGet = async () => {
     try {
@@ -34,7 +35,7 @@ export default function Gender() {
 
   useEffect(() => {
     DataGet();
-  }, []);
+  }, [gender]);
 
   const changeSort = async (e) => {
     if (e.target.value === "low") {
