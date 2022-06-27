@@ -36,8 +36,8 @@ export default function Gender() {
     DataGet();
   }, []);
 
-  const changeSort = async () => {
-    console.log("first");
+  const changeSort = async (e) => {
+    console.log(e.target.value);
   };
 
   return (
