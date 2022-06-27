@@ -8,6 +8,7 @@ import Footer from "../Components/Footer";
 
 export default function Gender() {
   const [showGender, setGender] = useState();
+  const [showSelect, setSelect] = useState();
 
   const { gender } = useParams();
 
@@ -41,6 +42,7 @@ export default function Gender() {
       <div className={GenCss.mDiv}>
         <div className={GenCss.SelectDiv}>
           <select name="sort" id="" className={GenCss.selectTag}>
+            <option value="feature">Featured</option>
             <option value="low">Low to High</option>
             <option value="high">High to Low</option>
           </select>
