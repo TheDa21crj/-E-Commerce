@@ -149,7 +149,8 @@ router.post(
         // console.table([data[0]]);
 
         for (let i = 0; i < data.length; i++) {}
-        res.status(202).json(data[0].tags.name);
+        // res.status(202).json(data[0].tags[0].name);
+        res.status(202).json(data);
     }
 );
 
