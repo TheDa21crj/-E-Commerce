@@ -34,3 +34,7 @@
     font-family: ManropeRegular;
     letter-spacing: 0.2px;
 }
+
+.optionTag {
+    padding: 3px 15px;
+}
