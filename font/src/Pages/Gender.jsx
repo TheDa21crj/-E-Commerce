@@ -36,12 +36,21 @@ export default function Gender() {
     DataGet();
   }, []);
 
+  const changeSort = async () => {
+    console.log("first");
+  };
+
   return (
     <div>
       <Nav />
       <div className={GenCss.mDiv}>
         <div className={GenCss.SelectDiv}>
-          <select name="sort" id="" className={GenCss.selectTag}>
+          <select
+            name="sort"
+            id=""
+            className={GenCss.selectTag}
+            onChange={changeSort}
+          >
             <option value="feature">Featured</option>
             <option value="low">Low to High</option>
             <option value="high">High to Low</option>
