@@ -22,6 +22,7 @@ export default function Tag() {
       });
 
       const data = await res.json();
+      console.log(data);
       setGender(data);
     } catch (error) {
       console.log(error);
@@ -35,11 +36,6 @@ export default function Tag() {
   return (
     <div>
       <Nav />
-      Tag
-      <br />
-      {tag}
-      <br />
-      {gender}
     </div>
   );
 }
