@@ -17,9 +17,28 @@ export default function CATEGORIES() {
             <Link
               to={`categories/${value.gender}/${value.link}`}
               key={value.id}
-              className={value.type}
+              // className={value.type}
             >
               {/* <img src={value.src} alt="" className="categoryImgTag" /> */}
+              <div className="col-md-4">
+                <div className="dcard">
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+                  <div className="trigger"></div>
+
+                  <div className="paracard">
+                    <div className="frame">
+                      {/* <h2>Last moon, first sun</h2> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Link>
           );
         })}
