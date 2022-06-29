@@ -33,9 +33,7 @@ export default function CATEGORIES() {
                   <div className="trigger"></div>
 
                   <div className="paracard">
-                    <div className="frame">
-                      {/* <h2>Last moon, first sun</h2> */}
-                    </div>
+                    <div className="frame"></div>
                   </div>
                 </div>
               </div>
