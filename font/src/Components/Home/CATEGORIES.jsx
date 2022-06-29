@@ -19,7 +19,6 @@ export default function CATEGORIES() {
               key={value.id}
               // className={value.type}
             >
-              {/* <img src={value.src} alt="" className="categoryImgTag" /> */}
               <div className="col-md-4">
                 <div className="dcard">
                   <div className="trigger"></div>
@@ -33,7 +32,9 @@ export default function CATEGORIES() {
                   <div className="trigger"></div>
 
                   <div className="paracard">
-                    <div className="frame"></div>
+                    <div className="frame">
+                      <img src={value.src} alt="" className="categoryImgTag" />
+                    </div>
                   </div>
                 </div>
               </div>
