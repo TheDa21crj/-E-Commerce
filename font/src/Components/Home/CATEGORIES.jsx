@@ -19,7 +19,7 @@ export default function CATEGORIES() {
               key={value.id}
               className={value.type}
             >
-              <img src={value.src} alt="" className="categoryImgTag" />
+              {/* <img src={value.src} alt="" className="categoryImgTag" /> */}
             </Link>
           );
         })}
