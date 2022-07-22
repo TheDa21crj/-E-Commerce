@@ -91,7 +91,7 @@ export default function PostContent() {
     <div>
       <Link to="/">The Da</Link>
       Logout
-      <h1>Welcome Admin</h1>
+      <h1 className={PCcss.h1WelAdmin}>Welcome Admin</h1>
       <div>
         <form action="" method="POST" className={PCcss.formTag}>
           <div className={PCcss.LeftFormDiv}>
