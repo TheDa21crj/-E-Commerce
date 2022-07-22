@@ -14,11 +14,6 @@ export default function MERCHANDISE() {
       <div className="slideParentDiv">
         <div className="slider">
           <div className="slide-track">
-            {/* <div className="slide">
-              <Link to="/MERCHANDISE/dc">
-                <img className="img-fluid" src={img1} alt="Second slide" />
-              </Link>
-            </div> */}
             {Data.map((value, key) => {
               return (
                 <div className="slide">
@@ -32,9 +27,6 @@ export default function MERCHANDISE() {
                 </div>
               );
             })}
-            {/* <div className="slide">
-              <img alt="Image" src={img4} className="img-fluid" />
-            </div> */}
           </div>
         </div>
       </div>
