@@ -50,6 +50,9 @@ export default function Gender() {
         a.rating < b.rating ? 1 : -1
       );
       setGender(sort);
+    } else if (e.target.value === "new") {
+      const sort = [...showGender].sort((a, b) => (a.date < b.date ? 1 : -1));
+      setGender(sort);
     }
   };
 
@@ -67,8 +70,8 @@ export default function Gender() {
             <option value="feature">Featured</option>
             <option value="low">Price - Low to High</option>
             <option value="high">Price - High to Low</option>
-            <option value="ratingHightoLow">Rating - High to Low</option>
-            <option value="ratingHightoLow">Rating - Low to High</option>
+            <option value="ratingHightoLow">Best Rating</option>
+            <option value="new">Newest</option>
           </select>
         </div>
         {showGender ? (
