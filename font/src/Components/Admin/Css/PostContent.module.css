@@ -104,12 +104,22 @@
         width: 98%;
     }
     .ImpTagTextArea {
-        width: 95%;
+        width: 90%;
     }
     .ImpTag:focus,
     .ImpTagTextArea:focus {
         border-radius: 10px;
         background-color: transparent;
         border-color: #f34278;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .LeftFormDivRowDiv {
+        width: 90%;
+        flex-direction: column;
+    }
+    .ImpTag {
+        width: 100%;
     }
 }
