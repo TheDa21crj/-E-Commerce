@@ -105,4 +105,6 @@
 
 .PostBtn:hover {
     background-color: #f56692;
+    color: #fff;
+    letter-spacing: 0.12rem;
 }
