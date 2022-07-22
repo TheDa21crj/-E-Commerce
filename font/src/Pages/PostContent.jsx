@@ -89,7 +89,9 @@ export default function PostContent() {
 
   return (
     <div>
-      <Link to="/">The Da</Link>
+      <Link to="/" className={PCcss.titleNav}>
+        The Da
+      </Link>
       Logout
       <h1 className={PCcss.h1WelAdmin}>Welcome Admin</h1>
       <div>
