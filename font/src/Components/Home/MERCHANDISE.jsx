@@ -3,8 +3,6 @@ import "./Css/MERCHANDISE.css";
 import TSCss from "./Css/TopSelling.module.css";
 import { Link } from "react-router-dom";
 
-// img
-
 export default function MERCHANDISE() {
   return (
     <div className="MERCHANDISEmDiv">
