@@ -17,7 +17,7 @@ export default function PostContent() {
     sold: "",
   });
   const navigate = useNavigate();
-  const [showRes, SetRes] = useState("d");
+  const [showRes, SetRes] = useState("");
 
   const AuthMiddleware = async () => {
     try {
@@ -84,7 +84,24 @@ export default function PostContent() {
       }),
     });
     const r = await res.json();
-    SetRes(r.message);
+
+    setTimeout(() => {
+      SetRes(r.message);
+      setTimeout(() => {
+        SetRes("");
+      }, 3000);
+    });
+
+    name = "";
+    imageSrc = "";
+    des = "";
+    rating = "";
+    NumReview = "";
+    price = "";
+    gender = "";
+    tags = "";
+    stocks = "";
+    sold = "";
   };
 
   return (
@@ -206,7 +223,7 @@ export default function PostContent() {
           </button>
         </center>
       </div>
-      <p className={PCcss.showResAlert}>{showRes}</p>
+      {showRes ? <p className={PCcss.showResAlert}>{showRes}</p> : ""}
     </div>
   );
 }
