@@ -185,7 +185,7 @@ export default function PostContent() {
           <div className={PCcss.RightFormDiv}>
             <textarea
               name="des"
-              id=""
+              className={PCcss.ImpTagTextArea}
               cols="30"
               rows="10"
               value={showProduct.des}
