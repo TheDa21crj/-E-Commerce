@@ -25,7 +25,8 @@
 }
 
 .postPDiv {
-    margin: 20px 0px;
+    font-family: ManropeRegular;
+    margin: 20px 0px 0px 20px;
     display: flex;
     justify-content: space-evenly;
 }
