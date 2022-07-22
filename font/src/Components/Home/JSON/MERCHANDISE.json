@@ -10,43 +10,43 @@
     },
     {
         "id": "3",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/dresses--name-tiles.jpg?format=webp&w=400&dpr=1.5",
-        "name": "nor400"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dcaf67a054637bb1f27_DC.webp",
+        "name": "DC"
     },
     {
         "id": "4",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womensacivewearhorizontal-tile.jpg?format=webp&w=610&dpr=1.5",
-        "name": "nor600"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca89f48ad676436d55_LooneyTunes.webp",
+        "name": "LooneyTunes"
     },
     {
         "id": "5",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles_2_Ub3ndMj.jpg?format=webp&w=300&dpr=1.5",
-        "name": "nor300"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca19be04382cf52b0e_web-icon.webp",
+        "name": "Netflix"
     },
     {
         "id": "6",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles1234_1.jpg?format=webp&w=300&dpr=1.5",
-        "name": "nor300"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca8c1f3e9337febd95_Disney.webp",
+        "name": "Disney"
     },
 
     {
         "id": "7",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/cordsets-women-web.jpg?format=webp&w=300&dpr=1.5",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc919be046db7f52b06_Marvel_Logo.webp",
         "name": "nor300"
     },
     {
         "id": "8",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles1_EkpBXJ6.jpg?format=webp&w=300&dpr=1.5",
+        "src": "",
         "name": "nor300"
     },
     {
         "id": "9",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womenspjshorizontal-tile.jpg?format=webp&w=610&dpr=1.5",
+        "src": "",
         "name": "nor600"
     },
     {
         "id": "10",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/dropcut-web_hyiMbEb.jpg?format=webp&w=300&dpr=1.5",
+        "src": "",
         "name": "nor400"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "id": "12",
-        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womensjoggers-web.jpg?format=webp&w=300&dpr=1.5",
+        "src": "",
         "name": "nor400"
     }
 ]
