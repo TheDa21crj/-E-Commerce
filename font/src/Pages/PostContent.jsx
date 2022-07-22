@@ -187,7 +187,7 @@ export default function PostContent() {
               name="des"
               className={PCcss.ImpTagTextArea}
               cols="30"
-              rows="10"
+              rows="18"
               value={showProduct.des}
               placeholder="des"
               onChange={DataInpProduct}
