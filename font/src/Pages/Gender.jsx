@@ -53,7 +53,11 @@ export default function Gender() {
     } else if (e.target.value === "new") {
       const sort = [...showGender].sort((a, b) => (a.date < b.date ? 1 : -1));
       setGender(sort);
+    } else if (e.target.value === "Popularity") {
+      const sort = [...showGender].sort((a, b) => (a.sold > b.sold ? 1 : -1));
+      setGender(sort);
     }
+    console.log(showGender);
   };
 
   return (
@@ -72,6 +76,7 @@ export default function Gender() {
             <option value="high">Price - High to Low</option>
             <option value="ratingHightoLow">Best Rating</option>
             <option value="new">Newest</option>
+            <option value="Popularity">Popularity</option>
           </select>
         </div>
         {showGender ? (
