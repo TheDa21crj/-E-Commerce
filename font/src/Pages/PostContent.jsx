@@ -100,6 +100,7 @@ export default function PostContent() {
                 type="text"
                 name="name"
                 id=""
+                className={PCcss.ImpTag}
                 placeholder="Name"
                 value={showProduct.name}
                 onChange={DataInpProduct}
@@ -108,6 +109,7 @@ export default function PostContent() {
                 type="text"
                 name="imageSrc"
                 id=""
+                className={PCcss.ImpTag}
                 placeholder="Image Src"
                 value={showProduct.imageSrc}
                 onChange={DataInpProduct}
@@ -118,6 +120,7 @@ export default function PostContent() {
                 type="number"
                 name="rating"
                 id=""
+                className={PCcss.ImpTag}
                 placeholder="Rating"
                 value={showProduct.rating}
                 onChange={DataInpProduct}
@@ -126,6 +129,7 @@ export default function PostContent() {
                 type="number"
                 name="NumReview"
                 id=""
+                className={PCcss.ImpTag}
                 placeholder="Number of Reviews"
                 value={showProduct.NumReview}
                 onChange={DataInpProduct}
@@ -136,6 +140,7 @@ export default function PostContent() {
                 type="number"
                 name="price"
                 id=""
+                className={PCcss.ImpTag}
                 value={showProduct.price}
                 placeholder="price"
                 onChange={DataInpProduct}
@@ -144,6 +149,7 @@ export default function PostContent() {
                 type="text"
                 name="gender"
                 id=""
+                className={PCcss.ImpTag}
                 value={showProduct.gender}
                 placeholder="gender"
                 onChange={DataInpProduct}
@@ -153,7 +159,7 @@ export default function PostContent() {
               <input
                 type="text"
                 name="tags"
-                id=""
+                className={PCcss.ImpTag}
                 placeholder="tags"
                 value={showProduct.tags}
                 onChange={DataInpProduct}
@@ -161,7 +167,7 @@ export default function PostContent() {
               <input
                 type="number"
                 name="stocks"
-                id=""
+                className={PCcss.ImpTag}
                 placeholder="stocks"
                 value={showProduct.stocks}
                 onChange={DataInpProduct}
@@ -171,7 +177,7 @@ export default function PostContent() {
             <input
               type="number"
               name="sold"
-              id=""
+              className={PCcss.ImpTag}
               placeholder="sold"
               value={showProduct.sold}
               onChange={DataInpProduct}
