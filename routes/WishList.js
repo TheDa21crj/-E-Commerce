@@ -119,6 +119,10 @@ router.delete(
 router.post(
     "/check", [UserAuth, check("_id", "_id is Required ").not().isEmpty()],
     async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
         let userID = req.userId;
         try {
             const { _id } = req.body;
