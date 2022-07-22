@@ -32,31 +32,21 @@
     {
         "id": "7",
         "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc919be046db7f52b06_Marvel_Logo.webp",
-        "name": "nor300"
+        "name": "Marvel"
     },
     {
         "id": "8",
-        "src": "",
-        "name": "nor300"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc91e10d0634e7b8bb7_friends.webp",
+        "name": "Friends"
     },
     {
         "id": "9",
-        "src": "",
-        "name": "nor600"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62ad4ae81253ba770756366d_himym.jpeg",
+        "name": "himym"
     },
     {
         "id": "10",
-        "src": "",
-        "name": "nor400"
-    },
-    {
-        "id": "11",
-        "src": "https://g3fashion.com/blog/wp-content/uploads/2021/06/white-indian-suit-e1624093293937.jpg",
-        "name": "nor400"
-    },
-    {
-        "id": "12",
-        "src": "",
-        "name": "nor400"
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62ad4ae80db1a7620c8a9195_lucifer.jpg",
+        "name": "lucifer"
     }
 ]
