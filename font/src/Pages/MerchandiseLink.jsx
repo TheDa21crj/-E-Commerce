@@ -26,7 +26,7 @@ export default function MerchandiseLink() {
       const data = await res.json();
       if (data.errors) {
       } else {
-        console.log(data);
+        setGender(data);
       }
     } catch (error) {
       console.log(error);
@@ -38,7 +38,35 @@ export default function MerchandiseLink() {
   return (
     <div>
       <Nav />
-      <p>{link}</p>
+      {showGender ? (
+        <div className={GenCss.MapPDiv}>
+          {showGender.map((value, key) => {
+            return (
+              <div key={value._id} className={GenCss.MapMDiv}>
+                <Link to={`/products/${value._id}`} className="LinkStyle">
+                  <div>
+                    <img
+                      src={value.imageSrc}
+                      alt={value.name}
+                      className={GenCss.ImgSrc}
+                    />
+                  </div>
+                  <div className={TSCss.DetailsDiv}>
+                    <p className={TSCss.Name}> {value.name} </p>
+                    <p className={TSCss.Rating}>
+                      <StarIcon fontSize="small" className={TSCss.StarIcon} />
+                      <span> {value.rating} </span>
+                    </p>
+                    <p className={TSCss.price}> ₹{value.price} </p>
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        ""
+      )}
       <Footer />
     </div>
   );
