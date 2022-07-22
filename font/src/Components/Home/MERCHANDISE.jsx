@@ -2,6 +2,7 @@ import React from "react";
 import "./Css/MERCHANDISE.css";
 import TSCss from "./Css/TopSelling.module.css";
 import { Link } from "react-router-dom";
+import Data from "./JSON/MERCHANDISE.json";
 
 export default function MERCHANDISE() {
   return (
