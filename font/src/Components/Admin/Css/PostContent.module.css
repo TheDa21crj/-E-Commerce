@@ -93,3 +93,14 @@
     border-radius: 10px;
     font-family: ManropeRegular;
 }
+
+@media only screen and (max-width: 860px) {
+    .formTag {
+        margin-top: 20px;
+        flex-direction: column-reverse;
+    }
+    .LeftFormDiv,
+    .RightFormDiv {
+        width: 98%;
+    }
+}
