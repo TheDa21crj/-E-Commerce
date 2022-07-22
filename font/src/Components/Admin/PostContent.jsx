@@ -65,6 +65,27 @@ export default function PostContent() {
       sold,
     } = showProduct;
 
+    if (
+      name === "" ||
+      imageSrc === "" ||
+      des === "" ||
+      rating === "" ||
+      NumReview === "" ||
+      price === "" ||
+      gender === "" ||
+      tags === "" ||
+      stocks === "" ||
+      sold === ""
+    ) {
+      setTimeout(() => {
+        SetRes("Enter All the Details");
+        setTimeout(() => {
+          SetRes("");
+        }, 3000);
+      });
+      return;
+    }
+
     const res = await fetch("/api/admin/Products", {
       method: "POST",
       headers: {
