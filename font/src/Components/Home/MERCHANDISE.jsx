@@ -14,42 +14,27 @@ export default function MERCHANDISE() {
       <div className="slideParentDiv">
         <div className="slider">
           <div className="slide-track">
-            <div className="slide">
+            {/* <div className="slide">
               <Link to="/MERCHANDISE/dc">
                 <img className="img-fluid" src={img1} alt="Second slide" />
               </Link>
-            </div>
-            <div className="slide">
-              <Link to="/MERCHANDISE/Disney">
-                <img alt="Image" src={img2} className="img-fluid" />
-              </Link>
-            </div>
-            <div className="slide">
-              <Link to="/MERCHANDISE/friends">
-                <img alt="Image" src={img3} className="img-fluid" />
-              </Link>
-            </div>
-            <div className="slide">
+            </div> */}
+            {Data.map((value, key) => {
+              return (
+                <div className="slide">
+                  <Link
+                    to={`/MERCHANDISE/${value.name}`}
+                    key={key}
+                    className={value.type}
+                  >
+                    <img alt="Image" src={value.src} className="img-fluid" />
+                  </Link>
+                </div>
+              );
+            })}
+            {/* <div className="slide">
               <img alt="Image" src={img4} className="img-fluid" />
-            </div>
-            <div className="slide">
-              <img alt="Image" src={img5} className="img-fluid" />
-            </div>
-            <div className="slide">
-              <img alt="Image" src={img6} className="img-fluid" />
-            </div>
-            <div className="slide">
-              <img alt="Image " src={img7} className="img-fluid " />
-            </div>
-            <div className="slide">
-              <img alt="Image " src={img8} className="img-fluid " />
-            </div>
-            <div className="slide">
-              <img alt="Image " src={img9} className="img-fluid " />
-            </div>
-            <div className="slide">
-              <img alt="Image " src={img10} className="img-fluid " />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
