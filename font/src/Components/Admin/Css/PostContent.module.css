@@ -103,4 +103,13 @@
     .RightFormDiv {
         width: 98%;
     }
+    .ImpTagTextArea {
+        width: 95%;
+    }
+    .ImpTag:focus,
+    .ImpTagTextArea:focus {
+        border-radius: 10px;
+        background-color: transparent;
+        border-color: #f34278;
+    }
 }
