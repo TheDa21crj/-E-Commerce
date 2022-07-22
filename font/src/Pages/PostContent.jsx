@@ -106,12 +106,11 @@ export default function PostContent() {
                 onChange={DataInpProduct}
               />
               <input
-                type="text"
-                name="imageSrc"
-                id=""
+                type="number"
+                name="sold"
                 className={PCcss.ImpTag}
-                placeholder="Image Src"
-                value={showProduct.imageSrc}
+                placeholder="sold"
+                value={showProduct.sold}
                 onChange={DataInpProduct}
               />
             </div>
@@ -173,13 +172,13 @@ export default function PostContent() {
                 onChange={DataInpProduct}
               />
             </div>
-
             <input
-              type="number"
-              name="sold"
+              type="text"
+              name="imageSrc"
+              id=""
               className={PCcss.ImpTag}
-              placeholder="sold"
-              value={showProduct.sold}
+              placeholder="Image Src"
+              value={showProduct.imageSrc}
               onChange={DataInpProduct}
             />
           </div>
