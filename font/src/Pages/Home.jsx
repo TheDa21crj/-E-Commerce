@@ -79,7 +79,7 @@ export default function Home() {
           <NewArrival />
           <CATEGORIES />
           <TopSelling />
-          <COLLECTIONS />
+          {/* <COLLECTIONS /> */}
           <MERCHANDISE />
           <Footer />
         </div>
