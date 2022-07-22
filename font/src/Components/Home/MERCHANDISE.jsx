@@ -1,6 +1,7 @@
 import React from "react";
 import "./Css/MERCHANDISE.css";
 import TSCss from "./Css/TopSelling.module.css";
+import { Link } from "react-router-dom";
 
 // img
 import img1 from "./../../Img/MERCHANDISE/DC.webp";
@@ -25,7 +26,9 @@ export default function MERCHANDISE() {
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
-              <img className="img-fluid" src={img1} alt="Second slide" />
+              <Link to="/MERCHANDISE/dc">
+                <img className="img-fluid" src={img1} alt="Second slide" />
+              </Link>
             </div>
             <div className="slide">
               <img alt="Image" src={img2} className="img-fluid" />
