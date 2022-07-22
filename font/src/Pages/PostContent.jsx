@@ -200,9 +200,11 @@ export default function PostContent() {
           </div>
         </form>
 
-        <button onClick={PostData} className={PCcss.Post}>
-          Post
-        </button>
+        <center>
+          <button onClick={PostData} className={PCcss.PostBtn}>
+            Post
+          </button>
+        </center>
       </div>
       <p>{showRes}</p>
     </div>
