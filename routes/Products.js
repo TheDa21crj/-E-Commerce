@@ -104,6 +104,7 @@ router.put(
     }
 );
 
+// Private || Update Tags || /api/admin/Products/UpdateTag
 router.put(
     "/UpdateTag", [
         check("_id", "id is Required").not().isEmpty(),
