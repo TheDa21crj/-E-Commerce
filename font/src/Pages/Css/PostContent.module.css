@@ -102,3 +102,7 @@
     color: #f56692;
     transition: all 0.3s;
 }
+
+.PostBtn:hover {
+    background-color: #f56692;
+}
