@@ -30,8 +30,19 @@
     width: 30%;
 }
 
-.ImpTagTextArea.ImpTag {
+.ImpTagTextArea,
+.ImpTag {
     outline: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.ImpTagTextArea {
+    resize: none;
 }
 
 .ImpTag {
@@ -39,15 +50,18 @@
     width: 40%;
 }
 
-.ImpTag::placeholder {
+.ImpTag::placeholder,
+.ImpTagTextArea::placeholder {
     text-transform: capitalize;
 }
 
-.ImpTag:hover {
+.ImpTag:hover,
+.ImpTagTextArea:hover {
     border-color: #f56692;
 }
 
-.ImpTag:focus {
+.ImpTag:focus,
+.ImpTagTextArea:focus {
     border-radius: 0px;
     background-color: transparent;
     border-color: transparent transparent #f34278 transparent;
