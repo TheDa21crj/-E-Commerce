@@ -20,6 +20,8 @@
     align-items: center;
 }
 
+.RightFormDiv {}
+
 .ImpTag {
     outline: none;
     margin-top: 20px;
@@ -45,5 +47,3 @@
     background-color: transparent;
     border-color: transparent transparent #f34278 transparent;
 }
-
-.RightFormDiv {}
