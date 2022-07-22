@@ -107,14 +107,14 @@ router.put(
 router.put(
     "/UpdateTag", [
         check("_id", "id is Required").not().isEmpty(),
-        check("value", "value is Required").not().isEmpty(),
+        check("name", "name is Required").not().isEmpty(),
     ],
     async(req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { _id, field, value } = req.body;
+        const { _id, name } = req.body;
 
         try {
             let id = await Products.findOne({ _id });
@@ -122,9 +122,12 @@ router.put(
             if (!id) {
                 return res.status(400).json({ message: `Product Does not Exists` });
             }
-            const result = await Products.updateOne({ _id }, {
-                $set: {
-                    [field]: value,
+
+            let tag = {};
+            tag.name = name;
+            const result = await Products.findOneAndUpdate({ _id }, {
+                $push: {
+                    tags: tag,
                 },
             });
             return res.status(200).json(result);
