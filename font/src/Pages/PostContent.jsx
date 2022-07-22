@@ -89,10 +89,13 @@ export default function PostContent() {
 
   return (
     <div>
-      <Link to="/" className={PCcss.titleNav}>
-        The Da
-      </Link>
-      Logout
+      <div className={PCcss.headdiv}>
+        <Link to="/" className={PCcss.titleNav}>
+          <h1>The Da</h1>
+        </Link>
+        Logout
+      </div>
+
       <h1 className={PCcss.h1WelAdmin}>Welcome Admin</h1>
       <div>
         <form action="" method="POST" className={PCcss.formTag}>
@@ -197,7 +200,9 @@ export default function PostContent() {
           </div>
         </form>
 
-        <button onClick={PostData}>Post</button>
+        <button onClick={PostData} className={PCcss.ImpTagTextArea}>
+          Post
+        </button>
       </div>
       <p>{showRes}</p>
     </div>
