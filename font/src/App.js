@@ -16,6 +16,7 @@ import ShopCart from "./Pages/ShopCart";
 import Loading from "./Pages/Loading";
 import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
+import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
 
 // redux
@@ -44,7 +45,7 @@ function App() {
             <Route path="/Loading" element={<Loading />} />
             <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
-            <Route path="/MERCHANDISE/:link" element={<Gender />} />
+            <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Layout>
