@@ -45,6 +45,11 @@ export default function Gender() {
     } else if (e.target.value === "feature") {
       const sort = [...showGender].sort((a, b) => (a.date > b.date ? 1 : -1));
       setGender(sort);
+    } else if (e.target.value === "ratingHightoLow") {
+      const sort = [...showGender].sort((a, b) =>
+        a.rating < b.rating ? 1 : -1
+      );
+      setGender(sort);
     }
   };
 
@@ -60,8 +65,10 @@ export default function Gender() {
             onChange={changeSort}
           >
             <option value="feature">Featured</option>
-            <option value="low">Low to High</option>
-            <option value="high">High to Low</option>
+            <option value="low">Price - Low to High</option>
+            <option value="high">Price - High to Low</option>
+            <option value="ratingHightoLow">Rating - High to Low</option>
+            <option value="ratingHightoLow">Rating - Low to High</option>
           </select>
         </div>
         {showGender ? (
