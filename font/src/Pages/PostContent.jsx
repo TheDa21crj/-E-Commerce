@@ -95,70 +95,79 @@ export default function PostContent() {
       <div>
         <form action="" method="POST" className={PCcss.formTag}>
           <div className={PCcss.LeftFormDiv}>
-            <input
-              type="text"
-              name="name"
-              id=""
-              placeholder="Name"
-              value={showProduct.name}
-              onChange={DataInpProduct}
-            />
-            <input
-              type="text"
-              name="imageSrc"
-              id=""
-              placeholder="Image Src"
-              value={showProduct.imageSrc}
-              onChange={DataInpProduct}
-            />
-            <input
-              type="number"
-              name="rating"
-              id=""
-              placeholder="Rating"
-              value={showProduct.rating}
-              onChange={DataInpProduct}
-            />
-            <input
-              type="number"
-              name="NumReview"
-              id=""
-              placeholder="Number of Reviews"
-              value={showProduct.NumReview}
-              onChange={DataInpProduct}
-            />
-            <input
-              type="number"
-              name="price"
-              id=""
-              value={showProduct.price}
-              placeholder="price"
-              onChange={DataInpProduct}
-            />
-            <input
-              type="text"
-              name="gender"
-              id=""
-              value={showProduct.gender}
-              placeholder="gender"
-              onChange={DataInpProduct}
-            />
-            <input
-              type="text"
-              name="tags"
-              id=""
-              placeholder="tags"
-              value={showProduct.tags}
-              onChange={DataInpProduct}
-            />
-            <input
-              type="number"
-              name="stocks"
-              id=""
-              placeholder="stocks"
-              value={showProduct.stocks}
-              onChange={DataInpProduct}
-            />
+            <div className={PCcss.LeftFormDivRowDiv}>
+              <input
+                type="text"
+                name="name"
+                id=""
+                placeholder="Name"
+                value={showProduct.name}
+                onChange={DataInpProduct}
+              />
+              <input
+                type="text"
+                name="imageSrc"
+                id=""
+                placeholder="Image Src"
+                value={showProduct.imageSrc}
+                onChange={DataInpProduct}
+              />
+            </div>
+            <div className={PCcss.LeftFormDivRowDiv}>
+              <input
+                type="number"
+                name="rating"
+                id=""
+                placeholder="Rating"
+                value={showProduct.rating}
+                onChange={DataInpProduct}
+              />
+              <input
+                type="number"
+                name="NumReview"
+                id=""
+                placeholder="Number of Reviews"
+                value={showProduct.NumReview}
+                onChange={DataInpProduct}
+              />
+            </div>
+            <div className={PCcss.LeftFormDivRowDiv}>
+              <input
+                type="number"
+                name="price"
+                id=""
+                value={showProduct.price}
+                placeholder="price"
+                onChange={DataInpProduct}
+              />
+              <input
+                type="text"
+                name="gender"
+                id=""
+                value={showProduct.gender}
+                placeholder="gender"
+                onChange={DataInpProduct}
+              />
+            </div>
+            <div className={PCcss.LeftFormDivRowDiv}>
+              <input
+                type="text"
+                name="tags"
+                id=""
+                placeholder="tags"
+                value={showProduct.tags}
+                onChange={DataInpProduct}
+              />
+              <input
+                type="number"
+                name="stocks"
+                id=""
+                placeholder="stocks"
+                value={showProduct.stocks}
+                onChange={DataInpProduct}
+              />
+            </div>
+
             <input
               type="number"
               name="sold"
@@ -168,7 +177,7 @@ export default function PostContent() {
               onChange={DataInpProduct}
             />
           </div>
-          <div className={PCcss.LeftFormDiv}>
+          <div className={PCcss.RightFormDiv}>
             <textarea
               name="des"
               id=""
