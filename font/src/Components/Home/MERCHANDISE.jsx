@@ -31,12 +31,14 @@ export default function MERCHANDISE() {
               </Link>
             </div>
             <div className="slide">
-              <Link to="/MERCHANDISE/dc">
+              <Link to="/MERCHANDISE/Disney">
                 <img alt="Image" src={img2} className="img-fluid" />
               </Link>
             </div>
             <div className="slide">
-              <img alt="Image" src={img3} className="img-fluid" />
+              <Link to="/MERCHANDISE/friends">
+                <img alt="Image" src={img3} className="img-fluid" />
+              </Link>
             </div>
             <div className="slide">
               <img alt="Image" src={img4} className="img-fluid" />
