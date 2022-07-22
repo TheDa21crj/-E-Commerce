@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PostContentCom from "../Components/Admin/PostContent";
+import UpdateProduct from "../Components/Admin/UpdateProduct";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import PCcs from "./Css/PostContent.module.css";
@@ -31,7 +32,7 @@ export default function PostContent() {
           Update a Product
         </p>
       </div>
-      {change === "1" ? "hello" : <PostContentCom />}
+      {change === "1" ? <UpdateProduct /> : <PostContentCom />}
     </div>
   );
 }
