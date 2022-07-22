@@ -5,7 +5,7 @@
 }
 
 .LeftFormDiv {
-    width: 45%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -23,7 +23,7 @@
 .ImpTag {
     outline: none;
     margin-top: 20px;
-    width: 80%;
+    width: 40%;
     background-color: #fff;
     padding: 10px 15px;
     border: solid 1px lightgrey;
@@ -32,6 +32,18 @@
     transition: all 0.3s;
 }
 
-.ImpTag:hover {}
+.ImpTag::placeholder {
+    text-transform: capitalize;
+}
+
+.ImpTag:hover {
+    border-color: #f56692;
+}
+
+.ImpTag:focus {
+    border-radius: 0px;
+    background-color: transparent;
+    border-color: transparent transparent #f34278 transparent;
+}
 
 .RightFormDiv {}
