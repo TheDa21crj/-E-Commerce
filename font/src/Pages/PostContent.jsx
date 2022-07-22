@@ -200,7 +200,7 @@ export default function PostContent() {
           </div>
         </form>
 
-        <button onClick={PostData} className={PCcss.ImpTagTextArea}>
+        <button onClick={PostData} className={PCcss.Post}>
           Post
         </button>
       </div>
