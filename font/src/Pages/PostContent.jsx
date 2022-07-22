@@ -18,15 +18,15 @@ export default function PostContent() {
       <div className={PCcs.postPDiv}>
         <p
           className={PCcs.postPTag}
-          id={change === "1" ? "Details" : ""}
-          onClick={() => setchange("1")}
+          id={change === "2" ? "Details" : ""}
+          onClick={() => setchange("2")}
         >
           Post New Product
         </p>
         <p
           className={PCcs.postPTag}
-          id={change === "2" ? "Details" : ""}
-          onClick={() => setchange("2")}
+          id={change === "1" ? "Details" : ""}
+          onClick={() => setchange("1")}
         >
           Update a Product
         </p>
