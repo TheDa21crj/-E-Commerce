@@ -6,13 +6,32 @@
 
 .LeftFormDiv {
     width: 45%;
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.LeftFormDivRowDiv {}
+.LeftFormDivRowDiv {
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ImpTag {
+    outline: none;
+    margin-top: 20px;
+    width: 80%;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.ImpTag:hover {}
 
 .RightFormDiv {}
