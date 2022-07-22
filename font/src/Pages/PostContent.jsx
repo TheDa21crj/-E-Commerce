@@ -92,16 +92,18 @@ export default function PostContent() {
       }, 3000);
     });
 
-    name = "";
-    imageSrc = "";
-    des = "";
-    rating = "";
-    NumReview = "";
-    price = "";
-    gender = "";
-    tags = "";
-    stocks = "";
-    sold = "";
+    setProduct({
+      name: "",
+      imageSrc: "",
+      des: "",
+      rating: "",
+      NumReview: "",
+      price: "",
+      gender: "",
+      tags: "",
+      stocks: "",
+      sold: "",
+    });
   };
 
   return (
