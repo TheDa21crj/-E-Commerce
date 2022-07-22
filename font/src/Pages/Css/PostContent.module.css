@@ -30,16 +30,13 @@
     width: 30%;
 }
 
-.ImpTag {
+.ImpTagTextArea.ImpTag {
     outline: none;
+}
+
+.ImpTag {
     margin-top: 20px;
     width: 40%;
-    background-color: #fff;
-    padding: 10px 15px;
-    border: solid 1px lightgrey;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s;
 }
 
 .ImpTag::placeholder {
