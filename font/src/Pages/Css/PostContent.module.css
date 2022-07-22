@@ -108,3 +108,14 @@
     color: #fff;
     letter-spacing: 0.12rem;
 }
+
+.showResAlert {
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    background-color: #f56692;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: ManropeRegular;
+}
