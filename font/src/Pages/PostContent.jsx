@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import PCcs from "./Css/PostContent.module.css";
 
 export default function PostContent() {
-  const [change, setchange] = useState("1");
+  const [change, setchange] = useState("2");
   return (
     <div>
       <div className={PCcs.headdiv}>
@@ -16,11 +16,14 @@ export default function PostContent() {
       </div>
       <h1 className={PCcs.h1WelAdmin}>Welcome Admin</h1>
       <div className={PCcs.postPDiv}>
-        <p className={PCcs.postPTag}>Post New Product</p>
-        <p className={PCcs.postPTag}>Update a Product</p>
-        <p></p>
+        <p className={PCcs.postPTag} onClick={() => setchange("1")}>
+          Post New Product
+        </p>
+        <p className={PCcs.postPTag} onClick={() => setchange("2")}>
+          Update a Product
+        </p>
       </div>
-      <PostContentCom />
+      {change === "1" ? "hello" : <PostContentCom />}
     </div>
   );
 }
