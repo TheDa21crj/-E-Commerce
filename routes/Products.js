@@ -104,6 +104,37 @@ router.put(
     }
 );
 
+router.put(
+    "/UpdateTag", [
+        check("_id", "id is Required").not().isEmpty(),
+        check("value", "value is Required").not().isEmpty(),
+    ],
+    async(req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+        const { _id, field, value } = req.body;
+
+        try {
+            let id = await Products.findOne({ _id });
+
+            if (!id) {
+                return res.status(400).json({ message: `Product Does not Exists` });
+            }
+            const result = await Products.updateOne({ _id }, {
+                $set: {
+                    [field]: value,
+                },
+            });
+            return res.status(200).json(result);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error });
+        }
+    }
+);
+
 // Public || New Arrival || /api/admin/Products/NewArival
 router.get("/NewArival", [], async(req, res) => {
     let data = await Products.find().sort({ date: 1 }).limit(9);
