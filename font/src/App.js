@@ -44,6 +44,7 @@ function App() {
             <Route path="/Loading" element={<Loading />} />
             <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
+            <Route path="/MERCHANDISE/:link" element={<Gender />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Layout>
