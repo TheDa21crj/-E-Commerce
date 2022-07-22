@@ -116,10 +116,13 @@
 
 @media only screen and (max-width: 650px) {
     .LeftFormDivRowDiv {
-        width: 90%;
+        width: 100%;
         flex-direction: column;
     }
     .ImpTag {
-        width: 100%;
+        width: 90%;
+    }
+    .LeftFormDivRowDiv {
+        margin: 0px 0px;
     }
 }
