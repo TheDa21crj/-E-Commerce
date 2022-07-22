@@ -17,7 +17,7 @@ export default function PostContent() {
     sold: "",
   });
   const navigate = useNavigate();
-  const [showRes, SetRes] = useState("");
+  const [showRes, SetRes] = useState("d");
 
   const AuthMiddleware = async () => {
     try {
@@ -206,7 +206,7 @@ export default function PostContent() {
           </button>
         </center>
       </div>
-      <p>{showRes}</p>
+      <p className={PCcss.showResAlert}>{showRes}</p>
     </div>
   );
 }
