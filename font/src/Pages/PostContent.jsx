@@ -31,8 +31,17 @@ export default function PostContent() {
         >
           Update a Product
         </p>
+        <p
+          className={PCcs.postPTag}
+          id={change === "3" ? "Details" : ""}
+          onClick={() => setchange("3")}
+        >
+          Update a Product
+        </p>
       </div>
-      {change === "1" ? <UpdateProduct /> : <PostContentCom />}
+      {change === "1" ? <UpdateProduct /> : ""}
+      {change === "2" ? <PostContentCom /> : ""}
+      {change === "3" ? <UpdateProduct /> : <PostContentCom />}
     </div>
   );
 }
