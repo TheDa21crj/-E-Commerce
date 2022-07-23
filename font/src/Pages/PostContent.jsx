@@ -37,7 +37,7 @@ export default function PostContent() {
           id={change === "3" ? "Details" : ""}
           onClick={() => setchange("3")}
         >
-          Update a Product
+          Add a Tag
         </p>
       </div>
       {change === "1" ? <UpdateProduct /> : ""}
