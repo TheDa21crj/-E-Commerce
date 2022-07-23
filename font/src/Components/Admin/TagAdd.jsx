@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import PCcss from "./Css/PostContent.module.css";
-import UPCss from "./Css/Update.module.css";
 
 export default function TagAdd() {
   const [showRes, SetRes] = useState("");
