@@ -36,8 +36,7 @@ export default function TagAdd() {
       },
       body: JSON.stringify({
         _id,
-        feild,
-        value,
+        name,
       }),
     });
     const r = await res.json();
