@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PCcss from "./Css/PostContent.module.css";
+import UPCss from "./Css/Update.module.css";
 
 export default function TagAdd() {
   const [showRes, SetRes] = useState("");
@@ -57,13 +58,13 @@ export default function TagAdd() {
   };
 
   return (
-    <div>
+    <div className={UPCss.mDiv}>
       <input
         type="text"
         name="_id"
         id=""
         className={PCcss.ImpTag}
-        placeholder="_id"
+        placeholder="product _id"
         value={showProduct.name}
         onChange={DataInpProduct}
       />
@@ -72,7 +73,7 @@ export default function TagAdd() {
         name="name"
         id=""
         className={PCcss.ImpTag}
-        placeholder="name"
+        placeholder="tag name"
         value={showProduct.name}
         onChange={DataInpProduct}
       />
