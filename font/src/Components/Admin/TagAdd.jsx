@@ -43,7 +43,7 @@ export default function TagAdd() {
     const r = await res.json();
 
     setTimeout(() => {
-      SetRes(r.message);
+      SetRes("Product Updated");
       setTimeout(() => {
         SetRes("");
       }, 3000);
