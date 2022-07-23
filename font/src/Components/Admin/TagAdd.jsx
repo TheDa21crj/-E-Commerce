@@ -4,6 +4,7 @@ import UPCss from "./Css/Update.module.css";
 
 export default function TagAdd() {
   const [showRes, SetRes] = useState("");
+
   const [showProduct, setProduct] = useState({
     _id: "",
     name: "",
