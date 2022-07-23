@@ -62,7 +62,7 @@ export default function TagAdd() {
         name="_id"
         className={PCcss.ImpTag}
         placeholder="product _id"
-        value={showProduct.name}
+        value={showProduct._id}
         onChange={DataInpProduct}
       />
       <input
@@ -73,6 +73,12 @@ export default function TagAdd() {
         value={showProduct.name}
         onChange={DataInpProduct}
       />
+
+      <center>
+        <button onClick={PostData} className={PCcss.PostBtn}>
+          Post
+        </button>
+      </center>
     </div>
   );
 }
