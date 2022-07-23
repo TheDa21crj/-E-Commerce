@@ -29,7 +29,7 @@ export default function TagAdd() {
       return;
     }
 
-    const res = await fetch("/api/admin/Products/Update", {
+    const res = await fetch("/api/admin/Products/UpdateTag", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -59,7 +59,6 @@ export default function TagAdd() {
       <input
         type="text"
         name="_id"
-        id=""
         className={PCcss.ImpTag}
         placeholder="product _id"
         value={showProduct.name}
@@ -68,7 +67,6 @@ export default function TagAdd() {
       <input
         type="text"
         name="name"
-        id=""
         className={PCcss.ImpTag}
         placeholder="tag name"
         value={showProduct.name}
