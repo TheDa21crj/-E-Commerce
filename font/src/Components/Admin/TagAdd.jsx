@@ -6,8 +6,7 @@ export default function TagAdd() {
   const [showRes, SetRes] = useState("");
   const [showProduct, setProduct] = useState({
     _id: "",
-    feild: "",
-    value: "",
+    name: "",
   });
 
   const DataInpProduct = (e) => {
@@ -18,9 +17,9 @@ export default function TagAdd() {
   };
 
   const PostData = async () => {
-    const { _id, feild, value } = showProduct;
+    const { _id, name } = showProduct;
 
-    if (_id === "" || feild === "" || value === "") {
+    if (_id === "" || name === "") {
       setTimeout(() => {
         SetRes("Enter All the Details");
         setTimeout(() => {
@@ -52,8 +51,7 @@ export default function TagAdd() {
 
     setProduct({
       _id: "",
-      feild: "",
-      value: "",
+      name: "",
     });
   };
 
