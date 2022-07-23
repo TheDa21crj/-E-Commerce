@@ -79,6 +79,7 @@ export default function TagAdd() {
           Post
         </button>
       </center>
+      {showRes ? <p className={PCcss.showResAlert}>{showRes}</p> : ""}
     </div>
   );
 }
