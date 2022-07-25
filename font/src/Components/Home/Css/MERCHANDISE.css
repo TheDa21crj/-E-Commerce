@@ -38,7 +38,7 @@
     background-color: transparent;
 }
 
-.slider .slide-track:hover {
+.slide-track:hover {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     -o-animation-play-state: paused;
