@@ -11,7 +11,10 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <Link to="/admin/login"> Admin </Link>
+        <Link to="/admin/login" className="LinkStyle">
+          {" "}
+          Admin{" "}
+        </Link>
       </div>
     </div>
   );
