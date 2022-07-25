@@ -12,8 +12,7 @@ export default function Footer() {
       </div>
       <div>
         <Link to="/admin/login" className="LinkStyle">
-          {" "}
-          Admin{" "}
+          Admin
         </Link>
       </div>
     </div>
