@@ -77,7 +77,11 @@ export default function ShopCart() {
   return (
     <div>
       <Nav />
-      {showTProducts !== 0 ? (
+      {showTProducts === 0 ? (
+        <div className={SCCss.FalseDiv}>
+          <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
+        </div>
+      ) : (
         <div>
           <p className={SCCss.MainPTag}>Shop Cart</p>
           <div className={SCCss.RoWDiv}>
@@ -135,10 +139,6 @@ export default function ShopCart() {
               </p>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={SCCss.FalseDiv}>
-          <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
       )}
       <Footer />
