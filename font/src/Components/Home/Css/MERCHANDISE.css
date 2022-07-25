@@ -2,36 +2,6 @@
     margin-top: 20px;
 }
 
-.slideParentDiv {
-    position: relative;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.slider {
-    height: 250px;
-    margin: auto;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    background-color: transparent;
-}
-
-.slide-track {
-    display: flex;
-    width: calc(250px * 10);
-    background-color: transparent;
-    animation: scroll 10s linear infinite;
-}
-
-.slide-track:hover {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
-    cursor: pointer;
-}
-
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -41,22 +11,66 @@
     }
 }
 
-.slide {
-    background-color: transparent;
-    height: 200px;
+.slider {
+    background: white;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+/* .slider::before,
+.slider::after {
+    background: linear-gradient( to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 250px;
+    position: absolute;
     width: 250px;
+    z-index: 2;
+} */
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 20s linear infinite;
     display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 24px;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    width: calc(250px * 10);
+    background-color: transparent;
+}
+
+.slider .slide {
+    height: 200px;
+    width: 300px;
+    background-color: transparent;
+}
+
+.slide {
+    margin-right: 60px;
+    background-color: #f2f1f1;
 }
 
 .slide img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f1f1;
+    /* padding: 20px; */
+}
+
+
+/* .slide img {
     border-radius: 24px;
     width: 100%;
     height: 200px;
-}
+} */
