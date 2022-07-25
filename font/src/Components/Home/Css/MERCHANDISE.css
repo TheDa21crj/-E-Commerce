@@ -12,7 +12,7 @@
 }
 
 .slider {
-    background: white;
+    background: transparent;
     height: 250px;
     margin: auto;
     overflow: hidden;
