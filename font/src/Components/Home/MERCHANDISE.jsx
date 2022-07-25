@@ -27,6 +27,19 @@ export default function MERCHANDISE() {
                 </div>
               );
             })}
+            {Data.map((value, key) => {
+              return (
+                <div className="slide">
+                  <Link
+                    to={`/MERCHANDISE/${value.name}`}
+                    key={key}
+                    className={value.type}
+                  >
+                    <img alt="Image" src={value.src} className="img-fluid" />
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
