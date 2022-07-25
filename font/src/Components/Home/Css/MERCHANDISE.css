@@ -38,6 +38,13 @@
     background-color: transparent;
 }
 
+.slider .slide-track:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
 .slider .slide {
     height: 200px;
     width: 230px;
