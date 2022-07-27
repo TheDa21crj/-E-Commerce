@@ -17,9 +17,8 @@ export default function ShopCart() {
   }, []);
 
   useEffect(() => {
-    console.log(showTProducts)
     console.log(showtrue);
-  }, [showTProducts]);
+  }, [showtrue]);
 
   const seeList = async () => {
     try {
@@ -64,7 +63,6 @@ export default function ShopCart() {
       return;
     } else {
       try {
-        console.log("hello");
         const res = await fetch("/api/Shoping/delete/product", {
           method: "DELETE",
           headers: {
