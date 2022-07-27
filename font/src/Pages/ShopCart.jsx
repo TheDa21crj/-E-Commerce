@@ -6,6 +6,7 @@ import img from "./../Img/delivery_truck.svg";
 import { Link } from "react-router-dom";
 
 export default function ShopCart() {
+  const [showtrue, settrue] = useState(false);
   const [showTPrice, setTPrice] = useState();
   const [showTProducts, setTProducts] = useState();
   const [show, set] = useState();
@@ -14,6 +15,11 @@ export default function ShopCart() {
     document.title = "The Da: Shopping Cart";
     seeList();
   }, []);
+
+  useEffect(() => {
+    console.log(showTProducts)
+    console.log(showtrue);
+  }, [showTProducts]);
 
   const seeList = async () => {
     try {
@@ -32,15 +38,18 @@ export default function ShopCart() {
       if (data) {
         if (data.message === "zero") {
           console.log("Zero = Data");
+          settrue(false);
         } else {
           let TotalPrice = 0;
           data.message.forEach((e) => {
             TotalPrice += e.price * e.qunatity;
+            setTPrice(TotalPrice);
+            setTProducts(data.message.length);
+            set(data.message);
+            settrue(true);
+            return;
           });
-          setTPrice(TotalPrice);
-          setTProducts(data.message.length);
-          set(data.message);
-          return;
+
         }
       }
     } catch (error) {
@@ -55,6 +64,7 @@ export default function ShopCart() {
       return;
     } else {
       try {
+        console.log("hello");
         const res = await fetch("/api/Shoping/delete/product", {
           method: "DELETE",
           headers: {
@@ -65,7 +75,7 @@ export default function ShopCart() {
           }),
         });
 
-        await res.json();
+        let data = await res.json();
 
         seeList();
       } catch (error) {
@@ -77,11 +87,7 @@ export default function ShopCart() {
   return (
     <div>
       <Nav />
-      {showTProducts === 0 ? (
-        <div className={SCCss.FalseDiv}>
-          <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
-        </div>
-      ) : (
+      {showtrue ? (
         <div>
           <p className={SCCss.MainPTag}>Shop Cart</p>
           <div className={SCCss.RoWDiv}>
@@ -139,6 +145,11 @@ export default function ShopCart() {
               </p>
             </div>
           </div>
+        </div>
+
+      ) : (
+        <div className={SCCss.FalseDiv}>
+          <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
       )}
       <Footer />
