@@ -75,7 +75,7 @@ export default function ShopCart() {
           }),
         });
 
-        let data = await res.json();
+        await res.json();
 
         seeList();
       } catch (error) {
