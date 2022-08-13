@@ -48,7 +48,6 @@ export default function ShopCart() {
             settrue(true);
             return;
           });
-
         }
       }
     } catch (error) {
@@ -84,7 +83,7 @@ export default function ShopCart() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       {showtrue ? (
         <div>
           <p className={SCCss.MainPTag}>Shop Cart</p>
@@ -144,13 +143,12 @@ export default function ShopCart() {
             </div>
           </div>
         </div>
-
       ) : (
         <div className={SCCss.FalseDiv}>
           <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
