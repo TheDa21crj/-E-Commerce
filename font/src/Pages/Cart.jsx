@@ -55,7 +55,7 @@ export default function Cart() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       {_id !== "" ? (
         <div className={CartCss.mDiv}>
           <p className={CartCss.MainPTag}>My Wishlist({wish} items)</p>
@@ -98,7 +98,7 @@ export default function Cart() {
         </div>
       )}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
