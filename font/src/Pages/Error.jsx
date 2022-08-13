@@ -9,7 +9,7 @@ export default function Error() {
   });
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <div className={ErrCss.mDiv}>
         <div className={ErrCss.imgDiv}>
           <img src={img404} alt="" />
