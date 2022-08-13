@@ -235,7 +235,7 @@ export default function ProductsDeatils() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <div className={PDCss.MDiv}>
         <div className={PDCss.leftDiv}>
           <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
@@ -421,7 +421,7 @@ export default function ProductsDeatils() {
 
       {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
