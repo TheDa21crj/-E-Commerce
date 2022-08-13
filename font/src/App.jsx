@@ -18,21 +18,16 @@ import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
-import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
-import { useSelector } from "react-redux";
 
 // redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
 function App() {
-  const email = useSelector((state) => state.user.email);
   return (
     <BrowserRouter>
       <Provider store={store}>
         <Layout>
-          <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Membership" element={<Membership />} />
@@ -41,16 +36,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
-            <Route
-              // exact
-              path="/my-account"
-              element={
-                <PrivateRoute>
-                  <MyAccount />
-                </PrivateRoute>
-              }
-            >
-              {/* <Route exact path="/my-account" element={<MyAccount />} /> */}
+            <Route exact path="/my-account" element={<PrivateRoute />}>
+              <Route exact path="/my-account" element={<MyAccount />} />
             </Route>
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
@@ -61,7 +48,6 @@ function App() {
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
             <Route path="*" element={<Error />} />
           </Routes>
-          <Footer />
         </Layout>
       </Provider>
     </BrowserRouter>
