@@ -8,7 +8,7 @@ const PrivateRoute = ({ children, ...rest }) => {
   const email = useSelector((state) => state.user.email);
   return (
     <Route {...rest}>
-      {email !== "" ? <Redirect to="/login"></Redirect> : children}
+      {email === "" ? <Redirect to="/login"></Redirect> : children}
     </Route>
   );
 };
