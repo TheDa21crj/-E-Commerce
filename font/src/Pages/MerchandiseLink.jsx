@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import Nav from "../Components/Nav";
 import GenCss from "./Css/Gender.module.css";
 import TSCss from "./../Components/Home/Css/TopSelling.module.css";
 import StarIcon from "@mui/icons-material/Star";
-import Footer from "../Components/Footer";
 
 export default function MerchandiseLink() {
   const [showGender, setGender] = useState();
