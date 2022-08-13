@@ -39,7 +39,6 @@ export default function MyAccount() {
 
   return (
     <div>
-      {/* <Nav /> */}
       <div className={MACss.mdiv}>
         <div className={MACss.leftDiv}>
           <img src={imgSrc} alt="" className={MACss.ImgTag} />
@@ -118,7 +117,6 @@ export default function MyAccount() {
           )}
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
