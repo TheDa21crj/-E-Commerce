@@ -78,7 +78,7 @@ const Login = (props) => {
 
   return (
     <div className={LoginCss.LoginMDiv}>
-      <Nav />
+      {/* <Nav /> */}
       <div className={LoginCss.contentMDiv}>
         <div className={LoginCss.Div}>
           <div className={LoginCss.LeftDiv}>
@@ -129,7 +129,7 @@ const Login = (props) => {
 
       {error ? <p className={LoginCss.error}>{error}</p> : ""}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
