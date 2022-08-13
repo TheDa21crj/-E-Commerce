@@ -45,7 +45,7 @@ function App() {
               // exact
               path="/my-account"
               element={
-                <PrivateRoute email={email}>
+                <PrivateRoute>
                   <MyAccount />
                 </PrivateRoute>
               }
