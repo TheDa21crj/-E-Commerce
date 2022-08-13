@@ -55,7 +55,6 @@ export default function Cart() {
 
   return (
     <div>
-      {/* <Nav /> */}
       {_id !== "" ? (
         <div className={CartCss.mDiv}>
           <p className={CartCss.MainPTag}>My Wishlist({wish} items)</p>
@@ -97,8 +96,6 @@ export default function Cart() {
           <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
         </div>
       )}
-
-      {/* <Footer /> */}
     </div>
   );
 }
