@@ -42,7 +42,10 @@ function App() {
             {/* <Route exact path="/my-account" element={<PrivateRoute />}>
               <Route exact path="/my-account" element={<MyAccount />} />
             </Route> */}
-            <PrivateRoute path="/my-account" component={MyAccount} />
+            <Route exact path="/my-account" element={<PrivateRoute />}>
+              <Route exact path="/my-account" element={<MyAccount />} />
+            </Route>
+            {/* <PrivateRoute path="/my-account" component={MyAccount} /> */}
             {/* <Route element={<PrivateRoute />}> */}
             {/* <Route exact path="/my-account" element={<MyAccount />} /> */}
             {/* <Route exact path="/my-account">
