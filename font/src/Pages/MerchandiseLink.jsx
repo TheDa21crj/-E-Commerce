@@ -38,7 +38,7 @@ export default function MerchandiseLink() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       {showGender ? (
         <div className={GenCss.MapPDiv}>
           {showGender.map((value, key) => {
@@ -68,7 +68,7 @@ export default function MerchandiseLink() {
       ) : (
         ""
       )}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
