@@ -105,7 +105,7 @@ export default function ProductsDeatils() {
         }
         if (data) {
           setcheck("true");
-          dispatch(addWish({ length: +1 }));
+          wishUpdate();
           return;
         }
       } catch (error) {
@@ -133,7 +133,8 @@ export default function ProductsDeatils() {
 
         await res.json();
 
-        dispatch(addWish({ length: -1 }));
+        wishUpdate();
+        // dispatch(addWish({ length: -1 }));
         setcheck("false");
       } catch (error) {
         console.log(error);
@@ -206,6 +207,29 @@ export default function ProductsDeatils() {
       setInterval(function () {
         setMsg("");
       }, 2000);
+    }
+  };
+
+  const wishUpdate = async () => {
+    const res = await fetch("/api/Wishlist", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    });
+    const data = await res.json();
+    if (data.errors) {
+      return;
+    }
+    if (data) {
+      if (data.message === "zero") {
+        return dispatch(addWish({ length: 0 }));
+      } else {
+        dispatch(addWish({ length: data.message.length, data: data.message }));
+        return;
+      }
     }
   };
 
