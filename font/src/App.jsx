@@ -20,12 +20,14 @@ import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
+import { useSelector } from "react-redux";
 
 // redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
 function App() {
+  const email = useSelector((state) => state.user.email);
   return (
     <BrowserRouter>
       <Provider store={store}>
@@ -39,17 +41,17 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
-            {/* <Route
-              exact
+            <Route
+              // exact
               path="/my-account"
               element={
-                <PrivateRoute>
+                <PrivateRoute email={email}>
                   <MyAccount />
                 </PrivateRoute>
               }
-            > */}
-            <Route exact path="/my-account" element={<MyAccount />} />
-            {/* </Route> */}
+            >
+              {/* <Route exact path="/my-account" element={<MyAccount />} /> */}
+            </Route>
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
