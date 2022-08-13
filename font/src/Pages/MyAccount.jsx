@@ -35,8 +35,6 @@ export default function MyAccount() {
   const gender = useSelector((state) => state.user.gender);
   const PhoneNumber = useSelector((state) => state.user.PhoneNumber);
 
-  console.log(email);
-
   return (
     <div>
       <div className={MACss.mdiv}>
