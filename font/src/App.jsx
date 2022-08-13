@@ -39,7 +39,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
-            <Route
+            {/* <Route
               exact
               path="/my-account"
               element={
@@ -47,9 +47,9 @@ function App() {
                   <MyAccount />
                 </PrivateRoute>
               }
-            >
-              {/* <Route exact path="/" element={<MyAccount />} /> */}
-            </Route>
+            > */}
+            <Route exact path="/my-account" element={<MyAccount />} />
+            {/* </Route> */}
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
