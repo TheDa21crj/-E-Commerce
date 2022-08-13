@@ -91,7 +91,7 @@ const Nav = (props) => {
   useEffect(() => {
     AuthMiddleware();
     CartCheck();
-  });
+  }, []);
 
   const wish = useSelector((state) => state.wish.length);
   const toggle = useSelector((state) => state.toggle.toggle);
