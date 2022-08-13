@@ -83,7 +83,6 @@ export default function ShopCart() {
 
   return (
     <div>
-      {/* <Nav /> */}
       {showtrue ? (
         <div>
           <p className={SCCss.MainPTag}>Shop Cart</p>
@@ -148,7 +147,6 @@ export default function ShopCart() {
           <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
         </div>
       )}
-      {/* <Footer /> */}
     </div>
   );
 }
