@@ -35,6 +35,7 @@ export default function MerchandiseLink() {
   useEffect(() => {
     AuthMiddleware();
   }, []);
+
   return (
     <div>
       <Nav />
