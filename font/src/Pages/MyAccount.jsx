@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Nav from "../Components/Nav";
 import Profile from "../Components/Account/Profile";
 import MyAddress from "../Components/Account/MyAddress";
 import Myorders from "../Components/Account/Myorders";
-import Footer from "../Components/Footer";
 import MACss from "./Css/MyAccount.module.css";
 import "./Css/Product.css";
 import ProfileMobo from "./../Components/Account/Mobile/Profile";
