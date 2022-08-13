@@ -39,9 +39,10 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
-            <Route exact path="/my-account" element={<PrivateRoute />}>
+            {/* <Route exact path="/my-account" element={<PrivateRoute />}>
               <Route exact path="/my-account" element={<MyAccount />} />
-            </Route>
+            </Route> */}
+            <PrivateRoute path="/my-account" component={MyAccount} />
             {/* <Route element={<PrivateRoute />}> */}
             {/* <Route exact path="/my-account" element={<MyAccount />} /> */}
             {/* <Route exact path="/my-account">
