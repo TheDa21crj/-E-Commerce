@@ -51,7 +51,6 @@ export default function Register() {
 
   return (
     <div>
-      {/* <Nav /> */}
       <div className={LoginCss.contentMDiv}>
         <div className={LoginCss.Div}>
           <div className={LoginCss.LeftDiv}>
@@ -99,8 +98,6 @@ export default function Register() {
           </div>
         </div>
       </div>
-
-      {/* <Footer /> */}
     </div>
   );
 }
