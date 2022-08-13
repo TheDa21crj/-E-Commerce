@@ -9,3 +9,16 @@ const PrivateRoute = () => {
 };
 
 export default PrivateRoute;
+
+// function PrivateRoute({ children, ...rest }) {
+//   let auth = useAuth();
+//   return (
+//     <Route
+//       {...rest}
+//       render={() => auth
+//         ? children
+//         : <Redirect to="/login" />
+//       }
+//     />
+//   );
+// }
