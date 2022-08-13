@@ -15,14 +15,12 @@ export default function Membership() {
 
   return (
     <div>
-      {/* <Nav /> */}
       <HeaderM />
       <div>
         <Excusive />
         <Member />
         <Testimonial />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
