@@ -74,14 +74,14 @@ export default function Home() {
         <Loading />
       ) : (
         <div>
-          <Nav />
+          {/* <Nav /> */}
           <Header />
           <NewArrival />
           <CATEGORIES />
           <TopSelling />
           {/* <COLLECTIONS /> */}
           <MERCHANDISE />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       )}
     </div>
