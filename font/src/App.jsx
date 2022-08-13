@@ -18,6 +18,8 @@ import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
+import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 
 // redux
 import { Provider } from "react-redux";
@@ -28,6 +30,7 @@ function App() {
     <BrowserRouter>
       <Provider store={store}>
         <Layout>
+          <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Membership" element={<Membership />} />
@@ -48,6 +51,7 @@ function App() {
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
             <Route path="*" element={<Error />} />
           </Routes>
+          <Footer />
         </Layout>
       </Provider>
     </BrowserRouter>
