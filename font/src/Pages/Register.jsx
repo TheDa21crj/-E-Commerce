@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Nav from "../Components/Nav";
-import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import LoginCss from "./Css/Login.module.css";
 import { useNavigate } from "react-router-dom";
