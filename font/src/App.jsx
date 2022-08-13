@@ -39,8 +39,16 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
-            <Route exact path="/my-account" element={<PrivateRoute />}>
-              <Route exact path="/" element={<MyAccount />} />
+            <Route
+              exact
+              path="/my-account"
+              element={
+                <PrivateRoute>
+                  <MyAccount />
+                </PrivateRoute>
+              }
+            >
+              {/* <Route exact path="/" element={<MyAccount />} /> */}
             </Route>
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
