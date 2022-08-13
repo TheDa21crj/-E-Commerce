@@ -62,7 +62,7 @@ export default function Gender() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <div className={GenCss.mDiv}>
         <div className={GenCss.SelectDiv}>
           <select
@@ -109,7 +109,7 @@ export default function Gender() {
           ""
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
