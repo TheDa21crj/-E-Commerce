@@ -38,7 +38,6 @@ export default function Tag() {
 
   return (
     <div>
-      {/* <Nav /> */}
       {showGender ? (
         <div className={GenCss.MapPDiv}>
           {showGender.map((value, key) => {
@@ -68,7 +67,6 @@ export default function Tag() {
       ) : (
         ""
       )}
-      {/* <Footer /> */}
     </div>
   );
 }
