@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import Nav from "../Components/Nav";
 import Header from "../Components/Home/Header";
-import Footer from "../Components/Footer";
 import NewArrival from "../Components/Home/NewArrival";
 import TopSelling from "../Components/Home/TopSelling";
 import MERCHANDISE from "../Components/Home/MERCHANDISE";
