@@ -42,11 +42,9 @@ function App() {
             {/* <Route exact path="/my-account" element={<PrivateRoute />}> */}
             {/* <Route exact path="/my-account" element={<MyAccount />} /> */}
             {/* </Route> */}
-            <PrivateRoute
-              exact
-              path="/my-account"
-              component={MyAccount}
-            ></PrivateRoute>
+            <Route exact path="/my-account">
+              <PrivateRoute component={MyAccount}></PrivateRoute>
+            </Route>
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
