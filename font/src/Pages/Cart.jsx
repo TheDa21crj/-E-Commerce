@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Nav from "../Components/Nav";
-import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
 import { Link } from "react-router-dom";
