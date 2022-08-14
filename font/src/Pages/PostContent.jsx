@@ -11,10 +11,10 @@ export default function PostContent() {
   return (
     <div>
       <div className={PCcs.headdiv}>
-        <Link to="/" className={PCcs.titleNav}>
+        {/* <Link to="/" className={PCcs.titleNav}>
           <h1>The Da</h1>
         </Link>
-        Logout
+        Logout */}
       </div>
       <h1 className={PCcs.h1WelAdmin}>Welcome Admin</h1>
       <div className={PCcs.postPDiv}>
