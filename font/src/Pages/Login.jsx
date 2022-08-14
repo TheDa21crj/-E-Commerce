@@ -64,6 +64,7 @@ const Login = (props) => {
     } else if (!r.errors) {
       dispatch(toggleN({ toggle: "true" }));
       navigate("/my-account");
+      window.location.reload();
     } else {
       setTimeout(() => {
         setError("Unwanted Error");
