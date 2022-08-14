@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "./DropDown";
 import NavCss from "./Css/Nav.module.css";
-import Wish from "./Wish.js";
+import Wish from "./Wish.jsx";
 import { Link, NavLink } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
