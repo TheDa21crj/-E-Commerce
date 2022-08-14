@@ -8,7 +8,6 @@ const PrivateRoute = () => {
     console.log(email);
   });
   return email ? <Outlet /> : <Navigate to="/login" />;
-  // return email ? /<a href="/my-account"></a> : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;
