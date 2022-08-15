@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, Navigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import PDCss from "./Css/ProductDetails.module.css";
 import SizeChart from "../Components/Product/SizeChart";
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { useNavigate } from "react-router-dom";
 import "./../Components/Product/CSS/ProductC.css";
 import Alert from "./../Components/Account/Alert";
 // redux
@@ -59,8 +58,7 @@ export default function ProductsDeatils() {
       }
     } catch (error) {
       console.log(error);
-      <Navigate to="/error" />;
-      console.log("error===");
+      navigate("/error");
       return;
     }
   };
