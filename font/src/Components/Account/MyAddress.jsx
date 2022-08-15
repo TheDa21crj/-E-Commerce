@@ -14,6 +14,7 @@ export default function MyAddress(props) {
 
   useEffect(() => {
     seeAddress();
+    console.log(show);
   }, []);
 
   useEffect(() => {
