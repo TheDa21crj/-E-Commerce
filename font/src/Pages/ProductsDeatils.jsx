@@ -57,7 +57,6 @@ export default function ProductsDeatils() {
         setrating(data[0].rating);
       }
     } catch (error) {
-      console.log(error);
       navigate("/error");
       return;
     }
