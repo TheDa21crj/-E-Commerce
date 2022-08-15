@@ -14,21 +14,7 @@ export default function MyAddress(props) {
 
   useEffect(() => {
     seeAddress();
-    console.log(show);
   }, []);
-
-  useEffect(() => {
-    if (showDelete) {
-      setInterval(function () {
-        setDelete(false);
-      }, 5000);
-    }
-    seeAddress();
-  }, [showDelete]);
-
-  useEffect(() => {
-    seeAddress();
-  }, [showAdd]);
 
   const seeAddress = async () => {
     try {
@@ -45,7 +31,6 @@ export default function MyAddress(props) {
         return;
       }
       if (data) {
-        console.log(data);
         if (data.message === "zero") {
           return;
         } else {
@@ -56,6 +41,19 @@ export default function MyAddress(props) {
       return;
     }
   };
+
+  useEffect(() => {
+    if (showDelete) {
+      setInterval(function () {
+        setDelete(false);
+      }, 5000);
+    }
+    seeAddress();
+  }, [showDelete]);
+
+  useEffect(() => {
+    seeAddress();
+  }, [showAdd]);
 
   return (
     <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
