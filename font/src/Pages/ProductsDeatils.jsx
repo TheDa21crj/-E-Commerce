@@ -59,6 +59,9 @@ export default function ProductsDeatils() {
       }
     } catch (error) {
       console.log(error);
+      <Navigate to="/error" />;
+      console.log("error===");
+      return;
     }
   };
 
