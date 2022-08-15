@@ -16,6 +16,19 @@ export default function MyAddress(props) {
     seeAddress();
   }, []);
 
+  useEffect(() => {
+    if (showDelete) {
+      setInterval(function () {
+        setDelete(false);
+      }, 5000);
+    }
+    seeAddress();
+  }, [showDelete]);
+
+  useEffect(() => {
+    seeAddress();
+  }, [showAdd]);
+
   const seeAddress = async () => {
     try {
       const res = await fetch("/api/Address", {
@@ -41,19 +54,6 @@ export default function MyAddress(props) {
       return;
     }
   };
-
-  useEffect(() => {
-    if (showDelete) {
-      setInterval(function () {
-        setDelete(false);
-      }, 5000);
-    }
-    seeAddress();
-  }, [showDelete]);
-
-  useEffect(() => {
-    seeAddress();
-  }, [showAdd]);
 
   return (
     <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
