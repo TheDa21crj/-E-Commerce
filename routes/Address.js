@@ -97,6 +97,7 @@ router.get(
     try {
       let userCheck = await Address.findOne({ user: userID });
       if (userCheck) {
+        console.log(userCheck);
         return res.status(200).json({ message: userCheck.address });
       } else {
         return res.status(304).json({ message: "zero" });
