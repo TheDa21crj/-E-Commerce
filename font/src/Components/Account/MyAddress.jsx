@@ -45,6 +45,7 @@ export default function MyAddress(props) {
         return;
       }
       if (data) {
+        console.log(data);
         if (data.message === "zero") {
           return;
         } else {
