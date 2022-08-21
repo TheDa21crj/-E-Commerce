@@ -1,7 +1,7 @@
 import React from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Common from "./Css/Common.module.css";
-import OrderCss from "./CSS/Orders.module.css";
+import OrderCss from "./../CSS/Orders.module.css";
 
 export default function Myorders(props) {
   return (
