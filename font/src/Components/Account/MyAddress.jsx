@@ -40,6 +40,7 @@ export default function MyAddress(props) {
           return;
         } else {
           set(data.message);
+          dispatch({ address: data.message });
         }
       }
     } catch (error) {
