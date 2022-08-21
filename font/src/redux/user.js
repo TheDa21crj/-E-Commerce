@@ -21,6 +21,7 @@ const userDataSlice = createSlice({
       state.LastName = action.payload.LastName;
       state.gender = action.payload.gender;
       state.PhoneNumber = action.payload.PhoneNumber;
+      state.address = action.payload.address;
     },
   },
 });
