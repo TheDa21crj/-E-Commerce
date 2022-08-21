@@ -5,12 +5,17 @@ import AddIcon from "@mui/icons-material/Add";
 import imgplus from "./../../Img/plus.png";
 import AddAddress from "./AddAddress";
 import DeleteAddress from "./DeleteAddress";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { adduser } from "./../../../redux/user";
 
 export default function MyAddress(props) {
   const [show, set] = useState();
   const [showAdd, setAdd] = useState(false);
   const [showDelete, setDelete] = useState(false);
   const [showDeleteID, setDeleteID] = useState("");
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     seeAddress();
