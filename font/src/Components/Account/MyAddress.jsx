@@ -7,7 +7,7 @@ import AddAddress from "./AddAddress";
 import DeleteAddress from "./DeleteAddress";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { adduser } from "./../../../redux/user";
+import { adduser } from "./../../redux/user";
 
 export default function MyAddress(props) {
   const [show, set] = useState();
