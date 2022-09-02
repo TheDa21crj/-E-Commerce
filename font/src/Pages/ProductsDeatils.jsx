@@ -6,6 +6,7 @@ import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./../Components/Product/CSS/ProductC.css";
 import Alert from "./../Components/Account/Alert";
+import Loading from "./Loading";
 // redux
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";
@@ -234,193 +235,215 @@ export default function ProductsDeatils() {
 
   return (
     <>
-{?"":<div>
-      <div className={PDCss.MDiv}>
-        <div className={PDCss.leftDiv}>
-          <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
-        </div>
-        <div className={PDCss.rightDiv}>
-          <h1 className={PDCss.PName}>{showname}</h1>
-          <div className={PDCss.RowDiv}>
-            <div>
-              <p className={PDCss.Price}>₹ {showprice}</p>
-              <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
+      {showload ? (
+        <Loading />
+      ) : (
+        <div>
+          <div className={PDCss.MDiv}>
+            <div className={PDCss.leftDiv}>
+              <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
             </div>
-            <div className={PDCss.RatingDiv}>
-              <p className={PDCss.Rating}>
-                <StarIcon className={PDCss.StarIcon} />
-                {showrating}
+            <div className={PDCss.rightDiv}>
+              <h1 className={PDCss.PName}>{showname}</h1>
+              <div className={PDCss.RowDiv}>
+                <div>
+                  <p className={PDCss.Price}>₹ {showprice}</p>
+                  <p className={PDCss.PriceSub}>Price inclusive of all taxes</p>
+                </div>
+                <div className={PDCss.RatingDiv}>
+                  <p className={PDCss.Rating}>
+                    <StarIcon className={PDCss.StarIcon} />
+                    {showrating}
+                  </p>
+                </div>
+              </div>
+              <div></div>
+              <div className={PDCss.SizeMDiv}>
+                <div
+                  className={PDCss.SizeRoundDivP}
+                  onClick={() => setSize("S")}
+                >
+                  {showSize === "S" ? (
+                    <div className={PDCss.SizeRoundDivTrue}>
+                      <p>S</p>
+                    </div>
+                  ) : (
+                    <div className={PDCss.SizeRoundDiv}>
+                      <p>S</p>
+                    </div>
+                  )}
+                </div>
+
+                <div
+                  className={PDCss.SizeRoundDivP}
+                  onClick={() => setSize("M")}
+                >
+                  {showSize === "M" ? (
+                    <div className={PDCss.SizeRoundDivTrue}>
+                      <p>M</p>
+                    </div>
+                  ) : (
+                    <div className={PDCss.SizeRoundDiv}>
+                      <p>M</p>
+                    </div>
+                  )}
+                </div>
+
+                <div
+                  className={PDCss.SizeRoundDivP}
+                  onClick={() => setSize("L")}
+                >
+                  {showSize === "L" ? (
+                    <div className={PDCss.SizeRoundDivTrue}>
+                      <p>L</p>
+                    </div>
+                  ) : (
+                    <div className={PDCss.SizeRoundDiv}>
+                      <p>L</p>
+                    </div>
+                  )}
+                </div>
+
+                <div
+                  className={PDCss.SizeRoundDivP}
+                  onClick={() => setSize("XL")}
+                >
+                  {showSize === "XL" ? (
+                    <div className={PDCss.SizeRoundDivTrue}>
+                      <p>XL</p>
+                    </div>
+                  ) : (
+                    <div className={PDCss.SizeRoundDiv}>
+                      <p>XL</p>
+                    </div>
+                  )}
+                </div>
+
+                <div
+                  className={PDCss.SizeRoundDivP}
+                  onClick={() => setSize("XXL")}
+                >
+                  {showSize === "XXL" ? (
+                    <div className={PDCss.SizeRoundDivTrue}>
+                      <p>XXL</p>
+                    </div>
+                  ) : (
+                    <div className={PDCss.SizeRoundDiv}>
+                      <p>XXL</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <p className={PDCss.SizeChart}>
+                Need Some Guide for selecting the size?{" "}
+                <span
+                  onClick={() => setChart(true)}
+                  className={PDCss.SizeChartSpan}
+                >
+                  Size Chart
+                </span>
               </p>
-            </div>
-          </div>
-          <div></div>
-          <div className={PDCss.SizeMDiv}>
-            <div className={PDCss.SizeRoundDivP} onClick={() => setSize("S")}>
-              {showSize === "S" ? (
-                <div className={PDCss.SizeRoundDivTrue}>
-                  <p>S</p>
-                </div>
+              {showChat ? (
+                <SizeChart
+                  name={showname}
+                  state={setChart}
+                  src={showimageSrc}
+                />
               ) : (
-                <div className={PDCss.SizeRoundDiv}>
-                  <p>S</p>
-                </div>
+                ""
               )}
-            </div>
 
-            <div className={PDCss.SizeRoundDivP} onClick={() => setSize("M")}>
-              {showSize === "M" ? (
-                <div className={PDCss.SizeRoundDivTrue}>
-                  <p>M</p>
-                </div>
-              ) : (
-                <div className={PDCss.SizeRoundDiv}>
-                  <p>M</p>
-                </div>
-              )}
-            </div>
-
-            <div className={PDCss.SizeRoundDivP} onClick={() => setSize("L")}>
-              {showSize === "L" ? (
-                <div className={PDCss.SizeRoundDivTrue}>
-                  <p>L</p>
-                </div>
-              ) : (
-                <div className={PDCss.SizeRoundDiv}>
-                  <p>L</p>
-                </div>
-              )}
-            </div>
-
-            <div className={PDCss.SizeRoundDivP} onClick={() => setSize("XL")}>
-              {showSize === "XL" ? (
-                <div className={PDCss.SizeRoundDivTrue}>
-                  <p>XL</p>
-                </div>
-              ) : (
-                <div className={PDCss.SizeRoundDiv}>
-                  <p>XL</p>
-                </div>
-              )}
-            </div>
-
-            <div className={PDCss.SizeRoundDivP} onClick={() => setSize("XXL")}>
-              {showSize === "XXL" ? (
-                <div className={PDCss.SizeRoundDivTrue}>
-                  <p>XXL</p>
-                </div>
-              ) : (
-                <div className={PDCss.SizeRoundDiv}>
-                  <p>XXL</p>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <p className={PDCss.SizeChart}>
-            Need Some Guide for selecting the size?{" "}
-            <span
-              onClick={() => setChart(true)}
-              className={PDCss.SizeChartSpan}
-            >
-              Size Chart
-            </span>
-          </p>
-          {showChat ? (
-            <SizeChart name={showname} state={setChart} src={showimageSrc} />
-          ) : (
-            ""
-          )}
-
-          <div className={PDCss.QuantityDiv}>
-            <p>Quantity</p>
-            <select
-              name=""
-              id=""
-              className={PDCss.QuantityINP}
-              onChange={handleClick}
-            >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="5">5</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-          </div>
-
-          <div className={PDCss.BuyDiv}>
-            <div className={PDCss.AddCART} onClick={addToCart}>
-              ADD TO CART
-            </div>
-            {check === "true" ? (
-              <div
-                className={PDCss.AddWISHLIST}
-                onClick={() => deleteWish(showid)}
-              >
-                <FavoriteIcon />
+              <div className={PDCss.QuantityDiv}>
+                <p>Quantity</p>
+                <select
+                  name=""
+                  id=""
+                  className={PDCss.QuantityINP}
+                  onChange={handleClick}
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="5">5</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
               </div>
-            ) : (
-              <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
-                ADD TO WISHLIST
-              </div>
-            )}
-          </div>
 
-          <div className={PDCss.DesDiv}>
-            <div className={PDCss.DesHeadDiv}>
-              <div
-                className={PDCss.Description}
-                onClick={() => setDetails(false)}
-                id={showDetails ? "" : "Details"}
-              >
-                Product Description
-                {showDetails ? "" : <div className={PDCss.Des}></div>}
+              <div className={PDCss.BuyDiv}>
+                <div className={PDCss.AddCART} onClick={addToCart}>
+                  ADD TO CART
+                </div>
+                {check === "true" ? (
+                  <div
+                    className={PDCss.AddWISHLIST}
+                    onClick={() => deleteWish(showid)}
+                  >
+                    <FavoriteIcon />
+                  </div>
+                ) : (
+                  <div className={PDCss.AddWISHLIST} onClick={CartCheck}>
+                    ADD TO WISHLIST
+                  </div>
+                )}
               </div>
-              <div
-                className={PDCss.Details}
-                onClick={() => setDetails(true)}
-                id={showDetails ? "Details" : ""}
-              >
-                Product Details
-                {showDetails ? <div className={PDCss.Des}></div> : ""}
+
+              <div className={PDCss.DesDiv}>
+                <div className={PDCss.DesHeadDiv}>
+                  <div
+                    className={PDCss.Description}
+                    onClick={() => setDetails(false)}
+                    id={showDetails ? "" : "Details"}
+                  >
+                    Product Description
+                    {showDetails ? "" : <div className={PDCss.Des}></div>}
+                  </div>
+                  <div
+                    className={PDCss.Details}
+                    onClick={() => setDetails(true)}
+                    id={showDetails ? "Details" : ""}
+                  >
+                    Product Details
+                    {showDetails ? <div className={PDCss.Des}></div> : ""}
+                  </div>
+                </div>
+
+                <div className={PDCss.ContentDiv}>
+                  {showDetails ? (
+                    <p className={PDCss.desPTagTrue}>
+                      <b>Est. Order Processing Time: </b>12-24 hours
+                      <br />
+                      <br />
+                      <b>Estimated Delivery Time:</b>
+                      <br />
+                      Metros: 1-4 days
+                      <br />
+                      Rest of India: 4-7 days
+                      <br />
+                      <br />
+                      <b>Country of Origin: </b>India (and proud)
+                      <br />
+                      <br />
+                      <b>Manufactured & Sold By:</b>
+                      <br />
+                      <i>The Da's Associations</i>
+                    </p>
+                  ) : (
+                    <p>{showdes}</p>
+                  )}
+                </div>
               </div>
             </div>
-
-            <div className={PDCss.ContentDiv}>
-              {showDetails ? (
-                <p className={PDCss.desPTagTrue}>
-                  <b>Est. Order Processing Time: </b>12-24 hours
-                  <br />
-                  <br />
-                  <b>Estimated Delivery Time:</b>
-                  <br />
-                  Metros: 1-4 days
-                  <br />
-                  Rest of India: 4-7 days
-                  <br />
-                  <br />
-                  <b>Country of Origin: </b>India (and proud)
-                  <br />
-                  <br />
-                  <b>Manufactured & Sold By:</b>
-                  <br />
-                  <i>The Da's Associations</i>
-                </p>
-              ) : (
-                <p>{showdes}</p>
-              )}
-            </div>
           </div>
+
+          {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
         </div>
-      </div>
-
-      {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
-    </div>}
+      )}
     </>
-    
   );
 }
