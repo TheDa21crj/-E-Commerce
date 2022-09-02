@@ -17,10 +17,10 @@ export default function Cart() {
     document.title = "My Wishlist";
   }, []);
 
-  useEffect(() => {
-    var show = showID;
-    deleteWish(show);
-  }, [showID]);
+  // useEffect(() => {
+  //   var show = showID;
+  //   deleteWish(show);
+  // }, [showID]);
 
   const wish = useSelector((state) => state.wish.length);
   const data = useSelector((state) => state.wish.data);
@@ -28,27 +28,30 @@ export default function Cart() {
 
   const deleteWish = async (deleteID) => {
     let _id = deleteID;
-    if (_id === "") {
-      return;
-    } else {
-      try {
-        const res = await fetch("/api/Wishlist/delete", {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            _id,
-          }),
-        });
 
-        await res.json();
+    console.log(_id);
 
-        dispatch(addWish({ length: -1 }));
-      } catch (error) {
-        console.log(error);
-      }
-    }
+    // if (_id === "") {
+    //   return;
+    // } else {
+    //   try {
+    //     const res = await fetch("/api/Wishlist/delete", {
+    //       method: "DELETE",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         _id,
+    //       }),
+    //     });
+
+    //     await res.json();
+
+    //     dispatch(addWish({ length: -1 }));
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // }
   };
 
   return (
@@ -77,7 +80,7 @@ export default function Cart() {
                         className={CartCss.CloseIcon}
                         fontSize="small"
                         onClick={() => {
-                          setID(value._id);
+                          deleteWish(value._id);
                         }}
                       />
                     </div>
