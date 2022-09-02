@@ -47,11 +47,35 @@ export default function Cart() {
 
         if (d.acknowledged) {
           console.log(d.acknowledged);
+          wishUpdate();
         }
 
         // dispatch(addWish({ length: -1 }));
       } catch (error) {
         console.log(error);
+      }
+    }
+  };
+
+  const wishUpdate = async () => {
+    const res = await fetch("/api/Wishlist", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    });
+    const data = await res.json();
+    if (data.errors) {
+      return;
+    }
+    if (data) {
+      if (data.message === "zero") {
+        return dispatch(addWish({ length: 0 }));
+      } else {
+        dispatch(addWish({ length: data.message.length, data: data.message }));
+        return;
       }
     }
   };
