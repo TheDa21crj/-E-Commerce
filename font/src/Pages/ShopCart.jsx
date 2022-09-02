@@ -125,7 +125,7 @@ export default function ShopCart() {
                               className={SCCss.DeleteDiv}
                               onClick={() => deleteWish(value.id)}
                             >
-                              Delete
+                              Remove
                             </div>
                           </div>
                         );
