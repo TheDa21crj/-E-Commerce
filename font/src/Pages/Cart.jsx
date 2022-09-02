@@ -31,27 +31,27 @@ export default function Cart() {
 
     console.log(_id);
 
-    // if (_id === "") {
-    //   return;
-    // } else {
-    //   try {
-    //     const res = await fetch("/api/Wishlist/delete", {
-    //       method: "DELETE",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify({
-    //         _id,
-    //       }),
-    //     });
+    if (_id === "") {
+      return;
+    } else {
+      try {
+        const res = await fetch("/api/Wishlist/delete", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            _id,
+          }),
+        });
 
-    //     await res.json();
+        await res.json();
 
-    //     dispatch(addWish({ length: -1 }));
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
+        dispatch(addWish({ length: -1 }));
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
   return (
