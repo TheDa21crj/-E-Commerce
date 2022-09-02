@@ -49,8 +49,6 @@ export default function Cart() {
           console.log(d.acknowledged);
           wishUpdate();
         }
-
-        // dispatch(addWish({ length: -1 }));
       } catch (error) {
         console.log(error);
       }
