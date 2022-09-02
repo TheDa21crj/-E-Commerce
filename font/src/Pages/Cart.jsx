@@ -45,7 +45,9 @@ export default function Cart() {
 
         var d = await res.json();
 
-        console.log(d);
+        if (d.acknowledged) {
+          console.log(d.acknowledged);
+        }
 
         // dispatch(addWish({ length: -1 }));
       } catch (error) {
