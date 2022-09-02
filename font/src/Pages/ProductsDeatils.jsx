@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 export default function ProductsDeatils() {
   const wish = useSelector((state) => state.wish.start);
 
+  const [showload, setload] = useState(true);
   const [showid, setid] = useState("");
   const [showname, setname] = useState("");
   const [showimageSrc, setimageSrc] = useState("");
@@ -57,6 +58,7 @@ export default function ProductsDeatils() {
         setrating(data[0].rating);
       }
     } catch (error) {
+      setload(false);
       navigate("/error");
       return;
     }
@@ -231,7 +233,8 @@ export default function ProductsDeatils() {
   };
 
   return (
-    <div>
+    <>
+{?"":<div>
       <div className={PDCss.MDiv}>
         <div className={PDCss.leftDiv}>
           <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
@@ -416,6 +419,8 @@ export default function ProductsDeatils() {
       </div>
 
       {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
-    </div>
+    </div>}
+    </>
+    
   );
 }
