@@ -57,6 +57,7 @@ export default function ProductsDeatils() {
         setdes(data[0].des);
         setprice(data[0].price);
         setrating(data[0].rating);
+        setload(false);
       }
     } catch (error) {
       setload(false);
