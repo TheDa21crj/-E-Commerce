@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
 export default function ShopCart() {
+  const [showload, setload] = useState(true);
   const [showtrue, settrue] = useState(false);
   const [showTPrice, setTPrice] = useState();
   const [showTProducts, setTProducts] = useState();
@@ -14,10 +15,6 @@ export default function ShopCart() {
     document.title = "The Da: Shopping Cart";
     seeList();
   }, []);
-
-  useEffect(() => {
-    console.log(showtrue);
-  }, [showtrue]);
 
   const seeList = async () => {
     try {
@@ -44,6 +41,7 @@ export default function ShopCart() {
             setTPrice(TotalPrice);
             setTProducts(data.message.length);
             set(data.message);
+            setload(false);
             settrue(true);
             return;
           });
@@ -81,71 +79,77 @@ export default function ShopCart() {
   };
 
   return (
-    <div>
-      {showtrue ? (
-        <div>
-          <p className={SCCss.MainPTag}>Shop Cart</p>
-          <div className={SCCss.RoWDiv}>
-            <div className={SCCss.LeftDiv}>
-              {show ? (
-                <div id={SCCss.checkShowDiv}>
-                  {show.map((value, key) => {
-                    return (
-                      <div key={value.id} className={SCCss.MapMDiv}>
-                        <Link
-                          to={`/products/${value.id}`}
-                          className="LinkStyle"
-                          id={SCCss.Link}
-                        >
-                          <div className={SCCss.MapLeftDiv}>
-                            <img src={value.imageSrc} alt="" />
-                          </div>
-                          <div className={SCCss.MapRightDiv}>
-                            <p className={SCCss.name}>{value.name}</p>
-                            <p className={SCCss.Qunatity}>
-                              Qunatity: <b>{value.qunatity}</b>
-                            </p>
-                            <div className={SCCss.MapRowDivBottom}>
-                              <p>
-                                Size: <b>{value.size}</b>
-                              </p>
-                              <p className={SCCss.price}>
-                                <b>₹ {value.price}</b>
-                              </p>
-                            </div>
-                            <div className={SCCss.DeliveryDiv}>
-                              <img src={img} alt="" />
-                              <p>Da Assured Delivered</p>
-                            </div>
-                          </div>
-                        </Link>
-                        <div
-                          className={SCCss.DeleteDiv}
-                          onClick={() => deleteWish(value.id)}
-                        >
-                          Delete
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-            <div className={SCCss.RightDiv}>
-              <p>Your order qualifies for FREE Delivery.</p>
-              <p className={SCCss.SubtotalPTag}>
-                Subtotal ({showTProducts} item): {showTPrice}
-              </p>
-            </div>
-          </div>
-        </div>
+    <>
+      {showload ? (
+        <Loading />
       ) : (
-        <div className={SCCss.FalseDiv}>
-          <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
+        <div>
+          {showtrue ? (
+            <div>
+              <p className={SCCss.MainPTag}>Shop Cart</p>
+              <div className={SCCss.RoWDiv}>
+                <div className={SCCss.LeftDiv}>
+                  {show ? (
+                    <div id={SCCss.checkShowDiv}>
+                      {show.map((value, key) => {
+                        return (
+                          <div key={value.id} className={SCCss.MapMDiv}>
+                            <Link
+                              to={`/products/${value.id}`}
+                              className="LinkStyle"
+                              id={SCCss.Link}
+                            >
+                              <div className={SCCss.MapLeftDiv}>
+                                <img src={value.imageSrc} alt="" />
+                              </div>
+                              <div className={SCCss.MapRightDiv}>
+                                <p className={SCCss.name}>{value.name}</p>
+                                <p className={SCCss.Qunatity}>
+                                  Qunatity: <b>{value.qunatity}</b>
+                                </p>
+                                <div className={SCCss.MapRowDivBottom}>
+                                  <p>
+                                    Size: <b>{value.size}</b>
+                                  </p>
+                                  <p className={SCCss.price}>
+                                    <b>₹ {value.price}</b>
+                                  </p>
+                                </div>
+                                <div className={SCCss.DeliveryDiv}>
+                                  <img src={img} alt="" />
+                                  <p>Da Assured Delivered</p>
+                                </div>
+                              </div>
+                            </Link>
+                            <div
+                              className={SCCss.DeleteDiv}
+                              onClick={() => deleteWish(value.id)}
+                            >
+                              Delete
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className={SCCss.RightDiv}>
+                  <p>Your order qualifies for FREE Delivery.</p>
+                  <p className={SCCss.SubtotalPTag}>
+                    Subtotal ({showTProducts} item): {showTPrice}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className={SCCss.FalseDiv}>
+              <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
+            </div>
+          )}
         </div>
       )}
-    </div>
+    </>
   );
 }
