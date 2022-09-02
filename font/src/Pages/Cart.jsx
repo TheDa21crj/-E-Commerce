@@ -29,8 +29,6 @@ export default function Cart() {
   const deleteWish = async (deleteID) => {
     let _id = deleteID;
 
-    console.log(_id);
-
     if (_id === "") {
       return;
     } else {
@@ -45,9 +43,11 @@ export default function Cart() {
           }),
         });
 
-        await res.json();
+        var d = await res.json();
 
-        dispatch(addWish({ length: -1 }));
+        console.log(d);
+
+        // dispatch(addWish({ length: -1 }));
       } catch (error) {
         console.log(error);
       }
