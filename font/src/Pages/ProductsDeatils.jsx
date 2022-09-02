@@ -132,7 +132,6 @@ export default function ProductsDeatils() {
         await res.json();
 
         wishUpdate();
-        // dispatch(addWish({ length: -1 }));
         setcheck("false");
       } catch (error) {
         console.log(error);
