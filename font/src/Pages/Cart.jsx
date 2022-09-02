@@ -17,11 +17,6 @@ export default function Cart() {
     document.title = "My Wishlist";
   }, []);
 
-  // useEffect(() => {
-  //   var show = showID;
-  //   deleteWish(show);
-  // }, [showID]);
-
   const wish = useSelector((state) => state.wish.length);
   const data = useSelector((state) => state.wish.data);
   const _id = useSelector((state) => state.user._id);
