@@ -41,7 +41,6 @@ export default function Cart() {
         var d = await res.json();
 
         if (d.acknowledged) {
-          console.log(d.acknowledged);
           wishUpdate();
         }
       } catch (error) {
