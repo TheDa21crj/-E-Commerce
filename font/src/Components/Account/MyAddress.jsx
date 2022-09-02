@@ -5,6 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import imgplus from "./../../Img/plus.png";
 import AddAddress from "./AddAddress";
 import DeleteAddress from "./DeleteAddress";
+import Loading from "./../../Pages/Loading";
 // redux
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
