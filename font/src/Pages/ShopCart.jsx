@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 export default function ShopCart() {
   const [showtrue, settrue] = useState(false);
