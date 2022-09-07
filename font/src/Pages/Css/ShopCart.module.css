@@ -163,6 +163,11 @@
   display: flex;
 }
 
+.empty_cart {
+  margin-top: 20px;
+  width: 20%;
+}
+
 @media only screen and (max-width: 950px) {
   .RoWDiv {
     flex-direction: column-reverse;
