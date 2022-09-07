@@ -112,10 +112,10 @@
 .flexDiv {
   display: flex;
   justify-content: center;
+  margin: 20px 0px;
 }
 
 .fallTag {
-  margin: 20px 0px;
   width: 40%;
 }
 
@@ -123,7 +123,7 @@
   font-family: ManropeRegular;
   text-align: center;
   font-size: 22px;
-  margin-top: 20px;
+  margin-top: 10px;
   letter-spacing: 0.18rem;
   color: #f56692;
 }
