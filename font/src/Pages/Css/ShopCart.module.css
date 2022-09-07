@@ -152,4 +152,8 @@
     align-items: center;
     gap: 30px;
   }
+  .RightDiv,
+  .LeftDiv {
+    width: 95%;
+  }
 }
