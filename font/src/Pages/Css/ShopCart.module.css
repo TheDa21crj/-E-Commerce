@@ -146,4 +146,10 @@
 }
 
 @media only screen and (max-width: 950px) {
+  .RoWDiv {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+  }
 }
