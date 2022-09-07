@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
 import SCCss from "./Css/ShopCart.module.css";
+import empty_cart from "./../Img/wishes.svg";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useSelector } from "react-redux";
@@ -21,6 +22,8 @@ export default function Cart() {
   const wish = useSelector((state) => state.wish.length);
   const data = useSelector((state) => state.wish.data);
   const _id = useSelector((state) => state.user._id);
+
+  console.table(wish);
 
   const deleteWish = async (deleteID) => {
     let _id = deleteID;
@@ -76,44 +79,56 @@ export default function Cart() {
   return (
     <div>
       {_id !== "" ? (
-        <div className={CartCss.mDiv}>
-          <p className={CartCss.MainPTag}>My Wishlist({wish} items)</p>
-          <div className={CartCss.CardDivM}>
-            {data ? (
-              <div className={CartCss.CardDivMap}>
-                {data.map((value, key) => {
-                  return (
-                    <div key={value._id} className={CartCss.CardGridDiv}>
-                      <Link to={`/products/${value.id}`} className="LinkStyle">
-                        <div className={CartCss.CardImgDiv}>
-                          <img
-                            src={value.imgSrc}
-                            alt=""
-                            className={CartCss.ImgTag}
+        <>
+          {data !== 0 ? (
+            <div className={CartCss.mDiv}>
+              <p className={CartCss.MainPTag}>My Wishlist({wish} items)</p>
+              <div className={CartCss.CardDivM}>
+                {data ? (
+                  <div className={CartCss.CardDivMap}>
+                    {data.map((value, key) => {
+                      return (
+                        <div key={value._id} className={CartCss.CardGridDiv}>
+                          <Link
+                            to={`/products/${value.id}`}
+                            className="LinkStyle"
+                          >
+                            <div className={CartCss.CardImgDiv}>
+                              <img
+                                src={value.imgSrc}
+                                alt=""
+                                className={CartCss.ImgTag}
+                              />
+                            </div>
+                            <p className={CartCss.Name}> {value.name} </p>
+                            <p className={CartCss.Price}> ₹{value.price} </p>
+                          </Link>
+                          <CloseIcon
+                            className={CartCss.CloseIcon}
+                            fontSize="small"
+                            onClick={() => {
+                              deleteWish(value._id);
+                            }}
                           />
                         </div>
-                        <p className={CartCss.Name}> {value.name} </p>
-                        <p className={CartCss.Price}> ₹{value.price} </p>
-                      </Link>
-                      <CloseIcon
-                        className={CartCss.CloseIcon}
-                        fontSize="small"
-                        onClick={() => {
-                          deleteWish(value._id);
-                        }}
-                      />
-                    </div>
-                  );
-                })}
+                      );
+                    })}
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
+            </div>
+          ) : (
+            <div className={CartCss.mDiv}>
+              <p className={CartCss.MainPTag}>My Wishlist(00 items)</p>
+              <img src={empty_cart} alt="" className={SCCss.empty_cart} />
+            </div>
+          )}
+        </>
       ) : (
         <div className={CartCss.mDiv}>
-          <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
+          <p className={CartCss.MainPTag}>My Wishlist(00 items)</p>
           <img src={empty_cart} alt="" className={SCCss.empty_cart} />
         </div>
       )}
