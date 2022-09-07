@@ -2,9 +2,10 @@ import React from "react";
 import ProfileCss from "./CSS/Profile.module.css";
 
 export default function Profile(props) {
+  console.log(props.firstName);
   return (
     <>
-      {props.firstName ? (
+      {props.firstName !== null ? (
         <div className={ProfileCss.mdiv}>
           <h1 className={ProfileCss.h1}>Profile</h1>
           <div className={ProfileCss.conMDiv}>
