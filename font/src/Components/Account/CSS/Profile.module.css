@@ -117,6 +117,7 @@
 
 .fallTag {
   width: 40%;
+  min-width: 100px;
 }
 
 .desTagBot {
