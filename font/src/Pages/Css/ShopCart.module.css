@@ -1,3 +1,7 @@
+.mdiv {
+  margin-bottom: 20px;
+}
+
 .MainPTag,
 .SubtotalPTag {
   font-size: 1.2rem;
