@@ -112,7 +112,9 @@ export default function Profile(props) {
           </div>
         </div>
       ) : (
-        <div>no</div>
+        <div>
+          <h1 className={ProfileCss.h1}>Profile</h1>
+        </div>
       )}
     </>
   );
