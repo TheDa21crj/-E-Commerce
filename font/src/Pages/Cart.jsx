@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CartCss from "./Css/Cart.module.css";
-import SCCss from "./Css/ShopCart.module.css";
 import empty_cart from "./../Img/wishes.svg";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
