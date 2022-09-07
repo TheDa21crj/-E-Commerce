@@ -113,6 +113,7 @@ export default function Cart() {
       ) : (
         <div className={CartCss.mDiv}>
           <p className={CartCss.MainPTag}>My Wishlist(0 items)</p>
+          <img src={empty_cart} alt="" className={SCCss.empty_cart} />
         </div>
       )}
     </div>
