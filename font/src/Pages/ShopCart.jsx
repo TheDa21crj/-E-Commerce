@@ -158,6 +158,9 @@ export default function ShopCart() {
           ) : (
             <div className={SCCss.FalseDiv}>
               <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
+              <div className="flexDiv">
+                <img src="" alt="" />
+              </div>
             </div>
           )}
         </div>
