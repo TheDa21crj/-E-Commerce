@@ -173,4 +173,10 @@
 }
 
 @media only screen and (max-width: 550px) {
+  #Link {
+    flex-direction: column;
+  }
+  .MapLeftDiv {
+    width: 100%;
+  }
 }
