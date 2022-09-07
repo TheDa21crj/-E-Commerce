@@ -148,7 +148,7 @@ export default function ShopCart() {
                     <br />
                     <br />
                   </p>
-                  <p>
+                  <p className={SCCss.totalPTag}>
                     Grand Total:{" "}
                     {Math.round(showTPrice + showTPrice * 0.18).toFixed(2)}
                   </p>
