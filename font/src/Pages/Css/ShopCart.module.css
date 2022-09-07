@@ -10,13 +10,15 @@
 }
 
 .SubtotalPTag {
-  margin: 30px 0px 30px 0%;
+  margin: 30px 0px 10px 0px;
 }
 
 .totalPTag {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: ManropeExtraBold;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
 }
 
 .RoWDiv {
