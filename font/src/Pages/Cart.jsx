@@ -23,8 +23,6 @@ export default function Cart() {
   const data = useSelector((state) => state.wish.data);
   const _id = useSelector((state) => state.user._id);
 
-  console.table(wish);
-
   const deleteWish = async (deleteID) => {
     let _id = deleteID;
 
