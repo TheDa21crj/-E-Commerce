@@ -5,7 +5,7 @@ export default function Profile(props) {
   console.log(props.firstName);
   return (
     <>
-      {props.firstName !== null ? (
+      {props.firstName === null ? (
         <div className={ProfileCss.mdiv}>
           <h1 className={ProfileCss.h1}>Profile</h1>
           <div className={ProfileCss.conMDiv}>
