@@ -31,9 +31,8 @@ export default function ShopCart() {
         return;
       }
       if (data) {
-        console.log(data.message.length);
-        if (data.message === "zero") {
-          console.log("Zero = Data");
+        if (data.message.length === 0) {
+          setload(false);
           settrue(false);
         } else {
           let TotalPrice = 0;
