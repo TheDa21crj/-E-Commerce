@@ -118,6 +118,7 @@ export default function Profile(props) {
           <div className={ProfileCss.flexDiv}>
             <img src={Fall} alt="" className={ProfileCss.fallTag} />
           </div>
+          <p className={ProfileCss.desTagBot}>Profile</p>
         </div>
       )}
     </>
