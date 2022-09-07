@@ -3,6 +3,7 @@ import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import empty_cart from "./../Img/empty_cart.svg";
 
 export default function ShopCart() {
   const [showload, setload] = useState(true);
@@ -159,7 +160,7 @@ export default function ShopCart() {
             <div className={SCCss.FalseDiv}>
               <p className={SCCss.MainPTag}>Shopping Cart Is Empty</p>
               <div className="flexDiv">
-                <img src="" alt="" />
+                <img src={empty_cart} alt="" />
               </div>
             </div>
           )}
