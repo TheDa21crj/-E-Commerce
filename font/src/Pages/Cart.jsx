@@ -127,7 +127,7 @@ export default function Cart() {
         </>
       ) : (
         <div className={CartCss.mDiv}>
-          <p className={CartCss.MainPTag}>My Wishlist(00 items)</p>
+          <p className={CartCss.MainPTag}>Wistlist Is Empty</p>
           <div className={CartCss.flexCentDiv}>
             <img src={empty_cart} alt="" className={CartCss.empty_cart} />
           </div>
