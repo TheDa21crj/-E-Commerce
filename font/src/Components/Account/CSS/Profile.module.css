@@ -121,6 +121,8 @@
 
 .desTagBot {
   text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 950px) {
