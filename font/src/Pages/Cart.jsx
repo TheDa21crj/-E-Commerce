@@ -119,14 +119,18 @@ export default function Cart() {
           ) : (
             <div className={CartCss.mDiv}>
               <p className={CartCss.MainPTag}>My Wishlist(00 items)</p>
-              <img src={empty_cart} alt="" className={CartCss.empty_cart} />
+              <div className={CartCss.flexCentDiv}>
+                <img src={empty_cart} alt="" className={CartCss.empty_cart} />
+              </div>
             </div>
           )}
         </>
       ) : (
         <div className={CartCss.mDiv}>
           <p className={CartCss.MainPTag}>My Wishlist(00 items)</p>
-          <img src={empty_cart} alt="" className={CartCss.empty_cart} />
+          <div className={CartCss.flexCentDiv}>
+            <img src={empty_cart} alt="" className={CartCss.empty_cart} />
+          </div>
         </div>
       )}
     </div>
