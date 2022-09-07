@@ -143,6 +143,8 @@ export default function ShopCart() {
                     Total ({showTProducts} item): {showTPrice}
                     <br />
                     <br />
+                    <br />
+                    <br />
                     Grand Total: {showTPrice + showTPrice * 0.18}
                   </p>
                 </div>
