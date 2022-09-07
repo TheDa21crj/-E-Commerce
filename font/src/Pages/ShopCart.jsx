@@ -136,7 +136,9 @@ export default function ShopCart() {
                   )}
                 </div>
                 <div className={SCCss.RightDiv}>
-                  <p>Your order qualifies for FREE Delivery.</p>
+                  <p className={SCCss.pTagYourOrder}>
+                    Your order qualifies for FREE Delivery.
+                  </p>
                   <p className={SCCss.SubtotalPTag}>
                     Subtotal ({showTProducts} item): {showTPrice}
                   </p>
