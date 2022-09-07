@@ -1,4 +1,5 @@
 import React from "react";
+import Fall from "./../../Img/fall.svg";
 import ProfileCss from "./CSS/Profile.module.css";
 
 export default function Profile(props) {
@@ -114,6 +115,9 @@ export default function Profile(props) {
       ) : (
         <div>
           <h1 className={ProfileCss.h1}>Profile</h1>
+          <div className={ProfileCss.flexDiv}>
+            <img src={Fall} alt="" className={ProfileCss.fallTag} />
+          </div>
         </div>
       )}
     </>
