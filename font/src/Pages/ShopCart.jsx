@@ -143,6 +143,8 @@ export default function ShopCart() {
                     Total ({showTProducts} item): {showTPrice}
                     <br />
                     <br />
+                    Tax Amount: {showTPrice * 0.18}
+                    Tax Amount: {Math.round(showTPrice * 0.18).toFixed(2)}
                     <br />
                     <br />
                     Grand Total: {showTPrice + showTPrice * 0.18}
