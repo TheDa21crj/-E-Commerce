@@ -150,6 +150,7 @@ export default function ShopCart() {
                     Grand Total:{" "}
                     {Math.round(showTPrice + showTPrice * 0.18).toFixed(2)}
                   </p>
+                  <p>The Tax rate is 18%.</p>
                 </div>
               </div>
             </div>
