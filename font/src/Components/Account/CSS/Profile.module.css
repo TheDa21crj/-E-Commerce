@@ -109,8 +109,18 @@
   display: none !important;
 }
 
+.flexDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .fallTag {
+  margin: 20px 0px;
   width: 40%;
+}
+
+.desTagBot {
+  text-align: center;
 }
 
 @media only screen and (max-width: 950px) {
