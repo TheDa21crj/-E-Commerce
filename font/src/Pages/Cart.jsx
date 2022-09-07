@@ -80,7 +80,7 @@ export default function Cart() {
     <div>
       {_id !== "" ? (
         <>
-          {data !== 0 ? (
+          {wish !== 0 ? (
             <div className={CartCss.mDiv}>
               <p className={CartCss.MainPTag}>My Wishlist({wish} items)</p>
               <div className={CartCss.CardDivM}>
