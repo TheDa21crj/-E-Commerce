@@ -140,14 +140,15 @@ export default function ShopCart() {
                     Your order qualifies for FREE Delivery.
                   </p>
                   <p className={SCCss.SubtotalPTag}>
-                    Total ({showTProducts} item): {showTPrice}
+                    Total ({showTProducts} item):{" "}
+                    {Math.round(showTPrice).toFixed(2)}
                     <br />
                     <br />
-                    Tax Amount: {showTPrice * 0.18}
                     Tax Amount: {Math.round(showTPrice * 0.18).toFixed(2)}
                     <br />
                     <br />
-                    Grand Total: {showTPrice + showTPrice * 0.18}
+                    Grand Total:{" "}
+                    {Math.round(showTPrice + showTPrice * 0.18).toFixed(2)}
                   </p>
                 </div>
               </div>
