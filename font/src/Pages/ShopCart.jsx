@@ -145,13 +145,12 @@ export default function ShopCart() {
                     <br />
                     <br />
                     Tax Amount: {Math.round(showTPrice * 0.18).toFixed(2)}
-                    <br />
-                    <br />
                   </p>
                   <p className={SCCss.totalPTag}>
                     Grand Total:{" "}
                     {Math.round(showTPrice + showTPrice * 0.18).toFixed(2)}
                   </p>
+                  <br />
                   <p>Tax rate is 18%.</p>
                 </div>
               </div>
