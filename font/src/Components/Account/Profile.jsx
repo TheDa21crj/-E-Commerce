@@ -3,7 +3,7 @@ import Fall from "./../../Img/fall.svg";
 import ProfileCss from "./CSS/Profile.module.css";
 
 export default function Profile(props) {
-  console.log(typeof props.firstName);
+  console.log(props.firstName);
   return (
     <>
       {props.firstName === null ? (
