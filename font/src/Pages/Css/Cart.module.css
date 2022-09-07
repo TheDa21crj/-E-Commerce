@@ -56,6 +56,11 @@
   width: 20%;
 }
 
+.flexCentDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .Name {
   font-weight: bold;
   font-family: ManropeExtraBold;
