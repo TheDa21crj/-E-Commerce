@@ -85,7 +85,7 @@ export default function ShopCart() {
       ) : (
         <div>
           {showtrue ? (
-            <div>
+            <div className={SCCss.mdiv}>
               <p className={SCCss.MainPTag}>Shop Cart</p>
               <div className={SCCss.RoWDiv}>
                 <div className={SCCss.LeftDiv}>
