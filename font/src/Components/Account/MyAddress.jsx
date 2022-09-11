@@ -69,7 +69,9 @@ export default function MyAddress(props) {
   return (
     <>
       {showload ? (
-        <img src={Loading} alt="" />
+        <div>
+          <img src={Loading} alt="" />
+        </div>
       ) : (
         <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
           <h1 className={ProfileCss.h1}>My Address</h1>
