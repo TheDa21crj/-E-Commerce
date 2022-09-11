@@ -44,10 +44,10 @@ export default function Update(props) {
           />
           <input
             type="text"
-            name="state"
+            name="dob"
             className={AddCss.impTag}
             // onChange={DataInp}
-            placeholder="State"
+            placeholder="Date of Birth"
           />
           <input
             type="text"
