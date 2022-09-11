@@ -12,7 +12,7 @@ export default function MyAddress(props) {
 
   return (
     <>
-      {a ? (
+      {showload ? (
         <div className={ProfileCss.LadingDiv}>
           <img src={Loading} alt="" />
         </div>
