@@ -50,14 +50,14 @@ export default function Update(props) {
             placeholder="Gender"
           />
           <input
-            type="text"
+            type="number"
             name="PhoneNumber"
             className={AddCss.impTag}
             onChange={DataInp}
             placeholder="Phone Number"
           />
           <input
-            type="text"
+            type="date"
             name="dob"
             className={AddCss.impTag}
             onChange={DataInp}
