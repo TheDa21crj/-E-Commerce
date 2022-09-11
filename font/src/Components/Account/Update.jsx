@@ -32,6 +32,10 @@ export default function Update(props) {
     }
   };
 
+  const changeSort = async () => {
+    console.log(e.target.value);
+  };
+
   return (
     <div className={AddCss.mDiv}>
       <div className={AddCss.ConDiv}>
