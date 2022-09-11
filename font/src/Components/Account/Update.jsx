@@ -33,7 +33,7 @@ export default function Update(props) {
   };
 
   const changeSort = async (e) => {
-    setUser.gender(e.target.value);
+    setUser({ ...showUser, gender: e.target.value });
   };
 
   return (
