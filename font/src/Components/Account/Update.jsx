@@ -27,6 +27,23 @@ export default function Update(props) {
     if (firstName !== "" && LastName !== "" && gender !== "" && dob !== "") {
       if (PhoneNumber.length >= 10 && PhoneNumber.length <= 12) {
         console.log(showUser);
+
+        const res = await fetch("/api/update", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            address,
+            pinCode,
+            town,
+            state,
+            country,
+            phoneNumber,
+          }),
+        });
+
         setMsg("");
       } else {
         setMsg("Enter a valid Phone Number");
