@@ -24,11 +24,14 @@ export default function Update(props) {
   const PostData = async () => {
     const { firstName, LastName, gender, PhoneNumber, dob } = showUser;
 
-    if (PhoneNumber.length >= 10 && PhoneNumber.length <= 12) {
-      console.log(showUser);
-      setMsg("");
+    if (firstName !== "" && LastName !== "" && gender !== "" && dob !== "") {
+      if (PhoneNumber.length >= 10 && PhoneNumber.length <= 12) {
+        console.log(showUser);
+        setMsg("");
+      } else {
+        setMsg("Enter a valid Phone Number");
+      }
     } else {
-      setMsg("Enter a valid Phone Number");
     }
   };
 
