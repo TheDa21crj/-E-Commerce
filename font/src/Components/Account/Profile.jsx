@@ -128,7 +128,7 @@ export default function Profile(props) {
           </div>
         </div>
       )}
-      {show ? <Update /> : ""}
+      {show ? <Update state={set} /> : ""}
     </>
   );
 }
