@@ -34,13 +34,12 @@ export default function Update(props) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name,
-            address,
-            pinCode,
-            town,
-            state,
-            country,
-            phoneNumber,
+            // _id:,
+            firstName,
+            LastName,
+            gender,
+            PhoneNumber,
+            dob,
           }),
         });
 
