@@ -16,17 +16,17 @@ export default function Update(props) {
         <div className={AddCss.inpDiv}>
           <input
             type="text"
-            name="name"
+            name="firstName"
             className={AddCss.impTag}
             // onChange={DataInp}
-            placeholder="Name"
+            placeholder="First Name"
           />
           <input
-            type="number"
-            name="pinCode"
+            type="text"
+            name="LastName"
             className={AddCss.impTag}
             // onChange={DataInp}
-            placeholder="Pin Code"
+            placeholder="Last Name"
           />
           <input
             type="text"
