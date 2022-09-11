@@ -7,7 +7,7 @@ import ProfileCss from "./../CSS/Profile.module.css";
 export default function Profile(props) {
   return (
     <>
-      {a ? (
+      {props.firstName !== "null" ? (
         <div className={Common.mdiv} id={ProfileCssMobo.mdiv}>
           <div>
             <KeyboardBackspaceIcon
@@ -115,7 +115,18 @@ export default function Profile(props) {
           </div>
         </div>
       ) : (
-        ""
+        <div>
+          <h1 className={ProfileCss.h1}>Profile</h1>
+          <div className={ProfileCss.flexDiv}>
+            <img src={Fall} alt="" className={ProfileCss.fallTag} />
+          </div>
+          <p className={ProfileCss.desTagBot}>Please Complete your Profile</p>
+          <div className={ProfileCss.centerDiv}>
+            <button className={ProfileCss.profileDiv} onClick={() => set(true)}>
+              Complete your profile
+            </button>
+          </div>
+        </div>
       )}
     </>
   );
