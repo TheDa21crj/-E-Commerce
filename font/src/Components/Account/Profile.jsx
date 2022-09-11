@@ -128,7 +128,7 @@ export default function Profile(props) {
           </div>
         </div>
       )}
-      {show ? "hello" : ""}
+      {show ? <Update /> : ""}
     </>
   );
 }
