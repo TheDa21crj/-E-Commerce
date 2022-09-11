@@ -9,6 +9,14 @@ import { useSelector } from "react-redux";
 
 export default function MyAddress(props) {
   const [showload, setload] = useState(true);
+  const [show, set] = useState();
+  const [showAdd, setAdd] = useState(false);
+  const [showDelete, setDelete] = useState(false);
+  const [showDeleteID, setDeleteID] = useState("");
+
+  useEffect(() => {
+    seeAddress();
+  }, []);
 
   return (
     <>
