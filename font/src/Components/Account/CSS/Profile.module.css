@@ -120,6 +120,12 @@
   min-width: 100px;
 }
 
+.LadingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .desTagBot {
   font-family: ManropeRegular;
   text-align: center;
