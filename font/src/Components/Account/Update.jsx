@@ -51,6 +51,14 @@ export default function Update(props) {
         const r = await res.json();
         console.log(r);
 
+        setUser({
+          firstName: "",
+          LastName: "",
+          gender: "",
+          PhoneNumber: "",
+          dob: "",
+        });
+
         setMsg("");
       } else {
         setMsg("Enter a valid Phone Number");
