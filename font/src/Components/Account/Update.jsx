@@ -4,13 +4,11 @@ import CloseIcon from "@mui/icons-material/Close";
 
 export default function Update(props) {
   const [showUser, setUser] = useState({
-    name: "",
-    address: "",
-    pinCode: "",
-    town: "",
-    state: "",
-    country: "",
-    phoneNumber: "",
+    firstName: "",
+    LastName: "",
+    gender: "",
+    PhoneNumber: "",
+    dob: "",
   });
 
   const DataInp = (e) => {
