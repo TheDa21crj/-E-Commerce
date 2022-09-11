@@ -69,7 +69,6 @@ export default function MyAddress(props) {
   return (
     <>
       {showload ? (
-        // <Loading />
         <img src={Loading} alt="" />
       ) : (
         <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
