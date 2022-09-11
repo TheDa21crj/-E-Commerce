@@ -15,6 +15,7 @@ import Cart from "./Pages/Cart";
 import ShopCart from "./Pages/ShopCart";
 import Loading from "./Pages/Loading";
 import Tag from "./Pages/Tag";
+import Buy from "./Pages/Buy";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
@@ -48,6 +49,7 @@ function App() {
             <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
+            <Route path="/Buy" element={<Buy />} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
