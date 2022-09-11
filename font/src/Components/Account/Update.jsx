@@ -62,13 +62,7 @@ export default function Update(props) {
             <option value="Female">Female</option>
             <option value="Other">Other</option>
           </select>
-          <input
-            type="text"
-            name="gender"
-            className={AddCss.impTag}
-            onChange={DataInp}
-            placeholder="Gender"
-          />
+
           <input
             type="number"
             name="PhoneNumber"
