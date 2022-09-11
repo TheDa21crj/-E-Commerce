@@ -5,6 +5,8 @@ import Loading from "./../../../Img/loading.gif";
 import imgplus from "./../../../Img/plus.png";
 import ProfileCss from "./../CSS/Profile.module.css";
 import AddCss from "./../CSS/Address.module.css";
+import DeleteAddress from "./../DeleteAddress";
+import AddAddress from "./../AddAddress";
 // redux
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -133,6 +135,12 @@ export default function MyAddress(props) {
               )}
             </div>
           </div>
+          {showAdd ? <AddAddress state={setAdd} /> : ""}
+          {showDelete ? (
+            <DeleteAddress DeleteID={showDeleteID} state={set} />
+          ) : (
+            ""
+          )}
         </div>
       )}
     </>
