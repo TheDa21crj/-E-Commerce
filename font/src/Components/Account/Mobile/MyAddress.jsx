@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Common from "./Css/Common.module.css";
 import Loading from "./../../../Img/loading.gif";
-import { useSelector } from "react-redux";
 import ProfileCss from "./../CSS/Profile.module.css";
 // redux
 import { useSelector } from "react-redux";
