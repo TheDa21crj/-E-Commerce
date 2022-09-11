@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import ProfileCss from "./../CSS/Profile.module.css";
 // redux
 import { useSelector } from "react-redux";
+import { adduser } from "./../../../redux/user";
 
 export default function MyAddress(props) {
   const [showload, setload] = useState(true);
