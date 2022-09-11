@@ -120,7 +120,9 @@ export default function Profile(props) {
           </div>
           <p className={ProfileCss.desTagBot}>Please Complete your Profile</p>
           <div className={ProfileCss.centerDiv}>
-            <button>Complete your profile</button>
+            <button className={ProfileCss.profileDiv}>
+              Complete your profile
+            </button>
           </div>
         </div>
       )}
