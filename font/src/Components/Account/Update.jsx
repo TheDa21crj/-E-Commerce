@@ -30,10 +30,10 @@ export default function Update(props) {
           />
           <input
             type="text"
-            name="address"
+            name="gender"
             className={AddCss.impTag}
             // onChange={DataInp}
-            placeholder="Address"
+            placeholder="Gender"
           />
           <input
             type="text"
