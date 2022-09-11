@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import AddCss from "./CSS/Add.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function Update(props) {
+  const [showUser, setUser] = useState({
+    name: "",
+    address: "",
+    pinCode: "",
+    town: "",
+    state: "",
+    country: "",
+    phoneNumber: "",
+  });
+
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setUser({ ...showUser, [name]: value });
+  };
   return (
     <div className={AddCss.mDiv}>
       <div className={AddCss.ConDiv}>
