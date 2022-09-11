@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Common from "./Css/Common.module.css";
 import Loading from "./../../../Img/loading.gif";
+import imgplus from "./../../../Img/plus.png";
 import ProfileCss from "./../CSS/Profile.module.css";
 import AddCss from "./../CSS/Address.module.css";
 // redux
@@ -70,7 +71,67 @@ export default function MyAddress(props) {
           </div>
           <p className={Common.MyPTag}>My Address</p>
           <div className={AddCss.AddressRowDiv}>
-            <div className={AddCss.mapPArent}>{}</div>
+            <div className={AddCss.mapPArent}>
+              {" "}
+              {show ? (
+                <div className={AddCss.mapPArentDiv}>
+                  <div
+                    className={AddCss.AddAddressmDiv}
+                    onClick={() => setAdd(true)}
+                  >
+                    <img src={imgplus} alt="" />
+                    <p>ADD ADDRESS</p>
+                  </div>
+                  {show.map((value, key) => {
+                    return (
+                      <div key={value._id} className={AddCss.AmDiv}>
+                        <p>
+                          <b>name:</b> {value.name}
+                        </p>
+                        <p>
+                          <b>address:</b> {value.address}
+                        </p>
+                        <p>
+                          <b>pin Code:</b> {value.pinCode}
+                        </p>
+                        <p>
+                          <b>Town:</b> {value.town}
+                        </p>
+                        <p>
+                          <b>State:</b> {value.state}
+                        </p>
+                        <p>
+                          <b>Country:</b> {value.country}
+                        </p>
+                        <p>
+                          <b>Phone Number:</b> {value.phoneNumber}
+                        </p>
+                        <div className={AddCss.editHoverDiv}>
+                          <p className={AddCss.editHoverEdit}>{/* Edit */}</p>
+                          <p
+                            className={AddCss.editHoverDelete}
+                            onClick={() => {
+                              setDelete(true);
+                              setDeleteID(value._id);
+                            }}
+                          >
+                            Delete
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div
+                  className={AddCss.AddAddressmDiv}
+                  onClick={() => setAdd(true)}
+                >
+                  <img src={imgplus} alt="" />
+                  <p>ADD ADDRESS</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
