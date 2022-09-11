@@ -153,7 +153,7 @@ export default function ShopCart() {
                   </p>
                   <br />
                   <p>Tax rate is 18%.</p>
-                  <Link to="/Buy">
+                  <Link to="/Buy" className="LinkStyle">
                     <div className={SCCss.ProceedBuyDiv}>Proceed to Buy</div>
                   </Link>
                 </div>
