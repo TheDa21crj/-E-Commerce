@@ -54,7 +54,7 @@ export default function Profile(props) {
                     <p>Gender</p>
                     <div className={ProfileCss.GenderTDiv}>
                       <div>
-                        {props.gender == "Male" ? (
+                        {props.gender === "Male" ? (
                           <input type="radio" name="" id="" checked />
                         ) : (
                           <input type="radio" name="" id="" />
@@ -64,7 +64,7 @@ export default function Profile(props) {
                         </label>
                       </div>
                       <div>
-                        {props.gender == "Female" ? (
+                        {props.gender === "Female" ? (
                           <input type="radio" name="" id="" checked />
                         ) : (
                           <input type="radio" name="" id="" />
@@ -77,7 +77,7 @@ export default function Profile(props) {
                         </label>
                       </div>
                       <div>
-                        {props.gender == "Other" ? (
+                        {props.gender === "Other" ? (
                           <input type="radio" name="" id="" checked />
                         ) : (
                           <input type="radio" name="" id="" />
