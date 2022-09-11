@@ -6,7 +6,7 @@ export default function Update(props) {
   return (
     <div className={AddCss.mDiv}>
       <div className={AddCss.ConDiv}>
-        Update
+        <p className={AddCss.AddAddress}>Add Address</p>
         <br />
         <CloseIcon
           onClick={() => props.state(false)}
