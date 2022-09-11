@@ -3,6 +3,9 @@ import AddCss from "./CSS/Add.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import Alert from "./Alert";
 
+// redux
+import { useSelector } from "react-redux";
+
 export default function Update(props) {
   const [showUser, setUser] = useState({
     firstName: "",
@@ -13,6 +16,8 @@ export default function Update(props) {
   });
 
   const [showMsg, setMsg] = useState("");
+
+  const _id = useSelector((state) => state.user._id);
 
   const DataInp = (e) => {
     const name = e.target.name;
@@ -34,7 +39,7 @@ export default function Update(props) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            // _id:,
+            _id,
             firstName,
             LastName,
             gender,
@@ -42,6 +47,9 @@ export default function Update(props) {
             dob,
           }),
         });
+
+        const r = await res.json();
+        console.log(r);
 
         setMsg("");
       } else {
