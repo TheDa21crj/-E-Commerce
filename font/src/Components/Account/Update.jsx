@@ -40,7 +40,7 @@ export default function Update(props) {
             name="PhoneNumber"
             className={AddCss.impTag}
             // onChange={DataInp}
-            placeholder="PhoneNumber"
+            placeholder="Phone Number"
           />
           <input
             type="text"
