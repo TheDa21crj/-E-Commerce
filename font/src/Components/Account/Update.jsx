@@ -17,6 +17,11 @@ export default function Update(props) {
 
     setUser({ ...showUser, [name]: value });
   };
+
+  const PostData = async () => {
+    console.log(showUser);
+  };
+
   return (
     <div className={AddCss.mDiv}>
       <div className={AddCss.ConDiv}>
