@@ -119,6 +119,9 @@ export default function Profile(props) {
             <img src={Fall} alt="" className={ProfileCss.fallTag} />
           </div>
           <p className={ProfileCss.desTagBot}>Please Complete your Profile</p>
+          <div>
+            <button>Complete your profile</button>
+          </div>
         </div>
       )}
     </>
