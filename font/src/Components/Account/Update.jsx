@@ -49,20 +49,6 @@ export default function Update(props) {
             // onChange={DataInp}
             placeholder="Date of Birth"
           />
-          <input
-            type="text"
-            name="country"
-            className={AddCss.impTag}
-            // onChange={DataInp}
-            placeholder="Country"
-          />
-          <input
-            type="text"
-            name="phoneNumber"
-            className={AddCss.impTag}
-            // onChange={DataInp}
-            placeholder="Phone Number"
-          />
           <button
             //    onClick={PostData}
             className={AddCss.LoginBtn}
