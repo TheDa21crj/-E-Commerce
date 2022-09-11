@@ -32,7 +32,7 @@ export default function Update(props) {
     }
   };
 
-  const changeSort = async () => {
+  const changeSort = async (e) => {
     console.log(e.target.value);
   };
 
@@ -62,6 +62,9 @@ export default function Update(props) {
             placeholder="Last Name"
           />
           <select name="gender" className={AddCss.impTag} onChange={changeSort}>
+            <option value="Gender" selected disabled hidden>
+              Gender
+            </option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
