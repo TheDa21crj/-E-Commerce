@@ -69,7 +69,7 @@ export default function MyAddress(props) {
   return (
     <>
       {showload ? (
-        <div>
+        <div className={ProfileCss.LadingDiv}>
           <img src={Loading} alt="" />
         </div>
       ) : (
