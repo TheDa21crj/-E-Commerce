@@ -18,35 +18,35 @@ export default function Update(props) {
             type="text"
             name="firstName"
             className={AddCss.impTag}
-            // onChange={DataInp}
+            onChange={DataInp}
             placeholder="First Name"
           />
           <input
             type="text"
             name="LastName"
             className={AddCss.impTag}
-            // onChange={DataInp}
+            onChange={DataInp}
             placeholder="Last Name"
           />
           <input
             type="text"
             name="gender"
             className={AddCss.impTag}
-            // onChange={DataInp}
+            onChange={DataInp}
             placeholder="Gender"
           />
           <input
             type="text"
             name="PhoneNumber"
             className={AddCss.impTag}
-            // onChange={DataInp}
+            onChange={DataInp}
             placeholder="Phone Number"
           />
           <input
             type="text"
             name="dob"
             className={AddCss.impTag}
-            // onChange={DataInp}
+            onChange={DataInp}
             placeholder="Date of Birth"
           />
           <button
