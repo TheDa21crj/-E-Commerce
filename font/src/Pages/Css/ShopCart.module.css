@@ -169,6 +169,18 @@
   min-width: 150px;
 }
 
+.ProceedBuyDiv {
+  font-family: ManropeExtraBold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
 @media only screen and (max-width: 950px) {
   .RoWDiv {
     flex-direction: column-reverse;
