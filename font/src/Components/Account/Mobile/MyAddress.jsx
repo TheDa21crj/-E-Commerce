@@ -6,16 +6,10 @@ import ProfileCss from "./../CSS/Profile.module.css";
 import AddCss from "./../CSS/Address.module.css";
 // redux
 import { useSelector } from "react-redux";
-import { adduser } from "./../../../redux/user";
 
 export default function MyAddress(props) {
   const [showload, setload] = useState(true);
 
-  const toggle = useSelector((state) => state.toggle.toggle);
-
-  const address = useSelector((state) => state.user.address);
-
-  console.log(address);
   return (
     <>
       {/* {showload ? (
