@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddCss from "./CSS/Add.module.css";
 import CloseIcon from "@mui/icons-material/Close";
+import Alert from "./Alert";
 
 export default function Update(props) {
   const [showUser, setUser] = useState({
@@ -10,6 +11,8 @@ export default function Update(props) {
     PhoneNumber: "",
     dob: "",
   });
+
+  const [showMsg, setMsg] = useState("");
 
   const DataInp = (e) => {
     const name = e.target.name;
