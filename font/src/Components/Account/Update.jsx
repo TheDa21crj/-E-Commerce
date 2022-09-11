@@ -70,6 +70,43 @@ export default function Update(props) {
     }
   };
 
+  const AuthMiddleware = async () => {
+    try {
+      const res = await fetch("/api/account", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (data.errors) {
+        dispatch(toggleN({ toggle: "false" }));
+        return;
+      }
+      if (data) {
+        setimg(data.message.avatar);
+        dispatch(
+          adduser({
+            _id: data.message._id,
+            email: data.message.email,
+            imgSrc: data.message.avatar,
+            firstName: data.message.firstName,
+            LastName: data.message.LastName,
+            gender: data.message.gender,
+            PhoneNumber: data.message.PhoneNumber,
+          })
+        );
+        dispatch(toggleN({ toggle: "true" }));
+      }
+    } catch (error) {
+      dispatch(toggleN({ toggle: "false" }));
+      return;
+    }
+  };
+
   const changeSort = async (e) => {
     setUser({ ...showUser, gender: e.target.value });
   };
