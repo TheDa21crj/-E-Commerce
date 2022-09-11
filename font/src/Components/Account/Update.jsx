@@ -76,6 +76,7 @@ export default function Update(props) {
           </button>
         </div>
       </div>
+      {showMsg !== "" ? <Alert msg={showMsg} /> : ""}
     </div>
   );
 }
