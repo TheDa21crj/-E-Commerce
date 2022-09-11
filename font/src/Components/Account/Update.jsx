@@ -63,10 +63,7 @@ export default function Update(props) {
             onChange={DataInp}
             placeholder="Date of Birth"
           />
-          <button
-            //    onClick={PostData}
-            className={AddCss.LoginBtn}
-          >
+          <button onClick={PostData} className={AddCss.LoginBtn}>
             ADD
           </button>
         </div>
