@@ -45,7 +45,6 @@ function App() {
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/post-content" element={<PostContent />} />
             <Route path="/ShopCart" element={<ShopCart />} />
-            <Route path="/Loading" element={<Loading />} />
             <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
