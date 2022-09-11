@@ -87,11 +87,9 @@ export default function Update(props) {
 
       const data = await res.json();
       if (data.errors) {
-        dispatch(toggleN({ toggle: "false" }));
         return;
       }
       if (data) {
-        setimg(data.message.avatar);
         dispatch(
           adduser({
             _id: data.message._id,
@@ -103,10 +101,8 @@ export default function Update(props) {
             PhoneNumber: data.message.PhoneNumber,
           })
         );
-        dispatch(toggleN({ toggle: "true" }));
       }
     } catch (error) {
-      dispatch(toggleN({ toggle: "false" }));
       return;
     }
   };
