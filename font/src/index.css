@@ -1,59 +1,47 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .LinkStyle {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .BodyDiv {
-    background-image: url(./Img/background.png);
-    background-attachment: fixed;
-    background-size: cover;
+  background-image: url(./Img/background.png);
+  background-attachment: fixed;
+  background-size: cover;
 }
-
-
-/* width */
 
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
-
-
-/* Track */
 
 ::-webkit-scrollbar-track {
-    padding: 0px 20px;
-    background: #fff;
+  padding: 0px 20px;
+  background: #fff;
 }
-
-
-/* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(161, 161, 161);
-    border-radius: 10px;
+  background: rgb(161, 161, 161);
+  border-radius: 10px;
 }
 
-
-/* Handle on hover */
-
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(145, 145, 145);
+  background: rgb(145, 145, 145);
 }
 
 .active {
-    color: #f56692;
+  color: #f56692;
 }
