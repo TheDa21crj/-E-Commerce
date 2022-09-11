@@ -32,6 +32,7 @@ export default function Update(props) {
         setMsg("Enter a valid Phone Number");
       }
     } else {
+      setMsg("Please fill all the required feilds");
     }
   };
 
