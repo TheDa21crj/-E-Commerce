@@ -5,7 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import imgplus from "./../../Img/plus.png";
 import AddAddress from "./AddAddress";
 import DeleteAddress from "./DeleteAddress";
-import Loading from "./../../Pages/Loading";
+import Loading from "./../../Img/loading.gif";
 // redux
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -69,7 +69,8 @@ export default function MyAddress(props) {
   return (
     <>
       {showload ? (
-        <Loading />
+        // <Loading />
+        <img src={Loading} alt="" />
       ) : (
         <div className={ProfileCss.mdiv} id={AddCss.mDiv}>
           <h1 className={ProfileCss.h1}>My Address</h1>
