@@ -22,7 +22,12 @@ export default function Update(props) {
   };
 
   const PostData = async () => {
-    console.log(showUser);
+    const { name, address, pinCode, town, state, country, PhoneNumber } =
+      showUser;
+
+    if (PhoneNumber) {
+      console.log(showUser);
+    }
   };
 
   return (
