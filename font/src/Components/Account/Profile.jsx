@@ -4,6 +4,8 @@ import ProfileCss from "./CSS/Profile.module.css";
 import Update from "./Update";
 
 export default function Profile(props) {
+  const [show, set] = useState(false);
+
   return (
     <>
       {props.firstName !== "null" ? (
@@ -120,12 +122,13 @@ export default function Profile(props) {
           </div>
           <p className={ProfileCss.desTagBot}>Please Complete your Profile</p>
           <div className={ProfileCss.centerDiv}>
-            <button className={ProfileCss.profileDiv}>
+            <button className={ProfileCss.profileDiv} onClick={() => set(true)}>
               Complete your profile
             </button>
           </div>
         </div>
       )}
+      {show ? "hello" : ""}
     </>
   );
 }
