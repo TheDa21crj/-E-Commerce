@@ -4,6 +4,7 @@ import Common from "./Css/Common.module.css";
 import ProfileCssMobo from "./Css/Profile.module.css";
 import ProfileCss from "./../CSS/Profile.module.css";
 import Update from "./../Update";
+import Fall from "./../../../Img/fall.svg";
 
 export default function Profile(props) {
   const [show, set] = useState(false);
