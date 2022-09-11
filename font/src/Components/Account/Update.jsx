@@ -5,6 +5,8 @@ import Alert from "./Alert";
 
 // redux
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { adduser } from "./../../redux/user";
 
 export default function Update(props) {
   const [showUser, setUser] = useState({
@@ -18,6 +20,8 @@ export default function Update(props) {
   const [showMsg, setMsg] = useState("");
 
   const _id = useSelector((state) => state.user._id);
+
+  const dispatch = useDispatch();
 
   const DataInp = (e) => {
     const name = e.target.name;
