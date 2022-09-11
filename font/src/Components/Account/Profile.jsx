@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Fall from "./../../Img/fall.svg";
 import ProfileCss from "./CSS/Profile.module.css";
+import Update from "./Update";
 
 export default function Profile(props) {
-  console.log(props.firstName.length);
   return (
     <>
       {props.firstName !== "null" ? (
