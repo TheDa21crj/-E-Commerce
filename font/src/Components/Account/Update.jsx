@@ -60,6 +60,8 @@ export default function Update(props) {
         });
 
         setMsg("");
+
+        props.state(false);
       } else {
         setMsg("Enter a valid Phone Number");
       }
