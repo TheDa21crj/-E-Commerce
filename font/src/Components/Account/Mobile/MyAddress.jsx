@@ -15,6 +15,8 @@ export default function MyAddress(props) {
   const [showDelete, setDelete] = useState(false);
   const [showDeleteID, setDeleteID] = useState("");
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     seeAddress();
   }, []);
