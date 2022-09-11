@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Common from "./Css/Common.module.css";
 import ProfileCssMobo from "./Css/Profile.module.css";
 import ProfileCss from "./../CSS/Profile.module.css";
+import Update from "./../Update";
 
 export default function Profile(props) {
+  const [show, set] = useState(false);
   return (
     <>
       {props.firstName !== "null" ? (
@@ -126,6 +128,7 @@ export default function Profile(props) {
               Complete your profile
             </button>
           </div>
+          {show ? <Update state={set} /> : ""}
         </div>
       )}
     </>
