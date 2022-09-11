@@ -137,6 +137,11 @@
 
 .profileDiv {
   padding: 5px 12px;
+  border: 0px solid #fff;
+  border-radius: 8px;
+  font-family: ManropeRegular;
+  font-weight: bold;
+  color: #fff;
 }
 
 @media only screen and (max-width: 950px) {
