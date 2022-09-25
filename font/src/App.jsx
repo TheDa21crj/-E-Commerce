@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import MyAccount from "./Pages/MyAccount";
@@ -13,9 +13,7 @@ import Membership from "./Pages/Membership";
 import ProductsDeatils from "./Pages/ProductsDeatils";
 import Cart from "./Pages/Cart";
 import ShopCart from "./Pages/ShopCart";
-import Loading from "./Pages/Loading";
 import Tag from "./Pages/Tag";
-import Buy from "./Pages/Buy";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
