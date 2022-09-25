@@ -27,11 +27,9 @@ export default function PayBtn(props) {
 
   return (
     <>
-      {/* <Link to="/Buy" className="LinkStyle"> */}
       <div className={SCCss.ProceedBuyDiv} onClick={handleClick}>
         Proceed to Buy
       </div>
-      {/* </Link> */}
     </>
   );
 }
