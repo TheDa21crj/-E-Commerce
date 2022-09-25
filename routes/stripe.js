@@ -33,7 +33,6 @@ router.post(
           product_data: {
             name: e.name,
             images: [e.imageSrc],
-            // description: e.desc,
           },
           unit_amount: e.price * 100,
         },
