@@ -38,7 +38,7 @@ router.post(
             // id: e.id,
             //},
           },
-          unit_amount: e.price,
+          unit_amount: e.price * 100,
         },
         quantity: e.qunatity,
       };
