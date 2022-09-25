@@ -5,6 +5,25 @@ import { Link } from "react-router-dom";
 export default function PayBtn(props) {
   const handleClick = async () => {
     console.table(props.itemsData);
+
+    const dataItems = props.itemsData;
+
+    const res = await fetch("/api/Stripe/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        dataItems,
+        password,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.errors) {
+      setload(false);
+      return;
+    }
   };
 
   return (
