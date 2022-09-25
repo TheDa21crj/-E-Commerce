@@ -13,7 +13,7 @@ export default function PayBtn(props) {
       },
       body: JSON.stringify({
         dataItems,
-        password,
+        // password,
       }),
     });
 
