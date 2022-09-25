@@ -24,7 +24,15 @@ router.post(
     }
 
     const { dataItems } = req.body;
-    console.table(dataItems);
+    // console.table(dataItems);
+
+    let price_data = {};
+
+    dataItems.forEach((e) => {
+      console.log(e.name);
+      console.log(e.price);
+      console.log(e.qunatity);
+    });
 
     const session = await stripe.checkout.sessions.create({
       line_items: [
@@ -39,6 +47,7 @@ router.post(
           quantity: 1,
         },
       ],
+
       mode: "payment",
       success_url: `${ClientURl}/checkout-success`,
       cancel_url: `${ClientURl}/ShopCart`,
