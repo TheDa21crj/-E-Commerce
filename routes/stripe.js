@@ -26,30 +26,26 @@ router.post(
     const { dataItems } = req.body;
     // console.table(dataItems);
 
-    let line_items = [];
-
-    dataItems.forEach((e) => {
-      var price_data = {};
-
-      console.log(e.name);
-      console.log(e.price);
-      console.log(e.qunatity);
+    const line_items = dataItems.map((e) => {
+      return {
+        price_data: {
+          currency: "inr",
+          product_data: {
+            name: e.name,
+            images: [e.imageSrc],
+            // description: e.desc,
+            // metadata: {
+            // id: e.id,
+            //},
+          },
+          unit_amount: e.price,
+        },
+        quantity: e.qunatity,
+      };
     });
 
     const session = await stripe.checkout.sessions.create({
-      line_items: [
-        {
-          price_data: {
-            currency: "inr",
-            product_data: {
-              name: "T-shirt",
-            },
-            unit_amount: 2000,
-          },
-          quantity: 1,
-        },
-      ],
-
+      line_items,
       mode: "payment",
       success_url: `${ClientURl}/checkout-success`,
       cancel_url: `${ClientURl}/ShopCart`,
