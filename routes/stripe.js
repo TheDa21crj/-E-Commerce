@@ -12,11 +12,7 @@ const stripe = require("stripe")(StripeKey);
 
 router.post(
   "/checkout",
-  [
-    UserAuth,
-    check("dataItems", "dataItems is Required").not().isEmpty(),
-    // check("name", "name is Required").not().isEmpty(),
-  ],
+  [UserAuth, check("dataItems", "dataItems is Required").not().isEmpty()],
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
