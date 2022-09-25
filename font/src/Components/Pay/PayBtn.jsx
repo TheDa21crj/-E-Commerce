@@ -19,7 +19,8 @@ export default function PayBtn(props) {
 
     const data = await res.json();
     if (data) {
-      console.log(data);
+      window.location.href = data.url;
+      //   console.log(data);
       return;
     }
   };
