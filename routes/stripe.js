@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const config = require("config");
 const StripeKey = config.get("Stripe");
+const ClientURl = config.get("ClientURl");
 
 const stripe = require("stripe")(StripeKey);
 
@@ -20,11 +21,9 @@ app.post("/create-checkout-session", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: "https://example.com/success",
-    cancel_url: "https://example.com/cancel",
+    success_url: `${ClientURl}/checkout-success`,
+    cancel_url: `${ClientURl}/ShopCart`,
   });
 
   res.redirect(303, session.url);
 });
-
-app.listen(4242, () => console.log(`Listening on port ${4242}!`));
