@@ -6,7 +6,7 @@ export default function PayBtn(props) {
   const handleClick = async () => {
     const dataItems = props.itemsData;
 
-    const res = await fetch("/api/Stripe/create-checkout-session", {
+    const res = await fetch("/api/Stripe/checkout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
