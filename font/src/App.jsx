@@ -50,7 +50,7 @@ function App() {
             <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
-            <Route path="/checkout-success" element={<MerchandiseLink />} />
+            <Route path="/checkout-success" element={<CheckoutSuccess />} />
             <Route path="/Buy" element={<Buy />} />
             <Route path="*" element={<Error />} />
           </Routes>
