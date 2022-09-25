@@ -26,9 +26,11 @@ router.post(
     const { dataItems } = req.body;
     // console.table(dataItems);
 
-    let price_data = {};
+    let line_items = [];
 
     dataItems.forEach((e) => {
+      var price_data = {};
+
       console.log(e.name);
       console.log(e.price);
       console.log(e.qunatity);
