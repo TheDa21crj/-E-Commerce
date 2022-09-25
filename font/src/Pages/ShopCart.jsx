@@ -3,6 +3,7 @@ import SCCss from "./Css/ShopCart.module.css";
 import img from "./../Img/delivery_truck.svg";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import PayBtn from "./../Components/Pay/PayBtn";
 import empty_cart from "./../Img/empty_cart.svg";
 
 export default function ShopCart() {
@@ -158,9 +159,7 @@ export default function ShopCart() {
                   </p>
                   <br />
                   <p>Tax rate is 18%.</p>
-                  <Link to="/Buy" className="LinkStyle">
-                    <div className={SCCss.ProceedBuyDiv}>Proceed to Buy</div>
-                  </Link>
+                  <PayBtn />
                 </div>
               </div>
             </div>
