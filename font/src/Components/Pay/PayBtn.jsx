@@ -2,7 +2,7 @@ import React from "react";
 import SCCss from "./../../Pages/Css/ShopCart.module.css";
 import { Link } from "react-router-dom";
 
-export default function PayBtn() {
+export default function PayBtn(props) {
   const handleClick = async () => {
     console.log("1");
   };
