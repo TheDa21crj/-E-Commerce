@@ -7,6 +7,10 @@ const router = express.Router();
 
 const stripe = require("stripe")(StripeKey);
 
+router.get("/", async (req, res) => {
+  return res.status(202).send({ message: "Hello World" });
+});
+
 router.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [
