@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function PayBtn(props) {
   const handleClick = async () => {
-    console.log("1");
+    console.table(props.itemsData);
   };
 
   return (
