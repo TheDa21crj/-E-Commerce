@@ -3,6 +3,7 @@ const app = express();
 const config = require("config");
 const StripeKey = config.get("Stripe");
 const ClientURl = config.get("ClientURl");
+const Stripe = require("stripe");
 const router = express.Router();
 
 const stripe = require("stripe")(StripeKey);
@@ -11,7 +12,7 @@ router.get("/", async (req, res) => {
   return res.status(202).send({ message: "Hello World" });
 });
 
-router.post("/create-checkout-session", async (req, res) => {
+router.post("/checkout", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
