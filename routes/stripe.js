@@ -25,5 +25,5 @@ app.post("/create-checkout-session", async (req, res) => {
     cancel_url: `${ClientURl}/ShopCart`,
   });
 
-  res.redirect(303, session.url);
+  res.send({ url: session.url });
 });
