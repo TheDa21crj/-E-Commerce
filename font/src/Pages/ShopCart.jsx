@@ -17,6 +17,10 @@ export default function ShopCart() {
     seeList();
   }, []);
 
+  useEffect(() => {
+    console.log(showload);
+  }, [showload]);
+
   const seeList = async () => {
     try {
       const res = await fetch("/api/Shoping", {
@@ -29,11 +33,13 @@ export default function ShopCart() {
       });
       const data = await res.json();
       if (data.errors) {
+        setload(false);
         return;
       }
       if (data) {
+        setload(false);
         if (data.message.length === 0) {
-          setload(false);
+          // setload(false);
           settrue(false);
         } else {
           let TotalPrice = 0;
@@ -42,13 +48,14 @@ export default function ShopCart() {
             setTPrice(TotalPrice);
             setTProducts(data.message.length);
             set(data.message);
-            setload(false);
+            // setload(false);
             settrue(true);
             return;
           });
         }
       }
     } catch (error) {
+      setload(false);
       console.log(error);
       return;
     }
