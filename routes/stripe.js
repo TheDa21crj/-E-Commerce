@@ -22,6 +22,11 @@ router.post(
     const { dataItems } = req.body;
     // console.table(dataItems);
 
+    // const coupon = await stripe.coupons.create({
+    //   percent_off: 5,
+    //   duration: "once",
+    // });
+
     const line_items = dataItems.map((e) => {
       return {
         price_data: {
@@ -39,6 +44,11 @@ router.post(
     const session = await stripe.checkout.sessions.create({
       line_items,
       mode: "payment",
+      // discounts: [
+      //   {
+      //     coupon: "qsbZdwb6",
+      //   },
+      // ],
       success_url: `${ClientURl}/checkout-success`,
       cancel_url: `${ClientURl}/ShopCart`,
     });
