@@ -21,6 +21,7 @@ import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
 import PrivateRoute from "./route/PrivateRouting";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
+import CheckoutSuccess from "./Components/Pay/CheckoutSuccess";
 
 // redux
 import { Provider } from "react-redux";
@@ -49,6 +50,7 @@ function App() {
             <Route path="/categories/:gender/:tag" element={<Tag />} />
             <Route path="/categories/:gender" element={<Gender />} />
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
+            <Route path="/CheckoutSuccess" element={<MerchandiseLink />} />
             <Route path="/Buy" element={<Buy />} />
             <Route path="*" element={<Error />} />
           </Routes>
