@@ -39,7 +39,6 @@ export default function ShopCart() {
       if (data) {
         setload(false);
         if (data.message.length === 0) {
-          // setload(false);
           settrue(false);
         } else {
           let TotalPrice = 0;
@@ -48,7 +47,6 @@ export default function ShopCart() {
             setTPrice(TotalPrice);
             setTProducts(data.message.length);
             set(data.message);
-            // setload(false);
             settrue(true);
             return;
           });
