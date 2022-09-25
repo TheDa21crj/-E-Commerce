@@ -34,9 +34,6 @@ router.post(
             name: e.name,
             images: [e.imageSrc],
             // description: e.desc,
-            // metadata: {
-            // id: e.id,
-            //},
           },
           unit_amount: e.price * 100,
         },
