@@ -23,10 +23,8 @@ export default function PayBtn(props) {
   };
 
   return (
-    <>
-      <div className={SCCss.ProceedBuyDiv} onClick={handleClick}>
-        Proceed to Buy
-      </div>
-    </>
+    <div className={SCCss.ProceedBuyDiv} onClick={handleClick}>
+      Proceed to Buy
+    </div>
   );
 }
