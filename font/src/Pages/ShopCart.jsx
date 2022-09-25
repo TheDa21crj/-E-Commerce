@@ -155,7 +155,7 @@ export default function ShopCart() {
                   </p>
                   <br />
                   <p>Tax rate is 18%.</p>
-                  <PayBtn />
+                  <PayBtn itemsData={show} />
                 </div>
               </div>
             </div>
