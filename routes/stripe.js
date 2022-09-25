@@ -27,3 +27,5 @@ app.post("/create-checkout-session", async (req, res) => {
 
   res.send({ url: session.url });
 });
+
+module.exports = router;
