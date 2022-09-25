@@ -34,6 +34,7 @@ app.use("/api/admin/login", require("./routes/Admin"));
 app.use("/api/admin/Products", require("./routes/Products"));
 app.use("/api/admin/", require("./routes/AdminPost"));
 app.use("/api/Address/", require("./routes/Address"));
+app.use("/api/Stripe/", require("./routes/stripe"));
 
 const port = process.env.PORT || 5000;
 
