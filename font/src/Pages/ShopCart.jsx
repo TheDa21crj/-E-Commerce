@@ -18,10 +18,6 @@ export default function ShopCart() {
     seeList();
   }, []);
 
-  useEffect(() => {
-    console.log(showload);
-  }, [showload]);
-
   const seeList = async () => {
     try {
       const res = await fetch("/api/Shoping", {
