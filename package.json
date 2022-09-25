@@ -46,7 +46,7 @@
         "redux": "^4.1.2",
         "request": "^2.88.2",
         "slick-carousel": "^1.8.1",
-        "stripe": "^10.8.0"
+        "stripe": "^10.11.0"
     },
     "devDependencies": {
         "concurrently": "^7.1.0",
