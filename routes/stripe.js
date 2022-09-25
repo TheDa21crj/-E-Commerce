@@ -9,7 +9,7 @@ const UserAuth = require("./../middleware/UserAuth");
 
 const stripe = require("stripe")(StripeKey);
 
-router.post("/checkout", async (req, res) => {
+router.post("/checkout", UserAuth, async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
