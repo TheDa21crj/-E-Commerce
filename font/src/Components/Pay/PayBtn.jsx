@@ -20,8 +20,9 @@ export default function PayBtn(props) {
     });
 
     const data = await res.json();
-    if (data.errors) {
-      setload(false);
+    if (data) {
+      console.log(data);
+      //   setload(false);
       return;
     }
   };
