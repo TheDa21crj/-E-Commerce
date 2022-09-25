@@ -5,6 +5,7 @@ const StripeKey = config.get("Stripe");
 const ClientURl = config.get("ClientURl");
 const Stripe = require("stripe");
 const router = express.Router();
+const UserAuth = require("./../middleware/UserAuth");
 
 const stripe = require("stripe")(StripeKey);
 
