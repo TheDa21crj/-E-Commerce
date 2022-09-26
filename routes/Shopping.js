@@ -90,7 +90,7 @@ router.post(
   }
 );
 
-// Private || Delete WishList Product || api/Shoping/delete/product
+// Private || Delete Shoping Product || api/Shoping/delete/product
 router.delete(
   "/delete/product",
   [UserAuth, check("id", "id is Required").not().isEmpty()],
