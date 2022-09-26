@@ -111,4 +111,21 @@ router.delete(
   }
 );
 
+// Private || Delete Shoping (All) || api/Shoping/delete/product/all
+router.delete("/delete/product/all", UserAuth, async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  const { id } = req.body;
+  let userID = req.userId;
+
+  let userCheck = await Shoping.updateOne(
+    { user: userID },
+    { $pull: { List: { id: id } } }
+  );
+
+  res.status(202).json(userCheck);
+});
+
 module.exports = router;
