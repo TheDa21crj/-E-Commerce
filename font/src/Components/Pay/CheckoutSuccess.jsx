@@ -30,7 +30,7 @@ export default function CheckoutSuccess() {
     }
   };
   return (
-    <div>
+    <div className={SCCss.FalseDiv}>
       <img src={successful_purchase} alt="" className={SCCss.empty_cart} />
     </div>
   );
