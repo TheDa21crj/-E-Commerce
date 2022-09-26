@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import SCCss from "./../../Pages/Css/ShopCart.module.css";
 import successful_purchase from "./../../Img/successful_purchase.svg";
 
 export default function CheckoutSuccess() {
@@ -30,7 +31,7 @@ export default function CheckoutSuccess() {
   };
   return (
     <div>
-      <img src={successful_purchase} alt="" />
+      <img src={successful_purchase} alt="" className={SCCss.empty_cart} />
     </div>
   );
 }
