@@ -6,20 +6,13 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const UserAuth = require("./../middleware/UserAuth");
 
-// Private || See Shoping || api/Shoping
+// Private || See Order || api/Order
 router.get("/", UserAuth, async (req, res) => {
   let userID = req.userId;
-  try {
-    let userCheck = await Shoping.findOne({ user: userID });
-    if (userCheck) {
-      return res.status(200).json({ message: userCheck.List });
-    } else {
-      return res.status(200).json({ message: "zero" });
-    }
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error });
+  if (userID) {
+    return res.status(202).send({ message: "Hello World" });
   }
+  return res.status(304).send({ message: "Error" });
 });
 
 module.exports = router;
