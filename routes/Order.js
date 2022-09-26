@@ -15,4 +15,13 @@ router.get("/", UserAuth, async (req, res) => {
   return res.status(304).send({ message: "Error" });
 });
 
+// Private || Add Order || api/Order/add
+router.get("/", UserAuth, async (req, res) => {
+  let userID = req.userId;
+  if (userID) {
+    return res.status(202).send({ message: "Add" });
+  }
+  return res.status(304).send({ message: "Error" });
+});
+
 module.exports = router;
