@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import successful_purchase from "./../../Img/successful_purchase.svg";
 
 export default function CheckoutSuccess() {
   useEffect(() => {
@@ -27,5 +28,9 @@ export default function CheckoutSuccess() {
       }
     }
   };
-  return <div>CheckoutSuccess</div>;
+  return (
+    <div>
+      <img src={successful_purchase} alt="" />
+    </div>
+  );
 }
