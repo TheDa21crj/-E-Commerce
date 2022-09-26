@@ -16,7 +16,7 @@ router.get("/", UserAuth, async (req, res) => {
 });
 
 // Private || Add Order || api/Order/add
-router.get("/", UserAuth, async (req, res) => {
+router.post("/add", UserAuth, async (req, res) => {
   let userID = req.userId;
   if (userID) {
     return res.status(202).send({ message: "Add" });
