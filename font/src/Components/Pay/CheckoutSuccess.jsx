@@ -5,6 +5,7 @@ import successful_purchase from "./../../Img/successful_purchase.svg";
 export default function CheckoutSuccess() {
   useEffect(() => {
     deleteWish();
+    addOrder();
   }, []);
 
   const deleteWish = async (deleteID) => {
@@ -29,7 +30,9 @@ export default function CheckoutSuccess() {
       }
     }
   };
-  
+
+  const addOrder = async (deleteID) => {};
+
   return (
     <div className={SCCss.FalseDiv}>
       <img src={successful_purchase} alt="" className={SCCss.empty_cart} />
