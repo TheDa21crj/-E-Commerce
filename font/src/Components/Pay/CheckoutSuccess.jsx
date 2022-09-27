@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import SCCss from "./../../Pages/Css/ShopCart.module.css";
 import successful_purchase from "./../../Img/successful_purchase.svg";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 export default function CheckoutSuccess() {
   useEffect(() => {
