@@ -4,8 +4,6 @@ import { addOrder } from "./../../redux/order";
 import { useDispatch } from "react-redux";
 
 export default function PayBtn(props) {
-  const dispatch = useDispatch();
-
   const handleClick = async () => {
     const dataItems = props.itemsData;
 
@@ -24,14 +22,7 @@ export default function PayBtn(props) {
     console.table(dataItems);
 
     if (data) {
-      dispatch(
-        addOrder({
-          orderList: dataItems,
-        })
-      );
-
       window.location.href = data.url;
-
       return;
     }
   };
