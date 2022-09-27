@@ -6,7 +6,7 @@ const OrderSlice = createSlice({
     orderList: [],
   },
   reducers: {
-    addselling: (state, action) => {
+    addOrder: (state, action) => {
       state.orderList = action.payload.orderList;
     },
   },
