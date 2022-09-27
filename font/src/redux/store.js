@@ -5,7 +5,7 @@ import loading from "./loading";
 import sellingReducer from "./selling";
 import shopping from "./shopping";
 import userData from "./user";
-import order from "./order";
+import orderData from "./order";
 
 export default configureStore({
   reducer: {
@@ -15,5 +15,6 @@ export default configureStore({
     selling: sellingReducer,
     user: userData,
     shop: shopping,
+    order: orderData,
   },
 });
