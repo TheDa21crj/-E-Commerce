@@ -16,10 +16,13 @@ export default function PayBtn(props) {
     });
 
     const data = await res.json();
-    if (data) {
-      window.location.href = data.url;
-      return;
-    }
+
+    console.table(dataItems);
+
+    // if (data) {
+    //   window.location.href = data.url;
+    //   return;
+    // }
   };
 
   return (
