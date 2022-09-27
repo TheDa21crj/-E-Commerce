@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import SCCss from "./../../Pages/Css/ShopCart.module.css";
 import successful_purchase from "./../../Img/successful_purchase.svg";
-import useWindowSize from "react-use/lib/useWindowSize";
-import Confetti from "react-confetti";
 
 export default function CheckoutSuccess() {
   useEffect(() => {
@@ -34,7 +32,16 @@ export default function CheckoutSuccess() {
   };
 
   const addOrder = async () => {
-    console.log("Hello World");
+    const res = await fetch("/api/Order/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    let r = await res.json();
+
+    console.log(r);
   };
 
   return (
