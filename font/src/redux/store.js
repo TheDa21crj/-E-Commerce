@@ -5,14 +5,15 @@ import loading from "./loading";
 import sellingReducer from "./selling";
 import shopping from "./shopping";
 import userData from "./user";
+import order from "./order";
 
 export default configureStore({
-    reducer: {
-        wish: wishReducer,
-        toggle: toggleReducer,
-        load: loading,
-        selling: sellingReducer,
-        user: userData,
-        shop: shopping,
-    },
+  reducer: {
+    wish: wishReducer,
+    toggle: toggleReducer,
+    load: loading,
+    selling: sellingReducer,
+    user: userData,
+    shop: shopping,
+  },
 });
