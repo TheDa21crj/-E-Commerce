@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const UserAuth = require("./../middleware/UserAuth");
+const Order = require("./../Schema/Order");
 
 // Private || See Order || api/Order
 router.get("/", UserAuth, async (req, res) => {
