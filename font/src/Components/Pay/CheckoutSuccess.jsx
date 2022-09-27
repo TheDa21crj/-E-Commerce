@@ -31,7 +31,9 @@ export default function CheckoutSuccess() {
     }
   };
 
-  const addOrder = async (deleteID) => {};
+  const addOrder = async () => {
+    console.log("Hello World");
+  };
 
   return (
     <div className={SCCss.FalseDiv}>
