@@ -19,10 +19,11 @@ router.get("/", UserAuth, async (req, res) => {
 // Private || Add Order || api/Order/add
 router.post(
   "/add",
-  [UserAuth, 
-    check("id", "id is Required").not().isEmpty()
-    check("price", "price is Required").not().isEmpty()
-    check("id", "id is Required").not().isEmpty()
+  [
+    UserAuth,
+    check("id", "id is Required").not().isEmpty(),
+    check("price", "price is Required").not().isEmpty(),
+    check("qunatity", "qunatity is Required").not().isEmpty(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -34,8 +35,6 @@ router.post(
 
     const { id } = req.body;
     if (userID) {
-
-
       return res.status(202).send({ message: id });
     }
     return res.status(304).send({ message: "Error" });
