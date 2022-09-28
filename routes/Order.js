@@ -38,9 +38,27 @@ router.post(
 
     const { id, price, qunatity, size, imageSrc, name } = req.body;
     if (userID) {
-      let userCheck = await WishList.findOne({ user: userID });
+      let userCheck = await Order.findOne({ user: userID });
 
       if (userCheck) {
+        let ListLocal = {};
+        ListLocal.id = id;
+        ListLocal.name = name;
+        ListLocal.imageSrc = imageSrc;
+        ListLocal.price = price;
+        ListLocal.qunatity = qunatity;
+        ListLocal.size = size;
+
+        // add product
+        let add = await Order.findOneAndUpdate(
+          { user: userID },
+          {
+            $push: {
+              List: ListLocal,
+            },
+          }
+        );
+        return res.status(200).json("Added");
       } else {
         let order = {};
         order.user = userID;
@@ -51,9 +69,12 @@ router.post(
         order.List.price = price;
         order.List.qunatity = qunatity;
         order.List.size = size;
-      }
 
-      return res.status(202).send({ message: id });
+        let newOrder = new Order(order);
+        await newOrder.save();
+
+        return res.status(202).send({ message: "Added" });
+      }
     }
     return res.status(304).send({ message: "Error" });
   }
