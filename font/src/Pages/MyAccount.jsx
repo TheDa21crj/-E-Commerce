@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import Profile from "../Components/Account/Profile";
 import MyAddress from "../Components/Account/MyAddress";
 import Myorders from "../Components/Account/Myorders";
@@ -10,8 +9,6 @@ import ProfileMobo from "./../Components/Account/Mobile/Profile";
 import MyAddressMobo from "./../Components/Account/Mobile/MyAddress";
 import MyordersMobo from "./../Components/Account/Mobile/Myorders";
 // redux
-import { toggleN } from "../redux/toggleNav";
-import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 export default function MyAccount() {
@@ -45,21 +42,21 @@ export default function MyAccount() {
           </p>
           <p
             className={MACss.pTags}
-            id={showProfileState == "Profile" ? "showshow" : ""}
+            id={showProfileState === "Profile" ? "showshow" : ""}
             onClick={ShowProfileState}
           >
             Profile
           </p>
           <p
             className={MACss.pTags}
-            id={showProfileState == "My Orders" ? "showshow" : ""}
+            id={showProfileState === "My Orders" ? "showshow" : ""}
             onClick={ShowProfileState}
           >
             My Orders
           </p>
           <p
             className={MACss.pTags}
-            id={showProfileState == "My Addresses" ? "showshow" : ""}
+            id={showProfileState === "My Addresses" ? "showshow" : ""}
             onClick={ShowProfileState}
           >
             My Addresses
@@ -72,7 +69,7 @@ export default function MyAccount() {
         </div>
         <div
           className={MACss.rightDiv}
-          id={showProfileState == "" ? "" : "showshowProfileState"}
+          id={showProfileState === "" ? "" : "showshowProfileState"}
         >
           {showProfileState === "Profile" && (
             <Profile
@@ -94,7 +91,7 @@ export default function MyAccount() {
         </div>
         <div
           className={MACss.MobomDiv}
-          id={showProfileStateDes == "" ? "" : "showProfileStateDes"}
+          id={showProfileStateDes === "" ? "" : "showProfileStateDes"}
         >
           {showProfileStateDes === "Profile" && (
             <ProfileMobo
