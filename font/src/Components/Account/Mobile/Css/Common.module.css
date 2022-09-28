@@ -6,10 +6,7 @@
   .mdiv {
     display: block;
     width: 100%;
-    /* height: 100%; */
     padding: 20px;
-    /* overflow-y: hidden; */
-    /* overflow-x: hidden; */
   }
   .MyPTag {
     font-family: ManropeRegular;
