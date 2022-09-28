@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Common from "./Css/Common.module.css";
 import OrderCss from "./../CSS/Orders.module.css";
 
 export default function Myorders(props) {
+  const [showData, setData] = useState([]);
+
+  useEffect(() => {
+    seeOrders();
+  }, []);
+
+  const seeOrders = async (e) => {};
   return (
     <div className={Common.mdiv}>
       <div>
