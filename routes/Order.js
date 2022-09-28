@@ -12,12 +12,15 @@ router.get("/", UserAuth, async (req, res) => {
   let userID = req.userId;
 
   try {
-    let orderData = Order.findOne({ user: userID });
-    if (userID) {
-      return res.status(202).json({ message: orderData });
+    let userCheck = await Order.findOne({ user: userID });
+    if (userCheck) {
+      return res.status(200).json({ message: userCheck.List });
+    } else {
+      return res.status(304).json({ message: "zero" });
     }
   } catch (error) {
     console.log(error);
+    res.status(500).json({ message: error });
   }
 });
 
