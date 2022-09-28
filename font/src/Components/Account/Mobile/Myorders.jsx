@@ -53,8 +53,6 @@ export default function Myorders(props) {
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
                 <p>========END========</p>
                 <br />
                 <br />
