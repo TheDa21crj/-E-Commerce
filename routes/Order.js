@@ -24,6 +24,9 @@ router.post(
     check("id", "id is Required").not().isEmpty(),
     check("price", "price is Required").not().isEmpty(),
     check("qunatity", "qunatity is Required").not().isEmpty(),
+    check("size", "size is Required").not().isEmpty(),
+    check("imageSrc", "imageSrc is Required").not().isEmpty(),
+    check("name", "name is Required").not().isEmpty(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
