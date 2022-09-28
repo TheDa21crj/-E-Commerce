@@ -8,8 +8,7 @@ import AddCss from "./../CSS/Address.module.css";
 import DeleteAddress from "./../DeleteAddress";
 import AddAddress from "./../AddAddress";
 // redux
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function MyAddress(props) {
   const [showload, setload] = useState(true);
