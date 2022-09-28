@@ -50,13 +50,6 @@ export default function Myorders(props) {
                 <p>{value.price}</p>
                 <p>{value.size}</p>
                 <p>{value.qunatity}</p>
-                <br />
-                <br />
-                <br />
-                <p>========END========</p>
-                <br />
-                <br />
-                <br />
               </div>
             );
           })}
