@@ -1,7 +1,5 @@
 import React from "react";
 import SCCss from "./../../Pages/Css/ShopCart.module.css";
-import { addOrder } from "./../../redux/order";
-import { useDispatch } from "react-redux";
 
 export default function PayBtn(props) {
   const handleClick = async () => {
