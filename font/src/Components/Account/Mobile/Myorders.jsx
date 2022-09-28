@@ -46,7 +46,7 @@ export default function Myorders(props) {
             return (
               <div className={OrderCss.mapMDiv}>
                 <img src={value.imageSrc} alt="" className={OrderCss.imgSrc} />
-                <div>
+                <div className={OrderCss.detailsDiv}>
                   <p className={OrderCss.pTagName}>{value.name}</p>
                   <p>{value.price}</p>
                   <p>{value.size}</p>
