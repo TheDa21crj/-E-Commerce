@@ -49,7 +49,7 @@ export default function Myorders(props) {
                 <img src={value.imageSrc} alt="" />
                 <p>{value.price}</p>
                 <p>{value.size}</p>
-                <p>{value.size}</p>
+                <p>{value.qunatity}</p>
               </div>
             );
           })}
