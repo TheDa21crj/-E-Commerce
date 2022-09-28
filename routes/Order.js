@@ -17,12 +17,21 @@ router.get("/", UserAuth, async (req, res) => {
 });
 
 // Private || Add Order || api/Order/add
-router.post("/add", UserAuth, async (req, res) => {
-  let userID = req.userId;
-  if (userID) {
-    return res.status(202).send({ message: "Add" });
+router.post(
+  "/add",
+  [UserAuth, check("id", "id is Required").not().isEmpty()],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    let userID = req.userId;
+    if (userID) {
+      return res.status(202).send({ message: "Add" });
+    }
+    return res.status(304).send({ message: "Error" });
   }
-  return res.status(304).send({ message: "Error" });
-});
+);
 
 module.exports = router;
