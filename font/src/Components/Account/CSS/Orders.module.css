@@ -29,8 +29,10 @@
 }
 
 .SizeQtyPTag {
+  color: #9e9e9e;
 }
 
 .separator {
-  font-size: 26px;
+  font-size: 22px;
+  font-family: Source Sans Pro, sans-serif;
 }
