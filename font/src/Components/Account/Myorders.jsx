@@ -32,7 +32,7 @@ export default function Myorders(props) {
   };
   return (
     <div className={ProfileCss.mdiv}>
-      <h1 className={ProfileCss.h1}>My Orders</h1>
+      <h1 className={OrderCss.h1}>My Orders</h1>
       {showData ? (
         <div className={OrderCss.showCheckDiv}>
           {" "}
