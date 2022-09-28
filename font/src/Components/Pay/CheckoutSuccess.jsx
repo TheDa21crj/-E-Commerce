@@ -37,19 +37,28 @@ export default function CheckoutSuccess() {
   };
 
   const addOrder = async () => {
-    // const res = await fetch("/api/Order/add", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     id,
-    //   }),
-    // });
-
-    // let r = await res.json();
-
     console.log(sendID);
+
+    for (var i = 0; i < sendID.length; i++) {
+      console.log(sendID[i].id);
+
+      try {
+        const res = await fetch("/api/Order/add", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: sendID[i].id,
+          }),
+        });
+        let r = await res.json();
+
+        console.log(r);
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
   return (
