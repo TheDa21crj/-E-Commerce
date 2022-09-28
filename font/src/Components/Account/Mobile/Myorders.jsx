@@ -21,7 +21,6 @@ export default function Myorders(props) {
         credentials: "include",
       });
       const data = await res.json();
-      console.log(data);
       if (data.errors) {
         return;
       }
