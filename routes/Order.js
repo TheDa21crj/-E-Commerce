@@ -36,7 +36,7 @@ router.post(
 
     let userID = req.userId;
 
-    const { id } = req.body;
+    const { id, price, qunatity, size, imageSrc, name } = req.body;
     if (userID) {
       return res.status(202).send({ message: id });
     }
