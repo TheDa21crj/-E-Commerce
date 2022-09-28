@@ -41,11 +41,11 @@ export default function Myorders(props) {
       </div>
       <p className={Common.MyPTag}>My Orders</p>
       {showData ? (
-        <>
+        <div className={OrderCss.showCheckDiv}>
           {showData.map((value, key) => {
             return (
-              <div>
-                <img src={value.imageSrc} alt="" />
+              <div className={OrderCss.mapMDiv}>
+                <img src={value.imageSrc} alt="" className={OrderCss.imgSrc} />
                 <p>{value.name}</p>
                 <p>{value.price}</p>
                 <p>{value.size}</p>
@@ -60,7 +60,7 @@ export default function Myorders(props) {
               </div>
             );
           })}
-        </>
+        </div>
       ) : (
         <p className={OrderCss.pTagMain}>No Orders</p>
       )}
