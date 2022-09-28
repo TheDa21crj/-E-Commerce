@@ -11,7 +11,9 @@ const Order = require("./../Schema/Order");
 router.get("/", UserAuth, async (req, res) => {
   let userID = req.userId;
   if (userID) {
-    return res.status(202).send({ message: "Hello World" });
+    let orderData = Order.findOne({ user: userID });
+
+    return res.status(202).send(orderData);
   }
   return res.status(304).send({ message: "Error" });
 });
