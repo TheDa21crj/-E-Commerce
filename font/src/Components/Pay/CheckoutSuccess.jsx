@@ -40,8 +40,6 @@ export default function CheckoutSuccess() {
     console.log(sendID);
 
     for (var i = 0; i < sendID.length; i++) {
-      console.log(sendID[i].id);
-
       try {
         const res = await fetch("/api/Order/add", {
           method: "POST",
