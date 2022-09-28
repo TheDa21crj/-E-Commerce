@@ -14,9 +14,9 @@ router.get("/", UserAuth, async (req, res) => {
   try {
     let userCheck = await Order.findOne({ user: userID });
     if (userCheck) {
-      return res.status(200).json({ message: userCheck.List });
+      return res.status(200).json(userCheck.List);
     } else {
-      return res.status(304).json({ message: "zero" });
+      return res.status(304).json(0);
     }
   } catch (error) {
     console.log(error);
