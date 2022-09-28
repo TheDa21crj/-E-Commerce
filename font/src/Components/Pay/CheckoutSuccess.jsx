@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SCCss from "./../../Pages/Css/ShopCart.module.css";
 import successful_purchase from "./../../Img/successful_purchase.svg";
 
 export default function CheckoutSuccess() {
+  const [sendID, setID] = useState([]);
+
   useEffect(() => {
     deleteWish();
     addOrder();
@@ -23,7 +25,8 @@ export default function CheckoutSuccess() {
 
         let r = await res.json();
 
-        console.table(r[0].List);
+        setID(r[0].List);
+        // console.table(r[0].List);
       } catch (error) {
         console.log(error);
       }
@@ -31,16 +34,19 @@ export default function CheckoutSuccess() {
   };
 
   const addOrder = async () => {
-    const res = await fetch("/api/Order/add", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    // const res = await fetch("/api/Order/add", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     id,
+    //   }),
+    // });
 
-    let r = await res.json();
+    // let r = await res.json();
 
-    console.log(r);
+    console.log(sendID);
   };
 
   return (
