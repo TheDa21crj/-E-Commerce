@@ -7,11 +7,10 @@ export default function CheckoutSuccess() {
 
   useEffect(() => {
     deleteWish();
-    addOrder();
   }, []);
 
   useEffect(() => {
-    console.log(sendID);
+    addOrder();
   }, [sendID]);
 
   const deleteWish = async (deleteID) => {
