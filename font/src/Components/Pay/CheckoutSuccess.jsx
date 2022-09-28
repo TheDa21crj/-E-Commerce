@@ -48,6 +48,11 @@ export default function CheckoutSuccess() {
           },
           body: JSON.stringify({
             id: sendID[i].id,
+            price: sendID[i].price,
+            qunatity: sendID[i].qunatity,
+            size: sendID[i].size,
+            imageSrc: sendID[i].imageSrc,
+            name: sendID[i].name,
           }),
         });
         let r = await res.json();
