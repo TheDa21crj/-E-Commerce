@@ -38,6 +38,12 @@ router.post(
 
     const { id, price, qunatity, size, imageSrc, name } = req.body;
     if (userID) {
+      console.log(price);
+      console.log(qunatity);
+      console.log(size);
+      console.log(imageSrc);
+      console.log(name);
+
       return res.status(202).send({ message: id });
     }
     return res.status(304).send({ message: "Error" });
