@@ -25,7 +25,7 @@ export default function Myorders(props) {
         return;
       }
       if (data) {
-        console.log(data);
+        setData(data);
       }
     } catch (error) {
       return;
@@ -40,9 +40,8 @@ export default function Myorders(props) {
         />
       </div>
       <p className={Common.MyPTag}>My Orders</p>
+      {}
       <p className={OrderCss.pTagMain}>No Orders</p>
-      <br />
-      <p>{props.id}</p>
     </div>
   );
 }
