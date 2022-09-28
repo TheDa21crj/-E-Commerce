@@ -25,6 +25,7 @@ export default function Myorders(props) {
         return;
       }
       if (data) {
+        console.log(data);
         setData(data);
       }
     } catch (error) {
@@ -44,7 +45,7 @@ export default function Myorders(props) {
         <div className={OrderCss.showCheckDiv}>
           {showData.map((value, key) => {
             return (
-              <div className={OrderCss.mapMDiv}>
+              <div className={OrderCss.mapMDiv} key={value._id}>
                 <img src={value.imageSrc} alt="" className={OrderCss.imgSrc} />
                 <div className={OrderCss.detailsDiv}>
                   <p className={OrderCss.pTagName}>{value.name}</p>
