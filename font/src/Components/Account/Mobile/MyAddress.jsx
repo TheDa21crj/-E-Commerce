@@ -63,7 +63,7 @@ export default function MyAddress(props) {
           <img src={Loading} alt="" />
         </div>
       ) : (
-        <div className={Common.mdiv}>
+        <div className={Common.mdiv} id="overflowHide">
           <div>
             <KeyboardBackspaceIcon
               fontSize="large"
