@@ -10,7 +10,28 @@ export default function Myorders(props) {
     seeOrders();
   }, []);
 
-  const seeOrders = async (e) => {};
+  const seeOrders = async (e) => {
+    try {
+      const res = await fetch("/api/Order", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+      const data = await res.json();
+      console.log(data);
+      if (data.errors) {
+        return;
+      }
+      if (data) {
+        console.log(data);
+      }
+    } catch (error) {
+      return;
+    }
+  };
   return (
     <div className={Common.mdiv}>
       <div>
