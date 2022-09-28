@@ -39,10 +39,11 @@
 
 .AmDiv {
   margin-bottom: 20px;
+  padding: 7px;
   font-family: ManropeRegular;
   text-transform: capitalize;
-  width: 250px;
-  height: 200px;
+  width: 270px;
+  height: 220px;
   border-style: solid;
   border-radius: 10px;
   border-width: 1px;
