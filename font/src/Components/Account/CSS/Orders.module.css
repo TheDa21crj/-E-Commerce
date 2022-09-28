@@ -15,10 +15,15 @@
 .mapMDiv {
   width: 90%;
   display: flex;
+  gap: 0px 20px;
 }
 
 .imgSrc {
   width: 100px;
   height: 100px;
   border-radius: 8px;
+}
+
+.pTagName {
+  font-family: ManropeMedium;
 }
