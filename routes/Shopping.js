@@ -119,9 +119,11 @@ router.delete("/delete/product/all", UserAuth, async (req, res) => {
   }
   let userID = req.userId;
 
+  let dataDelete = await Shoping.find({ user: userID });
+
   let userCheck = await Shoping.deleteMany({ user: userID });
 
-  res.status(202).json(userCheck);
+  res.status(202).json(dataDelete);
 });
 
 module.exports = router;
