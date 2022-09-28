@@ -4,6 +4,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import Alert from "./Alert";
 
 export default function AddAddress(props) {
+  const [showHide, setHide] = useState(false);
+
   const [showUser, setUser] = useState({
     name: "",
     address: "",
@@ -58,12 +60,23 @@ export default function AddAddress(props) {
       }, 5000);
       if (showMsg === "Address Added") {
         props.state(false);
+        setHide(false);
       }
     }
   }, [showMsg]);
 
   useEffect(() => {
-    console.log(props.state);
+    if (showHide) {
+      document.getElementById("overflowHide").style.height = "91vh";
+      document.getElementById("overflowHide").style.overflowX = "hidden";
+      document.getElementById("overflowHide").style.overflowY = "scroll";
+    } else {
+      document.getElementById("overflowHide").style.height = "auto";
+      document.getElementById("overflowHide").style.overflowX = "auto";
+      document.getElementById("overflowHide").style.overflowY = "auto";
+    }
+
+    // console.log(d);
   }, [props.state]);
 
   return (
