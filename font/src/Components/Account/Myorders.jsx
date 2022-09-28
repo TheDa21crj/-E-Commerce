@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProfileCss from "./CSS/Profile.module.css";
 import OrderCss from "./CSS/Orders.module.css";
 
