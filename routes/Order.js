@@ -38,11 +38,20 @@ router.post(
 
     const { id, price, qunatity, size, imageSrc, name } = req.body;
     if (userID) {
-      console.log(price);
-      console.log(qunatity);
-      console.log(size);
-      console.log(imageSrc);
-      console.log(name);
+      let userCheck = await WishList.findOne({ user: userID });
+
+      if (userCheck) {
+      } else {
+        let order = {};
+        order.user = userID;
+        order.List = {};
+        order.List.id = id;
+        order.List.name = name;
+        order.List.imageSrc = imageSrc;
+        order.List.price = price;
+        order.List.qunatity = qunatity;
+        order.List.size = size;
+      }
 
       return res.status(202).send({ message: id });
     }
