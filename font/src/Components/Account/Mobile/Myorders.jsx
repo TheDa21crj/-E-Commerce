@@ -25,6 +25,7 @@ export default function Myorders(props) {
         return;
       }
       if (data) {
+        console.log(data);
         setData(data);
       }
     } catch (error) {
