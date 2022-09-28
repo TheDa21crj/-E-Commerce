@@ -10,6 +10,10 @@ export default function CheckoutSuccess() {
     addOrder();
   }, []);
 
+  useEffect(() => {
+    console.log(sendID);
+  }, [sendID]);
+
   const deleteWish = async (deleteID) => {
     let id = deleteID;
     if (id === "") {
