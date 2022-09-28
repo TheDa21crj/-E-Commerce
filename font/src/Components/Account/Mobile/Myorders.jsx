@@ -47,6 +47,9 @@ export default function Myorders(props) {
               <div>
                 <p>{value.name}</p>
                 <img src={value.imageSrc} alt="" />
+                <p>{value.price}</p>
+                <p>{value.size}</p>
+                <p>{value.size}</p>
               </div>
             );
           })}
