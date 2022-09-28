@@ -12,9 +12,8 @@ router.get("/", UserAuth, async (req, res) => {
   let userID = req.userId;
 
   try {
+    let orderData = Order.findOne({ user: userID });
     if (userID) {
-      let orderData = Order.findOne({ user: userID });
-
       return res.status(202).json({ message: orderData });
     }
   } catch (error) {
