@@ -27,8 +27,10 @@ router.post(
     }
 
     let userID = req.userId;
+
+    const { id } = req.body;
     if (userID) {
-      return res.status(202).send({ message: "Add" });
+      return res.status(202).send({ message: id });
     }
     return res.status(304).send({ message: "Error" });
   }
