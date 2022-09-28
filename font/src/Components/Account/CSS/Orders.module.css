@@ -14,11 +14,9 @@
 
 .ShowDataMap {
   width: 90%;
-  background-color: red;
 }
 
 .OrderID {
-  background-color: blue;
   padding: 5px;
   margin-bottom: 8px;
 }
