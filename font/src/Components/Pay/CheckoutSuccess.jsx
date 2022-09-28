@@ -26,7 +26,7 @@ export default function CheckoutSuccess() {
         let r = await res.json();
 
         setID(r[0].List);
-        // console.table(r[0].List);
+        console.table(r[0].List);
       } catch (error) {
         console.log(error);
       }
