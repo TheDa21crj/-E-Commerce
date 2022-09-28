@@ -10,12 +10,16 @@ const Order = require("./../Schema/Order");
 // Private || See Order || api/Order
 router.get("/", UserAuth, async (req, res) => {
   let userID = req.userId;
-  if (userID) {
-    let orderData = Order.findOne({ user: userID });
 
-    return res.status(202).send(orderData);
-  }
-  return res.status(304).send({ message: "Error" });
+  console.log(userID);
+
+  return res.status(202).send({ message: "Hello World" });
+  // if (userID) {
+  //   let orderData = Order.findOne({ user: userID });
+
+  //   return res.status(202).send(orderData);
+  // }
+  // return res.status(304).send({ message: "Error" });
 });
 
 // Private || Add Order || api/Order/add
