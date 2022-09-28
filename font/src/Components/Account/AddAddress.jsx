@@ -62,6 +62,10 @@ export default function AddAddress(props) {
     }
   }, [showMsg]);
 
+  useEffect(() => {
+    console.log(props.state);
+  }, [props.state]);
+
   return (
     <div className={AddCss.mDiv}>
       <div className={AddCss.ConDiv}>
