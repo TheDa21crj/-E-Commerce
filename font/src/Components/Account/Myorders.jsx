@@ -33,7 +33,36 @@ export default function Myorders(props) {
   return (
     <div className={ProfileCss.mdiv}>
       <h1 className={ProfileCss.h1}>My Orders</h1>
-      <p className={OrderCss.pTagMain}>No Orders</p>
+      {showData ? (
+        <div className={OrderCss.showCheckDiv}>
+          {" "}
+          {showData.map((value, key) => {
+            return (
+              <div className={OrderCss.ShowDataMap}>
+                <div className={OrderCss.OrderID}>Order ID # {value._id}</div>
+                <div className={OrderCss.mapMDiv} key={value._id}>
+                  <img
+                    src={value.imageSrc}
+                    alt=""
+                    className={OrderCss.imgSrc}
+                  />
+                  <div className={OrderCss.detailsDiv}>
+                    <p className={OrderCss.pTagName}>{value.name}</p>
+                    <p>{value.price}</p>
+                    <p className={OrderCss.SizeQtyPTag}>
+                      Size: {value.size}{" "}
+                      <span className={OrderCss.separator}>|</span> Qunatity:{" "}
+                      {value.qunatity}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <p className={OrderCss.pTagMain}>No Orders</p>
+      )}
     </div>
   );
 }
