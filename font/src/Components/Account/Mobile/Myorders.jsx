@@ -40,8 +40,7 @@ export default function Myorders(props) {
         />
       </div>
       <p className={Common.MyPTag}>My Orders</p>
-      {}
-      <p className={OrderCss.pTagMain}>No Orders</p>
+      {showData ? "" : <p className={OrderCss.pTagMain}>No Orders</p>}
     </div>
   );
 }
