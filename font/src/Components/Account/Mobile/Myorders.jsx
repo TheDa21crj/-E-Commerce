@@ -45,16 +45,23 @@ export default function Myorders(props) {
         <div className={OrderCss.showCheckDiv}>
           {showData.map((value, key) => {
             return (
-              <div className={OrderCss.mapMDiv} key={value._id}>
-                <img src={value.imageSrc} alt="" className={OrderCss.imgSrc} />
-                <div className={OrderCss.detailsDiv}>
-                  <p className={OrderCss.pTagName}>{value.name}</p>
-                  <p>{value.price}</p>
-                  <p className={OrderCss.SizeQtyPTag}>
-                    Size: {value.size}{" "}
-                    <span className={OrderCss.separator}>|</span> Qunatity:{" "}
-                    {value.qunatity}
-                  </p>
+              <div className={OrderCss.ShowDataMap}>
+                <div className={OrderCss.OrderID}>Order ID: {value._id}</div>
+                <div className={OrderCss.mapMDiv} key={value._id}>
+                  <img
+                    src={value.imageSrc}
+                    alt=""
+                    className={OrderCss.imgSrc}
+                  />
+                  <div className={OrderCss.detailsDiv}>
+                    <p className={OrderCss.pTagName}>{value.name}</p>
+                    <p>{value.price}</p>
+                    <p className={OrderCss.SizeQtyPTag}>
+                      Size: {value.size}{" "}
+                      <span className={OrderCss.separator}>|</span> Qunatity:{" "}
+                      {value.qunatity}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
