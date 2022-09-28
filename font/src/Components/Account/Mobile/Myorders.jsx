@@ -49,7 +49,7 @@ export default function Myorders(props) {
                 <div className={OrderCss.detailsDiv}>
                   <p className={OrderCss.pTagName}>{value.name}</p>
                   <p>{value.price}</p>
-                  <p>
+                  <p className={OrderCss.SizeQtyPTag}>
                     Size: {value.size}{" "}
                     <span className={OrderCss.separator}>|</span> Qunatity:{" "}
                     {value.qunatity}
