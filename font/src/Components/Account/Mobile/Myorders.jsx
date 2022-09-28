@@ -42,7 +42,14 @@ export default function Myorders(props) {
       <p className={Common.MyPTag}>My Orders</p>
       {showData ? (
         <>
-          <p>Hello</p>
+          {showData.map((value, key) => {
+            return (
+              <div>
+                <p>{value.name}</p>
+                <img src={value.imageSrc} alt="" />
+              </div>
+            );
+          })}
         </>
       ) : (
         <p className={OrderCss.pTagMain}>No Orders</p>
