@@ -23,8 +23,7 @@ export default function CheckoutSuccess() {
 
         let r = await res.json();
 
-        console.log(r);
-        // seeList();
+        console.table(r[0].List);
       } catch (error) {
         console.log(error);
       }
