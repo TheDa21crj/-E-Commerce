@@ -45,11 +45,20 @@ export default function Myorders(props) {
           {showData.map((value, key) => {
             return (
               <div>
-                <p>{value.name}</p>
                 <img src={value.imageSrc} alt="" />
+                <p>{value.name}</p>
                 <p>{value.price}</p>
                 <p>{value.size}</p>
                 <p>{value.qunatity}</p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <p>========END========</p>
+                <br />
+                <br />
+                <br />
               </div>
             );
           })}
