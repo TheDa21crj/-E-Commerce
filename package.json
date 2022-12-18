@@ -7,8 +7,7 @@
     "start": "node server",
     "server": "nodemon server",
     "font": "npm start --prefix font",
-    "dev": "concurrently \"npm run server\" \"npm run font\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix font && npm run build --prefix font"
+    "dev": "concurrently \"npm run server\" \"npm run font\""
   },
   "repository": {
     "type": "git",
