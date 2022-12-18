@@ -6,8 +6,6 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "/font/build")));
-
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -19,13 +17,10 @@ app.use(function (req, res, next) {
 
 connectDB();
 
+// init middleware
 app.use(express.json({ extended: false }));
 
 app.use(cookieParser());
-
-app.get("/", (req, res) => {
-  res.status(200).send("Hello World");
-});
 
 app.use("/api", require("./routes/User"));
 app.use("/api/Order", require("./routes/Order"));
@@ -37,6 +32,16 @@ app.use("/api/admin/Products", require("./routes/Products"));
 app.use("/api/admin/", require("./routes/AdminPost"));
 app.use("/api/Address/", require("./routes/Address"));
 app.use("/api/Stripe/", require("./routes/stripe"));
+
+// Serve Static assets in production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("font/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "font", "build", "index.html"));
+  });
+}
 
 const port = process.env.PORT || 5000;
 
