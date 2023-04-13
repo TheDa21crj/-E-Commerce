@@ -1,6 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
+
+// Layout
 import Layout from "./Pages/Layout";
+
+// Pages
 import Home from "./Pages/Home";
 import MyAccount from "./Pages/MyAccount";
 import Error from "./Pages/Error";
@@ -16,10 +20,14 @@ import ShopCart from "./Pages/ShopCart";
 import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink.jsx";
+import CheckoutSuccess from "./Components/Pay/CheckoutSuccess";
+
+// PrivateRouting
 import PrivateRoute from "./route/PrivateRouting";
+
+// Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
-import CheckoutSuccess from "./Components/Pay/CheckoutSuccess";
 
 // redux
 import { Provider } from "react-redux";
