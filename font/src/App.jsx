@@ -5,6 +5,7 @@ import React from "react";
 import Layout from "./Pages/Layout";
 
 // Pages
+import AR from "./Pages/AR";
 import Home from "./Pages/Home";
 import MyAccount from "./Pages/MyAccount";
 import Error from "./Pages/Error";
@@ -57,6 +58,7 @@ function App() {
             <Route path="/categories/:gender" element={<Gender />} />
             <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
             <Route path="/checkout-success" element={<CheckoutSuccess />} />
+            <Route path="/AR" element={<AR />} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
