@@ -20,9 +20,7 @@ const Login = (props) => {
 
   const check = async () => {
     if (_id !== "") {
-      return navigate(
-        "https://seashell-app-k5r84.ondigitalocean.app/my-account"
-      );
+      return navigate("/my-account");
     }
   };
 
