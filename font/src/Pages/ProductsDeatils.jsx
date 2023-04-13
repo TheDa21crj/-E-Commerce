@@ -243,6 +243,7 @@ export default function ProductsDeatils() {
           <div className={PDCss.MDiv}>
             <div className={PDCss.leftDiv}>
               <img src={showimageSrc} alt="" className={PDCss.ImageSrc} />
+              <p className={PDCss.TryonAR}>Try on AR</p>
             </div>
             <div className={PDCss.rightDiv}>
               <h1 className={PDCss.PName}>{showname}</h1>
