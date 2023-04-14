@@ -5,7 +5,7 @@ import React from "react";
 import Layout from "./Pages/Layout";
 
 // Pages
-import AR from "./Pages/AR";
+import AR from "./Pages/ARScene";
 import Home from "./Pages/Home";
 import MyAccount from "./Pages/MyAccount";
 import Error from "./Pages/Error";
