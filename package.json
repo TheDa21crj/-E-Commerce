@@ -1,56 +1,17 @@
 {
-  "name": "e-commerce",
-  "version": "0.0.3",
+  "name": "ar.js",
+  "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
-    "font": "npm start --prefix font",
-    "dev": "concurrently \"npm run server\" \"npm run font\""
+    "server": "nodemon server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheDa21crj/E-Commerce.git"
-  },
-  "author": "Rishav Raj Singh",
+  "author": "Rishav Singh",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TheDa21crj/E-Commerce/issues"
-  },
-  "homepage": "https://github.com/TheDa21crj/E-Commerce#readme",
   "dependencies": {
-    "ar.js": "^2.2.2",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.2",
-    "client": "^0.0.1",
-    "config": "^3.3.7",
-    "cookie-parser": "^1.4.6",
-    "cookies": "^0.8.0",
-    "express": "^4.17.3",
-    "express-session": "^1.17.2",
-    "express-validator": "^6.14.0",
-    "google-auth-library": "^7.14.1",
-    "gravatar": "^1.8.2",
-    "gridfs-stream": "^1.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^6.2.9",
-    "multer": "^1.4.4",
-    "multer-gridfs-storage": "^5.0.2",
-    "passport": "^0.5.2",
-    "passport-google-oauth20": "^2.0.0",
-    "react": "^17.0.2",
-    "react-redux": "^7.2.8",
-    "react-router-dom": "^6.3.0",
-    "react-slick": "^0.28.1",
-    "redux": "^4.1.2",
-    "request": "^2.88.2",
-    "slick-carousel": "^1.8.1",
-    "stripe": "^10.11.0"
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "concurrently": "^7.1.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   }
 }
