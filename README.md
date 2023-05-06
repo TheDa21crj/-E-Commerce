@@ -4,7 +4,7 @@ Thank you for taking the time to consider sponsoring our e-commerce repository. 
 
 ## Our Vision
 
-Our goal is to create a seamless and secure online shopping experience for customers in the fashion industry. We are passionate about using the latest technology to innovate and improve the way people shop online. We believe that our application has the potential to revolutionize the e-commerce industry and provide significant value to both customers and merchants.
+The e-commerce industry has been facing challenges in the product replacement process, where the online companies bear a significant amount of financial loss due to the return and replacement of products. Our goal is to create a seamless and secure online shopping experience for customers in the fashion industry using AR. This will allow customers to try on clothes virtually before making a purchase, which will significantly reduce the number of returns and replacements, resulting in a significant decrease in financial loss for online companies.
 
 ## Features and Technology
 
