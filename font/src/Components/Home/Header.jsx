@@ -24,13 +24,22 @@ export default function Header() {
       <div className={HeaderCss.slideDiv}>
         <Sliders {...settings} className={HeaderCss.Hslide}>
           <div className={HeaderCss.slide}>
-            <img src={img1} className={HeaderCss.ImgHeader} />
+            <img
+              src="https://www.geetanjalihospital.co.in/img/media/cache/departments/1600x400/1011/general%20medicine.jpg"
+              className={HeaderCss.ImgHeader}
+            />
           </div>
           <div className={HeaderCss.slide}>
-            <img src={img2} className={HeaderCss.ImgHeader} />
+            <img
+              src="https://brisbanefirstaidcourses.com.au/wp-content/uploads/2022/04/Capture-7.png"
+              className={HeaderCss.ImgHeader}
+            />
           </div>
           <div className={HeaderCss.slide}>
-            <img src={img3} className={HeaderCss.ImgHeader} />
+            <img
+              src="https://www.practostatic.com/ecommerce-assets/static/media/home/mobile/full-width-3.f3f2d399.png"
+              className={HeaderCss.ImgHeader}
+            />
           </div>
         </Sliders>
       </div>

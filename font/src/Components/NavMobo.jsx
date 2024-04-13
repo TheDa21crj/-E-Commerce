@@ -38,7 +38,7 @@ export default function NavMobo() {
         </div>
         <div>
           <Link to="/" className="LinkStyle">
-            <h1 className={NCss.h1}>The Da</h1>
+            <h1 className={NCss.h1}>PVY</h1>
           </Link>
         </div>
         <div>

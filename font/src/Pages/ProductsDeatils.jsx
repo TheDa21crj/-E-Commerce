@@ -174,41 +174,42 @@ export default function ProductsDeatils() {
   }, [showChat]);
 
   const addToCart = async () => {
-    if (showSize !== "") {
-      const res = await fetch("/api/Shoping/add", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: id,
-          name: showname,
-          imgSrc: showimageSrc,
-          price: showprice,
-          qunatity: showSelect,
-          size: showSize,
-        }),
-      });
-      const data = await res.json();
-      if (data.message === "same") {
-        setMsg("Already Exists");
-        setInterval(function () {
-          setMsg("");
-        }, 2000);
-        return;
-      }
-      setMsg("Added to Shopping Cart");
+    // if (showSize !== "") {
+
+    const res = await fetch("/api/Shoping/add", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: id,
+        name: showname,
+        imgSrc: showimageSrc,
+        price: showprice,
+        qunatity: showSelect,
+        size: "S",
+      }),
+    });
+    const data = await res.json();
+    if (data.message === "same") {
+      setMsg("Already Exists");
       setInterval(function () {
         setMsg("");
       }, 2000);
-      console.log(data);
-    } else {
-      setMsg("Select a Size");
-      setInterval(function () {
-        setMsg("");
-      }, 2000);
+      return;
     }
+    setMsg("Added to Shopping Cart");
+    setInterval(function () {
+      setMsg("");
+    }, 2000);
+    console.log(data);
+    // } else {
+    //   setMsg("Select a Size");
+    //   setInterval(function () {
+    //     setMsg("");
+    //   }, 2000);
+    // }
   };
 
   const wishUpdate = async () => {
@@ -259,8 +260,8 @@ export default function ProductsDeatils() {
                   </p>
                 </div>
               </div>
-              <div></div>
-              <div className={PDCss.SizeMDiv}>
+              {/* <div></div> */}
+              {/* <div className={PDCss.SizeMDiv}>
                 <div
                   className={PDCss.SizeRoundDivP}
                   onClick={() => setSize("S")}
@@ -335,9 +336,9 @@ export default function ProductsDeatils() {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
 
-              <p className={PDCss.SizeChart}>
+              {/* <p className={PDCss.SizeChart}>
                 Need Some Guide for selecting the size?{" "}
                 <span
                   onClick={() => setChart(true)}
@@ -354,7 +355,7 @@ export default function ProductsDeatils() {
                 />
               ) : (
                 ""
-              )}
+              )} */}
 
               <div className={PDCss.QuantityDiv}>
                 <p>Quantity</p>

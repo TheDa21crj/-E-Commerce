@@ -43,7 +43,7 @@ export default function Testimonial() {
             <div className={TeCss.SliderinsideDiv}>
               <p className={TeCss.SliderContentDiv}>
                 The exclusive membership has been a real blessing, it gives you
-                first preference for limited edition clothes, it also helps you
+                first preference for limited edition medicine, it also helps you
                 save so much and it barely costs anything in comparison with
                 what you save.
               </p>

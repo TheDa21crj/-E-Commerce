@@ -6,6 +6,7 @@ import MERCHANDISE from "../Components/Home/MERCHANDISE";
 import CATEGORIES from "./../Components/Home/CATEGORIES";
 import COLLECTIONS from "./../Components/Home/COLLECTIONS";
 import Loading from "./Loading";
+
 // redux
 import { useSelector } from "react-redux";
 import { seeload } from "../redux/loading";
@@ -83,7 +84,7 @@ export default function Home() {
           <CATEGORIES />
           <TopSelling />
           {/* <COLLECTIONS /> */}
-          <MERCHANDISE />
+          {/* <MERCHANDISE /> */}
         </div>
       )}
     </div>

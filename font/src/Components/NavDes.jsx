@@ -104,11 +104,12 @@ const Nav = (props) => {
     <div className={NavCss.NavmDiv}>
       <div className={NavCss.TitleandSubtileDiv}>
         <NavLink to="/" className={NavCss.LinkTag}>
-          <h1 className={NavCss.TitleH1}>The Da</h1>
+          <h1 className={NavCss.TitleH1}>PVY</h1>
         </NavLink>
         <div className={NavCss.ulDiv}>
           <ul id={NavCss.Dd}>
-            <li>
+            {/* Men */}
+            {/* <li>
               <NavLink to="/categories/male/" className="LinkStyle">
                 <p className={NavCss.NavListPTag}>Men</p>
               </NavLink>
@@ -139,8 +140,8 @@ const Nav = (props) => {
                   li33="Backpacks"
                 />
               </div>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink to="/categories/female/" className="LinkStyle">
                 <p className={NavCss.NavListPTag}>Women</p>
               </NavLink>
@@ -169,8 +170,8 @@ const Nav = (props) => {
                   li33="Backpacks"
                 />
               </div>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <p className={NavCss.NavListPTag}>Kids</p>
               <div className={NavCss.dropDownDiv}>
                 <DropDown
@@ -207,13 +208,13 @@ const Nav = (props) => {
                   li93="Backpacks"
                 />
               </div>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <p className={NavCss.NavListPTag}>New</p>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <p className={NavCss.NavListPTag}>Beauty</p>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/Membership" className="LinkStyle">
                 <p className={NavCss.NavListPTag}>Membership</p>
